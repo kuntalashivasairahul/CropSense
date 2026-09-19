@@ -177,16 +177,39 @@ def bucket(score):
 # Loaders (wrapped in @st.cache_resource by app.py)
 # ---------------------------------------------------------------------------
 
+HF_MODELS_REPO = "rahulkuntala/cropsense-models"
+
+LFS_POINTER_MAGIC = b"version https://git-lfs"
+
+
+def model_path(filename):
+    """Path to a model file, downloading from the Hub if it isn't really here.
+
+    The artefacts are git-lfs tracked. Streamlit Community Cloud does not fetch
+    lfs objects, so on that host `models/*.keras` arrive as ~130-byte pointer
+    stubs that would fail to load with a confusing error. Detect the stub (and
+    a plain missing file) and pull the real artefact from HF_MODELS_REPO
+    instead. Locally, where lfs did run, the real file is used as-is.
+    """
+    local = MODELS_DIR / filename
+    if local.exists():
+        with open(local, "rb") as f:          # header only, not the whole 25 MB
+            if f.read(len(LFS_POINTER_MAGIC)) != LFS_POINTER_MAGIC:
+                return str(local)
+    from huggingface_hub import hf_hub_download
+    return hf_hub_download(HF_MODELS_REPO, filename)
+
+
 def load_disease_model():
     import keras
-    return keras.models.load_model(MODELS_DIR / "module1_cnn.keras")
+    return keras.models.load_model(model_path("module1_cnn.keras"))
 
 
 def load_ndvi_model():
     import joblib
-    return joblib.load(MODELS_DIR / "module2_rf.pkl")
+    return joblib.load(model_path("module2_rf.pkl"))
 
 
 def load_pest_model():
     import keras
-    return keras.models.load_model(MODELS_DIR / "module3_lstm.keras")
+    return keras.models.load_model(model_path("module3_lstm.keras"))

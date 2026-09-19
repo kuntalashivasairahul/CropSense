@@ -5,10 +5,14 @@
 # module2_rf.pkl was pickled by scikit-learn 1.6.1 — keep that pin exact,
 # a different minor version can refuse to unpickle the forest.
 streamlit==1.64.0
-tensorflow==2.21.0
+# tensorflow-cpu has no macOS arm64 wheel, and the full tensorflow build is
+# needlessly large on a CPU-only deploy host. Pick per platform.
+tensorflow-cpu==2.21.0; sys_platform == "linux"
+tensorflow==2.21.0; sys_platform != "linux"
 scikit-learn==1.6.1
 numpy==2.5.3
 pandas==3.0.6
 plotly==7.1.0
 pillow==12.3.0
 joblib==1.6.0
+huggingface_hub==1.32.0

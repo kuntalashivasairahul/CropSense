@@ -1,14 +1,3 @@
----
-title: CropSense AI
-emoji: 🌿
-colorFrom: green
-colorTo: yellow
-sdk: streamlit
-sdk_version: 1.64.0
-app_file: app.py
-pinned: false
-license: mit
----
 
 # CropSense AI
 
@@ -27,6 +16,22 @@ composite_score = ⅓·disease_score + ⅓·ndvi_score + ⅓·(1 − pest_risk_s
 ```
 
 Buckets: **Healthy** ≥ 0.66 · **Moderate Risk** 0.33–0.66 · **Severe Risk** < 0.33
+
+## Deployment
+
+Target host is **Streamlit Community Cloud**: point it at this repo, branch
+`main`, main file `app.py`, Python 3.12.
+
+The model artefacts are git-lfs tracked here, but Community Cloud does not fetch
+lfs objects — they would arrive as ~130-byte pointer stubs. `core.model_path()`
+detects that and pulls the real artefact from
+[rahulkuntala/cropsense-models](https://huggingface.co/rahulkuntala/cropsense-models)
+instead. Locally, where lfs did run, the checked-out files are used directly and
+nothing is downloaded.
+
+Hugging Face Spaces is not the host: HF has retired the `streamlit` SDK for new
+Spaces, and `docker`/`gradio` Spaces now require a PRO subscription. Model repos
+remain free, which is why the artefacts live there.
 
 ## Running locally
 
@@ -54,6 +59,8 @@ fine-tuning.
   region) and documented as a data-volume-limited baseline, included per the
   module's required architecture. Sequences are drawn from real test-set weeks
   and fed unscaled, as exported alongside the model.
+- **Artefact hosting.** The three files in `models/` and the copies in the HF
+  model repo are byte-identical (24,935,986 / 13,996,161 / 44,843 bytes).
 - **Equal weighting** is a deliberate choice: with three models trained on three
   unrelated datasets there is no labelled ground truth linking all three signals
   to one outcome, so no statistically grounded weighting can be derived.

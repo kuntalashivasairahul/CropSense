@@ -92,8 +92,31 @@ def check_fusion():
           f"composite(.5,.5,.5)={base:.3f} -> {core.bucket(base)[0]}")
 
 
+def check_model_path(tmp_path=None):
+    """Local real file is used as-is; an lfs pointer stub falls back to the Hub."""
+    import tempfile
+
+    assert core.model_path("module1_cnn.keras") == str(core.MODELS_DIR / "module1_cnn.keras")
+    print("  real local file  -> used directly, no download")
+
+    original = core.MODELS_DIR
+    try:
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / "module1_cnn.keras").write_bytes(
+            b"version https://git-lfs.github.com/spec/v1\noid sha256:deadbeef\nsize 24935986\n")
+        core.MODELS_DIR = tmp
+        resolved = core.model_path("module1_cnn.keras")
+        assert resolved != str(tmp / "module1_cnn.keras"), "pointer stub was not detected"
+        assert Path(resolved).stat().st_size > 1_000_000, "did not fetch the real artefact"
+        print(f"  lfs pointer stub -> fetched {Path(resolved).stat().st_size:,} bytes from "
+              f"{core.HF_MODELS_REPO}")
+    finally:
+        core.MODELS_DIR = original
+
+
 if __name__ == "__main__":
-    for name, fn in [("Module 1 (disease CNN)", check_disease),
+    for name, fn in [("Model resolution", check_model_path),
+                     ("Module 1 (disease CNN)", check_disease),
                      ("Module 2 (NDVI RF)", check_ndvi),
                      ("Module 3 (pest LSTM)", check_pest),
                      ("Fusion", check_fusion)]:
