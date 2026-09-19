@@ -1,0 +1,14 @@
+# Pinned to the exact versions this dashboard was verified against locally.
+#
+# The .keras files were saved with Keras 3.13.2; the Keras bundled with
+# TensorFlow 2.21 loads them without conversion (verified).
+# module2_rf.pkl was pickled by scikit-learn 1.6.1 — keep that pin exact,
+# a different minor version can refuse to unpickle the forest.
+streamlit==1.64.0
+tensorflow==2.21.0
+scikit-learn==1.6.1
+numpy==2.5.3
+pandas==3.0.6
+plotly==7.1.0
+pillow==12.3.0
+joblib==1.6.0
