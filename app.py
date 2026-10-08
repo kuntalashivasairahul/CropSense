@@ -948,6 +948,16 @@ def pil_to_b64(img):
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
+def prepare_image_input(img: Image.Image) -> Image.Image:
+    """Ensure image is in RGB format. If it has an alpha channel (RGBA/LA/palette),
+    composite it onto a flat pure white background before converting to RGB instead of dropping alpha."""
+    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+        rgba = img.convert("RGBA")
+        white_bg = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
+        return Image.alpha_composite(white_bg, rgba).convert("RGB")
+    return img.convert("RGB")
+
+
 def compute_ndvi_and_stats(rgb_img, nir_img):
     """Compute per-pixel NDVI, heatmap image, low-NDVI stress overlay, and 6 stats."""
     if nir_img.size != rgb_img.size:
@@ -1235,6 +1245,15 @@ def apply_scenario(name):
         st.session_state.disease_img = (img, "Adversarial test: Non-leaf stock photo (sports car)", "sample:adversarial_non_leaf")
         st.session_state["_target_nav"] = "Disease detection"
 
+    elif "Known limitation" in name:
+        sample_path = core.MODELS_DIR.parent / "sample_images" / "plantdoc_field_tomato_late_blight.jpg"
+        img = prepare_image_input(Image.open(sample_path))
+        st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
+        st.session_state.disease_pick = "None"
+        st.session_state.disease_src = "sample:plantdoc_field_tomato_late_blight"
+        st.session_state.disease_img = (img, "PlantDoc test set (70.jpg · True label: Tomato Late Blight)", "sample:plantdoc_field_tomato_late_blight")
+        st.session_state["_target_nav"] = "Disease detection"
+
     # Bump version numbers for all modules on scenario apply
     for m in ["m1", "m2", "m3", "m4"]:
         st.session_state[f"{m}_version"] = st.session_state.get(f"{m}_version", 0) + 1
@@ -1327,6 +1346,7 @@ with sec_right:
             "Scenario 2 · Early Warning (Hidden Stress)",
             "Scenario 3 · Severe Outbreak (High Risk)",
             "Adversarial test — non-leaf image",
+            "Known limitation: real-world photo",
         ],
         key="scenario_select",
         label_visibility="collapsed",
@@ -1355,7 +1375,15 @@ if nav == "Disease detection":
         with st.container(border=True):
             html('<div class="card-eyebrow">Leaf Photo Input</div>')
             upload = st.file_uploader("Upload leaf photograph", type=["jpg", "jpeg", "png"], key="disease_upload")
-            samples = sorted([p for p in (core.MODELS_DIR.parent / "sample_images").glob("*.jpg") if p.stem != "adversarial_non_leaf"])
+            with st.expander("Supported crops (14)", expanded=False):
+                st.markdown(
+                    "Apple, Blueberry, Cherry, Corn, Grape, Orange, Peach, Bell pepper, "
+                    "Potato, Raspberry, Soybean, Squash, Strawberry, Tomato.<br/>"
+                    "<div style='color:var(--text-secondary);font-size:13px;margin-top:0.35rem;'>"
+                    "Other crops will still be forced into one of these classes.</div>",
+                    unsafe_allow_html=True,
+                )
+            samples = sorted([p for p in (core.MODELS_DIR.parent / "sample_images").glob("*.jpg") if p.stem not in ("adversarial_non_leaf", "plantdoc_field_tomato_late_blight")])
             sample_names = [core.pretty_class(p.stem) for p in samples]
             pick = st.selectbox("Or load labelled PlantVillage sample", ["None"] + sample_names, key="disease_pick")
 
@@ -1364,14 +1392,14 @@ if nav == "Disease detection":
                 try:
                     decoded = Image.open(upload)
                     decoded.load()
+                    image = prepare_image_input(decoded)
                 except Exception:
                     note(f"<strong>{escape(upload.name)}</strong> could not be decoded as an image.", "fault")
                 else:
-                    image = decoded
                     source = "Uploaded leaf photograph (224×224)"
                     src_key = f"upload:{upload.name}:{upload.size}"
             elif pick != "None":
-                image = Image.open(samples[sample_names.index(pick)])
+                image = prepare_image_input(Image.open(samples[sample_names.index(pick)]))
                 source = f"PlantVillage reference ({pick})"
                 src_key = f"sample:{pick}"
 
@@ -1449,6 +1477,9 @@ if nav == "Disease detection":
                     </span>
                   </div>
                   <span class="hero-unit">Softmax Confidence</span>
+                </div>
+                <div class="conf-caveat" style="color:var(--text-secondary);font-size:13px;line-height:1.4;margin:0.25rem 0 0.65rem 0;">
+                  Softmax confidence is not accuracy. On field photos, high-confidence errors occur.
                 </div>
                 <div class="verdict-title {TONE_CLASS[tone]}">
                   <span class="status-mark">{status_svg(tone, 18)}</span> {result['display_class']}
