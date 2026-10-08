@@ -64,14 +64,38 @@ fine-tuning.
 - **Equal weighting** is a deliberate choice: with three models trained on three
   unrelated datasets there is no labelled ground truth linking all three signals
   to one outcome, so no statistically grounded weighting can be derived.
+- **Explainable AI (Grad-CAM).** The disease module computes a gradient-weighted class
+  activation map over the MobileNetV2 backbone (`out_relu`), visually grounding the
+  diagnosis in foliar lesions rather than background artifacts.
+- **Out-of-Distribution (OOD) Sanity Check.** A dual-heuristic pre-check combining HSV
+  vegetation color coverage analysis (greens/yellows/browns $\ge 15\%$) and stock ImageNet
+  MobileNetV2 classification (verifying plant-adjacent class representation in top-5). Flags
+  non-leaf inputs with an explanatory caution box, demonstrating awareness of closed-set
+  classifier limitations without hiding model predictions.
+- **Demo Scenarios & Advisory Reports.** Includes one-click test scenarios (Healthy,
+  Early Warning, Severe Outbreak, and Adversarial Non-Leaf Test), actionable agronomic
+  intervention protocols, and downloadable assessment reports.
+- **Multispectral (RGB+NIR) Canopy Analysis.** Module 2 accepts paired visible (RGB) and
+  near-infrared (NIR) multispectral satellite tiles, computes per-pixel NDVI
+  $((\text{NIR} - \text{Red}) / (\text{NIR} + \text{Red} + 10^{-8}))$, extracts 6 spatial
+  summary statistics (`mean, std, min, max, p25, p75`), renders low-NDVI stress overlays
+  and true NDVI heatmaps, and provides verified ground-truth sample parcels.
+- **Modern Light Theme & Restrained Motion Choreography.** Built with an airy agricultural
+  design language (fixed diagonal `#DDEBF3` to `#F0F4C3` gradient, `#0E1A12` ink, `#C6E94A` lime
+  fills, self-hosted IBM Plex typography, and WCAG AA/AAA compliance). Pure CSS motion includes
+  `linear()` spring easing, clip-path card reveals, `@property` count-up numerals, hand-built
+  inline SVG composite gauge and pest timeline area charts, blurred stats ribbons, and full
+  `prefers-reduced-motion` accessibility support.
 
 ## Layout
 
 ```
-app.py                     Streamlit UI (4 tabs)
-core.py                    model loading, inference, score formulas
-test_core.py               runnable sanity check
-models/                    trained artefacts (git-lfs)
-sample_images/             labelled PlantVillage samples for the demo
-.streamlit/config.toml     theme
+app.py                     Streamlit presentation layer (light theme, SVG visualisations)
+core.py                    model loading, inference, score formulas, Grad-CAM, OOD checks
+test_core.py               runnable verification suite for all models and heuristics
+models/                    trained artefacts (git-lfs) & module2_samples/ (RGB+NIR pairs)
+sample_images/             labelled PlantVillage samples and adversarial non-leaf test
+static/                    self-hosted IBM Plex Sans and Mono fonts
+.streamlit/config.toml     Streamlit light theme configuration
 ```
+
