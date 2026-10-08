@@ -1,9 +1,88 @@
+# Design tokens. The CSS block in app.py styles the custom components; this file
+# retunes Streamlit's own widget theme so the built-in chrome (alerts, dataframes,
+# sliders, charts) matches rather than being overridden one selector at a time.
+
 [theme]
 base = "light"
-primaryColor = "#2E7D32"
-backgroundColor = "#FAF8F3"
-secondaryBackgroundColor = "#EDE8DC"
-textColor = "#2B2B26"
+
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F8FA"
+textColor = "#0E1A12"
+primaryColor = "#0E1A12"              # black pill active states
+linkColor = "#3F6B12"
+borderColor = "rgba(14, 26, 18, 0.12)"
+dataframeBorderColor = "rgba(14, 26, 18, 0.12)"
+dataframeHeaderBackgroundColor = "#F4F8FA"
+
+baseRadius = "large"
+buttonRadius = "full"
+showWidgetBorder = true
+showSidebarBorder = false
+
+# Self-hosted fonts in static/
+font = "IBM Plex Sans, system-ui, sans-serif"
+headingFont = "IBM Plex Sans, system-ui, sans-serif"
+codeFont = "IBM Plex Mono, ui-monospace, monospace"
+baseFontSize = 15
+
+# Status palette in light mode
+greenColor = "#2E7D32"
+greenTextColor = "#2E7D32"
+greenBackgroundColor = "#E8F5E9"
+orangeColor = "#E0A526"
+orangeTextColor = "#946300"
+orangeBackgroundColor = "#FFF7E6"
+yellowColor = "#E0A526"
+yellowTextColor = "#946300"
+yellowBackgroundColor = "#FFF7E6"
+redColor = "#E4572E"
+redTextColor = "#C62828"
+redBackgroundColor = "#FBE9E7"
+blueColor = "#0E1A12"
+blueTextColor = "#0E1A12"
+blueBackgroundColor = "#F0F4C3"
+grayColor = "#5B6760"
+grayTextColor = "#5B6760"
+grayBackgroundColor = "#F4F8FA"
+
+chartCategoricalColors = ["#C6E94A", "#2E7D32", "#E0A526", "#E4572E", "#3F6B12", "#5B6760"]
+chartSequentialColors = ["#F0F4C3", "#DCE775", "#C6E94A", "#9CCC65", "#7CB342", "#558B2F", "#33691E", "#2E7D32", "#1B5E20"]
+
+[theme.sidebar]
+backgroundColor = "rgba(255, 255, 255, 0.85)"
+secondaryBackgroundColor = "#F4F8FA"
+
+
+# Plex Sans and Source Serif 4 ship as single variable files covering all weights.
+# The family alias must be one CSS identifier: a bare digit in "Source Serif 4"
+# makes Streamlit emit a font-family token the browser rejects.
+[[theme.fontFaces]]
+family = "IBM Plex Sans"
+url = "app/static/fonts/plex-sans-var.woff2"
+weight = "100 700"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "SourceSerif4"
+url = "app/static/fonts/source-serif-4-var.woff2"
+weight = "200 900"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "IBM Plex Mono"
+url = "app/static/fonts/plex-mono-400.woff2"
+weight = "400"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "IBM Plex Mono"
+url = "app/static/fonts/plex-mono-500.woff2"
+weight = "500"
+style = "normal"
 
 [server]
 maxUploadSize = 10
+enableStaticServing = true
+
+[client]
+toolbarMode = "minimal"
