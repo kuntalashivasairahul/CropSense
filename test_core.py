@@ -20,7 +20,7 @@ def check_disease():
     assert model.output_shape[-1] == 38, model.output_shape
 
     # Ground truth is encoded in each fixture's filename.
-    for path in sorted((HERE / "sample_images").glob("*.jpg")):
+    for path in sorted((HERE / "sample_images").glob("*___*.jpg")):
         truth = path.stem
         r = core.predict_disease(model, Image.open(path))
         total = sum(p for _, p in r["top_k"])
@@ -33,6 +33,11 @@ def check_disease():
         assert abs(r["disease_score"] - expected) < 1e-9
         # Class-index mapping must line up with the real label.
         assert r["raw_class"] == truth, f"class mapping off: {truth} -> {r['raw_class']}"
+        # Grad-CAM overlay must be generated as a 224x224 RGB image
+        assert r["cam_image"] is not None and isinstance(r["cam_image"], Image.Image)
+        assert r["cam_image"].size == (224, 224)
+        # Sanity dict must be present
+        assert "sanity" in r
 
     # Full softmax sums to 1.
     probs = model.predict(core.preprocess_image(Image.open(path)), verbose=0)[0]
@@ -88,8 +93,25 @@ def check_fusion():
     assert core.bucket(0.9)[0] == "Healthy"
     assert core.bucket(0.5)[0] == "Moderate Risk"
     assert core.bucket(0.1)[0] == "Severe Risk"
+
+    # Advisory & report checks
+    act_d = core.get_disease_action("Potato___Early_blight", False)
+    act_h = core.get_disease_action("Tomato___healthy", True)
+    assert "Mancozeb" in act_d or "Chlorothalonil" in act_d
+    assert "nominal" in act_h.lower()
+    assert "critical" in core.get_ndvi_action("severe_stress").lower()
+    assert "pheromone" in core.get_pest_action("high", 0.8).lower()
+
+    dummy_d = {"display_class": "Tomato — Healthy", "raw_class": "Tomato___healthy",
+               "confidence": 0.99, "disease_score": 0.99, "is_healthy": True}
+    dummy_n = {"label": "healthy", "confidence": 0.85, "ndvi_score": 1.0}
+    dummy_p = {"pred_class": "low", "confidence": 0.90, "pest_risk_score": 0.05}
+    rep = core.generate_report(dummy_d, dummy_n, dummy_p, 0.95, "Healthy")
+    assert "CROPSENSE AI — MULTI-MODAL CROP HEALTH ASSESSMENT REPORT" in rep
+    assert "HEALTHY" in rep
     print(f"  composite(1,1,0)=1.0  composite(0,0,1)=0.0  "
           f"composite(.5,.5,.5)={base:.3f} -> {core.bucket(base)[0]}")
+    print("  advisory rules and report generation validated")
 
 
 def check_model_path(tmp_path=None):
@@ -114,9 +136,41 @@ def check_model_path(tmp_path=None):
         core.MODELS_DIR = original
 
 
+def check_ood_sanity():
+    """Validates color coverage and ImageNet top-5 plant matching."""
+    im_model = core.load_imagenet_model()
+
+    # 1. Real leaf images (must NOT flag)
+    leaves = ["Tomato___healthy.jpg", "Potato___Early_blight.jpg"]
+    for leaf in leaves:
+        p = HERE / "sample_images" / leaf
+        img = Image.open(p)
+        res = core.check_leaf_sanity(img, im_model)
+        top5_str = ", ".join(f"{n} ({pr:.1%})" for n, pr, _ in res["imagenet_top_5"][:3])
+        print(f"  {leaf:24s} -> cov={res['color_coverage_pct']:.1f}% plant_match={res['has_plant_match']} "
+              f"is_flagged={res['is_flagged']} [top: {top5_str}]")
+        assert not res["color_flagged"], f"{leaf} color falsely flagged"
+        assert res["has_plant_match"], f"{leaf} missed ImageNet plant match"
+        assert not res["is_flagged"], f"{leaf} falsely flagged as OOD"
+
+    # 2. Adversarial non-leaf image (MUST flag)
+    adv_path = HERE / "sample_images" / "adversarial_non_leaf.jpg"
+    assert adv_path.exists(), "adversarial fixture missing"
+    adv_img = Image.open(adv_path)
+    adv_res = core.check_leaf_sanity(adv_img, im_model)
+    top5_str = ", ".join(f"{n} ({pr:.1%})" for n, pr, _ in adv_res["imagenet_top_5"][:3])
+    print(f"  {'adversarial_non_leaf':24s} -> cov={adv_res['color_coverage_pct']:.1f}% "
+          f"plant_match={adv_res['has_plant_match']} is_flagged={adv_res['is_flagged']} [top: {top5_str}]")
+    assert adv_res["color_flagged"], "adversarial image color check did not flag"
+    assert not adv_res["has_plant_match"], "adversarial image unexpectedly matched plant class"
+    assert adv_res["is_flagged"], "adversarial image was not flagged as OOD"
+    print("  OOD sanity check invariants verified (0 false positives on test leaves, flags non-leaf).")
+
+
 if __name__ == "__main__":
     for name, fn in [("Model resolution", check_model_path),
                      ("Module 1 (disease CNN)", check_disease),
+                     ("Module 1 (OOD sanity checks)", check_ood_sanity),
                      ("Module 2 (NDVI RF)", check_ndvi),
                      ("Module 3 (pest LSTM)", check_pest),
                      ("Fusion", check_fusion)]:
