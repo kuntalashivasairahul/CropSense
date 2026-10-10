@@ -14,7 +14,7 @@ Fusion is `⅓ × disease_score + ⅓ × ndvi_score + ⅓ × (1 − pest_risk_sc
 
 ## Windows 10 laptop
 
-Use **64-bit Python 3.12**. Version 3.12.2 is suitable. Clone the prepared branch and double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
+Use **64-bit Python 3.12**. Version 3.12.2 is suitable. Clone the prepared branch with `git clone -b codex/monday-demo-ready https://github.com/kuntalashivasairahul/CropSense.git`, then double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
 
 The app runs CPU inference on native Windows. Recent TensorFlow does not support native Windows GPU execution. If a DLL is missing, install the official [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist).
 
@@ -31,3 +31,5 @@ Run `./setup_mac.sh` once with Python 3.12 installed, then `./start_mac.sh`. Bot
 The three new Kaggle notebooks are [Module 1 field adaptation](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit), [Module 2 field-separated Random Forest](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics), and [Module 3 causal LSTM](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics). Local source copies, the original exported notebooks, and snapshots of the earlier Kaggle versions are in [notebooks](notebooks). The runs record splits, per-class precision/recall/F1, confusion matrices, predictions, training details, package versions, and checksummed model exports. Compact results are in [docs/evidence](docs/evidence).
 
 The disease classifier has no unknown class and can be confidently wrong. NDVI labels come from anomaly masks, not agronomist diagnoses. Pest data are sparse and from one region. Grad-CAM highlights image regions influencing a prediction; it does not prove biological correctness. Hyperspectral analysis is outside this release scope.
+
+For a short faculty-facing walkthrough and likely questions, see the [Monday briefing](docs/MONDAY_BRIEFING.md).

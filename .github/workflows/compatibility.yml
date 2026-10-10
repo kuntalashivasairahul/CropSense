@@ -1,5 +1,5 @@
 name: Demo compatibility
-on: [push, pull_request, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 jobs:
   inference:
     strategy:

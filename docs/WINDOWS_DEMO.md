@@ -3,7 +3,7 @@
 Use the laptop before presentation day. The Mac check has passed; native Windows is complete only after this laptop passes.
 
 1. Confirm **64-bit Python 3.12**. Version 3.12.2 is acceptable.
-2. Clone the prepared branch or pull its latest commit. Do not copy the Mac `.venv` folder.
+2. In PowerShell or Command Prompt, run `git clone -b codex/monday-demo-ready https://github.com/kuntalashivasairahul/CropSense.git` and open the new `CropSense` folder. If already cloned, switch to that branch and pull its latest commit. Do not copy the Mac `.venv` folder.
 3. Double-click `setup_windows.cmd` while online. It creates a fresh `.venv`, installs pinned dependencies, checks model hashes, and caches the ImageNet helper. Save any error text.
 4. Check `reports/environment-windows.json` says `"status": "passed"`.
 5. Disconnect Wi-Fi, then double-click `start_windows.cmd`. It repeats the offline check and opens the local Streamlit app.

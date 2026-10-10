@@ -57,6 +57,8 @@ class ReleaseBundleContract(unittest.TestCase):
             (folder / 'artifact_manifest.json').write_text(json.dumps(manifest))
             with ZipFile(folder / 'release_bundle.zip', 'w') as archive:
                 archive.writestr('module1_cnn.keras', payload)
+            bundle_hash = hashlib.sha256((folder / 'release_bundle.zip').read_bytes()).hexdigest()
+            (folder / 'release_bundle.sha256').write_text(bundle_hash + '  release_bundle.zip\n')
             ensure_local_models(root)
             self.assertEqual((folder / 'module1_cnn.keras').read_bytes(), payload)
 
