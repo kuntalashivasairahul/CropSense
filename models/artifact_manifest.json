@@ -1,6 +1,6 @@
 {
   "release": "candidate-2026-10-10",
-  "status": "Module 1 and Module 3 candidate models validated locally; Module 2 baseline retained pending grouped evaluation decision",
+  "status": "Module 1 and Module 3 candidates validated; original Module 2 forest retained after grouped candidate rejection",
   "models": {
     "module3_lstm.keras": {
       "sha256": "c9dcc0972ab5cc2e94989c3e4480f3468b36255ec8923e09acfa782da13722d6",

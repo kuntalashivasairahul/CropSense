@@ -1,0 +1,7 @@
+{
+  "bucket": "intelinair-data-releases",
+  "key": "agriculture-vision/cvpr_paper_2020/Dataset/data2017_miniscale.tar.gz",
+  "archive_sha256": "2b4bf0b2357ba982fe6d81da55841874afdd721a867bb8fddede9e04e4914027",
+  "retrieved_utc": "2026-10-10T18:44:10.641639+00:00",
+  "source": "Agriculture-Vision 2017 miniscale"
+}

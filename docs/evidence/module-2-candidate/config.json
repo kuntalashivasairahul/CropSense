@@ -1,0 +1,77 @@
+{
+  "seed": 42,
+  "feature_order": [
+    "ndvi_mean",
+    "ndvi_std",
+    "ndvi_min",
+    "ndvi_max",
+    "ndvi_p25",
+    "ndvi_p75"
+  ],
+  "class_order": [
+    "healthy",
+    "moderate_stress",
+    "severe_stress"
+  ],
+  "group": "filename prefix before first underscore",
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "test_fraction": 0.2,
+  "label_thresholds_percent": {
+    "severe": 5,
+    "moderate": 2,
+    "water_exclusion": 15
+  },
+  "selection": "maximize validation macro F1 while healthy recall does not fall and severe-to-healthy rate does not rise",
+  "candidate_configs": [
+    {
+      "n_estimators": 200,
+      "class_weight": "balanced"
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": "balanced",
+      "min_samples_leaf": 2,
+      "max_features": 1.0
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": "balanced_subsample",
+      "min_samples_leaf": 4,
+      "max_depth": 20
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": {
+        "healthy": 1.8,
+        "moderate_stress": 1.0,
+        "severe_stress": 2.5
+      },
+      "min_samples_leaf": 2
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": {
+        "healthy": 2.5,
+        "moderate_stress": 1.0,
+        "severe_stress": 3.0
+      },
+      "min_samples_leaf": 2
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": {
+        "healthy": 1.5,
+        "moderate_stress": 1.0,
+        "severe_stress": 3.0
+      },
+      "min_samples_leaf": 4
+    },
+    {
+      "n_estimators": 400,
+      "class_weight": "balanced",
+      "min_samples_leaf": 2,
+      "max_depth": 14
+    }
+  ]
+}

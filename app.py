@@ -1562,7 +1562,7 @@ elif nav == "Canopy stress":
                     st.rerun()
 
             st.write("")
-            st.caption("Or load ground-truth multispectral satellite samples:")
+            st.caption("Or load bundled paired RGB/NIR field-image samples:")
             b1, b2, b3 = st.columns(3)
 
             def load_sample_by_label(lbl_target):
@@ -1611,7 +1611,7 @@ elif nav == "Canopy stress":
 
             html('<div class="card-eyebrow">Canopy Health Diagnosis</div>')
             if not res_ndvi:
-                note("Load a multispectral satellite pair or run NDVI calculation.", "info")
+                note("Load a paired RGB/NIR field tile or run NDVI calculation.", "info")
             else:
                 tone = ndvi_tone(res_ndvi)
                 score_val = res_ndvi["ndvi_score"]
@@ -1828,7 +1828,8 @@ elif nav == "Composite":
     if not missing:
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True):
-            html('<div class="card-eyebrow">Agronomic Action Plan & Interventions</div>')
+            html('<div class="card-eyebrow">Illustrative follow-up</div>')
+            st.caption("Confirm the crop, symptoms, and local guidance before treatment. These prototype outputs are not a field diagnosis or a pesticide recommendation.")
             d_act = core.get_disease_action(_d["raw_class"], _d["is_healthy"])
             n_act = core.get_ndvi_action(_n["label"])
             p_act = core.get_pest_action(_p["pred_class"], _p["pest_risk_score"])
@@ -1845,7 +1846,8 @@ elif nav == "Composite":
                 st.caption(p_act)
 
             st.write("")
-            report_txt = core.generate_report(_d, _n, _p, score, label)
+            report_txt = ("Prototype assessment for demonstration only. Confirm findings with a qualified local agronomist before treatment.\n\n"
+                          + core.generate_report(_d, _n, _p, score, label))
             st.download_button(
                 "Download Agronomic Assessment Report (TXT)",
                 data=report_txt,

@@ -24,9 +24,18 @@ The original status document quoted 98.29% lab accuracy and about 30.6% PlantDoc
 
 The original exported notebook's final run used 1,996 sampled images, with 400 in a stratified random test split. It reported **66.75% accuracy**, macro F1 about **0.537**, healthy recall **7/67**, and **9** true-severe images classified healthy. These are the actual saved [notebook outputs](evidence/module-2-original-outputs.txt); the continuity document's 398-image result was from a different run.
 
-The new notebook processed all 8,345 RGB/NIR pairs and accepted 8,308 after water exclusion. It separated inferred field identifiers across train, validation, and test. This is a harder evaluation protocol, so its percentages are **not** directly comparable to the historical random-tile result. The six statistics, raw NDVI formula, and heuristic label rules are preserved. The inferred field identifier convention needs dataset-level confirmation, and labels are not agronomist-verified.
+The new notebook processed all 8,345 RGB/NIR pairs and accepted 8,308 after water exclusion. It separated inferred field identifiers across train, validation, and test. This is a harder evaluation protocol, so its percentages are **not** directly comparable to the historical random-tile result. The six statistics, raw NDVI formula, and heuristic label rules are preserved. The inferred field identifier convention needs dataset-level confirmation, and labels are not agronomist-verified. The grouped baseline below was **retrained on the new training split** with the same 200-tree configuration; it is not the exact deployed artifact from the old notebook.
 
-The first grouped run found a candidate with test macro F1 **0.492** versus **0.474** for its grouped baseline, but severe→healthy errors increased from **74/700** to **102/700**. It was rejected. The second run applies a strict validation rule: healthy recall cannot fall and severe→healthy rate cannot rise. Its final result is pending; the deployed model remains the prior 200-tree forest until a candidate passes both evaluation and integration checks.
+The first grouped run found a candidate with test macro F1 **0.492** versus **0.474** for its grouped baseline, but severe→healthy errors increased from **74/700** to **102/700**. It was rejected. The second run tested seven RF configurations with a strict **validation** rule: healthy recall cannot fall and severe→healthy errors cannot rise. It selected the baseline configuration. The third run swept a healthy-class minimum-probability rule on validation and selected a candidate forest with threshold 0.45. Both were assessed on the same grouped test. The split comprised 5,175 training, 1,584 validation and 1,549 test images from disjoint inferred field IDs.
+
+| Grouped test, 1,549 tiles | Retrained baseline configuration | Selected threshold candidate |
+|---|---:|---:|
+| Accuracy | **58.42%** | 57.84% |
+| Macro F1 | 0.474 | **0.477** |
+| Healthy recall | 23/280 (8.21%) | **29/280 (10.36%)** |
+| Severe classified healthy | **74/700** | 81/700 |
+
+On validation, the threshold candidate had macro F1 **0.491** versus **0.481** for baseline, healthy recall **56/318** versus **42/318**, and the same **26/613** severe→healthy errors. It therefore met the predeclared validation guardrails. The held-out test revealed seven additional severe→healthy errors, so the candidate was **rejected for deployment** despite its small F1 gain. [Per-class reports, both confusion matrices, sample-level predictions, and the threshold sweep](evidence/module-2-candidate/) are saved. The exact older deployment artifact remains in the release bundle; its historical random-tile score should not be substituted for this retrained grouped baseline result.
 
 ## Module 3: four-week pest LSTM
 
@@ -45,4 +54,4 @@ The LSTM beats persistence under this protocol but trails a simpler model. Ninet
 
 ## Release boundary
 
-The repo currently contains the adapted CNN, revised LSTM with matching sample sequences, and the previous Random Forest while the second grouped run completes. All files are checksummed in a bundled release. The Mac offline inference suite passes. Native Windows installation and the full laptop demo remain unverified. Hyperspectral work is excluded from this deadline; the dashboard demonstrates RGB/NIR multispectral NDVI.
+The repo contains the adapted CNN, revised LSTM with matching sample sequences, and the previous Random Forest because grouped candidate forests did not meet the held-out severe→healthy safety guardrail. All release files are checksummed in a bundle. The Mac mini and Windows Server 2025 and Linux GitHub runners pass the [offline inference checks](evidence/compatibility/); the actual Windows 10 laptop demo remains unverified. Hyperspectral work is excluded from this deadline; the dashboard demonstrates RGB/NIR multispectral NDVI.

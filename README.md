@@ -5,10 +5,12 @@ Final-year crop-health prototype. Three independently trained models feed an equ
 | Signal | Model and input | Current evaluation |
 |---|---|---|
 | Leaf disease | MobileNetV2, RGB image, 38 classes | 55.95% on 252 PlantDoc field photos; 96.83% on 8,145 PlantVillage validation images |
-| Canopy stress | 200-tree Random Forest, six NDVI statistics from paired RGB/NIR images | Historical random-tile test: 66.75% on 400 images; grouped-field experiment in progress |
+| Canopy stress | 200-tree Random Forest, six NDVI statistics from paired RGB/NIR images | Historical deployed-artifact random-tile test: 66.75% on 400 images; a separately retrained baseline scored 58.42% on 1,549 grouped-field images, macro F1 0.474 |
 | Pest risk | Four-week, nine-feature LSTM, three classes | 52.63% on 19 observed-target weeks; persistence 42.11%; logistic regression 68.42% |
 
 The original CNN checkpoint scored 30.95% on the same PlantDoc set when re-evaluated in the new notebook. Its PlantVillage result was 98.10% under the same image-loading code. The field test had been inspected in prior work, so it is a historical benchmark rather than a newly blind external test. The new pest evaluation uses a different target and split protocol from the older notebook, so its percentages cannot be compared directly with the old 36.8% result. See [model evaluation](docs/MODEL_EVALUATION.md).
+
+The grouped-field NDVI experiments did not produce a safe replacement. A validation-selected threshold improved macro F1 from 0.474 to 0.477 on held-out fields but increased severe-to-healthy mistakes from 74 to 81 of 700; the release keeps the previous forest and documents the negative result.
 
 Fusion is `⅓ × disease_score + ⅓ × ndvi_score + ⅓ × (1 − pest_risk_score)`. Equal weights reflect the absence of labelled three-signal outcomes; they were not learned from data.
 
@@ -32,4 +34,4 @@ The three new Kaggle notebooks are [Module 1 field adaptation](https://www.kaggl
 
 The disease classifier has no unknown class and can be confidently wrong. NDVI labels come from anomaly masks, not agronomist diagnoses. Pest data are sparse and from one region. Grad-CAM highlights image regions influencing a prediction; it does not prove biological correctness. Hyperspectral analysis is outside this release scope.
 
-For a short faculty-facing walkthrough and likely questions, see the [Monday briefing](docs/MONDAY_BRIEFING.md).
+For a short faculty-facing walkthrough and likely questions, see the [Monday briefing](docs/MONDAY_BRIEFING.md). An editable [academic report draft](docs/ACADEMIC_REPORT_DRAFT.md) collects the methodology, results, limitations, and references.

@@ -7,10 +7,18 @@
 | Module | Executed Kaggle notebook | Evaluation and main result | What to show |
 |---|---|---|---|
 | Disease, MobileNetV2, 38 classes | [Module 1 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit) | PlantDoc test: 141/252 correct (55.95%), macro F1 0.552. Original checkpoint: 78/252 (30.95%), macro F1 0.297. PlantVillage validation: 96.83% for the new checkpoint. | Class report, confusion matrix, both domain results, and model selection on PlantDoc training only. |
-| NDVI stress, Random Forest, 3 classes | [Module 2 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics) | Field-separated experiment in progress. Historical random-tile test: 66.75% on 400 tiles, with weak healthy recall (7/67). | Six feature definitions, image and mask pairing, grouped split, per-class recall, severe-to-healthy errors. |
+| NDVI stress, Random Forest, 3 classes | [Module 2 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics) | Retrained grouped-field baseline: 58.42% on 1,549 tiles, macro F1 0.474, healthy recall 23/280. Threshold candidate F1 0.477 but severe→healthy errors rose 74→81/700, so it was rejected. The deployed older artifact has a historical random-tile score of 66.75% on 400 tiles. | Six feature definitions, image and mask pairing, grouped split, per-class recall, severe-to-healthy errors. |
 | Pest risk, LSTM, 3 classes | [Module 3 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics) | 2009 observed-target test: 10/19 correct (52.63%), macro F1 0.433. Persistence: 8/19; logistic regression: 13/19. | Year-based split, four-week windows, observed-only targets, all baselines and confusion matrices. |
 
 For every module, the notebook records training configuration, dataset and split details, environment versions, model selection **before** the final test, accuracy, precision, recall, F1, support, confusion counts, and exported artifact checks. [Detailed evaluation](MODEL_EVALUATION.md) and [saved evidence](evidence/) are in the repository. Small test groups can change these percentages substantially, so state their sample counts aloud.
+
+## Base-paper gap statements
+
+These are topic-level comparisons based on the verified publication records; they do not claim to reproduce the papers' experiments.
+
+- [Shrotriya et al., IEEE Access (2024)](https://doi.org/10.1109/ACCESS.2024.3411013) studies plant-leaf disease classification and comparison with conventional classification. Our work adds an explicit lab-to-field benchmark, a PlantDoc-training adaptation experiment, and a class-level tradeoff audit for the released 38-class model.
+- [Le, Liou, and Pham, IEEE Access (2023)](https://doi.org/10.1109/ACCESS.2023.3283033) studies crop response to disease and water scarcity using a normalized-difference **latent heat** index. Our stress module uses a different index, RGB/NIR **NDVI**, then classifies six summary features with a Random Forest against Agriculture-Vision mask-derived labels. The index and target are different; we do not claim to reproduce their result.
+- [Dong et al., IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (2020)](https://doi.org/10.1109/JSTARS.2020.3013340) concerns dynamic pest and disease monitoring and early forecasting. Our pest module evaluates a four-week LSTM under a year-separated, observed-target protocol and reports persistence and logistic regression beside it. This is a retrospective study on one region, not a validated operational forecast.
 
 ## Suggested five-minute walkthrough
 
