@@ -1,0 +1,5 @@
+{
+  "selected": "adapted_checkpoint",
+  "original_validation_macro_f1": 0.18118671832153452,
+  "adapted_validation_macro_f1": 0.5599771253992443
+}

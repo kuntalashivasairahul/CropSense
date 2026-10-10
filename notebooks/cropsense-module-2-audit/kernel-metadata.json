@@ -1,0 +1,13 @@
+{
+  "id": "kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics",
+  "title": "CropSense Module 2 - field splits RF and metrics",
+  "code_file": "cropsense-module-2-audit.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": []
+}

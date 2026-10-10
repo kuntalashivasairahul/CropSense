@@ -1,0 +1,2461 @@
+CELL 0
+=== PlantVillage ===
+[error: [Errno 2] No such file or directory: '/kaggle/input/plantvillage-dataset']
+
+=== PlantDoc ===
+[error: [Errno 2] No such file or directory: '/kaggle/input/plantdoc-dataset']
+
+
+CELL 2
+Top-level /kaggle/input contents:
+  datasets
+
+
+CELL 3
+=== PlantVillage ===
+color/
+  Apple___Apple_scab/
+    00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG
+    01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003.JPG
+    01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112.JPG
+    0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037.JPG
+    023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487.JPG
+    0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055.JPG
+    029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504.JPG
+    03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355.JPG
+    0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966.JPG
+    0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287.JPG
+    03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334.JPG
+    0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079.JPG
+    058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181.JPG
+    0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252.JPG
+    0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347.JPG
+    ... (630 total entries)
+  Apple___Black_rot/
+    0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727.JPG
+    00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593.JPG
+    0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734.JPG
+    0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079.JPG
+    01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024.JPG
+    02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948.JPG
+    02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828.JPG
+    02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584.JPG
+    028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748.JPG
+    032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778.JPG
+    033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710.JPG
+    03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681.JPG
+    04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970.JPG
+    04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782.JPG
+    05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005.JPG
+    ... (621 total entries)
+  Apple___Cedar_apple_rust/
+    025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655.JPG
+    0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667.JPG
+    0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805.JPG
+    04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394.JPG
+    052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742.JPG
+    064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839.JPG
+    072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133.JPG
+    09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG
+    097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861.JPG
+    0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807.JPG
+    0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762.JPG
+    0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014.JPG
+    0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619.JPG
+    112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365.JPG
+    11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874.JPG
+    ... (275 total entries)
+  Apple___healthy/
+    0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672.JPG
+    00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709.JPG
+    0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776.JPG
+    00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669.JPG
+    00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708.JPG
+    010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948.JPG
+    011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544.JPG
+    013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480.JPG
+    017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279.JPG
+    0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941.JPG
+    0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042.JPG
+    01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977.JPG
+    01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515.JPG
+    022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131.JPG
+    023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538.JPG
+    ... (1645 total entries)
+  Blueberry___healthy/
+    008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431.JPG
+    00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681.JPG
+    011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311.JPG
+    0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347.JPG
+    013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120.JPG
+    01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545.JPG
+    02159532-6430-4006-a245-421593949304___RS_HL 2686.JPG
+    021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344.JPG
+    022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317.JPG
+    0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456.JPG
+    0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297.JPG
+    02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546.JPG
+    02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500.JPG
+    02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652.JPG
+    02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629.JPG
+    ... (1502 total entries)
+  Cherry_(including_sour)___Powdery_mildew/
+    00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267.JPG
+    00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748.JPG
+    00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812.JPG
+    00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917.JPG
+    00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479.JPG
+    012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423.JPG
+    02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868.JPG
+    02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593.JPG
+    02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699.JPG
+    02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450.JPG
+    03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372.JPG
+    0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434.JPG
+    03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252.JPG
+    041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392.JPG
+    042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152.JPG
+    ... (1052 total entries)
+  Cherry_(including_sour)___healthy/
+    0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092.JPG
+    002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655.JPG
+    0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765.JPG
+    005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679.JPG
+    0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277.JPG
+    00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156.JPG
+    011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165.JPG
+    014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842.JPG
+    01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836.JPG
+    02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259.JPG
+    02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582.JPG
+    02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892.JPG
+    02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723.JPG
+    036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600.JPG
+    03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298.JPG
+    ... (854 total entries)
+  Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+    00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357.JPG
+    00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655.JPG
+    0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378.JPG
+    0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287.JPG
+    01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276.JPG
+    02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631.JPG
+    038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480.JPG
+    045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313.JPG
+    05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335.JPG
+    05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315.JPG
+    0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy.jpg
+    065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337.JPG
+    06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288.JPG
+    06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy.jpg
+    06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656.JPG
+    ... (513 total entries)
+  Corn_(maize)___Common_rust_/
+    RS_Rust 1563.JPG
+    RS_Rust 1564.JPG
+    RS_Rust 1565.JPG
+    RS_Rust 1566.JPG
+    RS_Rust 1567.JPG
+    RS_Rust 1568.JPG
+    RS_Rust 1569.JPG
+    RS_Rust 1570.JPG
+    RS_Rust 1571.JPG
+    RS_Rust 1572.JPG
+    RS_Rust 1573.JPG
+    RS_Rust 1574.JPG
+    RS_Rust 1575.JPG
+    RS_Rust 1576.JPG
+    RS_Rust 1577.JPG
+    ... (1192 total entries)
+  Corn_(maize)___Northern_Leaf_Blight/
+    005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy.jpg
+    0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121.JPG
+    008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2.jpg
+    00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932.JPG
+    00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645.JPG
+    0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2.jpg
+    011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128.JPG
+    019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284.JPG
+    022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476.JPG
+    024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992.JPG
+    02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy.jpg
+    028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023.JPG
+    028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844.JPG
+    02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546.JPG
+    033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2.jpg
+    ... (985 total entries)
+  Corn_(maize)___healthy/
+    00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2.jpg
+    00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2.jpg
+    01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy.jpg
+    026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy.jpg
+    028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy.jpg
+    0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2.jpg
+    02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy.jpg
+    02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy.jpg
+    03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602.JPG
+    0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy.jpg
+    03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2.jpg
+    03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2.jpg
+    04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2.jpg
+    0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3.jpg
+    04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2.jpg
+    ... (1162 total entries)
+  Grape___Black_rot/
+    00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376.JPG
+    003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184.JPG
+    004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626.JPG
+    006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470.JPG
+    00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664.JPG
+    0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429.JPG
+    00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244.JPG
+    00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508.JPG
+    012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036.JPG
+    017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014.JPG
+    01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050.JPG
+    02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552.JPG
+    02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753.JPG
+    02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063.JPG
+    02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323.JPG
+    ... (1180 total entries)
+  Grape___Esca_(Black_Measles)/
+    0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399.JPG
+    00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990.JPG
+    00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197.JPG
+    01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153.JPG
+    011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288.JPG
+    011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096.JPG
+    019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744.JPG
+    01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113.JPG
+    02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908.JPG
+    023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834.JPG
+    025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282.JPG
+    0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396.JPG
+    02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062.JPG
+    0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231.JPG
+    037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944.JPG
+    ... (1383 total entries)
+  Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+    0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508.JPG
+    0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647.JPG
+    002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740.JPG
+    00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431.JPG
+    00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653.JPG
+    01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626.JPG
+    019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742.JPG
+    01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530.JPG
+    01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755.JPG
+    01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610.JPG
+    0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639.JPG
+    0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392.JPG
+    02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504.JPG
+    0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591.JPG
+    039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713.JPG
+    ... (1076 total entries)
+  Grape___healthy/
+    00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067.JPG
+    0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103.JPG
+    0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176.JPG
+    02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078.JPG
+    03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070.JPG
+    03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035.JPG
+    04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055.JPG
+    05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111.JPG
+    0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948.JPG
+    0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017.JPG
+    07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957.JPG
+    07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121.JPG
+    084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045.JPG
+    0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004.JPG
+    0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127.JPG
+    ... (423 total entries)
+  ... (38 total entries)
+grayscale/
+  Apple___Apple_scab/
+    00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG
+    01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003.JPG
+    01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112.JPG
+    0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037.JPG
+    023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487.JPG
+    0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055.JPG
+    029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504.JPG
+    03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355.JPG
+    0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966.JPG
+    0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287.JPG
+    03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334.JPG
+    0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079.JPG
+    058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181.JPG
+    0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252.JPG
+    0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347.JPG
+    ... (630 total entries)
+  Apple___Black_rot/
+    0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727.JPG
+    00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593.JPG
+    0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734.JPG
+    0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079.JPG
+    01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024.JPG
+    02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948.JPG
+    02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828.JPG
+    02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584.JPG
+    028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748.JPG
+    032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778.JPG
+    033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710.JPG
+    03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681.JPG
+    04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970.JPG
+    04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782.JPG
+    05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005.JPG
+    ... (621 total entries)
+  Apple___Cedar_apple_rust/
+    025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655.JPG
+    0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667.JPG
+    0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805.JPG
+    04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394.JPG
+    052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742.JPG
+    064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839.JPG
+    072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133.JPG
+    09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG
+    097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861.JPG
+    0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807.JPG
+    0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762.JPG
+    0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014.JPG
+    0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619.JPG
+    112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365.JPG
+    11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874.JPG
+    ... (275 total entries)
+  Apple___healthy/
+    0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672.JPG
+    00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709.JPG
+    0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776.JPG
+    00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669.JPG
+    00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708.JPG
+    010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948.JPG
+    011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544.JPG
+    013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480.JPG
+    017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279.JPG
+    0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941.JPG
+    0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042.JPG
+    01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977.JPG
+    01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515.JPG
+    022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131.JPG
+    023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538.JPG
+    ... (1645 total entries)
+  Blueberry___healthy/
+    008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431.JPG
+    00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681.JPG
+    011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311.JPG
+    0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347.JPG
+    013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120.JPG
+    01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545.JPG
+    02159532-6430-4006-a245-421593949304___RS_HL 2686.JPG
+    021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344.JPG
+    022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317.JPG
+    0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456.JPG
+    0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297.JPG
+    02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546.JPG
+    02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500.JPG
+    02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652.JPG
+    02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629.JPG
+    ... (1502 total entries)
+  Cherry_(including_sour)___Powdery_mildew/
+    00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267.JPG
+    00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748.JPG
+    00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812.JPG
+    00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917.JPG
+    00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479.JPG
+    012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423.JPG
+    02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868.JPG
+    02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593.JPG
+    02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699.JPG
+    02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450.JPG
+    03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372.JPG
+    0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434.JPG
+    03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252.JPG
+    041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392.JPG
+    042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152.JPG
+    ... (1052 total entries)
+  Cherry_(including_sour)___healthy/
+    0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092.JPG
+    002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655.JPG
+    0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765.JPG
+    005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679.JPG
+    0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277.JPG
+    00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156.JPG
+    011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165.JPG
+    014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842.JPG
+    01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836.JPG
+    02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259.JPG
+    02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582.JPG
+    02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892.JPG
+    02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723.JPG
+    036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600.JPG
+    03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298.JPG
+    ... (854 total entries)
+  Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+    00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357.JPG
+    00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655.JPG
+    0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378.JPG
+    0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287.JPG
+    01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276.JPG
+    02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631.JPG
+    038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480.JPG
+    045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313.JPG
+    05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335.JPG
+    05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315.JPG
+    0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy.jpg
+    065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337.JPG
+    06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288.JPG
+    06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy.jpg
+    06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656.JPG
+    ... (513 total entries)
+  Corn_(maize)___Common_rust_/
+    RS_Rust 1563.JPG
+    RS_Rust 1564.JPG
+    RS_Rust 1565.JPG
+    RS_Rust 1566.JPG
+    RS_Rust 1567.JPG
+    RS_Rust 1568.JPG
+    RS_Rust 1569.JPG
+    RS_Rust 1570.JPG
+    RS_Rust 1571.JPG
+    RS_Rust 1572.JPG
+    RS_Rust 1573.JPG
+    RS_Rust 1574.JPG
+    RS_Rust 1575.JPG
+    RS_Rust 1576.JPG
+    RS_Rust 1577.JPG
+    ... (1192 total entries)
+  Corn_(maize)___Northern_Leaf_Blight/
+    005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy.jpg
+    0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121.JPG
+    008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2.jpg
+    00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932.JPG
+    00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645.JPG
+    0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2.jpg
+    011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128.JPG
+    019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284.JPG
+    022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476.JPG
+    024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992.JPG
+    02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy.jpg
+    028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023.JPG
+    028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844.JPG
+    02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546.JPG
+    033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2.jpg
+    ... (985 total entries)
+  Corn_(maize)___healthy/
+    00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2.jpg
+    00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2.jpg
+    01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy.jpg
+    026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy.jpg
+    028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy.jpg
+    0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2.jpg
+    02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy.jpg
+    02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy.jpg
+    03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602.JPG
+    0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy.jpg
+    03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2.jpg
+    03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2.jpg
+    04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2.jpg
+    0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3.jpg
+    04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2.jpg
+    ... (1162 total entries)
+  Grape___Black_rot/
+    00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376.JPG
+    003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184.JPG
+    004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626.JPG
+    006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470.JPG
+    00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664.JPG
+    0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429.JPG
+    00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244.JPG
+    00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508.JPG
+    012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036.JPG
+    017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014.JPG
+    01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050.JPG
+    02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552.JPG
+    02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753.JPG
+    02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063.JPG
+    02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323.JPG
+    ... (1180 total entries)
+  Grape___Esca_(Black_Measles)/
+    0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399.JPG
+    00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990.JPG
+    00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197.JPG
+    01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153.JPG
+    011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288.JPG
+    011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096.JPG
+    019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744.JPG
+    01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113.JPG
+    02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908.JPG
+    023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834.JPG
+    025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282.JPG
+    0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396.JPG
+    02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062.JPG
+    0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231.JPG
+    037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944.JPG
+    ... (1383 total entries)
+  Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+    0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508.JPG
+    0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647.JPG
+    002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740.JPG
+    00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431.JPG
+    00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653.JPG
+    01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626.JPG
+    019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742.JPG
+    01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530.JPG
+    01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755.JPG
+    01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610.JPG
+    0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639.JPG
+    0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392.JPG
+    02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504.JPG
+    0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591.JPG
+    039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713.JPG
+    ... (1076 total entries)
+  Grape___healthy/
+    00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067.JPG
+    0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103.JPG
+    0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176.JPG
+    02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078.JPG
+    03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070.JPG
+    03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035.JPG
+    04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055.JPG
+    05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111.JPG
+    0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948.JPG
+    0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017.JPG
+    07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957.JPG
+    07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121.JPG
+    084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045.JPG
+    0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004.JPG
+    0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127.JPG
+    ... (423 total entries)
+  ... (38 total entries)
+plantvillage dataset/
+  color/
+    Apple___Apple_scab/
+      00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG
+      01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003.JPG
+      01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112.JPG
+      0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037.JPG
+      023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487.JPG
+      0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055.JPG
+      029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504.JPG
+      03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355.JPG
+      0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966.JPG
+      0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287.JPG
+      03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334.JPG
+      0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079.JPG
+      058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181.JPG
+      0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252.JPG
+      0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347.JPG
+      ... (630 total entries)
+    Apple___Black_rot/
+      0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727.JPG
+      00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593.JPG
+      0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734.JPG
+      0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079.JPG
+      01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024.JPG
+      02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948.JPG
+      02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828.JPG
+      02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584.JPG
+      028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748.JPG
+      032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778.JPG
+      033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710.JPG
+      03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681.JPG
+      04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970.JPG
+      04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782.JPG
+      05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005.JPG
+      ... (621 total entries)
+    Apple___Cedar_apple_rust/
+      025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655.JPG
+      0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667.JPG
+      0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805.JPG
+      04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394.JPG
+      052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742.JPG
+      064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839.JPG
+      072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133.JPG
+      09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG
+      097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861.JPG
+      0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807.JPG
+      0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762.JPG
+      0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014.JPG
+      0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619.JPG
+      112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365.JPG
+      11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874.JPG
+      ... (275 total entries)
+    Apple___healthy/
+      0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672.JPG
+      00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709.JPG
+      0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776.JPG
+      00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669.JPG
+      00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708.JPG
+      010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948.JPG
+      011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544.JPG
+      013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480.JPG
+      017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279.JPG
+      0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941.JPG
+      0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042.JPG
+      01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977.JPG
+      01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515.JPG
+      022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131.JPG
+      023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538.JPG
+      ... (1645 total entries)
+    Blueberry___healthy/
+      008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431.JPG
+      00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681.JPG
+      011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311.JPG
+      0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347.JPG
+      013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120.JPG
+      01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545.JPG
+      02159532-6430-4006-a245-421593949304___RS_HL 2686.JPG
+      021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344.JPG
+      022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317.JPG
+      0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456.JPG
+      0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297.JPG
+      02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546.JPG
+      02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500.JPG
+      02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652.JPG
+      02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629.JPG
+      ... (1502 total entries)
+    Cherry_(including_sour)___Powdery_mildew/
+      00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267.JPG
+      00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748.JPG
+      00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812.JPG
+      00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917.JPG
+      00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479.JPG
+      012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423.JPG
+      02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868.JPG
+      02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593.JPG
+      02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699.JPG
+      02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450.JPG
+      03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372.JPG
+      0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434.JPG
+      03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252.JPG
+      041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392.JPG
+      042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152.JPG
+      ... (1052 total entries)
+    Cherry_(including_sour)___healthy/
+      0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092.JPG
+      002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655.JPG
+      0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765.JPG
+      005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679.JPG
+      0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277.JPG
+      00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156.JPG
+      011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165.JPG
+      014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842.JPG
+      01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836.JPG
+      02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259.JPG
+      02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582.JPG
+      02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892.JPG
+      02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723.JPG
+      036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600.JPG
+      03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298.JPG
+      ... (854 total entries)
+    Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+      00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357.JPG
+      00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655.JPG
+      0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378.JPG
+      0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287.JPG
+      01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276.JPG
+      02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631.JPG
+      038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480.JPG
+      045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313.JPG
+      05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335.JPG
+      05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315.JPG
+      0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy.jpg
+      065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337.JPG
+      06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288.JPG
+      06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy.jpg
+      06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656.JPG
+      ... (513 total entries)
+    Corn_(maize)___Common_rust_/
+      RS_Rust 1563.JPG
+      RS_Rust 1564.JPG
+      RS_Rust 1565.JPG
+      RS_Rust 1566.JPG
+      RS_Rust 1567.JPG
+      RS_Rust 1568.JPG
+      RS_Rust 1569.JPG
+      RS_Rust 1570.JPG
+      RS_Rust 1571.JPG
+      RS_Rust 1572.JPG
+      RS_Rust 1573.JPG
+      RS_Rust 1574.JPG
+      RS_Rust 1575.JPG
+      RS_Rust 1576.JPG
+      RS_Rust 1577.JPG
+      ... (1192 total entries)
+    Corn_(maize)___Northern_Leaf_Blight/
+      005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy.jpg
+      0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121.JPG
+      008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2.jpg
+      00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932.JPG
+      00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645.JPG
+      0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2.jpg
+      011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128.JPG
+      019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284.JPG
+      022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476.JPG
+      024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992.JPG
+      02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy.jpg
+      028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023.JPG
+      028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844.JPG
+      02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546.JPG
+      033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2.jpg
+      ... (985 total entries)
+    Corn_(maize)___healthy/
+      00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2.jpg
+      00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2.jpg
+      01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy.jpg
+      026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy.jpg
+      028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy.jpg
+      0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2.jpg
+      02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy.jpg
+      02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy.jpg
+      03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602.JPG
+      0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy.jpg
+      03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2.jpg
+      03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2.jpg
+      04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2.jpg
+      0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3.jpg
+      04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2.jpg
+      ... (1162 total entries)
+    Grape___Black_rot/
+      00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376.JPG
+      003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184.JPG
+      004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626.JPG
+      006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470.JPG
+      00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664.JPG
+      0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429.JPG
+      00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244.JPG
+      00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508.JPG
+      012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036.JPG
+      017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014.JPG
+      01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050.JPG
+      02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552.JPG
+      02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753.JPG
+      02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063.JPG
+      02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323.JPG
+      ... (1180 total entries)
+    Grape___Esca_(Black_Measles)/
+      0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399.JPG
+      00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990.JPG
+      00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197.JPG
+      01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153.JPG
+      011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288.JPG
+      011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096.JPG
+      019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744.JPG
+      01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113.JPG
+      02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908.JPG
+      023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834.JPG
+      025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282.JPG
+      0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396.JPG
+      02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062.JPG
+      0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231.JPG
+      037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944.JPG
+      ... (1383 total entries)
+    Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+      0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508.JPG
+      0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647.JPG
+      002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740.JPG
+      00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431.JPG
+      00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653.JPG
+      01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626.JPG
+      019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742.JPG
+      01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530.JPG
+      01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755.JPG
+      01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610.JPG
+      0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639.JPG
+      0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392.JPG
+      02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504.JPG
+      0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591.JPG
+      039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713.JPG
+      ... (1076 total entries)
+    Grape___healthy/
+      00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067.JPG
+      0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103.JPG
+      0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176.JPG
+      02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078.JPG
+      03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070.JPG
+      03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035.JPG
+      04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055.JPG
+      05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111.JPG
+      0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948.JPG
+      0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017.JPG
+      07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957.JPG
+      07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121.JPG
+      084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045.JPG
+      0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004.JPG
+      0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127.JPG
+      ... (423 total entries)
+    ... (38 total entries)
+  grayscale/
+    Apple___Apple_scab/
+      00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG
+      01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003.JPG
+      01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112.JPG
+      0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037.JPG
+      023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487.JPG
+      0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055.JPG
+      029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504.JPG
+      03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355.JPG
+      0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966.JPG
+      0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287.JPG
+      03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334.JPG
+      0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079.JPG
+      058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181.JPG
+      0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252.JPG
+      0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347.JPG
+      ... (630 total entries)
+    Apple___Black_rot/
+      0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727.JPG
+      00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593.JPG
+      0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734.JPG
+      0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079.JPG
+      01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024.JPG
+      02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948.JPG
+      02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828.JPG
+      02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584.JPG
+      028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748.JPG
+      032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778.JPG
+      033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710.JPG
+      03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681.JPG
+      04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970.JPG
+      04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782.JPG
+      05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005.JPG
+      ... (621 total entries)
+    Apple___Cedar_apple_rust/
+      025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655.JPG
+      0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667.JPG
+      0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805.JPG
+      04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394.JPG
+      052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742.JPG
+      064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839.JPG
+      072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133.JPG
+      09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG
+      097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861.JPG
+      0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807.JPG
+      0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762.JPG
+      0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014.JPG
+      0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619.JPG
+      112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365.JPG
+      11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874.JPG
+      ... (275 total entries)
+    Apple___healthy/
+      0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672.JPG
+      00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709.JPG
+      0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776.JPG
+      00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669.JPG
+      00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708.JPG
+      010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948.JPG
+      011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544.JPG
+      013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480.JPG
+      017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279.JPG
+      0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941.JPG
+      0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042.JPG
+      01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977.JPG
+      01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515.JPG
+      022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131.JPG
+      023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538.JPG
+      ... (1645 total entries)
+    Blueberry___healthy/
+      008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431.JPG
+      00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681.JPG
+      011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311.JPG
+      0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347.JPG
+      013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120.JPG
+      01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545.JPG
+      02159532-6430-4006-a245-421593949304___RS_HL 2686.JPG
+      021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344.JPG
+      022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317.JPG
+      0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456.JPG
+      0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297.JPG
+      02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546.JPG
+      02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500.JPG
+      02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652.JPG
+      02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629.JPG
+      ... (1502 total entries)
+    Cherry_(including_sour)___Powdery_mildew/
+      00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267.JPG
+      00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748.JPG
+      00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812.JPG
+      00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917.JPG
+      00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479.JPG
+      012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423.JPG
+      02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868.JPG
+      02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593.JPG
+      02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699.JPG
+      02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450.JPG
+      03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372.JPG
+      0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434.JPG
+      03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252.JPG
+      041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392.JPG
+      042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152.JPG
+      ... (1052 total entries)
+    Cherry_(including_sour)___healthy/
+      0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092.JPG
+      002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655.JPG
+      0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765.JPG
+      005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679.JPG
+      0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277.JPG
+      00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156.JPG
+      011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165.JPG
+      014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842.JPG
+      01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836.JPG
+      02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259.JPG
+      02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582.JPG
+      02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892.JPG
+      02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723.JPG
+      036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600.JPG
+      03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298.JPG
+      ... (854 total entries)
+    Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+      00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357.JPG
+      00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655.JPG
+      0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378.JPG
+      0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287.JPG
+      01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276.JPG
+      02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631.JPG
+      038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480.JPG
+      045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313.JPG
+      05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335.JPG
+      05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315.JPG
+      0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy.jpg
+      065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337.JPG
+      06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288.JPG
+      06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy.jpg
+      06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656.JPG
+      ... (513 total entries)
+    Corn_(maize)___Common_rust_/
+      RS_Rust 1563.JPG
+      RS_Rust 1564.JPG
+      RS_Rust 1565.JPG
+      RS_Rust 1566.JPG
+      RS_Rust 1567.JPG
+      RS_Rust 1568.JPG
+      RS_Rust 1569.JPG
+      RS_Rust 1570.JPG
+      RS_Rust 1571.JPG
+      RS_Rust 1572.JPG
+      RS_Rust 1573.JPG
+      RS_Rust 1574.JPG
+      RS_Rust 1575.JPG
+      RS_Rust 1576.JPG
+      RS_Rust 1577.JPG
+      ... (1192 total entries)
+    Corn_(maize)___Northern_Leaf_Blight/
+      005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy.jpg
+      0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121.JPG
+      008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2.jpg
+      00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932.JPG
+      00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645.JPG
+      0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2.jpg
+      011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128.JPG
+      019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284.JPG
+      022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476.JPG
+      024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992.JPG
+      02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy.jpg
+      028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023.JPG
+      028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844.JPG
+      02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546.JPG
+      033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2.jpg
+      ... (985 total entries)
+    Corn_(maize)___healthy/
+      00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2.jpg
+      00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2.jpg
+      01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy.jpg
+      026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy.jpg
+      028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy.jpg
+      0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2.jpg
+      02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy.jpg
+      02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy.jpg
+      03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602.JPG
+      0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy.jpg
+      03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2.jpg
+      03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2.jpg
+      04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2.jpg
+      0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3.jpg
+      04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2.jpg
+      ... (1162 total entries)
+    Grape___Black_rot/
+      00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376.JPG
+      003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184.JPG
+      004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626.JPG
+      006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470.JPG
+      00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664.JPG
+      0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429.JPG
+      00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244.JPG
+      00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508.JPG
+      012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036.JPG
+      017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014.JPG
+      01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050.JPG
+      02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552.JPG
+      02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753.JPG
+      02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063.JPG
+      02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323.JPG
+      ... (1180 total entries)
+    Grape___Esca_(Black_Measles)/
+      0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399.JPG
+      00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990.JPG
+      00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197.JPG
+      01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153.JPG
+      011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288.JPG
+      011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096.JPG
+      019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744.JPG
+      01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113.JPG
+      02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908.JPG
+      023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834.JPG
+      025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282.JPG
+      0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396.JPG
+      02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062.JPG
+      0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231.JPG
+      037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944.JPG
+      ... (1383 total entries)
+    Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+      0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508.JPG
+      0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647.JPG
+      002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740.JPG
+      00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431.JPG
+      00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653.JPG
+      01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626.JPG
+      019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742.JPG
+      01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530.JPG
+      01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755.JPG
+      01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610.JPG
+      0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639.JPG
+      0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392.JPG
+      02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504.JPG
+      0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591.JPG
+      039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713.JPG
+      ... (1076 total entries)
+    Grape___healthy/
+      00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067.JPG
+      0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103.JPG
+      0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176.JPG
+      02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078.JPG
+      03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070.JPG
+      03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035.JPG
+      04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055.JPG
+      05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111.JPG
+      0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948.JPG
+      0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017.JPG
+      07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957.JPG
+      07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121.JPG
+      084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045.JPG
+      0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004.JPG
+      0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127.JPG
+      ... (423 total entries)
+    ... (38 total entries)
+  segmented/
+    Apple___Apple_scab/
+      00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335_final_masked.jpg
+      01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003_final_masked.jpg
+      01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112_final_masked.jpg
+      0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037_final_masked.jpg
+      023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487_final_masked.jpg
+      0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055_final_masked.jpg
+      029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504_final_masked.jpg
+      03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355_final_masked.jpg
+      0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966_final_masked.jpg
+      0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287_final_masked.jpg
+      03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334_final_masked.jpg
+      0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079_final_masked.jpg
+      058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181_final_masked.jpg
+      0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252_final_masked.jpg
+      0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347_final_masked.jpg
+      ... (630 total entries)
+    Apple___Black_rot/
+      0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727_final_masked.jpg
+      00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593_final_masked.jpg
+      0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734_final_masked.jpg
+      0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079_final_masked.jpg
+      01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024_final_masked.jpg
+      02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948_final_masked.jpg
+      02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828_final_masked.jpg
+      02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584_final_masked.jpg
+      028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748_final_masked.jpg
+      032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778_final_masked.jpg
+      033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710_final_masked.jpg
+      03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681_final_masked.jpg
+      04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970_final_masked.jpg
+      04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782_final_masked.jpg
+      05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005_final_masked.jpg
+      ... (621 total entries)
+    Apple___Cedar_apple_rust/
+      025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655_final_masked.jpg
+      0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667_final_masked.jpg
+      0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805_final_masked.jpg
+      04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394_final_masked.jpg
+      052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742_final_masked.jpg
+      064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839_final_masked.jpg
+      072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133_final_masked.jpg
+      09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024_final_masked.jpg
+      097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861_final_masked.jpg
+      0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807_final_masked.jpg
+      0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762_final_masked.jpg
+      0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014_final_masked.jpg
+      0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619_final_masked.jpg
+      112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365_final_masked.jpg
+      11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874_final_masked.jpg
+      ... (275 total entries)
+    Apple___healthy/
+      0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672_final_masked.jpg
+      00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709_final_masked.jpg
+      0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776_final_masked.jpg
+      00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669_final_masked.jpg
+      00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708_final_masked.jpg
+      010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948_final_masked.jpg
+      011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544_final_masked.jpg
+      013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480_final_masked.jpg
+      017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279_final_masked.jpg
+      0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941_final_masked.jpg
+      0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042_final_masked.jpg
+      01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977_final_masked.jpg
+      01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515_final_masked.jpg
+      022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131_final_masked.jpg
+      023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538_final_masked.jpg
+      ... (1645 total entries)
+    Blueberry___healthy/
+      008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431_final_masked.jpg
+      00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681_final_masked.jpg
+      011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311_final_masked.jpg
+      0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347_final_masked.jpg
+      013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120_final_masked.jpg
+      01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545_final_masked.jpg
+      02159532-6430-4006-a245-421593949304___RS_HL 2686_final_masked.jpg
+      021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344_final_masked.jpg
+      022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317_final_masked.jpg
+      0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456_final_masked.jpg
+      0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297_final_masked.jpg
+      02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546_final_masked.jpg
+      02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500_final_masked.jpg
+      02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652_final_masked.jpg
+      02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629_final_masked.jpg
+      ... (1502 total entries)
+    Cherry_(including_sour)___Powdery_mildew/
+      00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267_final_masked.jpg
+      00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748_final_masked.jpg
+      00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812_final_masked.jpg
+      00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917_final_masked.jpg
+      00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479_final_masked.jpg
+      012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423_final_masked.jpg
+      02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868_final_masked.jpg
+      02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593_final_masked.jpg
+      02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699_final_masked.jpg
+      02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450_final_masked.jpg
+      03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372_final_masked.jpg
+      0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434_final_masked.jpg
+      03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252_final_masked.jpg
+      041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392_final_masked.jpg
+      042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152_final_masked.jpg
+      ... (1052 total entries)
+    Cherry_(including_sour)___healthy/
+      0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092_final_masked.jpg
+      002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655_final_masked.jpg
+      0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765_final_masked.jpg
+      005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679_final_masked.jpg
+      0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277_final_masked.jpg
+      00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156_final_masked.jpg
+      011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165_final_masked.jpg
+      014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842_final_masked.jpg
+      01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836_final_masked.jpg
+      02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259_final_masked.jpg
+      02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582_final_masked.jpg
+      02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892_final_masked.jpg
+      02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723_final_masked.jpg
+      036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600_final_masked.jpg
+      03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298_final_masked.jpg
+      ... (854 total entries)
+    Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+      00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357_final_masked.jpg
+      00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655_final_masked.jpg
+      0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378_final_masked.jpg
+      0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287_final_masked.jpg
+      01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276_final_masked.jpg
+      02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631_final_masked.jpg
+      038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480_final_masked.jpg
+      045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313_final_masked.jpg
+      05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335_final_masked.jpg
+      05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315_final_masked.jpg
+      0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy_final_masked.jpg
+      065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337_final_masked.jpg
+      06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288_final_masked.jpg
+      06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy_final_masked.jpg
+      06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656_final_masked.jpg
+      ... (513 total entries)
+    Corn_(maize)___Common_rust_/
+      007f6e89-3e7c-4e6a-8ef6-8058c7133799___RS_Rust 1933_final_masked.jpg
+      00ab8410-2b0e-4877-b947-cc3889be8d79___RS_Rust 2562_final_masked.jpg
+      00b29f2a-2ee9-4461-a97e-1d8bdf5a1d3e___RS_Rust 1566_final_masked.jpg
+      00cbdbc2-0bef-477e-999f-20e0f36a2cf6___RS_Rust 2725_final_masked.jpg
+      00db1ede-2fbf-42ba-bbe7-69d974be3dda___RS_Rust 1675_final_masked.jpg
+      011cb947-31f6-4231-aade-c35f434d0218___RS_Rust 2292_final_masked.jpg
+      01b9df41-d0c6-4935-8005-c3895071da5c___RS_Rust 1644_final_masked.jpg
+      01c81355-a360-4a5b-a0d9-30b0b6763059___RS_Rust 1619_final_masked.jpg
+      01f900b2-ae38-4884-9bcf-e9321f09f26c___RS_Rust 2351_final_masked.jpg
+      020de84e-d9e7-4bd3-8890-0735f1c5fc0b___RS_Rust 1671_final_masked.jpg
+      026d9035-fa70-4a18-9033-d77f54c84d43___RS_Rust 1634_final_masked.jpg
+      03c1151d-6408-4aba-b652-74e12378ef65___RS_Rust 2585_final_masked.jpg
+      03f21e10-d906-42ec-a4d2-880b1419691b___RS_Rust 1808_final_masked.jpg
+      04051bfd-1b07-4576-b08e-e48162e30b67___RS_Rust 1662_final_masked.jpg
+      04876bfd-d1da-4e61-80c4-34e98aae7065___RS_Rust 2153_final_masked.jpg
+      ... (1192 total entries)
+    Corn_(maize)___Northern_Leaf_Blight/
+      005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy_final_masked.jpg
+      0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121_final_masked.jpg
+      008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2_final_masked.jpg
+      00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932_final_masked.jpg
+      00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645_final_masked.jpg
+      0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2_final_masked.jpg
+      011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128_final_masked.jpg
+      019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284_final_masked.jpg
+      022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476_final_masked.jpg
+      024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992_final_masked.jpg
+      02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy_final_masked.jpg
+      028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023_final_masked.jpg
+      028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844_final_masked.jpg
+      02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546_final_masked.jpg
+      033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2_final_masked.jpg
+      ... (985 total entries)
+    Corn_(maize)___healthy/
+      00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2_final_masked.jpg
+      00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2_final_masked.jpg
+      01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy_final_masked.jpg
+      026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy_final_masked.jpg
+      028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy_final_masked.jpg
+      0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2_final_masked.jpg
+      02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy_final_masked.jpg
+      02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy_final_masked.jpg
+      03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602_final_masked.jpg
+      0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy_final_masked.jpg
+      03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2_final_masked.jpg
+      03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2_final_masked.jpg
+      04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2_final_masked.jpg
+      0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3_final_masked.jpg
+      04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2_final_masked.jpg
+      ... (1162 total entries)
+    Grape___Black_rot/
+      00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376_final_masked.jpg
+      003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184_final_masked.jpg
+      004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626_final_masked.jpg
+      006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470_final_masked.jpg
+      00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664_final_masked.jpg
+      0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429_final_masked.jpg
+      00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244_final_masked.jpg
+      00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508_final_masked.jpg
+      012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036_final_masked.jpg
+      017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014_final_masked.jpg
+      01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050_final_masked.jpg
+      02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552_final_masked.jpg
+      02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753_final_masked.jpg
+      02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063_final_masked.jpg
+      02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323_final_masked.jpg
+      ... (1180 total entries)
+    Grape___Esca_(Black_Measles)/
+      0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399_final_masked.jpg
+      00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990_final_masked.jpg
+      00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197_final_masked.jpg
+      01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153_final_masked.jpg
+      011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288_final_masked.jpg
+      011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096_final_masked.jpg
+      019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744_final_masked.jpg
+      01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113_final_masked.jpg
+      02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908_final_masked.jpg
+      023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834_final_masked.jpg
+      025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282_final_masked.jpg
+      0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396_final_masked.jpg
+      02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062_final_masked.jpg
+      0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231_final_masked.jpg
+      037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944_final_masked.jpg
+      ... (1384 total entries)
+    Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+      0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508_final_masked.jpg
+      0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647_final_masked.jpg
+      002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740_final_masked.jpg
+      00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431_final_masked.jpg
+      00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653_final_masked.jpg
+      01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626_final_masked.jpg
+      019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742_final_masked.jpg
+      01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530_final_masked.jpg
+      01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755_final_masked.jpg
+      01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610_final_masked.jpg
+      0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639_final_masked.jpg
+      0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392_final_masked.jpg
+      02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504_final_masked.jpg
+      0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591_final_masked.jpg
+      039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713_final_masked.jpg
+      ... (1076 total entries)
+    Grape___healthy/
+      00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067_final_masked.jpg
+      0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103_final_masked.jpg
+      0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176_final_masked.jpg
+      02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078_final_masked.jpg
+      03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070_final_masked.jpg
+      03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035_final_masked.jpg
+      04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055_final_masked.jpg
+      05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111_final_masked.jpg
+      0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948_final_masked.jpg
+      0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017_final_masked.jpg
+      07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957_final_masked.jpg
+      07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121_final_masked.jpg
+      084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045_final_masked.jpg
+      0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004_final_masked.jpg
+      0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127_final_masked.jpg
+      ... (423 total entries)
+    ... (38 total entries)
+segmented/
+  Apple___Apple_scab/
+    00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335_final_masked.jpg
+    01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003_final_masked.jpg
+    01f3deaa-6143-4b6c-9c22-620a46d8be04___FREC_Scab 3112_final_masked.jpg
+    0208f4eb-45a4-4399-904e-989ac2c6257c___FREC_Scab 3037_final_masked.jpg
+    023123cb-7b69-4c9f-a521-766d7c8543bb___FREC_Scab 3487_final_masked.jpg
+    0261a6e4-21f8-481a-8827-b674e6955644___FREC_Scab 3055_final_masked.jpg
+    029424b0-0ef5-491b-9ef5-069190d24d8f___FREC_Scab 3504_final_masked.jpg
+    03354abb-aa1c-4f9d-a1ef-9f40505cd539___FREC_Scab 3355_final_masked.jpg
+    0340dc35-5215-48ab-8db7-06af99fcb358___FREC_Scab 2966_final_masked.jpg
+    0395b847-2c73-4674-826f-33a6afb5b4fe___FREC_Scab 3287_final_masked.jpg
+    03eccb1a-0368-4ac7-9f48-7546037b775a___FREC_Scab 3334_final_masked.jpg
+    0537ad56-3d24-4e97-a947-65b9b37f8988___FREC_Scab 3079_final_masked.jpg
+    058d5e64-2c57-45ba-94cb-ac83fd1885a0___FREC_Scab 3181_final_masked.jpg
+    0631708e-5bac-4611-8ff9-6d5ee87ce3b3___FREC_Scab 3252_final_masked.jpg
+    0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347_final_masked.jpg
+    ... (630 total entries)
+  Apple___Black_rot/
+    0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S 8727_final_masked.jpg
+    00e909aa-e3ae-4558-9961-336bb0f35db3___JR_FrgE.S 8593_final_masked.jpg
+    0139bc6d-391c-4fd1-bcae-cc74dabfddd7___JR_FrgE.S 2734_final_masked.jpg
+    0199a733-6d3f-4e66-a903-2d1d34457871___JR_FrgE.S 3079_final_masked.jpg
+    01e94c43-0879-4e8c-9b61-c48cfed88dab___JR_FrgE.S 3024_final_masked.jpg
+    02168189-aa75-4284-a7f0-8ca5901ea783___JR_FrgE.S 2948_final_masked.jpg
+    02186b4f-a9e1-4d19-ae3d-6cfb0f4b106a___JR_FrgE.S 2828_final_masked.jpg
+    02859ed3-f56a-4315-82a5-c1cb72717225___JR_FrgE.S 8584_final_masked.jpg
+    028d1f49-303d-46b6-ae2b-50862fab78ca___JR_FrgE.S 2748_final_masked.jpg
+    032cf235-07ff-478f-b347-d55c07835bc5___JR_FrgE.S 8778_final_masked.jpg
+    033b1492-d5cf-4de7-a195-941f7780e092___JR_FrgE.S 8710_final_masked.jpg
+    03fd7154-2e33-4fb6-999d-bfc3a3f467fe___JR_FrgE.S 8681_final_masked.jpg
+    04de1246-ecfa-4d2c-bc2d-16b81b0bd364___JR_FrgE.S 2970_final_masked.jpg
+    04e74a0c-bda4-4e06-aeab-ec24b1007994___JR_FrgE.S 8782_final_masked.jpg
+    05421496-3901-424d-b44a-1be1f2734cf1___JR_FrgE.S 3005_final_masked.jpg
+    ... (621 total entries)
+  Apple___Cedar_apple_rust/
+    025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust 3655_final_masked.jpg
+    0321e067-d13b-47d0-b3a6-76ba6f357d02___FREC_C.Rust 3667_final_masked.jpg
+    0340baaa-e9cc-4c04-8f9b-c204180d9ae3___FREC_C.Rust 3805_final_masked.jpg
+    04da297e-5238-41b1-a8a0-0c87c6c2f21f___FREC_C.Rust 4394_final_masked.jpg
+    052e3deb-0499-4685-bc39-cea7f1df0700___FREC_C.Rust 3742_final_masked.jpg
+    064b14b5-af1b-4bcf-afe7-a061e5669dbb___FREC_C.Rust 9839_final_masked.jpg
+    072f23fb-0b1a-43b9-a548-3981120ff33c___FREC_C.Rust 0133_final_masked.jpg
+    09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024_final_masked.jpg
+    097f37e1-d490-42e6-84d2-51e5385bf886___FREC_C.Rust 9861_final_masked.jpg
+    0a41c25a-f9a6-4c34-8e5c-7f89a6ac4c40___FREC_C.Rust 9807_final_masked.jpg
+    0cd24b0c-0a9d-483f-8734-5c08988e029f___FREC_C.Rust 3762_final_masked.jpg
+    0ce943e7-3fed-41cb-8430-0e0f54ff2bc4___FREC_C.Rust 0014_final_masked.jpg
+    0fbdccdc-fb96-475a-92bb-65734592c895___FREC_C.Rust 3619_final_masked.jpg
+    112cfc79-00ab-4920-a235-977c134bdb5d___FREC_C.Rust 4365_final_masked.jpg
+    11a41b2a-5bf3-458a-801c-0898dd280c1e___FREC_C.Rust 9874_final_masked.jpg
+    ... (275 total entries)
+  Apple___healthy/
+    0055dd26-23a7-4415-ac61-e0b44ebfaf80___RS_HL 5672_final_masked.jpg
+    00907d8b-6ae6-4306-bfd7-d54471981a86___RS_HL 5709_final_masked.jpg
+    0098dbd9-286a-4d6a-bf4b-5459d66f88c0___RS_HL 5776_final_masked.jpg
+    00a6039c-e425-4f7d-81b1-d6b0e668517e___RS_HL 7669_final_masked.jpg
+    00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708_final_masked.jpg
+    010125c0-e6f2-4f3d-b469-dd98ffecbb01___RS_HL 7948_final_masked.jpg
+    011d02f3-5c3c-4484-a384-b1a0a0dbdec1___RS_HL 7544_final_masked.jpg
+    013b7c70-5e3b-42b7-86af-167815a5b04f___RS_HL 7480_final_masked.jpg
+    017fd21b-142f-4988-849a-5fd316ea9a1b___RS_HL 6279_final_masked.jpg
+    0181db4e-718e-41bc-b6ed-92863471fa85___RS_HL 5941_final_masked.jpg
+    0199bffc-baee-499f-8e03-5dadb8b671be___RS_HL 8042_final_masked.jpg
+    01b32971-5125-4982-98e2-22daa9ae864a___RS_HL 7977_final_masked.jpg
+    01efa999-757d-487e-8250-27c7854c0ca8___RS_HL 7515_final_masked.jpg
+    022b515d-41fd-448e-abac-e8722c32d864___RS_HL 8131_final_masked.jpg
+    023810b0-18e6-4352-9dfa-c2f4c034cda5___RS_HL 7538_final_masked.jpg
+    ... (1645 total entries)
+  Blueberry___healthy/
+    008c85d0-a954-4127-bd26-861dc8a1e6ff___RS_HL 2431_final_masked.jpg
+    00fee259-67b7-4dd7-8b36-12503bbdba14___RS_HL 2681_final_masked.jpg
+    011405e4-a92a-44b6-9f04-10fec28d93f5___RS_HL 2311_final_masked.jpg
+    0137389a-9b78-4a94-afdb-c2b50861f89c___RS_HL 2347_final_masked.jpg
+    013ffdc5-cbd1-4202-b0f1-8fd7c1ffc0b8___RS_HL 5120_final_masked.jpg
+    01ca7a9f-80a6-4693-a067-50684beda81d___RS_HL 2545_final_masked.jpg
+    02159532-6430-4006-a245-421593949304___RS_HL 2686_final_masked.jpg
+    021e662c-f3a0-4e08-a2cf-346748f95475___RS_HL 0344_final_masked.jpg
+    022c53af-7964-4692-8dee-04a563d352bf___RS_HL 2317_final_masked.jpg
+    0257329a-7b6b-42a5-99db-0dbdf116b89d___RS_HL 5456_final_masked.jpg
+    0293e23d-2961-4271-9a6c-1a568d942887___RS_HL 5297_final_masked.jpg
+    02a9797d-ff35-4abb-9f0a-33a86208f2a0___RS_HL 0546_final_masked.jpg
+    02aa57b8-95c2-49a0-a8ee-4ec96bb966da___RS_HL 0500_final_masked.jpg
+    02bc9464-dc06-4289-88a6-54a0cbee99df___RS_HL 0652_final_masked.jpg
+    02ecb53f-24e1-4e6b-bbaf-ae3bfe36e349___RS_HL 0629_final_masked.jpg
+    ... (1502 total entries)
+  Cherry_(including_sour)___Powdery_mildew/
+    00705aa7-5ea2-4419-9440-8ba65e108eb9___FREC_Pwd.M 0267_final_masked.jpg
+    00b7df55-c789-43d6-a02e-a579ac9d07e6___FREC_Pwd.M 4748_final_masked.jpg
+    00d12ac0-a293-47e0-a4c6-a80f37204c39___FREC_Pwd.M 4812_final_masked.jpg
+    00e0a4ab-ecbd-4560-a71c-b19d86bb087c___FREC_Pwd.M 4917_final_masked.jpg
+    00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479_final_masked.jpg
+    012b55cf-de7a-483a-9118-0fd8ff012185___FREC_Pwd.M 0423_final_masked.jpg
+    02a749ab-890a-4165-9f17-c1e30a56ef41___FREC_Pwd.M 4868_final_masked.jpg
+    02d6722b-1f47-4f11-b831-be4bba26b158___FREC_Pwd.M 4593_final_masked.jpg
+    02d6c81a-c5dc-4b29-848a-7a0b8c42e5ed___FREC_Pwd.M 4699_final_masked.jpg
+    02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M 0450_final_masked.jpg
+    03132cd9-1649-4de0-aa41-de6eb60d4878___FREC_Pwd.M 0372_final_masked.jpg
+    0325a93a-4fa1-4eae-a6a9-fc6baa82ca7f___FREC_Pwd.M 0434_final_masked.jpg
+    03c5abe8-66c5-44d7-af97-3f55b3917610___FREC_Pwd.M 0252_final_masked.jpg
+    041d97fc-da3d-4420-8f6f-2be0e7070f28___FREC_Pwd.M 0392_final_masked.jpg
+    042944e9-9d32-4655-9c99-3908c8d30e72___FREC_Pwd.M 5152_final_masked.jpg
+    ... (1052 total entries)
+  Cherry_(including_sour)___healthy/
+    0008f3d3-2f85-4973-be9a-1b520b8b59fc___JR_HL 4092_final_masked.jpg
+    002efba9-09b3-43de-93b7-5c2460185cde___JR_HL 9655_final_masked.jpg
+    0048afb8-b950-4c57-9e72-7e26282327ee___JR_HL 9765_final_masked.jpg
+    005f183c-0a73-4738-91f7-c0a0e02cd9e3___JR_HL 9679_final_masked.jpg
+    0086a8c7-1440-423e-939d-d0567b1fc4e4___JR_HL 4277_final_masked.jpg
+    00a8e886-d172-4261-85e2-780b3c50ad4d___JR_HL 4156_final_masked.jpg
+    011f07d1-8813-4a63-99c7-e274ab5cc261___JR_HL 4165_final_masked.jpg
+    014161fb-3c15-414b-9af3-00cb51a11d7c___JR_HL 9842_final_masked.jpg
+    01958ee7-f585-4956-90aa-a40dc79102d4___JR_HL 9836_final_masked.jpg
+    02818f40-58e6-4c7d-bfbc-372d89b2045b___JR_HL 4259_final_masked.jpg
+    02a7466b-4847-4a18-bbd9-f0278e7b8d20___JR_HL 9582_final_masked.jpg
+    02b90e70-80a6-415d-b6a8-07e22dead5c4___JR_HL 9892_final_masked.jpg
+    02d14b15-897d-4081-8953-e7d83189cff4___JR_HL 9723_final_masked.jpg
+    036b575a-cbe7-45a4-8b97-15b7ecdf3dee___JR_HL 9600_final_masked.jpg
+    03fac8d0-2e9a-4f2b-b1ce-e93c01f18809___JR_HL 4298_final_masked.jpg
+    ... (854 total entries)
+  Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/
+    00120a18-ff90-46e4-92fb-2b7a10345bd3___RS_GLSp 9357_final_masked.jpg
+    00a20f6f-e8bd-4453-9e25-36ea70feb626___RS_GLSp 4655_final_masked.jpg
+    0140764c-6157-4995-9ada-9c10b81af3b8___RS_GLSp 4378_final_masked.jpg
+    0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp 4287_final_masked.jpg
+    01a02916-5d4c-4256-936b-6b1a9ee65b11___RS_GLSp 9276_final_masked.jpg
+    02e6c80d-c86f-44ca-9d4c-4b100f92a839___RS_GLSp 4631_final_masked.jpg
+    038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480_final_masked.jpg
+    045080ca-8b98-4320-adcc-e431f88c1aaa___RS_GLSp 7313_final_masked.jpg
+    05daf90f-9100-499f-a4aa-ebc5dfc20adf___RS_GLSp 7335_final_masked.jpg
+    05f92471-3cd4-441b-af21-1a02304d0b6c___RS_GLSp 7315_final_masked.jpg
+    0657e6c0-5a6d-4ef3-807a-4e31e57fb683___RS_GLSp 7344 copy_final_masked.jpg
+    065fe7da-dcaf-41be-9332-5ec5ebceb94b___RS_GLSp 9337_final_masked.jpg
+    06785548-9756-4410-b3c2-55cc089276ce___RS_GLSp 4288_final_masked.jpg
+    06830ecc-28d2-4ec9-a553-4d7905a12dbf___RS_GLSp 4355 copy_final_masked.jpg
+    06e94cd0-fe77-4af0-b4ae-664fcd78cfff___RS_GLSp 4656_final_masked.jpg
+    ... (513 total entries)
+  Corn_(maize)___Common_rust_/
+    007f6e89-3e7c-4e6a-8ef6-8058c7133799___RS_Rust 1933_final_masked.jpg
+    00ab8410-2b0e-4877-b947-cc3889be8d79___RS_Rust 2562_final_masked.jpg
+    00b29f2a-2ee9-4461-a97e-1d8bdf5a1d3e___RS_Rust 1566_final_masked.jpg
+    00cbdbc2-0bef-477e-999f-20e0f36a2cf6___RS_Rust 2725_final_masked.jpg
+    00db1ede-2fbf-42ba-bbe7-69d974be3dda___RS_Rust 1675_final_masked.jpg
+    011cb947-31f6-4231-aade-c35f434d0218___RS_Rust 2292_final_masked.jpg
+    01b9df41-d0c6-4935-8005-c3895071da5c___RS_Rust 1644_final_masked.jpg
+    01c81355-a360-4a5b-a0d9-30b0b6763059___RS_Rust 1619_final_masked.jpg
+    01f900b2-ae38-4884-9bcf-e9321f09f26c___RS_Rust 2351_final_masked.jpg
+    020de84e-d9e7-4bd3-8890-0735f1c5fc0b___RS_Rust 1671_final_masked.jpg
+    026d9035-fa70-4a18-9033-d77f54c84d43___RS_Rust 1634_final_masked.jpg
+    03c1151d-6408-4aba-b652-74e12378ef65___RS_Rust 2585_final_masked.jpg
+    03f21e10-d906-42ec-a4d2-880b1419691b___RS_Rust 1808_final_masked.jpg
+    04051bfd-1b07-4576-b08e-e48162e30b67___RS_Rust 1662_final_masked.jpg
+    04876bfd-d1da-4e61-80c4-34e98aae7065___RS_Rust 2153_final_masked.jpg
+    ... (1192 total entries)
+  Corn_(maize)___Northern_Leaf_Blight/
+    005318c8-a5fa-4420-843b-23bdda7322c2___RS_NLB 3853 copy_final_masked.jpg
+    0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB 4121_final_masked.jpg
+    008d9af0-7568-4a67-bb1a-0e915836ddc0___RS_NLB 4165 copy 2_final_masked.jpg
+    00a14441-7a62-4034-bc40-b196aeab2785___RS_NLB 3932_final_masked.jpg
+    00a55069-3fa3-405b-8d87-4d3408a6ed98___RS_NLB 3645_final_masked.jpg
+    0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2_final_masked.jpg
+    011b766d-7744-420d-a1a1-57bdff9b4ddd___RS_NLB 4128_final_masked.jpg
+    019e3ef7-aae4-4fd3-b95f-b4e914df7a39___RS_NLB 4284_final_masked.jpg
+    022817bd-6a93-4b0a-ac39-1cc4094128b1___RS_NLB 3476_final_masked.jpg
+    024fb674-fdcb-4777-a8d6-8a13abb58d8f___RS_NLB 3992_final_masked.jpg
+    02504be2-4192-42f3-957d-df2841103562___RS_NLB 3955 copy_final_masked.jpg
+    028159fc-995e-455a-8d60-6d377580a898___RS_NLB 4023_final_masked.jpg
+    028a7e62-b520-42fe-8607-ee4d4bc6764d___RS_NLB 3844_final_masked.jpg
+    02eee796-1a1e-4d63-8247-a6aac6bfb272___RS_NLB 3546_final_masked.jpg
+    033219ed-54a8-4f95-ab72-c87b90189006___RS_NLB 3818 copy 2_final_masked.jpg
+    ... (985 total entries)
+  Corn_(maize)___healthy/
+    00031d74-076e-4aef-b040-e068cd3576eb___R.S_HL 8315 copy 2_final_masked.jpg
+    00665f92-adb0-41eb-bba7-9eeadecfe10e___R.S_HL 8325 copy 2_final_masked.jpg
+    01c3bf88-d315-42a3-8fa1-fc80a05c97f1___R.S_HL 8189 copy_final_masked.jpg
+    026bd735-b9f4-4eab-86f3-23df15dbec95___R.S_HL 7938 copy_final_masked.jpg
+    028ed539-32f5-4540-a6af-466179837de9___R.S_HL 8212 copy_final_masked.jpg
+    0292a37f-07d0-401f-83d8-cde4c98547d8___R.S_HL 0630 copy 2_final_masked.jpg
+    02ab8d66-0385-43db-855a-ea5f8811ebd5___R.S_HL 7954 copy_final_masked.jpg
+    02e76b75-f201-44ee-a694-35edf97cc82b___R.S_HL 8015 copy_final_masked.jpg
+    03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602_final_masked.jpg
+    0305800e-de91-4742-b923-f9a1c0799392___R.S_HL 8116 copy_final_masked.jpg
+    03297f41-30ff-42db-a482-84665adfe4da___R.S_HL 8260 copy 2_final_masked.jpg
+    03fc887f-e206-4233-8829-ff7070bb3449___R.S_HL 5519 copy 2_final_masked.jpg
+    04506233-3040-4d4b-9e8f-acdd0a1e9693___R.S_HL 7942 copy 2_final_masked.jpg
+    0487da8b-736c-4310-82d2-fa8acf4aed07___R.S_HL 0646 copy 3_final_masked.jpg
+    04ed222d-d287-4199-b412-f2f07c872bee___R.S_HL 8101 copy 2_final_masked.jpg
+    ... (1162 total entries)
+  Grape___Black_rot/
+    00090b0f-c140-4e77-8d20-d39f67b75fcc___FAM_B.Rot 0376_final_masked.jpg
+    003d09ef-e16c-4e8a-badf-847d46cb3dc0___FAM_B.Rot 3184_final_masked.jpg
+    004175d8-dc74-4285-8401-3cc9565730bb___FAM_B.Rot 0626_final_masked.jpg
+    006efc68-9e46-4168-921c-10ef8065702c___FAM_B.Rot 3470_final_masked.jpg
+    00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot 0664_final_masked.jpg
+    0093ee81-2439-414c-bfb5-a5b6cd6aea72___FAM_B.Rot 3429_final_masked.jpg
+    00cab05d-e87b-4cf6-87d8-284f3ec99626___FAM_B.Rot 3244_final_masked.jpg
+    00cff577-afd4-4e36-ac9c-a52aa6ae5949___FAM_B.Rot 0508_final_masked.jpg
+    012658ed-f0a3-4791-a996-7115dd1e6e3b___FAM_B.Rot 3036_final_masked.jpg
+    017268b1-c25c-4299-a566-1b7ba3f1591e___FAM_B.Rot 3014_final_masked.jpg
+    01d4aa8b-cc91-4475-b80c-b5b0ca10f1f6___FAM_B.Rot 3050_final_masked.jpg
+    02a1df6c-97ec-41d4-b00c-9510741a39dc___FAM_B.Rot 0552_final_masked.jpg
+    02c0e019-97c2-48f5-ac40-90b8789e6288___FAM_B.Rot 0753_final_masked.jpg
+    02e135dd-a02e-40a5-a049-4b5fa978445c___FAM_B.Rot 3063_final_masked.jpg
+    02f75392-dbad-4ab8-a35d-d391f9d57113___FAM_B.Rot 3323_final_masked.jpg
+    ... (1180 total entries)
+  Grape___Esca_(Black_Measles)/
+    0075b632-2e34-4e4f-9697-fe2b332b7ef8___FAM_B.Msls 4399_final_masked.jpg
+    00b65fe8-cee1-4b68-8ef4-1211814f2845___FAM_B.Msls 3990_final_masked.jpg
+    00c247e8-48d2-4a56-a9f3-4eacfb4d85be___FAM_B.Msls 4197_final_masked.jpg
+    01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls 1153_final_masked.jpg
+    011bb69d-fb9c-4fb9-b8cc-031e91270ec2___FAM_B.Msls 4288_final_masked.jpg
+    011f307f-e06b-4604-9419-d940f7b00290___FAM_B.Msls 1096_final_masked.jpg
+    019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744_final_masked.jpg
+    01c74b8d-1113-47c0-86a3-6ceea27853c0___FAM_B.Msls 4113_final_masked.jpg
+    02223cc6-30d2-408d-a091-65257d044a50___FAM_B.Msls 0908_final_masked.jpg
+    023df989-ab4c-4f66-a6c8-a41c1142ab7d___FAM_B.Msls 1834_final_masked.jpg
+    025a9fa7-827a-43c3-a82f-66d9cbfb2055___FAM_B.Msls 4282_final_masked.jpg
+    0279ec2c-5470-47e8-b1ba-79442bd323bb___FAM_B.Msls 4396_final_masked.jpg
+    02af0429-46c1-444b-bf62-a4d0198141e8___FAM_B.Msls 1062_final_masked.jpg
+    0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231_final_masked.jpg
+    037b6ea5-3d81-4489-b7a3-1116ee2cc6e1___FAM_B.Msls 0944_final_masked.jpg
+    ... (1384 total entries)
+  Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+    0001aa74-bbd7-433b-a900-1dccab39d521___FAM_L.Blight 4508_final_masked.jpg
+    0012e1ee-fde3-478f-ab27-18648feb2b05___FAM_L.Blight 1647_final_masked.jpg
+    002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight 4740_final_masked.jpg
+    00a962ad-573b-44b1-97ae-912a6bd6e0b0___FAM_L.Blight 1431_final_masked.jpg
+    00ed3cc2-020b-499f-a951-d772dea3b154___FAM_L.Blight 4653_final_masked.jpg
+    01445290-a36f-4435-9b7d-bd1a9d1ff79b___FAM_L.Blight 4626_final_masked.jpg
+    019e7c07-16e3-4584-baba-5d38defdfb2a___FAM_L.Blight 4742_final_masked.jpg
+    01b04553-8472-40ce-9f00-8dff5a1a2777___FAM_L.Blight 4530_final_masked.jpg
+    01cdbd4c-bd3e-4277-8e84-60700397daaf___FAM_L.Blight 4755_final_masked.jpg
+    01d00d79-98e1-46c2-90a9-52dcaeb895d2___FAM_L.Blight 4610_final_masked.jpg
+    0231ac9c-05aa-4710-8753-819c721b29b5___FAM_L.Blight 4639_final_masked.jpg
+    0249d5d6-ca79-40a5-9cdb-3d72382e25e1___FAM_L.Blight 1392_final_masked.jpg
+    02605da9-90bc-4456-ae3f-fa42d0b49c29___FAM_L.Blight 1504_final_masked.jpg
+    0285f30b-c22b-483c-be1d-9457bbddc4fa___FAM_L.Blight 1591_final_masked.jpg
+    039b45b1-015d-4f76-b393-140903468476___FAM_L.Blight 3713_final_masked.jpg
+    ... (1076 total entries)
+  Grape___healthy/
+    00e00912-bf75-4cf8-8b7d-ad64b73bea5f___Mt.N.V_HL 6067_final_masked.jpg
+    0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103_final_masked.jpg
+    0294ca65-4c29-44be-af28-501df9f715e8___Mt.N.V_HL 6176_final_masked.jpg
+    02f95acb-5d92-4f2a-b7ec-3af8709ee7c9___Mt.N.V_HL 9078_final_masked.jpg
+    03027791-26bb-4c46-960e-8df76e27042c___Mt.N.V_HL 6070_final_masked.jpg
+    03492a0d-6ad7-42ec-a742-c2f1fa59499a___Mt.N.V_HL 6035_final_masked.jpg
+    04991ee7-b17c-420f-90ff-230d4e59361a___Mt.N.V_HL 9055_final_masked.jpg
+    05cff9d7-0f63-4b6e-9aa3-199cf9ffa64c___Mt.N.V_HL 9111_final_masked.jpg
+    0681edcd-e6f2-4ebe-8ef9-24d3e058e1ec___Mt.N.V_HL 8948_final_masked.jpg
+    0708190e-d6a1-4186-8428-1cd816419bfd___Mt.N.V_HL 9017_final_masked.jpg
+    07c7232b-5cdb-4bab-9413-e0108a48526f___Mt.N.V_HL 8957_final_masked.jpg
+    07d28aaf-09ea-4223-9a65-88ef49e54924___Mt.N.V_HL 9121_final_masked.jpg
+    084c897b-172c-4263-8d46-c6a629449c60___Mt.N.V_HL 9045_final_masked.jpg
+    0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004_final_masked.jpg
+    0c1667a2-61d7-4dee-b4d9-0d141a1ceb20___Mt.N.V_HL 9127_final_masked.jpg
+    ... (423 total entries)
+  ... (38 total entries)
+
+=== PlantDoc ===
+file_renamer.py
+folder_renamer.py
+test/
+  Apple_Scab_Leaf/
+    test_Apple Scab Leaf_1.jpg
+    test_Apple Scab Leaf_10.jpg
+    test_Apple Scab Leaf_2.jpg
+    test_Apple Scab Leaf_3.jpg
+    test_Apple Scab Leaf_4.jpg
+    test_Apple Scab Leaf_5.jpg
+    test_Apple Scab Leaf_6.jpg
+    test_Apple Scab Leaf_7.jpg
+    test_Apple Scab Leaf_8.jpg
+    test_Apple Scab Leaf_9.jpg
+  Apple_leaf/
+    test_Apple leaf_1.jpg
+    test_Apple leaf_2.jpg
+    test_Apple leaf_3.jpg
+    test_Apple leaf_4.jpg
+    test_Apple leaf_5.jpg
+    test_Apple leaf_6.jpg
+    test_Apple leaf_7.jpg
+    test_Apple leaf_8.jpg
+    test_Apple leaf_9.jpg
+  Apple_rust_leaf/
+    test_Apple rust leaf_1.jpg
+    test_Apple rust leaf_10.jpg
+    test_Apple rust leaf_2.jpg
+    test_Apple rust leaf_3.jpg
+    test_Apple rust leaf_4.jpg
+    test_Apple rust leaf_5.jpg
+    test_Apple rust leaf_6.jpg
+    test_Apple rust leaf_7.jpg
+    test_Apple rust leaf_8.jpg
+    test_Apple rust leaf_9.jpg
+  Bell_pepper_leaf/
+    test_Bell_pepper leaf_1.jpg
+    test_Bell_pepper leaf_2.jpg
+    test_Bell_pepper leaf_3.jpg
+    test_Bell_pepper leaf_4.jpg
+    test_Bell_pepper leaf_5.jpg
+    test_Bell_pepper leaf_6.jpg
+    test_Bell_pepper leaf_7.jpg
+    test_Bell_pepper leaf_8.jpg
+  Bell_pepper_leaf_spot/
+    test_Bell_pepper leaf spot_1.jpg
+    test_Bell_pepper leaf spot_2.jpg
+    test_Bell_pepper leaf spot_3.jpg
+    test_Bell_pepper leaf spot_4.jpg
+    test_Bell_pepper leaf spot_5.jpg
+    test_Bell_pepper leaf spot_6.jpg
+    test_Bell_pepper leaf spot_7.jpg
+    test_Bell_pepper leaf spot_8.jpg
+    test_Bell_pepper leaf spot_9.jpg
+  Blueberry_leaf/
+    test_Blueberry leaf_1.jpg
+    test_Blueberry leaf_10.jpg
+    test_Blueberry leaf_11.jpg
+    test_Blueberry leaf_2.jpg
+    test_Blueberry leaf_3.jpg
+    test_Blueberry leaf_4.jpg
+    test_Blueberry leaf_5.jpg
+    test_Blueberry leaf_6.jpg
+    test_Blueberry leaf_7.jpg
+    test_Blueberry leaf_8.jpg
+    test_Blueberry leaf_9.jpg
+  Cherry_leaf/
+    test_Cherry leaf_1.jpg
+    test_Cherry leaf_10.jpg
+    test_Cherry leaf_2.jpg
+    test_Cherry leaf_3.jpg
+    test_Cherry leaf_4.jpg
+    test_Cherry leaf_5.jpg
+    test_Cherry leaf_6.jpg
+    test_Cherry leaf_7.jpg
+    test_Cherry leaf_8.jpg
+    test_Cherry leaf_9.jpg
+  Corn_Gray_leaf_spot/
+    test_Corn Gray leaf spot_1.jpg
+    test_Corn Gray leaf spot_2.jpg
+    test_Corn Gray leaf spot_3.jpg
+    test_Corn Gray leaf spot_4.jpg
+  Corn_leaf_blight/
+    test_Corn leaf blight_1.jpg
+    test_Corn leaf blight_10.jpg
+    test_Corn leaf blight_11.jpg
+    test_Corn leaf blight_12.jpg
+    test_Corn leaf blight_2.jpg
+    test_Corn leaf blight_3.jpg
+    test_Corn leaf blight_4.jpg
+    test_Corn leaf blight_5.jpg
+    test_Corn leaf blight_6.jpg
+    test_Corn leaf blight_7.jpg
+    test_Corn leaf blight_8.jpg
+    test_Corn leaf blight_9.jpg
+  Corn_rust_leaf/
+    test_Corn rust leaf_1.jpg
+    test_Corn rust leaf_10.jpg
+    test_Corn rust leaf_2.jpg
+    test_Corn rust leaf_3.jpg
+    test_Corn rust leaf_4.jpg
+    test_Corn rust leaf_5.jpg
+    test_Corn rust leaf_6.jpg
+    test_Corn rust leaf_7.jpg
+    test_Corn rust leaf_8.jpg
+    test_Corn rust leaf_9.jpg
+  Peach_leaf/
+    test_Peach leaf_1.jpg
+    test_Peach leaf_2.jpg
+    test_Peach leaf_3.jpg
+    test_Peach leaf_4.jpg
+    test_Peach leaf_5.jpg
+    test_Peach leaf_6.jpg
+    test_Peach leaf_7.jpg
+    test_Peach leaf_8.jpg
+    test_Peach leaf_9.jpg
+  Potato_leaf_early_blight/
+    test_Potato leaf early blight_1.jpg
+    test_Potato leaf early blight_2.jpg
+    test_Potato leaf early blight_3.jpg
+    test_Potato leaf early blight_4_1.jpg
+    test_Potato leaf early blight_4_2.jpg
+    test_Potato leaf early blight_4_3.jpg
+    test_Potato leaf early blight_4_4.jpg
+    test_Potato leaf early blight_5.jpg
+    test_Potato leaf early blight_6_1.jpg
+    test_Potato leaf early blight_6_2.jpg
+    test_Potato leaf early blight_6_3.jpg
+    test_Potato leaf early blight_6_4.jpg
+    test_Potato leaf early blight_7.jpg
+    test_Potato leaf early blight_8.jpg
+  Potato_leaf_late_blight/
+    test_Potato leaf late blight_1.jpg
+    test_Potato leaf late blight_2.jpg
+    test_Potato leaf late blight_3.jpg
+    test_Potato leaf late blight_4.jpg
+    test_Potato leaf late blight_5.jpg
+    test_Potato leaf late blight_6.jpg
+    test_Potato leaf late blight_7.jpg
+    test_Potato leaf late blight_8.jpg
+  Raspberry_leaf/
+    test_Raspberry leaf_1.jpg
+    test_Raspberry leaf_2.jpg
+    test_Raspberry leaf_3.jpg
+    test_Raspberry leaf_4.jpg
+    test_Raspberry leaf_5.jpg
+    test_Raspberry leaf_6.jpg
+    test_Raspberry leaf_7.jpg
+  Soyabean_leaf/
+    test_Soyabean leaf_1.jpg
+    test_Soyabean leaf_2.jpg
+    test_Soyabean leaf_3.jpg
+    test_Soyabean leaf_4.jpg
+    test_Soyabean leaf_5.jpg
+    test_Soyabean leaf_6.jpg
+    test_Soyabean leaf_7.jpg
+    test_Soyabean leaf_8.jpg
+  ... (27 total entries)
+train/
+  Apple_Scab_Leaf/
+    train_Apple Scab Leaf_1.jpg
+    train_Apple Scab Leaf_10.jpg
+    train_Apple Scab Leaf_11.jpg
+    train_Apple Scab Leaf_12.jpg
+    train_Apple Scab Leaf_13.jpg
+    train_Apple Scab Leaf_14.jpg
+    train_Apple Scab Leaf_15.jpg
+    train_Apple Scab Leaf_16.jpg
+    train_Apple Scab Leaf_17.jpg
+    train_Apple Scab Leaf_18.jpg
+    train_Apple Scab Leaf_19.jpg
+    train_Apple Scab Leaf_2.jpg
+    train_Apple Scab Leaf_20.jpg
+    train_Apple Scab Leaf_21.jpg
+    train_Apple Scab Leaf_22.jpg
+    ... (83 total entries)
+  Apple_leaf/
+    train_Apple leaf_1.jpg
+    train_Apple leaf_10.jpg
+    train_Apple leaf_11.jpg
+    train_Apple leaf_12.jpg
+    train_Apple leaf_13.jpg
+    train_Apple leaf_14.jpg
+    train_Apple leaf_15.jpg
+    train_Apple leaf_16.jpg
+    train_Apple leaf_17.jpg
+    train_Apple leaf_18.jpg
+    train_Apple leaf_19.jpg
+    train_Apple leaf_2.jpg
+    train_Apple leaf_20.jpg
+    train_Apple leaf_21.jpg
+    train_Apple leaf_22.jpg
+    ... (79 total entries)
+  Apple_rust_leaf/
+    train_Apple rust leaf_1.jpg
+    train_Apple rust leaf_10.jpg
+    train_Apple rust leaf_11.jpg
+    train_Apple rust leaf_12.jpg
+    train_Apple rust leaf_13.jpg
+    train_Apple rust leaf_14.jpg
+    train_Apple rust leaf_15.jpg
+    train_Apple rust leaf_16.jpg
+    train_Apple rust leaf_17.jpg
+    train_Apple rust leaf_18.jpg
+    train_Apple rust leaf_19.jpg
+    train_Apple rust leaf_2.jpg
+    train_Apple rust leaf_20.jpg
+    train_Apple rust leaf_21.jpg
+    train_Apple rust leaf_22.jpg
+    ... (96 total entries)
+  Bell_pepper_leaf/
+    train_Bell_pepper leaf_14.jpg
+    train_Bell_pepper leaf_24_1.jpg
+    train_Bell_pepper leaf_24_2.jpg
+    train_Bell_pepper leaf_26.jpg
+    train_Bell_pepper leaf_29.jpg
+    train_Bell_pepper leaf_3.jpg
+    train_Bell_pepper leaf_30_1.jpg
+    train_Bell_pepper leaf_30_2.jpg
+    train_Bell_pepper leaf_32_1.jpg
+    train_Bell_pepper leaf_32_2.jpg
+    train_Bell_pepper leaf_34_1.jpg
+    train_Bell_pepper leaf_34_2.jpg
+    train_Bell_pepper leaf_36_1.jpg
+    train_Bell_pepper leaf_36_2.jpg
+    train_Bell_pepper leaf_4.jpg
+    ... (34 total entries)
+  Bell_pepper_leaf_spot/
+    train_Bell_pepper leaf spot_1.jpg
+    train_Bell_pepper leaf spot_10.jpg
+    train_Bell_pepper leaf spot_11.jpg
+    train_Bell_pepper leaf spot_12.jpg
+    train_Bell_pepper leaf spot_13_1.jpg
+    train_Bell_pepper leaf spot_13_2.jpg
+    train_Bell_pepper leaf spot_14.jpg
+    train_Bell_pepper leaf spot_15.jpg
+    train_Bell_pepper leaf spot_16.jpg
+    train_Bell_pepper leaf spot_17_1.jpg
+    train_Bell_pepper leaf spot_17_2.jpg
+    train_Bell_pepper leaf spot_17_3.jpg
+    train_Bell_pepper leaf spot_18.jpg
+    train_Bell_pepper leaf spot_19.jpg
+    train_Bell_pepper leaf spot_20_1.jpg
+    ... (74 total entries)
+  Blueberry_leaf/
+    train_Blueberry leaf_1.jpg
+    train_Blueberry leaf_10.jpg
+    train_Blueberry leaf_100.jpg
+    train_Blueberry leaf_101.jpg
+    train_Blueberry leaf_102.jpg
+    train_Blueberry leaf_103.jpg
+    train_Blueberry leaf_104.jpg
+    train_Blueberry leaf_105.jpg
+    train_Blueberry leaf_106.jpg
+    train_Blueberry leaf_11.jpg
+    train_Blueberry leaf_12.jpg
+    train_Blueberry leaf_13.jpg
+    train_Blueberry leaf_14.jpg
+    train_Blueberry leaf_15.jpg
+    train_Blueberry leaf_16.jpg
+    ... (106 total entries)
+  Cherry_leaf/
+    train_Cherry leaf_1.jpg
+    train_Cherry leaf_10.jpg
+    train_Cherry leaf_11.jpg
+    train_Cherry leaf_12.jpg
+    train_Cherry leaf_13.jpg
+    train_Cherry leaf_14.jpg
+    train_Cherry leaf_15.jpg
+    train_Cherry leaf_16.jpg
+    train_Cherry leaf_17.jpg
+    train_Cherry leaf_18.jpg
+    train_Cherry leaf_19.jpg
+    train_Cherry leaf_2.jpg
+    train_Cherry leaf_20.jpg
+    train_Cherry leaf_21.jpg
+    train_Cherry leaf_22.jpg
+    ... (47 total entries)
+  Corn_Gray_leaf_spot/
+    train_Corn Gray leaf spot_1.jpg
+    train_Corn Gray leaf spot_10.jpg
+    train_Corn Gray leaf spot_11.jpg
+    train_Corn Gray leaf spot_12.jpg
+    train_Corn Gray leaf spot_13.jpg
+    train_Corn Gray leaf spot_14.jpg
+    train_Corn Gray leaf spot_15.jpg
+    train_Corn Gray leaf spot_16.jpg
+    train_Corn Gray leaf spot_17.jpg
+    train_Corn Gray leaf spot_18.jpg
+    train_Corn Gray leaf spot_19.jpg
+    train_Corn Gray leaf spot_2.jpg
+    train_Corn Gray leaf spot_20.jpg
+    train_Corn Gray leaf spot_21.jpg
+    train_Corn Gray leaf spot_22.jpg
+    ... (63 total entries)
+  Corn_leaf_blight/
+    train_Corn Gray leaf spot_42_1.jpg
+    train_Corn Gray leaf spot_47_1.jpg
+    train_Corn leaf blight_1.jpg
+    train_Corn leaf blight_10.jpg
+    train_Corn leaf blight_100.jpg
+    train_Corn leaf blight_101.jpg
+    train_Corn leaf blight_102.jpg
+    train_Corn leaf blight_103.jpg
+    train_Corn leaf blight_104.jpg
+    train_Corn leaf blight_105.jpg
+    train_Corn leaf blight_106.jpg
+    train_Corn leaf blight_107.jpg
+    train_Corn leaf blight_108.jpg
+    train_Corn leaf blight_109.jpg
+    train_Corn leaf blight_11.jpg
+    ... (182 total entries)
+  Corn_rust_leaf/
+    train_Corn rust leaf_1.jpg
+    train_Corn rust leaf_10.jpg
+    train_Corn rust leaf_100.jpg
+    train_Corn rust leaf_101.jpg
+    train_Corn rust leaf_102.jpg
+    train_Corn rust leaf_103.jpg
+    train_Corn rust leaf_104.jpg
+    train_Corn rust leaf_105_1.jpg
+    train_Corn rust leaf_105_2.jpg
+    train_Corn rust leaf_106.jpg
+    train_Corn rust leaf_11.jpg
+    train_Corn rust leaf_12.jpg
+    train_Corn rust leaf_13.jpg
+    train_Corn rust leaf_14.jpg
+    train_Corn rust leaf_15.jpg
+    ... (107 total entries)
+  Peach_leaf/
+    train_Peach leaf_1.jpg
+    train_Peach leaf_10.jpg
+    train_Peach leaf_100.jpg
+    train_Peach leaf_101.jpg
+    train_Peach leaf_102.jpg
+    train_Peach leaf_103.jpg
+    train_Peach leaf_11.jpg
+    train_Peach leaf_12.jpg
+    train_Peach leaf_13.jpg
+    train_Peach leaf_14.jpg
+    train_Peach leaf_15.jpg
+    train_Peach leaf_16.jpg
+    train_Peach leaf_17.jpg
+    train_Peach leaf_18.jpg
+    train_Peach leaf_19.jpg
+    ... (103 total entries)
+  Potato_leaf_early_blight/
+    train_Potato leaf early blight_1.jpg
+    train_Potato leaf early blight_10.jpg
+    train_Potato leaf early blight_100.jpg
+    train_Potato leaf early blight_101.jpg
+    train_Potato leaf early blight_102.jpg
+    train_Potato leaf early blight_104_1.jpg
+    train_Potato leaf early blight_104_2.jpg
+    train_Potato leaf early blight_105.jpg
+    train_Potato leaf early blight_106.jpg
+    train_Potato leaf early blight_107.jpg
+    train_Potato leaf early blight_108.jpg
+    train_Potato leaf early blight_109.jpg
+    train_Potato leaf early blight_11.jpg
+    train_Potato leaf early blight_12.jpg
+    train_Potato leaf early blight_13_1.jpg
+    ... (157 total entries)
+  Potato_leaf_late_blight/
+    train_Potato leaf late blight_1.jpg
+    train_Potato leaf late blight_10_1.jpg
+    train_Potato leaf late blight_10_2.jpg
+    train_Potato leaf late blight_10_3.jpg
+    train_Potato leaf late blight_10_4.jpg
+    train_Potato leaf late blight_10_5.jpg
+    train_Potato leaf late blight_10_6.jpg
+    train_Potato leaf late blight_10_7.jpg
+    train_Potato leaf late blight_10_8.jpg
+    train_Potato leaf late blight_10_9.jpg
+    train_Potato leaf late blight_11.jpg
+    train_Potato leaf late blight_12_1.jpg
+    train_Potato leaf late blight_12_2.jpg
+    train_Potato leaf late blight_12_3.jpg
+    train_Potato leaf late blight_12_4.jpg
+    ... (200 total entries)
+  Raspberry_leaf/
+    train_Raspberry leaf_1.jpg
+    train_Raspberry leaf_10.jpg
+    train_Raspberry leaf_100.jpg
+    train_Raspberry leaf_101.jpg
+    train_Raspberry leaf_102.jpg
+    train_Raspberry leaf_103.jpg
+    train_Raspberry leaf_104.jpg
+    train_Raspberry leaf_105.jpg
+    train_Raspberry leaf_106.jpg
+    train_Raspberry leaf_107.jpg
+    train_Raspberry leaf_108.jpg
+    train_Raspberry leaf_109.jpg
+    train_Raspberry leaf_11.jpg
+    train_Raspberry leaf_110.jpg
+    train_Raspberry leaf_111.jpg
+    ... (112 total entries)
+  Soyabean_leaf/
+    train_Soyabean leaf_1.jpg
+    train_Soyabean leaf_10.jpg
+    train_Soyabean leaf_11.jpg
+    train_Soyabean leaf_12.jpg
+    train_Soyabean leaf_13.jpg
+    train_Soyabean leaf_14.jpg
+    train_Soyabean leaf_15.jpg
+    train_Soyabean leaf_16.jpg
+    train_Soyabean leaf_17.jpg
+    train_Soyabean leaf_18.jpg
+    train_Soyabean leaf_19.jpg
+    train_Soyabean leaf_2.jpg
+    train_Soyabean leaf_20.jpg
+    train_Soyabean leaf_21.jpg
+    train_Soyabean leaf_22.jpg
+    ... (57 total entries)
+  ... (28 total entries)
+
+
+CELL 4
+=== PlantVillage (color) tomato classes ===
+Tomato___Bacterial_spot  (2127 images)
+Tomato___Early_blight  (1000 images)
+Tomato___Late_blight  (1909 images)
+Tomato___Leaf_Mold  (952 images)
+Tomato___Septoria_leaf_spot  (1771 images)
+Tomato___Spider_mites Two-spotted_spider_mite  (1676 images)
+Tomato___Target_Spot  (1404 images)
+Tomato___Tomato_Yellow_Leaf_Curl_Virus  (5357 images)
+Tomato___Tomato_mosaic_virus  (373 images)
+Tomato___healthy  (1591 images)
+
+=== PlantDoc train tomato classes ===
+Tomato_Early_blight_leaf  (79 images)
+Tomato_Septoria_leaf_spot  (145 images)
+Tomato_leaf  (44 images)
+Tomato_leaf_bacterial_spot  (101 images)
+Tomato_leaf_late_blight  (101 images)
+Tomato_leaf_mosaic_virus  (44 images)
+Tomato_leaf_yellow_virus  (223 images)
+Tomato_mold_leaf  (85 images)
+Tomato_two_spotted_spider_mites_leaf  (2 images)
+
+=== PlantDoc test tomato classes ===
+Tomato_Early_blight_leaf  (9 images)
+Tomato_Septoria_leaf_spot  (12 images)
+Tomato_leaf  (8 images)
+Tomato_leaf_bacterial_spot  (9 images)
+Tomato_leaf_late_blight  (10 images)
+Tomato_leaf_mosaic_virus  (10 images)
+Tomato_leaf_yellow_virus  (15 images)
+Tomato_mold_leaf  (6 images)
+
+
+CELL 5
+PlantVillage set: (3173, 96, 96, 3) (3173,)
+PlantDoc eval set: (901, 96, 96, 3) (901,)
+
+
+CELL 5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789810821.411576      58 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13756 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5
+I0000 00:00:1789810821.414415      58 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 13756 MB memory:  -> device: 1, name: Tesla T4, pci bus id: 0000:00:05.0, compute capability: 7.5
+
+
+CELL 5
+Epoch 1/5
+
+
+CELL 5
+I0000 00:00:1789810828.642407     133 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+
+
+CELL 5
+85/85 - 10s - 113ms/step - accuracy: 0.3426 - loss: 1.7426 - val_accuracy: 0.5945 - val_loss: 1.1622
+Epoch 2/5
+85/85 - 1s - 11ms/step - accuracy: 0.6022 - loss: 1.1206 - val_accuracy: 0.7500 - val_loss: 0.7345
+Epoch 3/5
+85/85 - 1s - 11ms/step - accuracy: 0.6804 - loss: 0.9032 - val_accuracy: 0.7395 - val_loss: 0.7096
+Epoch 4/5
+85/85 - 1s - 11ms/step - accuracy: 0.7367 - loss: 0.7267 - val_accuracy: 0.7668 - val_loss: 0.6278
+Epoch 5/5
+85/85 - 1s - 11ms/step - accuracy: 0.7582 - loss: 0.6651 - val_accuracy: 0.7815 - val_loss: 0.5784
+
+PlantVillage val accuracy: 0.782
+PlantDoc (real-world) accuracy: 0.149
+Accuracy drop: 0.633
+
+
+CELL 6
+                                        precision    recall  f1-score   support
+
+               Tomato___Bacterial_spot       0.06      0.04      0.05       110
+                 Tomato___Early_blight       0.08      0.12      0.10        88
+                  Tomato___Late_blight       0.15      0.88      0.26       111
+                    Tomato___Leaf_Mold       0.29      0.02      0.04        91
+           Tomato___Septoria_leaf_spot       0.18      0.01      0.02       157
+Tomato___Tomato_Yellow_Leaf_Curl_Virus       0.47      0.07      0.12       238
+          Tomato___Tomato_mosaic_virus       0.00      0.00      0.00        54
+                      Tomato___healthy       0.25      0.02      0.04        52
+
+                              accuracy                           0.15       901
+                             macro avg       0.19      0.15      0.08       901
+                          weighted avg       0.23      0.15      0.09       901
+
+
+Confusion matrix (rows=true, cols=predicted):
+Classes in order: ['Bacterial_spot', 'Early_blight', 'Late_blight', 'Leaf_Mold', 'Septoria_leaf_spot', 'Tomato_Yellow_Leaf_Curl_Virus', 'Tomato_mosaic_virus', 'healthy']
+[[  4  14  84   2   0   4   0   2]
+ [  6  11  68   1   1   0   0   1]
+ [  1   8  98   2   1   1   0   0]
+ [ 11  10  63   2   3   2   0   0]
+ [ 21  23 108   0   2   3   0   0]
+ [ 18  46 155   0   3  16   0   0]
+ [  3  12  35   0   1   3   0   0]
+ [  0  12  34   0   0   5   0   1]]
+
+
+CELL 7
+Found 3 table(s) on the page
+
+Table 0 shape: (60, 11)
+                                    Observation Year  \
+0  Historical Data of Pest and Weather Crop Name ...
+1                Historical Data of Pest and Weather
+2                                          Crop Name
+3                                           Location
+4                                               Year
+
+                         Standard Week Pest Value MaxT(°C) MinT(°C) RH1(%)  \
+0                                  NaN        NaN      NaN      NaN    NaN
+1  Historical Data of Pest and Weather        NaN      NaN      NaN    NaN
+2                               Cotton        NaN      NaN      NaN    NaN
+3                               Nagpur        NaN      NaN      NaN    NaN
+4                            2005-2005        NaN      NaN      NaN    NaN
+
+  RH2(%) RF(mm) WS(kmph) SSH(hrs) EVP(mm)
+0    NaN    NaN      NaN      NaN     NaN
+1    NaN    NaN      NaN      NaN     NaN
+2    NaN    NaN      NaN      NaN     NaN
+3    NaN    NaN      NaN      NaN     NaN
+4    NaN    NaN      NaN      NaN     NaN
+
+Table 1 shape: (4, 2)
+  Historical Data of Pest and Weather Historical Data of Pest and Weather.1
+0                           Crop Name                                Cotton
+1                            Location                                Nagpur
+2                                Year                             2005-2005
+3                   Pest/Disease Name             Jassid (Number/ 3 leaves)
+
+Table 2 shape: (52, 11)
+   Observation Year  Standard Week  Pest Value  MaxT(°C)  MinT(°C)  RH1(%)  \
+0              2005              1         NaN      18.0       8.0    84.9
+1              2005              2         NaN      20.4       6.8    84.1
+2              2005              3         NaN      18.9       6.5    81.7
+3              2005              4         NaN      16.0       6.8    83.1
+4              2005              5         NaN      18.2       5.4    75.0
+
+   RH2(%)  RF(mm)  WS(kmph)  SSH(hrs)  EVP(mm)
+0    49.1     6.2         0       4.3      1.8
+1    46.4     0.0         0       4.8      2.0
+2    48.1     0.0         0       4.8      2.0
+3    56.1     0.0         0       5.7      1.9
+4    37.9     0.0         0       5.7      1.9
+
+
+CELL 8
+Status code: 200
+Found 3 table(s)
+Table 0 shape: (54, 11)
+Table 1 shape: (4, 2)
+Table 2 shape: (52, 11)
+
+
+CELL 8
+/tmp/ipykernel_58/2628525223.py:10: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(resp.text)
+
+
+CELL 9
+OK  Nagpur / Jassid: (52, 13)
+OK  Nagpur / Aphid: (0, 13)
+OK  Nagpur / Whitefly: (0, 13)
+OK  Nagpur / Thrips: (0, 13)
+OK  Akola / Jassid: (260, 13)
+OK  Akola / Aphid: (260, 13)
+OK  Akola / Whitefly: (260, 13)
+OK  Akola / Thrips: (260, 13)
+OK  Coimbatore / Jassid: (0, 13)
+OK  Coimbatore / Aphid: (0, 13)
+OK  Coimbatore / Whitefly: (0, 13)
+OK  Coimbatore / Thrips: (0, 13)
+OK  Sirsa / Jassid: (52, 13)
+OK  Sirsa / Aphid: (0, 13)
+OK  Sirsa / Whitefly: (52, 13)
+OK  Sirsa / Thrips: (0, 13)
+
+Combined shape: (1196, 13)
+Errors: 0
+
+
+CELL 9
+/tmp/ipykernel_58/3948645198.py:33: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(all_data, ignore_index=True) if all_data else pd.DataFrame()
+
+
+CELL 9
+  Observation Year Standard Week  Pest Value  MaxT(°C)  MinT(°C)  RH1(%)  \
+0             2005             1         NaN      18.0       8.0    84.9
+1             2005             2         NaN      20.4       6.8    84.1
+2             2005             3         NaN      18.9       6.5    81.7
+3             2005             4         NaN      16.0       6.8    83.1
+4             2005             5         NaN      18.2       5.4    75.0
+
+   RH2(%)  RF(mm)  WS(kmph)  SSH(hrs)  EVP(mm) Location    Pest
+0    49.1     6.2       0.0       4.3      1.8   Nagpur  Jassid
+1    46.4     0.0       0.0       4.8      2.0   Nagpur  Jassid
+2    48.1     0.0       0.0       4.8      2.0   Nagpur  Jassid
+3    56.1     0.0       0.0       5.7      1.9   Nagpur  Jassid
+4    37.9     0.0       0.0       5.7      1.9   Nagpur  Jassid
+
+CELL 10
+                   n_rows                           years  pest_value_filled
+Location Pest
+Akola    Aphid        260  [2005, 2006, 2007, 2008, 2009]                119
+         Jassid       260  [2005, 2006, 2007, 2008, 2009]                122
+         Thrips       260  [2005, 2006, 2007, 2008, 2009]                125
+         Whitefly     260  [2005, 2006, 2007, 2008, 2009]                117
+Nagpur   Jassid        52                          [2005]                 12
+Sirsa    Jassid        52                          [2005]                 16
+         Whitefly      52                          [2005]                 16
+
+
+CELL 11
+          Location              Pest  n_rows  n_years                                                                           years  pest_value_filled
+29             Lam            Jassid     676       13  [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2003]                278
+35             Lam          Whitefly     624       12        [1990, 1991, 1992, 1993, 1994, 1996, 1997, 1998, 1999, 2000, 2001, 2002]                192
+28             Lam             Aphid     416        8                                [1990, 1994, 1996, 1997, 1998, 2001, 2002, 2003]                141
+7            Akola            Thrips     260        5                                                  [2005, 2006, 2007, 2008, 2009]                125
+2            Akola            Jassid     260        5                                                  [2005, 2006, 2007, 2008, 2009]                122
+1            Akola             Aphid     260        5                                                  [2005, 2006, 2007, 2008, 2009]                119
+8            Akola          Whitefly     260        5                                                  [2005, 2006, 2007, 2008, 2009]                117
+107          Sirsa          Whitefly     208        4                                                        [2001, 2002, 2003, 2005]                 67
+34             Lam            Thrips     364        7                                      [1992, 1994, 1996, 1997, 1999, 2001, 2002]                 61
+101          Sirsa            Jassid     156        3                                                              [2002, 2003, 2005]                 53
+103          Sirsa      PinkBollworm     156        3                                                              [2001, 2002, 2006]                 37
+3            Akola          Mealybug      52        1                                                                          [2007]                 24
+59          Nagpur        Spodoptera      52        1                                                                          [2009]                 22
+5            Akola        Spodoptera      52        1                                                                          [2009]                 17
+12      Coimbatore          Mealybug     104        2                                                                    [2010, 2011]                 17
+104          Sirsa        Spodoptera      52        1                                                                          [2006]                 15
+11      Coimbatore            Jassid       0        0                                                                              []                  0
+10      Coimbatore             Aphid       0        0                                                                              []                  0
+9       Coimbatore  AmericanBollworm       0        0                                                                              []                  0
+15      Coimbatore   SpottedBollworm       0        0                                                                              []                  0
+20         Cuttack            Jassid       0        0                                                                              []                  0
+21         Cuttack          Mealybug       0        0                                                                              []                  0
+22         Cuttack      PinkBollworm       0        0                                                                              []                  0
+6            Akola   SpottedBollworm       0        0                                                                              []                  0
+4            Akola      PinkBollworm       0        0                                                                              []                  0
+13      Coimbatore      PinkBollworm       0        0                                                                              []                  0
+14      Coimbatore        Spodoptera       0        0                                                                              []                  0
+19         Cuttack             Aphid       0        0                                                                              []                  0
+27             Lam  AmericanBollworm       0        0                                                                              []                  0
+26         Cuttack          Whitefly       0        0                                                                              []                  0
+25         Cuttack            Thrips       0        0                                                                              []                  0
+24         Cuttack   SpottedBollworm       0        0                                                                              []                  0
+31             Lam      PinkBollworm       0        0                                                                              []                  0
+30             Lam          Mealybug       0        0                                                                              []                  0
+33             Lam   SpottedBollworm       0        0                                                                              []                  0
+32             Lam        Spodoptera       0        0                                                                              []                  0
+36        Ludhiana  AmericanBollworm       0        0                                                                              []                  0
+37        Ludhiana             Aphid       0        0                                                                              []                  0
+38        Ludhiana            Jassid       0        0                                                                              []                  0
+23         Cuttack        Spodoptera       0        0                                                                              []                  0
+16      Coimbatore            Thrips       0        0                                                                              []                  0
+17      Coimbatore          Whitefly       0        0                                                                              []                  0
+18         Cuttack  AmericanBollworm       0        0                                                                              []                  0
+0            Akola  AmericanBollworm       0        0                                                                              []                  0
+91   Rajendranagar             Aphid       0        0                                                                              []                  0
+90   Rajendranagar  AmericanBollworm       0        0                                                                              []                  0
+89          Raipur          Whitefly       0        0                                                                              []                  0
+40        Ludhiana      PinkBollworm       0        0                                                                              []                  0
+39        Ludhiana          Mealybug       0        0                                                                              []                  0
+57          Nagpur          Mealybug       0        0                                                                              []                  0
+58          Nagpur      PinkBollworm       0        0                                                                              []                  0
+72        Parbhani  AmericanBollworm       0        0                                                                              []                  0
+67        Palampur      PinkBollworm       0        0                                                                              []                  0
+66        Palampur          Mealybug       0        0                                                                              []                  0
+65        Palampur            Jassid       0        0                                                                              []                  0
+64        Palampur             Aphid       0        0                                                                              []                  0
+71        Palampur          Whitefly       0        0                                                                              []                  0
+70        Palampur            Thrips       0        0                                                                              []                  0
+69        Palampur   SpottedBollworm       0        0                                                                              []                  0
+68        Palampur        Spodoptera       0        0                                                                              []                  0
+74        Parbhani            Jassid       0        0                                                                              []                  0
+73        Parbhani             Aphid       0        0                                                                              []                  0
+75        Parbhani          Mealybug       0        0                                                                              []                  0
+80        Parbhani          Whitefly       0        0                                                                              []                  0
+87          Raipur   SpottedBollworm       0        0                                                                              []                  0
+86          Raipur        Spodoptera       0        0                                                                              []                  0
+85          Raipur      PinkBollworm       0        0                                                                              []                  0
+84          Raipur          Mealybug       0        0                                                                              []                  0
+79        Parbhani            Thrips       0        0                                                                              []                  0
+78        Parbhani   SpottedBollworm       0        0                                                                              []                  0
+77        Parbhani        Spodoptera       0        0                                                                              []                  0
+76        Parbhani      PinkBollworm       0        0                                                                              []                  0
+63        Palampur  AmericanBollworm       0        0                                                                              []                  0
+62          Nagpur          Whitefly       0        0                                                                              []                  0
+61          Nagpur            Thrips       0        0                                                                              []                  0
+60          Nagpur   SpottedBollworm       0        0                                                                              []                  0
+105          Sirsa   SpottedBollworm       0        0                                                                              []                  0
+100          Sirsa             Aphid       0        0                                                                              []                  0
+106          Sirsa            Thrips       0        0                                                                              []                  0
+88          Raipur            Thrips       0        0                                                                              []                  0
+92   Rajendranagar            Jassid       0        0                                                                              []                  0
+93   Rajendranagar          Mealybug       0        0                                                                              []                  0
+94   Rajendranagar      PinkBollworm       0        0                                                                              []                  0
+95   Rajendranagar        Spodoptera       0        0                                                                              []                  0
+99           Sirsa  AmericanBollworm       0        0                                                                              []                  0
+98   Rajendranagar          Whitefly       0        0                                                                              []                  0
+97   Rajendranagar            Thrips       0        0                                                                              []                  0
+96   Rajendranagar   SpottedBollworm       0        0                                                                              []                  0
+102          Sirsa          Mealybug       0        0                                                                              []                  0
+81          Raipur  AmericanBollworm       0        0                                                                              []                  0
+82          Raipur             Aphid       0        0                                                                              []                  0
+83          Raipur            Jassid       0        0                                                                              []                  0
+43        Ludhiana            Thrips      -1        0                                                                              []                 -1
+42        Ludhiana   SpottedBollworm      -1        0                                                                              []                 -1
+41        Ludhiana        Spodoptera      -1        0                                                                              []                 -1
+51        Maruteru   SpottedBollworm      -1        0                                                                              []                 -1
+48        Maruteru          Mealybug      -1        0                                                                              []                 -1
+50        Maruteru        Spodoptera      -1        0                                                                              []                 -1
+49        Maruteru      PinkBollworm      -1        0                                                                              []                 -1
+44        Ludhiana          Whitefly      -1        0                                                                              []                 -1
+55          Nagpur             Aphid      -1        0                                                                              []                 -1
+54          Nagpur  AmericanBollworm      -1        0                                                                              []                 -1
+53        Maruteru          Whitefly      -1        0                                                                              []                 -1
+52        Maruteru            Thrips      -1        0                                                                              []                 -1
+56          Nagpur            Jassid      -1        0                                                                              []                 -1
+45        Maruteru  AmericanBollworm      -1        0                                                                              []                 -1
+46        Maruteru             Aphid      -1        0                                                                              []                 -1
+47        Maruteru            Jassid      -1        0                                                                              []                 -1
+
+
+CELL 12
+GPU available: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU')]
+Total classes: 38
+Total images: 54305
+
+Largest class: Orange___Haunglongbing_(Citrus_greening) (5507)
+Smallest class: Potato___healthy (152)
+Imbalance ratio (largest/smallest): 36.2x
+
+Full distribution:
+                                             class  count
+          Orange___Haunglongbing_(Citrus_greening)   5507
+            Tomato___Tomato_Yellow_Leaf_Curl_Virus   5357
+                                 Soybean___healthy   5090
+                            Peach___Bacterial_spot   2297
+                           Tomato___Bacterial_spot   2127
+                              Tomato___Late_blight   1909
+                           Squash___Powdery_mildew   1835
+                       Tomato___Septoria_leaf_spot   1771
+     Tomato___Spider_mites Two-spotted_spider_mite   1676
+                                   Apple___healthy   1645
+                                  Tomato___healthy   1591
+                               Blueberry___healthy   1502
+                            Pepper,_bell___healthy   1478
+                              Tomato___Target_Spot   1404
+                      Grape___Esca_(Black_Measles)   1383
+                       Corn_(maize)___Common_rust_   1192
+                                 Grape___Black_rot   1180
+                            Corn_(maize)___healthy   1162
+                          Strawberry___Leaf_scorch   1109
+        Grape___Leaf_blight_(Isariopsis_Leaf_Spot)   1076
+          Cherry_(including_sour)___Powdery_mildew   1052
+                             Tomato___Early_blight   1000
+                             Potato___Early_blight   1000
+                              Potato___Late_blight   1000
+                     Pepper,_bell___Bacterial_spot    997
+               Corn_(maize)___Northern_Leaf_Blight    985
+                                Tomato___Leaf_Mold    952
+                 Cherry_(including_sour)___healthy    854
+                                Apple___Apple_scab    630
+                                 Apple___Black_rot    621
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot    513
+                              Strawberry___healthy    456
+                                   Grape___healthy    423
+                      Tomato___Tomato_mosaic_virus    373
+                               Raspberry___healthy    371
+                                   Peach___healthy    360
+                          Apple___Cedar_apple_rust    275
+                                  Potato___healthy    152
+
+
+CELL 13
+' Step 2: Build the data pipeline\n\nUsing `image_dataset_from_directory` for an 85/15 train/validation split, with data\naugmentation applied only to the training set (never to validation — augmenting validation\ndata would let the model "practice" on artificially varied versions of images it\'s being\ngraded on, giving a falsely optimistic score). Class weights are computed to counteract the\n36x imbalance found above.'
+
+CELL 14
+Found 54305 files belonging to 38 classes.
+Using 46160 files for training.
+Found 54305 files belonging to 38 classes.
+Using 8145 files for validation.
+Classes: 38
+
+Sample class weights (highest = rarest classes):
+  Potato___healthy: 9.40
+  Apple___Cedar_apple_rust: 5.20
+  Peach___healthy: 3.97
+  Raspberry___healthy: 3.85
+  Tomato___Tomato_mosaic_virus: 3.83
+
+
+CELL 15
+" Step 3: Build the model — MobileNetV2 transfer learning\n\nTwo-phase training strategy:\n1. **Phase 1 (feature extraction):** freeze MobileNetV2's pretrained layers entirely, only\n   train a new classification head on top. This adapts the model quickly without risking\n   damage to the general-purpose features it already learned from ImageNet.\n2. **Phase 2 (fine-tuning):** unfreeze the top portion of MobileNetV2 and continue training\n   at a much lower learning rate, letting it adjust its higher-level features specifically\n   for leaf textures and lesions. We'll only do this once Phase 1 is stable.\n\nThis section builds and runs Phase 1."
+
+CELL 16
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v2/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5
+9406464/9406464 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
+
+
+CELL 16
+Model: "functional_2"
+
+
+CELL 16
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ input_layer_3 (InputLayer)      │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ true_divide (TrueDivide)        │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ subtract (Subtract)             │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenetv2_1.00_224            │ (None, 7, 7, 1280)     │     2,257,984 │
+│ (Functional)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling2d        │ (None, 1280)           │             0 │
+│ (GlobalAveragePooling2D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_1 (Dropout)             │ (None, 1280)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 38)             │        48,678 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+
+CELL 16
+ Total params: 2,306,662 (8.80 MB)
+
+
+CELL 16
+ Trainable params: 48,678 (190.15 KB)
+
+
+CELL 16
+ Non-trainable params: 2,257,984 (8.61 MB)
+
+
+CELL 16
+Epoch 1/15
+
+
+CELL 16
+2026-09-19 09:45:47.272281: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+2026-09-19 09:45:47.409911: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+
+
+CELL 16
+1442/1443 ━━━━━━━━━━━━━━━━━━━━ 0s 174ms/step - accuracy: 0.7082 - loss: 1.1933
+
+CELL 16
+2026-09-19 09:50:09.087483: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+2026-09-19 09:50:09.223773: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+
+
+CELL 16
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 0s 182ms/step - accuracy: 0.7083 - loss: 1.1929
+
+CELL 16
+2026-09-19 09:50:39.842515: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+2026-09-19 09:50:39.981423: E external/local_xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+
+
+CELL 16
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 311s 203ms/step - accuracy: 0.8276 - loss: 0.6530 - val_accuracy: 0.9303 - val_loss: 0.2423 - learning_rate: 0.0010
+Epoch 2/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 227s 157ms/step - accuracy: 0.9111 - loss: 0.2924 - val_accuracy: 0.9444 - val_loss: 0.1857 - learning_rate: 0.0010
+Epoch 3/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 263s 157ms/step - accuracy: 0.9178 - loss: 0.2585 - val_accuracy: 0.9376 - val_loss: 0.1867 - learning_rate: 0.0010
+Epoch 4/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 226s 156ms/step - accuracy: 0.9262 - loss: 0.2291 - val_accuracy: 0.9439 - val_loss: 0.1860 - learning_rate: 0.0010
+Epoch 5/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 229s 158ms/step - accuracy: 0.9333 - loss: 0.2066 - val_accuracy: 0.9467 - val_loss: 0.1674 - learning_rate: 5.0000e-04
+Epoch 6/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 226s 156ms/step - accuracy: 0.9345 - loss: 0.1951 - val_accuracy: 0.9516 - val_loss: 0.1607 - learning_rate: 5.0000e-04
+Epoch 7/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 226s 156ms/step - accuracy: 0.9375 - loss: 0.1892 - val_accuracy: 0.9530 - val_loss: 0.1552 - learning_rate: 5.0000e-04
+Epoch 8/15
+1443/1443 ━━━━━━━━━━━━━━━━━━━━ 225s 156ms/step - accuracy: 0.9378 - loss: 0.1856 - val_accuracy: 0.9515 - val_loss: 0.1503 - learning_rate: 5.0000e-04
+Epoch 9/15
+1286/1443 ━━━━━━━━━━━━━━━━━━━━ 23s 151ms/step - accuracy: 0.9404 - loss: 0.1801

@@ -1,0 +1,7 @@
+path,label,image_hash
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Blueberry_leaf/train_Blueberry leaf_33.jpg,4,056d2a683d66a0091aed91cdd2e7a907e4028bb87c5bf143b4dd340c973ffbf2
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Corn_Gray_leaf_spot/train_Corn Gray leaf spot_16.jpg,7,ee5feb93630e84778bf22c136a56340ee51da6dc5e76b4171dfe037644966c84
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Corn_Gray_leaf_spot/train_Corn Gray leaf spot_19.jpg,7,da22454d6433118b4c98a5a8e5635604e981fe59a1876347f43d739e443b77c4
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Corn_leaf_blight/train_Corn leaf blight_119.jpg,9,95ca980a4b5ed581a67a38da9ef4925d789de72723d2e6cc30a2ee82905f9767
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Potato_leaf_early_blight/train_Potato leaf early blight_68.jpg,20,b744f0b2ab6bf51bdd87735e5ccec4adb7e27015cb9c43c261b3a62dee5cfa9a
+/kaggle/input/datasets/nirmalsankalana/plantdoc-dataset/train/Tomato_Septoria_leaf_spot/train_Tomato Septoria leaf spot_20.jpg,32,42172c0701d01f13607828f9abd860e551d8777966c0523e1655b2037022a306
