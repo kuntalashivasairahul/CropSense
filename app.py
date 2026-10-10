@@ -18,6 +18,7 @@ import streamlit as st
 from PIL import Image
 
 import core
+from scripts.release_assets import ensure_local_models
 
 # --------------------------------------------------------------------------
 # Design tokens & Light Agriculture Palette
@@ -58,6 +59,13 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+
+@st.cache_resource(show_spinner=False)
+def prepare_release_assets():
+    ensure_local_models()
+    return True
+
+prepare_release_assets()
 
 # --------------------------------------------------------------------------
 # Icons — Lucide line paths, 24x24 grid, single stroke weight, currentColor.
@@ -961,7 +969,9 @@ def prepare_image_input(img: Image.Image) -> Image.Image:
 def compute_ndvi_and_stats(rgb_img, nir_img):
     """Compute per-pixel NDVI, heatmap image, low-NDVI stress overlay, and 6 stats."""
     if nir_img.size != rgb_img.size:
-        nir_img = nir_img.resize(rgb_img.size, Image.Resampling.BILINEAR)
+        raise ValueError(f"RGB and NIR dimensions differ: {rgb_img.size} vs {nir_img.size}. Use aligned images of the same size.")
+    if nir_img.mode != "L":
+        raise ValueError("The NIR image must be a single-channel grayscale image, not a colour photograph.")
 
     rgb_arr = np.array(rgb_img.convert("RGB")).astype(float)
     red = rgb_arr[:, :, 0]
@@ -1149,6 +1159,23 @@ def run_model(slot, fn):
         st.session_state[f"{slot}_error"] = str(e)
 
 
+def clear_disease_input():
+    st.session_state.disease = None
+    st.session_state.pop("disease_img", None)
+    st.session_state.pop("disease_src", None)
+
+
+def clear_ndvi_input():
+    st.session_state.ndvi = None
+    st.session_state.pop("ndvi_imgs", None)
+
+
+def clear_pest_input():
+    st.session_state.pest = None
+    for key in ("pest_seq", "pest_truth", "pest_label"):
+        st.session_state.pop(key, None)
+
+
 def apply_scenario(name):
     dm, nm, pm = disease_model(), ndvi_model(), pest_model()
     im = imagenet_model()
@@ -1311,7 +1338,6 @@ with col_pills:
     nav = st.pills(
         "Navigation",
         ["Disease detection", "Canopy stress", "Pest risk", "Composite"],
-        default="Disease detection",
         key="nav",
         label_visibility="collapsed",
     )
@@ -1363,7 +1389,8 @@ with sec_right:
 # ==========================================================================
 if nav == "Disease detection":
     note("Trained and validated on lab-condition leaf images (PlantVillage dataset); accuracy "
-         "on real-world field photos is lower (~30%) due to domain shift — see project report "
+         "on the 252-image PlantDoc field test, the adapted checkpoint reached 55.95% accuracy "
+         "(historically inspected test set) — see project report "
          "for details.")
 
     anim_m1 = should_anim_title
@@ -1374,7 +1401,7 @@ if nav == "Disease detection":
     with left:
         with st.container(border=True):
             html('<div class="card-eyebrow">Leaf Photo Input</div>')
-            upload = st.file_uploader("Upload leaf photograph", type=["jpg", "jpeg", "png"], key="disease_upload")
+            upload = st.file_uploader("Upload leaf photograph", type=["jpg", "jpeg", "png"], key="disease_upload", on_change=clear_disease_input)
             with st.expander("Supported crops (14)", expanded=False):
                 st.markdown(
                     "Apple, Blueberry, Cherry, Corn, Grape, Orange, Peach, Bell pepper, "
@@ -1385,7 +1412,7 @@ if nav == "Disease detection":
                 )
             samples = sorted([p for p in (core.MODELS_DIR.parent / "sample_images").glob("*.jpg") if p.stem not in ("adversarial_non_leaf", "plantdoc_field_tomato_late_blight")])
             sample_names = [core.pretty_class(p.stem) for p in samples]
-            pick = st.selectbox("Or load labelled PlantVillage sample", ["None"] + sample_names, key="disease_pick")
+            pick = st.selectbox("Or load labelled PlantVillage sample", ["None"] + sample_names, key="disease_pick", on_change=clear_disease_input)
 
             image, source, src_key = None, "", None
             if upload is not None:
@@ -1421,7 +1448,7 @@ if nav == "Disease detection":
                     view_mode = st.segmented_control("View Mode", ["Original photo", "Grad-CAM saliency"], default="Original photo", key="disease_cam_mode", label_visibility="collapsed")
                     if view_mode == "Grad-CAM saliency":
                         st.image(res_live["cam_image"], width=320)
-                        st.caption("Grad-CAM: warm gradients highlight visual lesion features driving the diagnosis.")
+                        st.caption("Grad-CAM: warm regions influenced this prediction; they do not prove a lesion was detected.")
                     else:
                         st.image(image, width=320)
                         st.caption(source)
@@ -1454,13 +1481,13 @@ if nav == "Disease detection":
                                          f"stock backbone identified {guesses}.</div>")
 
                     warning_html = (
-                        f"<strong>Out-of-distribution input detected:</strong> This image does not "
-                        f"resemble plant or leaf material based on automated sanity checks.<br/>"
+                        f"<strong>Image check needs review:</strong> One or more heuristic screens "
+                        f"could not confirm this as a typical leaf image. These screens can flag real leaves.<br/>"
                         f"{signals_html}"
                         f"<div style='margin-top:0.35rem'>Because this classifier operates on a closed-set 38-class softmax "
                         f"with no built-in &ldquo;unknown&rdquo; category, it always assigns one of its "
                         f"trained crop-disease labels regardless of input &mdash; so the prediction below "
-                        f"should be treated as unreliable, not dismissed outright.</div>"
+                        f"needs review alongside the original photo.</div>"
                     )
                     note(warning_html, "caution")
 
@@ -1492,8 +1519,8 @@ if nav == "Disease detection":
                 with st.expander("Explainable AI · Grad-CAM activation details"):
                     st.markdown(
                         "**Gradient-weighted Class Activation Mapping (Grad-CAM)** computes gradient saliency "
-                        "backpropagated directly to the final convolutional layer (`out_relu`), proving the model "
-                        "anchors its diagnosis in active necrosis rather than background noise."
+                        "backpropagated to the final convolutional layer (`out_relu`). It highlights regions that "
+                        "influenced the prediction, but does not prove the prediction is correct or lesion-based."
                     )
         html('</div>')
 
@@ -1512,15 +1539,21 @@ elif nav == "Canopy stress":
         with st.container(border=True):
             html('<div class="card-eyebrow">Multispectral Imagery Inputs</div>')
             st.caption("Upload paired visible (RGB) and near-infrared (NIR) multispectral field tiles:")
-            m2_rgb_file = st.file_uploader("RGB image", type=["jpg", "jpeg", "png"], key="m2_rgb_file")
-            m2_nir_file = st.file_uploader("NIR image (near-infrared band)", type=["jpg", "jpeg", "png"], key="m2_nir_file")
+            m2_rgb_file = st.file_uploader("RGB image", type=["jpg", "jpeg", "png"], key="m2_rgb_file", on_change=clear_ndvi_input)
+            m2_nir_file = st.file_uploader("NIR image (near-infrared band)", type=["jpg", "jpeg", "png"], key="m2_nir_file", on_change=clear_ndvi_input)
 
             if m2_rgb_file and m2_nir_file:
                 if st.button("Compute NDVI and classify", type="primary", key="btn_run_m2_upload"):
-                    rgb_img = Image.open(m2_rgb_file)
-                    nir_img = Image.open(m2_nir_file)
-                    stats, hm, ov = compute_ndvi_and_stats(rgb_img, nir_img)
-                    st.session_state.ndvi = core.predict_ndvi(ndvi_model(), stats)
+                    try:
+                        rgb_img = prepare_image_input(Image.open(m2_rgb_file))
+                        nir_img = Image.open(m2_nir_file)
+                        nir_img.load()
+                        stats, hm, ov = compute_ndvi_and_stats(rgb_img, nir_img)
+                        prediction = core.predict_ndvi(ndvi_model(), stats)
+                    except (OSError, ValueError) as exc:
+                        st.error(f"Could not analyze this image pair: {exc}")
+                        st.stop()
+                    st.session_state.ndvi = prediction
                     st.session_state.ndvi_imgs = (rgb_img, ov, hm, stats, "Uploaded multispectral pair")
                     for f, val in stats.items():
                         st.session_state[f"ndvi_{f}"] = val
@@ -1529,7 +1562,7 @@ elif nav == "Canopy stress":
                     st.rerun()
 
             st.write("")
-            st.caption("Or load ground-truth multispectral satellite samples:")
+            st.caption("Or load bundled paired RGB/NIR field-image samples:")
             b1, b2, b3 = st.columns(3)
 
             def load_sample_by_label(lbl_target):
@@ -1559,7 +1592,7 @@ elif nav == "Canopy stress":
             # Manual stats expander (demoted fallback)
             with st.expander("Enter NDVI statistics manually"):
                 for feat in core.NDVI_FEATURES:
-                    st.slider(feat, -1.0 if "min" in feat else 0.0, 1.0, step=0.01, value=float(st.session_state.get(f"ndvi_{feat}", 0.35)), key=f"manual_slider_{feat}")
+                    st.slider(feat, 0.0 if feat == "ndvi_std" else -1.0, 1.0, step=0.01, value=float(st.session_state.get(f"ndvi_{feat}", 0.35)), key=f"manual_slider_{feat}")
                 if st.button("Classify from manual stats", key="btn_manual_ndvi"):
                     man_stats = {feat: float(st.session_state[f"manual_slider_{feat}"]) for feat in core.NDVI_FEATURES}
                     st.session_state.ndvi = core.predict_ndvi(ndvi_model(), man_stats)
@@ -1578,7 +1611,7 @@ elif nav == "Canopy stress":
 
             html('<div class="card-eyebrow">Canopy Health Diagnosis</div>')
             if not res_ndvi:
-                note("Load a multispectral satellite pair or run NDVI calculation.", "info")
+                note("Load a paired RGB/NIR field tile or run NDVI calculation.", "info")
             else:
                 tone = ndvi_tone(res_ndvi)
                 score_val = res_ndvi["ndvi_score"]
@@ -1664,7 +1697,7 @@ elif nav == "Pest risk":
     with left:
         with st.container(border=True):
             html('<div class="card-eyebrow">Meteorological Window</div>')
-            pick_seq = st.selectbox("Select 4-week test sequence", labels, key="pest_week_select")
+            pick_seq = st.selectbox("Select 4-week test sequence", labels, key="pest_week_select", on_change=clear_pest_input)
             chosen_sample = samples[labels.index(pick_seq)]
             seq_matrix = chosen_sample["sequence"]
 
@@ -1795,7 +1828,8 @@ elif nav == "Composite":
     if not missing:
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True):
-            html('<div class="card-eyebrow">Agronomic Action Plan & Interventions</div>')
+            html('<div class="card-eyebrow">Illustrative follow-up</div>')
+            st.caption("Confirm the crop, symptoms, and local guidance before treatment. These prototype outputs are not a field diagnosis or a pesticide recommendation.")
             d_act = core.get_disease_action(_d["raw_class"], _d["is_healthy"])
             n_act = core.get_ndvi_action(_n["label"])
             p_act = core.get_pest_action(_p["pred_class"], _p["pest_risk_score"])
@@ -1812,7 +1846,8 @@ elif nav == "Composite":
                 st.caption(p_act)
 
             st.write("")
-            report_txt = core.generate_report(_d, _n, _p, score, label)
+            report_txt = ("Prototype assessment for demonstration only. Confirm findings with a qualified local agronomist before treatment.\n\n"
+                          + core.generate_report(_d, _n, _p, score, label))
             st.download_button(
                 "Download Agronomic Assessment Report (TXT)",
                 data=report_txt,

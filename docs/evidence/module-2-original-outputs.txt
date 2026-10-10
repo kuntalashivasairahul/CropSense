@@ -1,0 +1,110 @@
+CELL 2
+Download complete
+
+
+CELL 2
+/tmp/ipykernel_58/2490088515.py:16: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tar.extractall("/kaggle/working/")
+
+
+CELL 2
+Extraction complete
+Total RGB images available: 8345
+Total NIR images available: 8345
+Label subfolders: ['storm_damage', 'drydown', 'nutrient_deficiency', 'water', 'endrow', 'planter_skip', 'weed_cluster', 'waterway', 'double_plant']
+
+
+CELL 4
+100%|██████████| 2000/2000 [01:03<00:00, 31.39it/s]
+
+
+CELL 4
+Skipped 0 images (missing pairing or unreadable)
+(1993, 8)
+label
+severe_stress      904
+moderate_stress    746
+healthy            343
+Name: count, dtype: int64
+
+
+CELL 6
+                 precision    recall  f1-score   support
+
+        healthy      0.280     0.101     0.149        69
+moderate_stress      0.700     0.658     0.678       149
+  severe_stress      0.662     0.856     0.747       181
+
+       accuracy                          0.652       399
+      macro avg      0.547     0.539     0.525       399
+   weighted avg      0.610     0.652     0.618       399
+
+Confusion matrix (rows=true, cols=predicted, order: healthy/moderate/severe)
+[[  7  23  39]
+ [ 11  98  40]
+ [  7  19 155]]
+
+Feature importances:
+ndvi_p25     0.203763
+ndvi_std     0.199746
+ndvi_p75     0.198803
+ndvi_mean    0.186261
+ndvi_max     0.183877
+ndvi_min     0.027550
+dtype: float64
+
+
+CELL 8
+Before SMOTE: {'severe_stress': 723, 'moderate_stress': 597, 'healthy': 274}
+After SMOTE: {'moderate_stress': 723, 'healthy': 723, 'severe_stress': 723}
+                 precision    recall  f1-score   support
+
+        healthy      0.228     0.261     0.243        69
+moderate_stress      0.708     0.570     0.632       149
+  severe_stress      0.680     0.751     0.714       181
+
+       accuracy                          0.599       399
+      macro avg      0.539     0.528     0.530       399
+   weighted avg      0.612     0.599     0.602       399
+
+Confusion matrix (rows=true, cols=predicted, order: healthy/moderate/severe)
+[[ 18  18  33]
+ [ 33  85  31]
+ [ 28  17 136]]
+
+
+CELL 10
+Split source: REUSED existing X_train/X_test/y_train/y_test from the kernel
+Train size: 1594 Test size: 399
+Train class counts, must be the ORIGINAL imbalance and NOT SMOTE: {'severe_stress': 723, 'moderate_stress': 597, 'healthy': 274}
+class_weight in use: balanced
+                 precision    recall  f1-score   support
+
+        healthy      0.280     0.101     0.149        69
+moderate_stress      0.700     0.658     0.678       149
+  severe_stress      0.662     0.856     0.747       181
+
+       accuracy                          0.652       399
+      macro avg      0.547     0.539     0.525       399
+   weighted avg      0.610     0.652     0.618       399
+
+Confusion matrix rows=true cols=predicted order healthy/moderate_stress/severe_stress
+[[  7  23  39]
+ [ 11  98  40]
+ [  7  19 155]]
+TRUE severe_stress PREDICTED healthy = 7  -- baseline was 6, SMOTE was 20
+Saved to: /kaggle/working/module2_rf.pkl
+File size: 14089441 bytes = 13.44 MB
+                 precision    recall  f1-score   support
+
+        healthy      0.280     0.101     0.149        69
+moderate_stress      0.700     0.658     0.678       149
+  severe_stress      0.662     0.856     0.747       181
+
+       accuracy                          0.652       399
+      macro avg      0.547     0.539     0.525       399
+   weighted avg      0.610     0.652     0.618       399
+
+Reloaded predictions identical: True
+Reloaded classification_report identical: True
+Reloaded confusion matrix identical: True

@@ -1,0 +1,8 @@
+{
+  "selected": "lstm_u16_d0.3",
+  "required_architecture": "LSTM",
+  "reload_predictions_match": true,
+  "beats_persistence_accuracy": true,
+  "beats_persistence_macro_f1": true,
+  "deployment": "candidate only; preserve fallback until Windows/Mac integration and provenance review pass"
+}

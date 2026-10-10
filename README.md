@@ -1,101 +1,37 @@
-
 # CropSense AI
 
-A composite crop-health dashboard that fuses three independently trained models
-into a single score. Final-year B.Tech project.
+Final-year crop-health prototype. Three independently trained models feed an equal-weight composite score. The inputs come from unrelated datasets, so the composite is a **simulated scenario**, with no validated fusion accuracy.
 
-| Tab | Model | Output |
+| Signal | Model and input | Current evaluation |
 |---|---|---|
-| Disease Detection | MobileNetV2 transfer-learning CNN, 38 classes | `disease_score` |
-| NDVI Crop Stress | RandomForestClassifier, 200 trees, 3 classes | `ndvi_score` |
-| Pest Risk | LSTM (16 units) over a 4-week weather window | `pest_risk_score` |
-| Fusion Dashboard | equal-weighted combination | `composite_score` |
+| Leaf disease | MobileNetV2, RGB image, 38 classes | 55.95% on 252 PlantDoc field photos; 96.83% on 8,145 PlantVillage validation images |
+| Canopy stress | 200-tree Random Forest, six NDVI statistics from paired RGB/NIR images | Historical deployed-artifact random-tile test: 66.75% on 400 images; a separately retrained baseline scored 58.42% on 1,549 grouped-field images, macro F1 0.474 |
+| Pest risk | Four-week, nine-feature LSTM, three classes | 52.63% on 19 observed-target weeks; persistence 42.11%; logistic regression 68.42% |
 
-```
-composite_score = ⅓·disease_score + ⅓·ndvi_score + ⅓·(1 − pest_risk_score)
-```
+The original CNN checkpoint scored 30.95% on the same PlantDoc set when re-evaluated in the new notebook. Its PlantVillage result was 98.10% under the same image-loading code. The field test had been inspected in prior work, so it is a historical benchmark rather than a newly blind external test. The new pest evaluation uses a different target and split protocol from the older notebook, so its percentages cannot be compared directly with the old 36.8% result. See [model evaluation](docs/MODEL_EVALUATION.md).
 
-Buckets: **Healthy** ≥ 0.66 · **Moderate Risk** 0.33–0.66 · **Severe Risk** < 0.33
+The grouped-field NDVI experiments did not produce a safe replacement. A validation-selected threshold improved macro F1 from 0.474 to 0.477 on held-out fields but increased severe-to-healthy mistakes from 74 to 81 of 700; the release keeps the previous forest and documents the negative result.
 
-## Deployment
+Fusion is `⅓ × disease_score + ⅓ × ndvi_score + ⅓ × (1 − pest_risk_score)`. Equal weights reflect the absence of labelled three-signal outcomes; they were not learned from data.
 
-Target host is **Streamlit Community Cloud**: point it at this repo, branch
-`main`, main file `app.py`, Python 3.12.
+## Windows 10 laptop
 
-The model artefacts are git-lfs tracked here, but Community Cloud does not fetch
-lfs objects — they would arrive as ~130-byte pointer stubs. `core.model_path()`
-detects that and pulls the real artefact from
-[rahulkuntala/cropsense-models](https://huggingface.co/rahulkuntala/cropsense-models)
-instead. Locally, where lfs did run, the checked-out files are used directly and
-nothing is downloaded.
+Use **64-bit Python 3.12**. Version 3.12.2 is suitable. Clone the prepared branch with `git clone -b codex/monday-demo-ready https://github.com/kuntalashivasairahul/CropSense.git`, then double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
 
-Hugging Face Spaces is not the host: HF has retired the `streamlit` SDK for new
-Spaces, and `docker`/`gradio` Spaces now require a PRO subscription. Model repos
-remain free, which is why the artefacts live there.
+The app runs CPU inference on native Windows. Recent TensorFlow does not support native Windows GPU execution. If a DLL is missing, install the official [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist).
 
-## Running locally
+After setup, disconnect the laptop from Wi-Fi and run the full [demo checklist](docs/WINDOWS_DEMO.md). The launch script writes `reports/environment-windows.json`; share that report and any error text if the laptop behaves differently.
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python test_core.py      # sanity-checks all three models against known inputs
-streamlit run app.py
-```
+The model files are tracked with Git LFS, but [release_bundle.zip](models/release_bundle.zip) also contains the exact release files. A clone with only LFS pointers restores the models from this bundle. Every restored file is verified against [artifact_manifest.json](models/artifact_manifest.json). The demonstration needs no model download.
 
-## Notes on the models
+## Mac mini
 
-These are served exactly as trained — the dashboard performs no retraining or
-fine-tuning.
+Run `./setup_mac.sh` once with Python 3.12 installed, then `./start_mac.sh`. Both launch scripts use the same pinned runtime dependencies. [Continuous integration](.github/workflows/compatibility.yml) covers Windows, Apple Silicon, and Linux; the actual laptop remains the final Windows check.
 
-- **Disease CNN.** The saved model rescales internally (`x / 127.5 − 1`,
-  MobileNetV2 `preprocess_input`, baked in as graph ops right after the input
-  layer). Images are therefore fed as **raw 0–255 RGB** after a 224×224 resize.
-  Adding manual normalisation here would double-scale the input and silently
-  corrupt every prediction.
-- **Disease CNN, domain shift.** Validated at 98.3% on lab-condition
-  PlantVillage images but ~30.6% on real-world field photos. This is a known,
-  documented limitation, surfaced in the UI.
-- **Pest LSTM.** Trained on a limited historical dataset (~5 seasons, one
-  region) and documented as a data-volume-limited baseline, included per the
-  module's required architecture. Sequences are drawn from real test-set weeks
-  and fed unscaled, as exported alongside the model.
-- **Artefact hosting.** The three files in `models/` and the copies in the HF
-  model repo are byte-identical (24,935,986 / 13,996,161 / 44,843 bytes).
-- **Equal weighting** is a deliberate choice: with three models trained on three
-  unrelated datasets there is no labelled ground truth linking all three signals
-  to one outcome, so no statistically grounded weighting can be derived.
-- **Explainable AI (Grad-CAM).** The disease module computes a gradient-weighted class
-  activation map over the MobileNetV2 backbone (`out_relu`), visually grounding the
-  diagnosis in foliar lesions rather than background artifacts.
-- **Out-of-Distribution (OOD) Sanity Check.** A dual-heuristic pre-check combining HSV
-  vegetation color coverage analysis (greens/yellows/browns $\ge 15\%$) and stock ImageNet
-  MobileNetV2 classification (verifying plant-adjacent class representation in top-5). Flags
-  non-leaf inputs with an explanatory caution box, demonstrating awareness of closed-set
-  classifier limitations without hiding model predictions.
-- **Demo Scenarios & Advisory Reports.** Includes one-click test scenarios (Healthy,
-  Early Warning, Severe Outbreak, and Adversarial Non-Leaf Test), actionable agronomic
-  intervention protocols, and downloadable assessment reports.
-- **Multispectral (RGB+NIR) Canopy Analysis.** Module 2 accepts paired visible (RGB) and
-  near-infrared (NIR) multispectral satellite tiles, computes per-pixel NDVI
-  $((\text{NIR} - \text{Red}) / (\text{NIR} + \text{Red} + 10^{-8}))$, extracts 6 spatial
-  summary statistics (`mean, std, min, max, p25, p75`), renders low-NDVI stress overlays
-  and true NDVI heatmaps, and provides verified ground-truth sample parcels.
-- **Modern Light Theme & Restrained Motion Choreography.** Built with an airy agricultural
-  design language (fixed diagonal `#DDEBF3` to `#F0F4C3` gradient, `#0E1A12` ink, `#C6E94A` lime
-  fills, self-hosted IBM Plex typography, and WCAG AA/AAA compliance). Pure CSS motion includes
-  `linear()` spring easing, clip-path card reveals, `@property` count-up numerals, hand-built
-  inline SVG composite gauge and pest timeline area charts, blurred stats ribbons, and full
-  `prefers-reduced-motion` accessibility support.
+## Training and evidence
 
-## Layout
+The three new Kaggle notebooks are [Module 1 field adaptation](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit), [Module 2 field-separated Random Forest](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics), and [Module 3 causal LSTM](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics). Local source copies, the original exported notebooks, and snapshots of the earlier Kaggle versions are in [notebooks](notebooks). The runs record splits, per-class precision/recall/F1, confusion matrices, predictions, training details, package versions, and checksummed model exports. Compact results are in [docs/evidence](docs/evidence).
 
-```
-app.py                     Streamlit presentation layer (light theme, SVG visualisations)
-core.py                    model loading, inference, score formulas, Grad-CAM, OOD checks
-test_core.py               runnable verification suite for all models and heuristics
-models/                    trained artefacts (git-lfs) & module2_samples/ (RGB+NIR pairs)
-sample_images/             labelled PlantVillage samples and adversarial non-leaf test
-static/                    self-hosted IBM Plex Sans and Mono fonts
-.streamlit/config.toml     Streamlit light theme configuration
-```
+The disease classifier has no unknown class and can be confidently wrong. NDVI labels come from anomaly masks, not agronomist diagnoses. Pest data are sparse and from one region. Grad-CAM highlights image regions influencing a prediction; it does not prove biological correctness. Hyperspectral analysis is outside this release scope.
 
+For a short faculty-facing walkthrough and likely questions, see the [Monday briefing](docs/MONDAY_BRIEFING.md). An editable [academic report draft](docs/ACADEMIC_REPORT_DRAFT.md) collects the methodology, results, limitations, and references.

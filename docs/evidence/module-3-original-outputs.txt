@@ -1,0 +1,51 @@
+CELL 0
+(260, 12) ['Observation Year', 'Standard Week', 'Jassid_Value', 'MaxT(°C)', 'MinT(°C)', 'RH1(%)', 'RH2(%)', 'RF(mm)', 'WS(kmph)', 'SSH(hrs)', 'EVP(mm)', 'Aphid_Value']
+
+
+CELL 1
+   Observation Year  Standard Week  pest_pressure
+0              2005             31       0.019048
+1              2005             32       0.169082
+2              2005             33       0.785507
+3              2005             34       0.102899
+4              2005             35       0.247619
+
+
+CELL 2
+(117, 4, 9) (19, 4, 9)
+
+
+CELL 3
+Epoch 1/50
+
+
+CELL 3
+2026-09-19 08:20:42.004658: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+
+
+CELL 3
+15/15 ━━━━━━━━━━━━━━━━━━━━ 2s 29ms/step - loss: 0.0657 - mae: 0.2065 - val_loss: 0.0879 - val_mae: 0.2022
+Epoch 2/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0655 - mae: 0.2103 - val_loss: 0.0817 - val_mae: 0.1972
+Epoch 3/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 7ms/step - loss: 0.0502 - mae: 0.1793 - val_loss: 0.0830 - val_mae: 0.1952
+Epoch 4/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0462 - mae: 0.1711 - val_loss: 0.0894 - val_mae: 0.1987
+Epoch 5/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0478 - mae: 0.1644 - val_loss: 0.0932 - val_mae: 0.2009
+Epoch 6/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0547 - mae: 0.1815 - val_loss: 0.0935 - val_mae: 0.2007
+Epoch 7/50
+15/15 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0451 - mae: 0.1628 - val_loss: 0.0891 - val_mae: 0.1961
+
+
+CELL 4
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 194ms/step
+Test MAE: 0.1972
+Sample predictions vs actual: [(np.float32(0.354), np.float64(1.0)), (np.float32(0.351), np.float64(0.424)), (np.float32(0.402), np.float64(1.0)), (np.float32(0.384), np.float64(1.0)), (np.float32(0.225), np.float64(0.371)), (np.float32(0.19), np.float64(0.157)), (np.float32(0.309), np.float64(0.138)), (np.float32(0.375), np.float64(0.167)), (np.float32(0.198), np.float64(0.281)), (np.float32(0.198), np.float64(0.2))]
+
+
+CELL 5
+LSTM MAE:          0.19721378498806388
+Mean-baseline MAE:  0.20557848001045756
+Persistence MAE:    0.15388471177944862

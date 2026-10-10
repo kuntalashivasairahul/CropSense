@@ -1,0 +1,23 @@
+{
+  "feature_order": [
+    "ndvi_mean",
+    "ndvi_std",
+    "ndvi_min",
+    "ndvi_max",
+    "ndvi_p25",
+    "ndvi_p75"
+  ],
+  "class_order": [
+    "healthy",
+    "moderate_stress",
+    "severe_stress"
+  ],
+  "preprocessing": "raw float64 NDVI; six unscaled statistics",
+  "healthy_min_probability": 0.45,
+  "decision_rule": "If top class is healthy but its probability is below threshold, choose the higher-probability stress class.",
+  "scikit_learn_version": "1.6.1",
+  "limitations": "Heuristic anomaly-mask labels; inferred field identifiers; no agronomist ground truth; new split is not comparable to historical random-tile accuracy.",
+  "artifact": "module2_rf_candidate.pkl",
+  "sha256": "1f30f9cef64ac0859840f4eb2e00dfea14ce591d683d42ddd8e42f5d916949c7",
+  "run_id": "20261010T184302Z"
+}
