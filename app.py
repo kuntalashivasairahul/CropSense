@@ -1204,6 +1204,7 @@ def apply_scenario(name):
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "healthy sample pair")
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
+                st.session_state[f"manual_slider_{f}"] = val
 
         p_samp = seq_map["low"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
@@ -1231,6 +1232,7 @@ def apply_scenario(name):
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "severe stress sample pair")
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
+                st.session_state[f"manual_slider_{f}"] = val
 
         p_samp = seq_map["medium"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
@@ -1257,6 +1259,7 @@ def apply_scenario(name):
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "severe stress sample pair")
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
+                st.session_state[f"manual_slider_{f}"] = val
 
         p_samp = seq_map["high"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
@@ -1368,7 +1371,7 @@ with sec_right:
         "Load demonstration scenario",
         [
             "Manual / Custom inputs",
-            "Scenario 1 · Pristine Field (Healthy)",
+            "Scenario 1 · Pristine Leaf, Canopy Warning",
             "Scenario 2 · Early Warning (Hidden Stress)",
             "Scenario 3 · Severe Outbreak (High Risk)",
             "Adversarial test — non-leaf image",
@@ -1557,6 +1560,7 @@ elif nav == "Canopy stress":
                     st.session_state.ndvi_imgs = (rgb_img, ov, hm, stats, "Uploaded multispectral pair")
                     for f, val in stats.items():
                         st.session_state[f"ndvi_{f}"] = val
+                        st.session_state[f"manual_slider_{f}"] = val
                     st.session_state["m2_version"] = st.session_state.get("m2_version", 0) + 1
                     st.session_state["m2_just_computed"] = True
                     st.rerun()
@@ -1578,6 +1582,7 @@ elif nav == "Canopy stress":
                     st.session_state.ndvi_imgs = (rgb_img, ov, hm, stats, f"Sample parcel ({entry['label'].replace('_', ' ').title()})")
                     for f, val in stats.items():
                         st.session_state[f"ndvi_{f}"] = val
+                        st.session_state[f"manual_slider_{f}"] = val
                     st.session_state["m2_version"] = st.session_state.get("m2_version", 0) + 1
                     st.session_state["m2_just_computed"] = True
                     st.rerun()
@@ -1592,7 +1597,8 @@ elif nav == "Canopy stress":
             # Manual stats expander (demoted fallback)
             with st.expander("Enter NDVI statistics manually"):
                 for feat in core.NDVI_FEATURES:
-                    st.slider(feat, 0.0 if feat == "ndvi_std" else -1.0, 1.0, step=0.01, value=float(st.session_state.get(f"ndvi_{feat}", 0.35)), key=f"manual_slider_{feat}")
+                    st.session_state.setdefault(f"manual_slider_{feat}", float(st.session_state.get(f"ndvi_{feat}", 0.35)))
+                    st.slider(feat, 0.0 if feat == "ndvi_std" else -1.0, 1.0, step=0.01, key=f"manual_slider_{feat}")
                 if st.button("Classify from manual stats", key="btn_manual_ndvi"):
                     man_stats = {feat: float(st.session_state[f"manual_slider_{feat}"]) for feat in core.NDVI_FEATURES}
                     st.session_state.ndvi = core.predict_ndvi(ndvi_model(), man_stats)

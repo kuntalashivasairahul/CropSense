@@ -64,6 +64,18 @@ class ReleaseBundleContract(unittest.TestCase):
 
 
 class AppStateContract(unittest.TestCase):
+    def test_manual_ndvi_controls_follow_loaded_pairs(self):
+        from streamlit.testing.v1 import AppTest
+        app = AppTest.from_file(str(ROOT / 'app.py'), default_timeout=60).run()
+        app.session_state['nav'] = 'Canopy stress'
+        app.run()
+        for button in ('btn_m2_s', 'btn_m2_h'):
+            app.button(key=button).click().run()
+            self.assertFalse(app.exception)
+            stats = app.session_state['ndvi_imgs'][3]
+            for feature, value in stats.items():
+                self.assertAlmostEqual(app.session_state[f'manual_slider_{feature}'], value)
+
     def test_input_change_clears_old_predictions(self):
         from streamlit.testing.v1 import AppTest
         app = AppTest.from_file(str(ROOT / 'app.py'), default_timeout=60).run()
