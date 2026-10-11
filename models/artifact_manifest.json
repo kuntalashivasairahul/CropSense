@@ -1,0 +1,26 @@
+{
+  "release": "candidate-2026-10-10",
+  "status": "Module 1 and Module 3 candidates validated; original Module 2 forest retained after grouped candidate rejection",
+  "models": {
+    "module3_lstm.keras": {
+      "sha256": "c9dcc0972ab5cc2e94989c3e4480f3468b36255ec8923e09acfa782da13722d6",
+      "bytes": 48261,
+      "kaggle_notebook": "cropsense-module-3-audit"
+    },
+    "module1_cnn.keras": {
+      "sha256": "5c263a58b9d4613625af07b344500bd45011336c680b30b2095c6b051d0d8deb",
+      "bytes": 9805815,
+      "kaggle_notebook": "cropsense-module-1-audit"
+    },
+    "module2_rf.pkl": {
+      "sha256": "2fc55e901be9f29f209f7bd30c1e33a4a793c999b3f87c8e901faaaade8eafe2",
+      "bytes": 13996161
+    }
+  },
+  "demo_assets": {
+    "sample_sequences.json": {
+      "sha256": "8978d0ee0e8e26bebf2c0657dc41f7fee424bed108efe0f1213a70e51d034890",
+      "bytes": 19901
+    }
+  }
+}

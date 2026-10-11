@@ -4,7 +4,9 @@
 # TensorFlow 2.21 loads them without conversion (verified).
 # module2_rf.pkl was pickled by scikit-learn 1.6.1 — keep that pin exact,
 # a different minor version can refuse to unpickle the forest.
+-c requirements/constraints.txt
 streamlit==1.64.0
+keras==3.15.1
 # tensorflow-cpu has no macOS arm64 wheel, and the full tensorflow build is
 # needlessly large on a CPU-only deploy host. Pick per platform.
 tensorflow-cpu==2.21.0; sys_platform == "linux"

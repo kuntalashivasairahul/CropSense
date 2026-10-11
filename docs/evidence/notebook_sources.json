@@ -1,0 +1,20 @@
+{
+  "module-1": {
+    "source": "user-provided Downloads export",
+    "sha256": "b339c3a52f49c763cfb06d4df4726e7aa70f6868ea46f81c4e78db660b9fdd08",
+    "cells": 24,
+    "kaggle_url": "https://www.kaggle.com/code/kuntalashivasairahul/module-1"
+  },
+  "module-2": {
+    "source": "user-provided Downloads export",
+    "sha256": "c163ad2d2a1cdf25ae2eb0531ba9baccd828e1bf2fa2f8afc0e5f5861cb3e5d7",
+    "cells": 11,
+    "kaggle_url": "https://www.kaggle.com/code/kuntalashivasairahul/module-2"
+  },
+  "module-3": {
+    "source": "user-provided Downloads export",
+    "sha256": "c8fd06a0436b58791f1c76a1320301a54bdf50119e3eec5d1efb1917dbc544eb",
+    "cells": 6,
+    "kaggle_url": "https://www.kaggle.com/code/kuntalashivasairahul/module-3"
+  }
+}

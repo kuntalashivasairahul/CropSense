@@ -1,0 +1,1246 @@
+[
+  {
+    "id": 1,
+    "key": "10.3390/s18082674",
+    "reference": "K. Liakos, P. Busato, D. Moshou, S. Pearson, and D. Bochtis, “Machine Learning in Agriculture: A Review,” Sensors, vol. 18, no. 8, pp. 2674, 2018, doi: 10.3390/s18082674.",
+    "url": "https://doi.org/10.3390/s18082674",
+    "purpose": "Survey of agricultural machine-learning tasks.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.3390/s18082674",
+      "title": [
+        "Machine Learning in Agriculture: A Review"
+      ],
+      "authors": [
+        {
+          "given": "Konstantinos",
+          "family": "Liakos",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Institute for Bio-Economy and Agri-Technology (IBO), Centre of Research and Technology—Hellas (CERTH), 6th km Charilaou-Thermi Rd, GR 57001 Thessaloniki, Greece"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Patrizia",
+          "family": "Busato",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Agriculture, Forestry and Food Sciences (DISAFA), Faculty of Agriculture, University of Turin, Largo Braccini 2, 10095 Grugliasco, Italy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dimitrios",
+          "family": "Moshou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute for Bio-Economy and Agri-Technology (IBO), Centre of Research and Technology—Hellas (CERTH), 6th km Charilaou-Thermi Rd, GR 57001 Thessaloniki, Greece"
+            },
+            {
+              "name": "Agricultural Engineering Laboratory, Faculty of Agriculture, Aristotle University of Thessaloniki, 54124 Thessaloniki, Greece"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4297-4837",
+          "authenticated-orcid": false,
+          "given": "Simon",
+          "family": "Pearson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lincoln Institute for Agri-food Technology (LIAT), University of Lincoln, Brayford Way, Brayford Pool, Lincoln LN6 7TS, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7058-5986",
+          "authenticated-orcid": false,
+          "given": "Dionysis",
+          "family": "Bochtis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute for Bio-Economy and Agri-Technology (IBO), Centre of Research and Technology—Hellas (CERTH), 6th km Charilaou-Thermi Rd, GR 57001 Thessaloniki, Greece"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "Sensors"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2018,
+            8,
+            14
+          ]
+        ]
+      },
+      "volume": "18",
+      "issue": "8",
+      "page": "2674",
+      "abstract": "<jats:p>Machine learning has emerged with big data technologies and high-performance computing to create new opportunities for data intensive science in the multi-disciplinary agri-technologies domain. In this paper, we present a comprehensive review of research dedicated to applications of machine learning in agricultural production systems. The works analyzed were categorized in (a) crop management, including applications on yield prediction, disease detection, weed detection crop quality, and species recognition; (b) livestock management, including applications on animal welfare and livestock production; (c) water management; and (d) soil management. The filtering and classification of the presented articles demonstrate how agriculture will benefit from machine learning technologies. By applying machine learning to sensor data, farm management systems are evolving into real time artificial intelligence enabled programs that provide rich recommendations and insights for farmer decision support and action.</jats:p>"
+    }
+  },
+  {
+    "id": 2,
+    "key": "10.1016/j.compag.2018.02.016",
+    "reference": "A. Kamilaris, and F. X. Prenafeta-Boldú, “Deep learning in agriculture: A survey,” Computers and Electronics in Agriculture, vol. 147, pp. 70–90, 2018, doi: 10.1016/j.compag.2018.02.016.",
+    "url": "https://doi.org/10.1016/j.compag.2018.02.016",
+    "purpose": "Broad context for deep learning in agriculture; no numerical benchmark claim.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.compag.2018.02.016",
+      "title": [
+        "Deep learning in agriculture: A survey"
+      ],
+      "authors": [
+        {
+          "given": "Andreas",
+          "family": "Kamilaris",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Francesc X.",
+          "family": "Prenafeta-Boldú",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "Computers and Electronics in Agriculture"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2018,
+            4
+          ]
+        ]
+      },
+      "volume": "147",
+      "page": "70-90"
+    }
+  },
+  {
+    "id": 3,
+    "key": "10.3389/fpls.2016.01419",
+    "reference": "S. P. Mohanty, D. P. Hughes, and M. Salathé, “Using Deep Learning for Image-Based Plant Disease Detection,” Frontiers in Plant Science, vol. 7, Art. no. 1419, 2016, doi: 10.3389/fpls.2016.01419.",
+    "url": "https://doi.org/10.3389/fpls.2016.01419",
+    "purpose": "Controlled-condition PlantVillage disease classification; full article read.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.3389/fpls.2016.01419",
+      "title": [
+        "Using Deep Learning for Image-Based Plant Disease Detection"
+      ],
+      "authors": [
+        {
+          "given": "Sharada P.",
+          "family": "Mohanty",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "David P.",
+          "family": "Hughes",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marcel",
+          "family": "Salathé",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "Frontiers in Plant Science"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2016,
+            9,
+            22
+          ]
+        ]
+      },
+      "volume": "7",
+      "article": "1419"
+    }
+  },
+  {
+    "id": 4,
+    "key": "https://arxiv.org/abs/1511.08060",
+    "reference": "D. P. Hughes and M. Salathé, “An open access repository of images on plant health to enable the development of mobile disease diagnostics,” arXiv:1511.08060, 2015.",
+    "url": "https://arxiv.org/abs/1511.08060",
+    "purpose": "PlantVillage repository origin.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 5,
+    "key": "https://arxiv.org/abs/1911.10317",
+    "reference": "D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and N. Batra, “PlantDoc: A dataset for visual plant disease detection,” arXiv:1911.10317, 2019.",
+    "url": "https://arxiv.org/abs/1911.10317",
+    "purpose": "PlantDoc dataset and non-laboratory image setting.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 6,
+    "key": "https://arxiv.org/abs/2001.01306",
+    "reference": "M. T. Chiu et al., “Agriculture-Vision: A large aerial image database for agricultural pattern analysis,” in Proc. IEEE/CVF CVPR, 2020.",
+    "url": "https://arxiv.org/abs/2001.01306",
+    "purpose": "Agriculture-Vision RGB/NIR anomaly-image dataset.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 7,
+    "key": "10.1109/JSTARS.2020.3013340",
+    "reference": "Y. Dong et al., “Automatic System for Crop Pest and Disease Dynamic Monitoring and Early Forecasting,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 13, pp. 4410–4418, 2020, doi: 10.1109/JSTARS.2020.3013340.",
+    "url": "https://doi.org/10.1109/JSTARS.2020.3013340",
+    "purpose": "Related pest/disease monitoring and forecasting topic; no direct benchmark comparison.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1109/jstars.2020.3013340",
+      "title": [
+        "Automatic System for Crop Pest and Disease Dynamic Monitoring and Early Forecasting"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-2865-5020",
+          "authenticated-orcid": false,
+          "given": "Yingying",
+          "family": "Dong",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Fang",
+          "family": "Xu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beijing Advanced Innovation Center for Imaging Technology, School of Mathematics, Capital Normal University, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4587-2489",
+          "authenticated-orcid": false,
+          "given": "Linyi",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0618-0984",
+          "authenticated-orcid": false,
+          "given": "Xiaoping",
+          "family": "Du",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Binyuan",
+          "family": "Ren",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "National Agricultural Technology Extension and Service Center, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anting",
+          "family": "Guo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yun",
+          "family": "Geng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chao",
+          "family": "Ruan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Huichun",
+          "family": "Ye",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wenjing",
+          "family": "Huang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4498-477X",
+          "authenticated-orcid": false,
+          "given": "Yining",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beijing Advanced Innovation Center for Imaging Technology, School of Mathematics, Capital Normal University, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2020
+          ]
+        ]
+      },
+      "volume": "13",
+      "page": "4410-4418"
+    }
+  },
+  {
+    "id": 8,
+    "key": "10.1016/j.agsy.2017.01.023",
+    "reference": "S. Wolfert, L. Ge, C. Verdouw, and M. J. Bogaardt, “Big Data in Smart Farming – A review,” Agricultural Systems, vol. 153, pp. 69–80, 2017, doi: 10.1016/j.agsy.2017.01.023.",
+    "url": "https://doi.org/10.1016/j.agsy.2017.01.023",
+    "purpose": "Smart-farming integration context.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.agsy.2017.01.023",
+      "title": [
+        "Big Data in Smart Farming – A review"
+      ],
+      "authors": [
+        {
+          "given": "Sjaak",
+          "family": "Wolfert"
+        },
+        {
+          "given": "Lan",
+          "family": "Ge"
+        },
+        {
+          "given": "Cor",
+          "family": "Verdouw"
+        },
+        {
+          "given": "Marc-Jeroen",
+          "family": "Bogaardt"
+        }
+      ],
+      "venue": [
+        "Agricultural Systems"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2017,
+            5
+          ]
+        ]
+      },
+      "volume": "153",
+      "page": "69-80"
+    }
+  },
+  {
+    "id": 9,
+    "key": "10.1016/j.biosystemseng.2016.01.017",
+    "reference": "J. G. A. Barbedo, “A review on the main challenges in automatic plant disease identification based on visible range images,” Biosystems Engineering, vol. 144, pp. 52–60, 2016, doi: 10.1016/j.biosystemseng.2016.01.017.",
+    "url": "https://doi.org/10.1016/j.biosystemseng.2016.01.017",
+    "purpose": "Visible-image disease-identification challenges; corrected year/title.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.biosystemseng.2016.01.017",
+      "title": [
+        "A review on the main challenges in automatic plant disease identification based on visible range images"
+      ],
+      "authors": [
+        {
+          "given": "Jayme Garcia Arnal",
+          "family": "Barbedo"
+        }
+      ],
+      "venue": [
+        "Biosystems Engineering"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2016,
+            4
+          ]
+        ]
+      },
+      "volume": "144",
+      "page": "52-60"
+    }
+  },
+  {
+    "id": 10,
+    "key": "10.1016/j.compag.2018.01.009",
+    "reference": "K. P. Ferentinos, “Deep learning models for plant disease detection and diagnosis,” Computers and Electronics in Agriculture, vol. 145, pp. 311–318, 2018, doi: 10.1016/j.compag.2018.01.009.",
+    "url": "https://doi.org/10.1016/j.compag.2018.01.009",
+    "purpose": "Prior deep-learning disease-detection work; no comparative numerical claim.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.compag.2018.01.009",
+      "title": [
+        "Deep learning models for plant disease detection and diagnosis"
+      ],
+      "authors": [
+        {
+          "given": "Konstantinos P.",
+          "family": "Ferentinos"
+        }
+      ],
+      "venue": [
+        "Computers and Electronics in Agriculture"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2018,
+            2
+          ]
+        ]
+      },
+      "volume": "145",
+      "page": "311-318"
+    }
+  },
+  {
+    "id": 11,
+    "key": "10.1109/ACCESS.2024.3411013",
+    "reference": "A. Shrotriya, A. Kumar Sharma, S. Prabhu, and A. Kumar Bairwa, “An Approach Toward Classifying Plant-Leaf Diseases and Comparisons With the Conventional Classification,” IEEE Access, vol. 12, pp. 117379–117398, 2024, doi: 10.1109/ACCESS.2024.3411013.",
+    "url": "https://doi.org/10.1109/ACCESS.2024.3411013",
+    "purpose": "Supplied base paper on plant-leaf classification; no method reproduction claimed.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1109/access.2024.3411013",
+      "title": [
+        "An Approach Toward Classifying Plant-Leaf Diseases and Comparisons With the Conventional Classification"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-5520-9448",
+          "authenticated-orcid": false,
+          "given": "Anita",
+          "family": "Shrotriya",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Akhilesh",
+          "family": "Kumar Sharma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Data Science and Engineering, Manipal University Jaipur, Jaipur, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3826-1084",
+          "authenticated-orcid": false,
+          "given": "Srikanth",
+          "family": "Prabhu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Computer Science and Engineering, Manipal Academy of Higher Education, Manipal Institute of Technology, Manipal, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1830-0661",
+          "authenticated-orcid": false,
+          "given": "Amit",
+          "family": "Kumar Bairwa",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Artificial Intelligence and Machine Learning, Manipal University Jaipur, Jaipur, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "IEEE Access"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2024
+          ]
+        ]
+      },
+      "volume": "12",
+      "page": "117379-117398"
+    }
+  },
+  {
+    "id": 12,
+    "key": "https://arxiv.org/abs/1801.04381",
+    "reference": "M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, “MobileNetV2: Inverted residuals and linear bottlenecks,” in Proc. IEEE/CVF CVPR, 2018, pp. 4510–4520.",
+    "url": "https://arxiv.org/abs/1801.04381",
+    "purpose": "MobileNetV2 inverted residuals and linear bottlenecks.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 13,
+    "key": "10.1186/s40537-019-0197-0",
+    "reference": "C. Shorten, and T. M. Khoshgoftaar, “A survey on Image Data Augmentation for Deep Learning,” Journal of Big Data, vol. 6, no. 1, Art. no. 60, 2019, doi: 10.1186/s40537-019-0197-0.",
+    "url": "https://doi.org/10.1186/s40537-019-0197-0",
+    "purpose": "Image-augmentation methodological context.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1186/s40537-019-0197-0",
+      "title": [
+        "A survey on Image Data Augmentation for Deep Learning"
+      ],
+      "authors": [
+        {
+          "given": "Connor",
+          "family": "Shorten"
+        },
+        {
+          "given": "Taghi M.",
+          "family": "Khoshgoftaar"
+        }
+      ],
+      "venue": [
+        "Journal of Big Data"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            6
+          ]
+        ]
+      },
+      "volume": "6",
+      "issue": "1",
+      "article": "60"
+    }
+  },
+  {
+    "id": 14,
+    "key": "https://arxiv.org/abs/1610.02391",
+    "reference": "R. R. Selvaraju et al., “Grad-CAM: Visual explanations from deep networks via gradient-based localization,” arXiv:1610.02391, 2016, revised 2019.",
+    "url": "https://arxiv.org/abs/1610.02391",
+    "purpose": "Grad-CAM model-localization method.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 15,
+    "key": "10.1016/0034-4257(79)90013-0",
+    "reference": "C. J. Tucker, “Red and photographic infrared linear combinations for monitoring vegetation,” Remote Sensing of Environment, vol. 8, no. 2, pp. 127–150, 1979, doi: 10.1016/0034-4257(79)90013-0.",
+    "url": "https://doi.org/10.1016/0034-4257(79)90013-0",
+    "purpose": "Red/infrared vegetation-index foundation.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/0034-4257(79)90013-0",
+      "title": [
+        "Red and photographic infrared linear combinations for monitoring vegetation"
+      ],
+      "authors": [
+        {
+          "given": "Compton J.",
+          "family": "Tucker",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "Remote Sensing of Environment"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            1979,
+            5
+          ]
+        ]
+      },
+      "volume": "8",
+      "issue": "2",
+      "page": "127-150"
+    }
+  },
+  {
+    "id": 16,
+    "key": "10.1016/j.tree.2005.05.011",
+    "reference": "N. Pettorelli et al., “Using the satellite-derived NDVI to assess ecological responses to environmental change,” Trends in Ecology & Evolution, vol. 20, no. 9, pp. 503–510, 2005, doi: 10.1016/j.tree.2005.05.011.",
+    "url": "https://doi.org/10.1016/j.tree.2005.05.011",
+    "purpose": "NDVI interpretation context.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.tree.2005.05.011",
+      "title": [
+        "Using the satellite-derived NDVI to assess ecological responses to environmental change"
+      ],
+      "authors": [
+        {
+          "given": "Nathalie",
+          "family": "Pettorelli",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jon Olav",
+          "family": "Vik",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Atle",
+          "family": "Mysterud",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jean-Michel",
+          "family": "Gaillard",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Compton J.",
+          "family": "Tucker",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nils Chr.",
+          "family": "Stenseth",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "Trends in Ecology &amp; Evolution"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2005,
+            9
+          ]
+        ]
+      },
+      "volume": "20",
+      "issue": "9",
+      "page": "503-510"
+    }
+  },
+  {
+    "id": 17,
+    "key": "10.1109/ACCESS.2023.3283033",
+    "reference": "M. Son Le, Y. A. Liou, and M. T. Pham, “Crop Response to Disease and Water Scarcity Quantified by Normalized Difference Latent Heat Index,” IEEE Access, vol. 11, pp. 55938–55946, 2023, doi: 10.1109/ACCESS.2023.3283033.",
+    "url": "https://doi.org/10.1109/ACCESS.2023.3283033",
+    "purpose": "Supplied latent-heat-index base paper; explicitly distinct from implemented NDVI.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1109/access.2023.3283033",
+      "title": [
+        "Crop Response to Disease and Water Scarcity Quantified by Normalized Difference Latent Heat Index"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-5360-7119",
+          "authenticated-orcid": false,
+          "given": "Mai",
+          "family": "Son Le",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Vietnam Academy of Science and Technology, Space Technology Institute, Hanoi, Cau Giay, Vietnam"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-8100-5529",
+          "authenticated-orcid": false,
+          "given": "Yuei-An",
+          "family": "Liou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Hydrology Remote Sensing Laboratory, Center for Space and Remote Sensing Research, National Central University (NCU), Taoyuan, Zhongli, Taiwan"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0308-3406",
+          "authenticated-orcid": false,
+          "given": "Minh Tuan",
+          "family": "Pham",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Vietnam Academy of Science and Technology, Space Technology Institute, Hanoi, Cau Giay, Vietnam"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "venue": [
+        "IEEE Access"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2023
+          ]
+        ]
+      },
+      "volume": "11",
+      "page": "55938-55946"
+    }
+  },
+  {
+    "id": 18,
+    "key": "10.1162/neco.1997.9.8.1735",
+    "reference": "S. Hochreiter, and J. Schmidhuber, “Long Short-Term Memory,” Neural Computation, vol. 9, no. 8, pp. 1735–1780, 1997, doi: 10.1162/neco.1997.9.8.1735.",
+    "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+    "purpose": "Original LSTM method.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1162/neco.1997.9.8.1735",
+      "title": [
+        "Long Short-Term Memory"
+      ],
+      "authors": [
+        {
+          "given": "Sepp",
+          "family": "Hochreiter"
+        },
+        {
+          "given": "Jürgen",
+          "family": "Schmidhuber"
+        }
+      ],
+      "venue": [
+        "Neural Computation"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            1997,
+            11,
+            1
+          ]
+        ]
+      },
+      "volume": "9",
+      "issue": "8",
+      "page": "1735-1780",
+      "abstract": "<jats:p>Learning to store information over extended time intervals by recurrent backpropagation takes a very long time, mostly because of insufficient, decaying error backflow. We briefly review Hochreiter's (1991) analysis of this problem, then address it by introducing a novel, efficient, gradient based method called long short-term memory (LSTM). Truncating the gradient where this does not do harm, LSTM can learn to bridge minimal time lags in excess of 1000 discrete-time steps by enforcing constant error flow through constant error carousels within special units. Multiplicative gate units learn to open and close access to the constant error flow. LSTM is local in space and time; its computational complexity per time step and weight is O. 1. Our experiments with artificial data involve local, distributed, real-valued, and noisy pattern representations. In comparisons with real-time recurrent learning, back propagation through time, recurrent cascade correlation, Elman nets, and neural sequence chunking, LSTM leads to many more successful runs, and learns much faster. LSTM also solves complex, artificial long-time-lag tasks that have never been solved by previous recurrent network algorithms.</jats:p>"
+    }
+  },
+  {
+    "id": 19,
+    "key": "10.1111/ecog.02881",
+    "reference": "D. R. Roberts et al., “Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure,” Ecography, vol. 40, no. 8, pp. 913–929, 2017, doi: 10.1111/ecog.02881.",
+    "url": "https://doi.org/10.1111/ecog.02881",
+    "purpose": "Structured spatial/temporal validation.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1111/ecog.02881",
+      "title": [
+        "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure"
+      ],
+      "authors": [
+        {
+          "given": "David R.",
+          "family": "Roberts"
+        },
+        {
+          "given": "Volker",
+          "family": "Bahn"
+        },
+        {
+          "given": "Simone",
+          "family": "Ciuti"
+        },
+        {
+          "given": "Mark S.",
+          "family": "Boyce"
+        },
+        {
+          "given": "Jane",
+          "family": "Elith"
+        },
+        {
+          "given": "Gurutzeta",
+          "family": "Guillera‐Arroita"
+        },
+        {
+          "given": "Severin",
+          "family": "Hauenstein"
+        },
+        {
+          "given": "José J.",
+          "family": "Lahoz‐Monfort"
+        },
+        {
+          "given": "Boris",
+          "family": "Schröder"
+        },
+        {
+          "given": "Wilfried",
+          "family": "Thuiller"
+        },
+        {
+          "given": "David I.",
+          "family": "Warton"
+        },
+        {
+          "given": "Brendan A.",
+          "family": "Wintle"
+        },
+        {
+          "given": "Florian",
+          "family": "Hartig"
+        },
+        {
+          "given": "Carsten F.",
+          "family": "Dormann"
+        }
+      ],
+      "venue": [
+        "Ecography"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2017,
+            3,
+            3
+          ]
+        ]
+      },
+      "volume": "40",
+      "issue": "8",
+      "page": "913-929",
+      "abstract": "<jats:p>Ecological data often show temporal, spatial, hierarchical (random effects), or phylogenetic structure. Modern statistical approaches are increasingly accounting for such dependencies. However, when performing cross‐validation, these structures are regularly ignored, resulting in serious underestimation of predictive error. One cause for the poor performance of uncorrected (random) cross‐validation, noted often by modellers, are dependence structures in the data that persist as dependence structures in model residuals, violating the assumption of independence. Even more concerning, because often overlooked, is that structured data also provides ample opportunity for overfitting with non‐causal predictors. This problem can persist even if remedies such as autoregressive models, generalized least squares, or mixed models are used. Block cross‐validation, where data are split strategically rather than randomly, can address these issues. However, the blocking strategy must be carefully considered. Blocking in space, time, random effects or phylogenetic distance, while accounting for dependencies in the data, may also unwittingly induce extrapolations by restricting the ranges or combinations of predictor variables available for model training, thus overestimating interpolation errors. On the other hand, deliberate blocking in predictor space may also improve error estimates when extrapolation is the modelling goal. Here, we review the ecological literature on non‐random and blocked cross‐validation approaches. We also provide a series of simulations and case studies, in which we show that, for all instances tested, block cross‐validation is nearly universally more appropriate than random cross‐validation if the goal is predicting to new data or predictor space, or for selecting causal predictors. We recommend that block cross‐validation be used wherever dependence structures exist in a dataset, even if no correlation structure is visible in the fitted model residuals, or if the fitted models account for such correlations.</jats:p>"
+    }
+  },
+  {
+    "id": 20,
+    "key": "10.1016/j.patter.2023.100804",
+    "reference": "S. Kapoor, and A. Narayanan, “Leakage and the reproducibility crisis in machine-learning-based science,” Patterns, vol. 4, no. 9, Art. no. 100804, 2023, doi: 10.1016/j.patter.2023.100804.",
+    "url": "https://doi.org/10.1016/j.patter.2023.100804",
+    "purpose": "Leakage and reproducibility; corresponding preprint abstract read.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.patter.2023.100804",
+      "title": [
+        "Leakage and the reproducibility crisis in machine-learning-based science"
+      ],
+      "authors": [
+        {
+          "given": "Sayash",
+          "family": "Kapoor"
+        },
+        {
+          "given": "Arvind",
+          "family": "Narayanan"
+        }
+      ],
+      "venue": [
+        "Patterns"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2023,
+            9
+          ]
+        ]
+      },
+      "volume": "4",
+      "issue": "9",
+      "page": "100804",
+      "article": "100804"
+    }
+  },
+  {
+    "id": 21,
+    "key": "https://arxiv.org/abs/1412.6980",
+    "reference": "D. P. Kingma and J. Ba, “Adam: A method for stochastic optimization,” in Proc. ICLR, 2015.",
+    "url": "https://arxiv.org/abs/1412.6980",
+    "purpose": "Adam optimiser.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 22,
+    "key": "10.1023/A:1010933404324",
+    "reference": "L. Breiman, “Random Forests,” Machine Learning, vol. 45, no. 1, pp. 5–32, 2001, doi: 10.1023/A:1010933404324.",
+    "url": "https://doi.org/10.1023/A:1010933404324",
+    "purpose": "Original Random Forest method.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1023/a:1010933404324",
+      "title": [
+        "Random Forests"
+      ],
+      "authors": [
+        {
+          "given": "Leo",
+          "family": "Breiman"
+        }
+      ],
+      "venue": [
+        "Machine Learning"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2001,
+            10
+          ]
+        ]
+      },
+      "volume": "45",
+      "issue": "1",
+      "page": "5-32"
+    }
+  },
+  {
+    "id": 23,
+    "key": "https://jmlr.org/papers/v15/srivastava14a.html",
+    "reference": "N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov, “Dropout: A simple way to prevent neural networks from overfitting,” J. Mach. Learn. Res., vol. 15, pp. 1929–1958, 2014.",
+    "url": "https://jmlr.org/papers/v15/srivastava14a.html",
+    "purpose": "Dropout regularization.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 24,
+    "key": "icar",
+    "reference": "ICAR-CRIDA, “Historical data of pest and weather: Cotton, Akola, Jassid and Aphid, 2005–2009,” Pest and Weather Database, accessed Oct. 10, 2026.",
+    "url": "http://icar-crida.res.in:8080/naip/Servlet1.jsp",
+    "purpose": "ICAR-CRIDA original pest/weather data source.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 25,
+    "key": "https://jmlr.org/papers/v12/pedregosa11a.html",
+    "reference": "F. Pedregosa et al., “Scikit-learn: Machine learning in Python,” J. Mach. Learn. Res., vol. 12, pp. 2825–2830, 2011.",
+    "url": "https://jmlr.org/papers/v12/pedregosa11a.html",
+    "purpose": "scikit-learn implementation.",
+    "verification": "Original arXiv/journal/database page and abstract or source table checked.",
+    "metadata": null
+  },
+  {
+    "id": 26,
+    "key": "10.1016/j.ipm.2009.03.002",
+    "reference": "M. Sokolova, and G. Lapalme, “A systematic analysis of performance measures for classification tasks,” Information Processing & Management, vol. 45, no. 4, pp. 427–437, 2009, doi: 10.1016/j.ipm.2009.03.002.",
+    "url": "https://doi.org/10.1016/j.ipm.2009.03.002",
+    "purpose": "Classification metrics.",
+    "verification": "Publisher-deposited Crossref metadata checked; abstract available only where returned.",
+    "metadata": {
+      "doi": "10.1016/j.ipm.2009.03.002",
+      "title": [
+        "A systematic analysis of performance measures for classification tasks"
+      ],
+      "authors": [
+        {
+          "given": "Marina",
+          "family": "Sokolova"
+        },
+        {
+          "given": "Guy",
+          "family": "Lapalme"
+        }
+      ],
+      "venue": [
+        "Information Processing &amp; Management"
+      ],
+      "date": {
+        "date-parts": [
+          [
+            2009,
+            7
+          ]
+        ]
+      },
+      "volume": "45",
+      "issue": "4",
+      "page": "427-437"
+    }
+  }
+]

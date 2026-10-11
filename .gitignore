@@ -6,3 +6,10 @@ __pycache__/
 .playwright-mcp/
 .serena/
 .agents/
+reports/
+.gstack/
+.streamlit/secrets.toml
+.ipynb_checkpoints/
+*.download
+kaggle.json
+.env

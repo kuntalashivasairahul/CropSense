@@ -1,0 +1,16 @@
+{
+  "id": "kuntalashivasairahul/cropsense-module-1-audit",
+  "title": "CropSense Module 1 Audit",
+  "code_file": "cropsense-module-1-audit.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "abdallahalidev/plantvillage-dataset",
+    "nirmalsankalana/plantdoc-dataset"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

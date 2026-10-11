@@ -1,0 +1,52 @@
+{
+  "Jassid": {
+    "query": {
+      "combo0": "Cotton",
+      "combo1": "Akola",
+      "combo2": "Jassid",
+      "combo3": "2005",
+      "combo4": "2009"
+    },
+    "sha256_html": "199a5b911e61cf6ea7632fc147b9b89e9e3ae2f6273388e268c2368051777cc5",
+    "rows": 260,
+    "missing": {
+      "Observation Year": 0,
+      "Standard Week": 0,
+      "Pest Value": 138,
+      "MaxT(°C)": 0,
+      "MinT(°C)": 0,
+      "RH1(%)": 0,
+      "RH2(%)": 0,
+      "RF(mm)": 0,
+      "WS(kmph)": 0,
+      "SSH(hrs)": 0,
+      "EVP(mm)": 0
+    },
+    "retrieved_utc": "2026-10-10T10:47:23.610345+00:00"
+  },
+  "Aphid": {
+    "query": {
+      "combo0": "Cotton",
+      "combo1": "Akola",
+      "combo2": "Aphid",
+      "combo3": "2005",
+      "combo4": "2009"
+    },
+    "sha256_html": "0ba859b778373ebdd5f18e276659a7d2980116c97e1bef0bdcfe051321006af2",
+    "rows": 260,
+    "missing": {
+      "Observation Year": 0,
+      "Standard Week": 0,
+      "Pest Value": 141,
+      "MaxT(°C)": 0,
+      "MinT(°C)": 0,
+      "RH1(%)": 0,
+      "RH2(%)": 0,
+      "RF(mm)": 0,
+      "WS(kmph)": 0,
+      "SSH(hrs)": 0,
+      "EVP(mm)": 0
+    },
+    "retrieved_utc": "2026-10-10T10:47:27.371447+00:00"
+  }
+}

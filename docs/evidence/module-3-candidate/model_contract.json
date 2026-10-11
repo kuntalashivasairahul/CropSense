@@ -1,0 +1,46 @@
+{
+  "input_shape": [
+    null,
+    4,
+    9
+  ],
+  "output_shape": [
+    null,
+    3
+  ],
+  "class_order": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "feature_order": [
+    "MaxT(°C)",
+    "MinT(°C)",
+    "RH1(%)",
+    "RH2(%)",
+    "RF(mm)",
+    "WS(kmph)",
+    "SSH(hrs)",
+    "EVP(mm)",
+    "pest_pressure"
+  ],
+  "input_preprocessing": "raw weather plus training-scaled pest_pressure; weather normalization embedded in graph",
+  "pest_scaling": {
+    "Jassid": {
+      "min": 0.0,
+      "max": 14.7
+    },
+    "Aphid": {
+      "min": 0.0,
+      "max": 207.0
+    }
+  },
+  "thresholds": [
+    0.2136876006441224,
+    0.3223832528180354
+  ],
+  "limitations": "Single region; small test set; historically inspected 2009 season; causal observed-target protocol differs from legacy evaluation.",
+  "artifact": "module3_lstm_candidate.keras",
+  "sha256": "c9dcc0972ab5cc2e94989c3e4480f3468b36255ec8923e09acfa782da13722d6",
+  "run_id": "20261010T104719Z"
+}
