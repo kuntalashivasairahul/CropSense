@@ -1,16 +1,18 @@
 # CropSense AI — faculty briefing and demonstration
 
+For questions about the ten weekly progress sheets and what was actually completed on each date, use the [dated evidence addendum](WEEKLY_PROGRESS_EVIDENCE_ADDENDUM_2026-10-11.md). It corrects the unsupported 6 August class-analysis claim without backdating later work.
+
 **Project:** three separately trained models joined by an illustrative dashboard score. The disease model accepts one RGB leaf photograph; the stress model accepts a paired RGB and near-infrared field tile; the pest model accepts four weeks of weather and prior pest observations. The datasets do not come from one farm, so the combined score is a simulated scenario, not a validated farm-level prediction. Hyperspectral analysis is outside this demonstration's agreed scope.
 
 ## Reproducible evidence
 
-| Module | Executed Kaggle notebook | Evaluation and main result | What to show |
+| Module | Kaggle audit notebook | Evaluation and main result | What to show |
 |---|---|---|---|
 | Disease, MobileNetV2, 38 classes | [Module 1 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit) | PlantDoc test: 141/252 correct (55.95%), macro F1 0.552. Original checkpoint: 78/252 (30.95%), macro F1 0.297. PlantVillage validation: 96.83% for the new checkpoint. | Class report, confusion matrix, both domain results, and model selection on PlantDoc training only. |
 | NDVI stress, Random Forest, 3 classes | [Module 2 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-2-field-splits-rf-and-metrics) | Retrained grouped-field baseline: 58.42% on 1,549 tiles, macro F1 0.474, healthy recall 23/280. Threshold candidate F1 0.477 but severe→healthy errors rose 74→81/700, so it was rejected. The deployed older artifact has a historical random-tile score of 66.75% on 400 tiles. | Six feature definitions, image and mask pairing, grouped split, per-class recall, severe-to-healthy errors. |
 | Pest risk, LSTM, 3 classes | [Module 3 audit](https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics) | 2009 observed-target test: 10/19 correct (52.63%), macro F1 0.433. Persistence: 8/19; logistic regression: 13/19. | Year-based split, four-week windows, observed-only targets, all baselines and confusion matrices. |
 
-For every module, the notebook records training configuration, dataset and split details, environment versions, model selection **before** the final test, accuracy, precision, recall, F1, support, confusion counts, and exported artifact checks. [Detailed evaluation](MODEL_EVALUATION.md) and [saved evidence](evidence/) are in the repository. Small test groups can change these percentages substantially, so state their sample counts aloud.
+For every module, the audit code exports training configuration, dataset and split details, environment versions, model selection **before** the final test, accuracy, precision, recall, F1, support, confusion counts, and artifact checks. The checked-in notebook copies have no embedded cell outputs; open [saved evidence](evidence/) and [detailed evaluation](MODEL_EVALUATION.md) to show results. Small test groups can change these percentages substantially, so state their sample counts aloud.
 
 ## Base-paper gap statements
 

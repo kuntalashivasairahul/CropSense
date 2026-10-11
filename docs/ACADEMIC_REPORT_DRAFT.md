@@ -33,7 +33,7 @@ The related-work gap is stated conservatively in the [faculty briefing](MONDAY_B
 | Retrained NDVI baseline, grouped-field test (1,549) | 58.42% | 0.474 | Healthy recall 23/280; severe→healthy 74/700 |
 | Pest LSTM, 2009 observed-target weeks (19) | 52.63% | 0.433 | Persistence 42.11%; logistic regression 68.42% |
 
-Confusion matrices, support, per-class precision/recall/F1, predictions, split manifests, model-selection records, learning curves, versions, and hashes are in the three executed [Kaggle audit notebooks](../README.md#training-and-evidence) and the repository [evidence](evidence/). The complete numerical definitions and caveats are in [Model Evaluation](MODEL_EVALUATION.md). The grouped baseline is a new fit of the previous configuration, not a direct evaluation of the exact older deployed forest.
+Confusion matrices, support, per-class precision/recall/F1, predictions, split manifests, model-selection records, learning curves, versions, and hashes are in the repository [evidence](evidence/) exported by the three [Kaggle audit notebooks](../README.md#training-and-evidence). The checked-in notebook copies have no embedded cell outputs; use the evidence files for a live walkthrough. The complete numerical definitions and caveats are in [Model Evaluation](MODEL_EVALUATION.md). The grouped baseline is a new fit of the previous configuration, not a direct evaluation of the exact older deployed forest.
 
 ## Discussion and limitations
 
@@ -47,7 +47,7 @@ The composite score has no accuracy metric because its three inputs are evaluate
 
 ## Reproducibility and demonstration
 
-Notebook code and outputs identify every split, model configuration, export, and package version. The repository pins Python 3.12 dependencies, checksums the release models, and includes a bundle that restores them when a clone has only Git LFS pointers. Windows, Linux, and Mac checks compare inference outputs against reference predictions. The actual Windows 10 laptop must pass the [offline rehearsal checklist](WINDOWS_DEMO.md) before presentation.
+Notebook code and exported evidence identify every split, model configuration, export, and package version. The repository pins Python 3.12 dependencies, checksums the release models, and includes a bundle that restores them when a clone has only Git LFS pointers. Windows, Linux, and Mac checks compare inference outputs against reference predictions. The actual Windows 10 laptop must pass the [offline rehearsal checklist](WINDOWS_DEMO.md) before presentation.
 
 ## References
 

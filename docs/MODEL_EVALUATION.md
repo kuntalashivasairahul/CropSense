@@ -1,6 +1,6 @@
 # CropSense AI — model evaluation and decisions
 
-**Recorded 10 October 2026.** The model hashes are in [artifact_manifest.json](../models/artifact_manifest.json). Executed Kaggle notebooks and [compact evidence](evidence/) contain per-class precision, recall, F1, support, confusion counts, training history, package versions, split membership, and export checks. The composite score has no accuracy metric because the three datasets do not describe one labelled farm outcome.
+**Recorded 10 October 2026, with later grouped-NDVI results added 11 October.** The model hashes are in [artifact_manifest.json](../models/artifact_manifest.json). The Kaggle audit code exported [saved evidence](evidence/) with per-class precision, recall, F1, support, confusion counts, training history, package versions, split membership, and export checks. The checked-in notebook copies do not embed cell outputs. The composite score has no accuracy metric because the three datasets do not describe one labelled farm outcome.
 
 Accuracy is correct predictions divided by all predictions. Macro F1 weights classes equally; weighted F1 accounts for class size. A confusion matrix has true classes in rows and predictions in columns. Each notebook stores probabilities and sample-level predictions so mistakes can be audited. Scores under different split or target rules must be kept separate.
 
