@@ -39,7 +39,7 @@ Confusion matrices, support, per-class precision/recall/F1, predictions, split m
 
 The disease model gains 25.00 percentage points on the historically inspected PlantDoc benchmark but still performs well below its lab validation result. The change is not uniformly beneficial: the small Tomato Late Blight test subgroup loses recall. The disease softmax cannot output “unknown,” and an auxiliary ImageNet/color heuristic can produce false alarms even on genuine leaf images.
 
-The released checkpoint's result is the one in the table above and was directly reproduced by the [Kaggle audit v4 release-verification run](KAGGLE_NOTEBOOK_PRESENTATION.md#module-1-release-score-versus-fresh-rerun). An earlier v3 fresh retraining reached 55.16% PlantDoc test accuracy rather than 55.95%; it produced a different candidate artifact and was not promoted. The version used to demonstrate training should be named separately from the version used to verify the release score.
+The released checkpoint's result is the one in the table above and was directly reproduced by the [Kaggle audit v5 release-verification run](KAGGLE_NOTEBOOK_PRESENTATION.md#module-1-release-score-versus-fresh-rerun). An earlier v3 fresh retraining reached 55.16% PlantDoc test accuracy rather than 55.95%; it produced a different candidate artifact and was not promoted. The version used to demonstrate training should be named separately from the version used to verify the release score.
 
 For NDVI stress, aggregate accuracy conceals a weak healthy class and a costly severe-to-healthy error type. One proposed forest increased macro F1 but raised severe-to-healthy errors from 74 to 102 on the grouped test. A validation-selected probability threshold reduced that tradeoff on validation, yet the held-out test still rose from 74 to 81 severe-to-healthy errors. Both replacements were rejected. This is a case where optimizing one headline metric would make the demonstration less trustworthy. The mask-derived labels also limit biological interpretation.
 
@@ -49,7 +49,7 @@ The composite score has no accuracy metric because its three inputs are evaluate
 
 ## Reproducibility and demonstration
 
-Notebook code and exported evidence identify every split, model configuration, export, and package version. The repository pins Python 3.12 dependencies, checksums the release models, and includes a bundle that restores them when a clone has only Git LFS pointers. Windows, Linux, and Mac checks compare inference outputs against reference predictions. The actual Windows 10 laptop must pass the [offline rehearsal checklist](WINDOWS_DEMO.md) before presentation.
+Notebook code and exported evidence identify every split, model configuration, export, and package version. The repository pins Python 3.12 dependencies, checksums the release models, and includes a bundle that restores them when a clone has only Git LFS pointers. Windows, Linux, and Mac checks compare inference outputs against reference predictions. The actual Windows 11 laptop must pass the [offline rehearsal checklist](WINDOWS_DEMO.md) before presentation.
 
 ## References
 

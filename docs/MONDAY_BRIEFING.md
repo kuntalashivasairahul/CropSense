@@ -1,7 +1,7 @@
 # CropSense AI — faculty briefing and demonstration
 
 For questions about the ten weekly progress sheets and what was actually completed on each date, use the [dated evidence addendum](WEEKLY_PROGRESS_EVIDENCE_ADDENDUM_2026-10-11.md). It corrects the unsupported 6 August class-analysis claim without backdating later work.
-For live Kaggle evidence, use the [completed-version walkthrough](KAGGLE_NOTEBOOK_PRESENTATION.md), including the distinction between the locked Module 1 release score and its fresh retraining run.
+For live Kaggle evidence, open the last **Faculty view** output: cell **17** in Module 1 and cell **16** in Modules 2 and 3. Use the [completed-version walkthrough](KAGGLE_NOTEBOOK_PRESENTATION.md) to select the right saved versions and distinguish the locked Module 1 release score from its separate fresh retraining run.
 
 **Project:** three separately trained models joined by an illustrative dashboard score. The disease model accepts one RGB leaf photograph; the stress model accepts a paired RGB and near-infrared field tile; the pest model accepts four weeks of weather and prior pest observations. The datasets do not come from one farm, so the combined score is a simulated scenario, not a validated farm-level prediction. Hyperspectral analysis is outside this demonstration's agreed scope.
 

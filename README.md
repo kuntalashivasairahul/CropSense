@@ -14,7 +14,7 @@ The grouped-field NDVI experiments did not produce a safe replacement. A validat
 
 Fusion is `⅓ × disease_score + ⅓ × ndvi_score + ⅓ × (1 − pest_risk_score)`. Equal weights reflect the absence of labelled three-signal outcomes; they were not learned from data.
 
-## Windows 10 laptop
+## Windows 11 laptop
 
 Use **64-bit Python 3.12**. Version 3.12.2 is suitable. Clone the prepared branch with `git clone -b codex/monday-demo-ready https://github.com/kuntalashivasairahul/CropSense.git`, then double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
 

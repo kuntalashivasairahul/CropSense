@@ -1,6 +1,6 @@
-# Windows 10 demonstration checklist
+# Windows 11 demonstration checklist
 
-Use the laptop before presentation day. The Mac mini and a clean Windows Server 2025 GitHub runner have passed the offline inference suite; native Windows **10 laptop** readiness is complete only after this laptop passes. The [runner reports](evidence/compatibility/) record the checked versions and model hashes.
+Use the laptop before presentation day. The Mac mini and a clean Windows Server 2025 GitHub runner have passed the offline inference suite; native **Windows 11 laptop** readiness is complete only after this laptop passes. The [runner reports](evidence/compatibility/) record the checked versions and model hashes.
 
 1. Confirm **64-bit Python 3.12**. Version 3.12.2 is acceptable.
 2. In PowerShell or Command Prompt, run `git clone -b codex/monday-demo-ready https://github.com/kuntalashivasairahul/CropSense.git` and open the new `CropSense` folder. If already cloned, switch to that branch and pull its latest commit. Do not copy the Mac `.venv` folder.
@@ -11,6 +11,7 @@ Use the laptop before presentation day. The Mac mini and a clean Windows Server 
 7. Load all three paired RGB/NIR sample buttons. Confirm a real heatmap and statistics. Try mismatched dimensions and check the clear error. A colour photograph is not a valid NIR band.
 8. Run a pest sequence, change the selection, and confirm the old result clears.
 9. Check the composite score appears after all three modules have run.
-10. Keep a local copy of the repo and this checklist on the laptop for Monday.
+10. If you want to show the Agriculture-Vision source data, download and hash-check the mini archive using the [Kaggle walkthrough](KAGGLE_NOTEBOOK_PRESENTATION.md#agriculture-vision-mini-archive-for-local-use). Extract it to a folder outside the Git repo and show a matching RGB/NIR pair. The app uses its bundled pairs, so this archive is not needed to run it.
+11. Keep a local copy of the repo and this checklist on the laptop for Monday.
 
 Windows TensorFlow uses CPU inference. If a DLL error appears, install the official [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist) and rerun setup. If a model hash fails, send the report; do not hand-copy an unverified model.
