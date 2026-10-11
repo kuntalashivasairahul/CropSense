@@ -1373,7 +1373,7 @@ with sec_right:
             "Manual / Custom inputs",
             "Scenario 1 · Pristine Leaf, Canopy Warning",
             "Scenario 2 · Early Warning (Hidden Stress)",
-            "Scenario 3 · Severe Outbreak (High Risk)",
+            "Scenario 3 · Severe Combined Risk",
             "Adversarial test — non-leaf image",
             "Known limitation: real-world photo",
         ],
@@ -1766,6 +1766,8 @@ elif nav == "Composite":
     if not _d: missing.append("Disease detection")
     if not _n: missing.append("Canopy stress")
     if not _p: missing.append("Pest risk")
+    if _d and (_d.get("sanity") or {}).get("is_flagged"):
+        note("Leaf image check raised a heuristic warning. The composite includes a forced crop-disease class; review the photo before interpreting this score.")
 
     anim_m4 = should_anim_title
     wrapper_cls = "card-anim-reveal" if anim_m4 else "card-static"

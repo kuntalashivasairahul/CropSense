@@ -64,6 +64,19 @@ class ReleaseBundleContract(unittest.TestCase):
 
 
 class AppStateContract(unittest.TestCase):
+    def test_composite_carries_leaf_sanity_warning(self):
+        from streamlit.testing.v1 import AppTest
+        app = AppTest.from_file(str(ROOT / 'app.py'), default_timeout=60).run()
+        app.session_state['nav'] = 'Composite'
+        app.session_state['disease'] = {
+            'raw_class': 'Apple___Black_rot', 'display_class': 'Apple — Black Rot',
+            'disease_score': .1, 'is_healthy': False,
+            'sanity': {'is_flagged': True},
+        }
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any('Leaf image check raised a heuristic warning' in m.value for m in app.markdown))
+
     def test_manual_ndvi_controls_follow_loaded_pairs(self):
         from streamlit.testing.v1 import AppTest
         app = AppTest.from_file(str(ROOT / 'app.py'), default_timeout=60).run()
