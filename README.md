@@ -16,7 +16,7 @@ The simulated mean index is `⅓ × healthy_class_probability_sum + ⅓ × ndvi_
 
 ## Public web demo
 
-Deployment is prepared on `deploy/streamlit-demo` for free Streamlit Community Cloud hosting. The [deployment runbook](docs/DEPLOYMENT.md) records Python 3.12 settings, checksummed model loading, release gates and recovery. The live URL remains pending account sign-in and hosted acceptance; deployment readiness does not establish field accuracy.
+Open the public demo at **https://cropsense-ai-demo.streamlit.app/**. It runs from `deploy/streamlit-demo` on free Streamlit Community Cloud with Python 3.12. All four sections and three concurrent anonymous sessions were exercised on 23 October 2026. The [deployment runbook](docs/DEPLOYMENT.md) records the tested commit, performance, memory limits and recovery. Wake the app before presentations; deployment does not establish field accuracy.
 
 ## Windows 11 laptop
 

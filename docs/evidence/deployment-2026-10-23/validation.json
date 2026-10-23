@@ -1,0 +1,80 @@
+{
+  "verified_date": "2026-10-23",
+  "repository": "kuntalashivasairahul/CropSense",
+  "branch": "deploy/streamlit-demo",
+  "runtime_commit": "7356f0f947ee051ac38639870e70856c24afe3b9",
+  "live_url": "https://cropsense-ai-demo.streamlit.app/",
+  "older_app_preserved": "https://cropsense-btech.streamlit.app/",
+  "configuration": {
+    "entrypoint": "app.py",
+    "python": "3.12",
+    "hosting": "Streamlit Community Cloud free",
+    "public": true,
+    "secrets_required": false
+  },
+  "ci": {
+    "url": "https://github.com/kuntalashivasairahul/CropSense/actions/runs/39879798310",
+    "status": "passed",
+    "tests_per_platform": 28,
+    "platforms": [
+      "inference (ubuntu-latest)",
+      "inference (windows-latest)",
+      "inference (macos-15)"
+    ],
+    "full_offline_reports_verified": 3
+  },
+  "hosted_checks": {
+    "anonymous_profiles": 3,
+    "four_sections_rendered": true,
+    "grad_cam": true,
+    "paired_rgb_nir": true,
+    "pest_replay_chart": true,
+    "prototype_warnings_visible": true,
+    "report_downloads": 3,
+    "report_inputs_isolated": true,
+    "invalid_image_rejected": true,
+    "pixel_limit_rejected": true,
+    "upload_byte_limit_rejected": true,
+    "valid_input_recovery": true,
+    "desktop_and_390x844_viewports": true,
+    "physical_phone_tested": false,
+    "live_model_failure_injected": false,
+    "model_failure_handling": "Local AppTest loader-failure injection: visible error, cleared prediction and successful retry; 28-test suite also covers inference-failure handling."
+  },
+  "timings_seconds": {
+    "first_full_scenario_after_reboot": 17.666,
+    "cold_measurement_scope": "scenario selection to result, excludes provisioning and wake-up",
+    "ten_warm_leaf": {
+      "runtime_commit": "ba43b72",
+      "count": 10,
+      "mean": 2.470229999999702,
+      "minimum": 2.34469999999553,
+      "maximum": 2.86439999999851,
+      "scope": "browser click to result"
+    },
+    "three_concurrent_scenarios": {
+      "A": 7.589599999994039,
+      "B": 7.592,
+      "C": 7.46589999999851
+    },
+    "valid_recovery": 2.5134000000059604
+  },
+  "memory_bytes": {
+    "rss_bytes": 1390108672,
+    "container_bytes": 3220754432,
+    "container_limit_bytes": 3221225472
+  },
+  "limits": [
+    "Aggregate container usage approached the observed 3 GiB limit; no OOM observed in this bounded run.",
+    "Free hosting can sleep; sustained load, more than three anonymous viewers and physical devices were not tested.",
+    "Field accuracy, model provenance and sensor-calibration limitations remain; deployment does not validate the simulated composite."
+  ],
+  "raw_evidence": "Ignored local reports/deployment-2026-10-23/hosted; no authentication state or raw session identifiers published.",
+  "production_sha256": {
+    "module3_lstm.keras": "c9dcc0972ab5cc2e94989c3e4480f3468b36255ec8923e09acfa782da13722d6",
+    "module1_cnn.keras": "5c263a58b9d4613625af07b344500bd45011336c680b30b2095c6b051d0d8deb",
+    "module2_rf.pkl": "2fc55e901be9f29f209f7bd30c1e33a4a793c999b3f87c8e901faaaade8eafe2",
+    "sample_sequences.json": "8978d0ee0e8e26bebf2c0657dc41f7fee424bed108efe0f1213a70e51d034890",
+    "release_bundle.zip": "2072f2ae41e3636f03848238054586217ad1c9803ea206b9cccdd5629dfee63e"
+  }
+}

@@ -13,9 +13,9 @@ Target: free Streamlit Community Cloud, public access, initially 1–3 simultane
 | Dependencies | Root `requirements.txt`, including `requirements/constraints.txt` |
 | Visibility | Public |
 | Secrets | None |
-| Preferred address | `cropsense-ai-demo.streamlit.app`, if available; otherwise use the assigned address |
+| Live address | https://cropsense-ai-demo.streamlit.app/ |
 
-The new public app was created at **https://cropsense-ai-demo.streamlit.app/** on 23 October. The older **https://cropsense-btech.streamlit.app/** still points to `main` and is preserved. Hosted acceptance is tracked below; creation alone does not establish that every check passed.
+The public app was deployed and exercised on 23 October 2026. The older **https://cropsense-btech.streamlit.app/** still points to `main` and is preserved; it was 24 commits behind the initial prepared release. Use the new address for the audited runtime.
 
 The [Community Cloud deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy) describes the repository, branch, entrypoint and Python settings. The owner signs in and grants GitHub access in the browser; passwords, OAuth credentials and verification codes must not enter the repository or logs. No Kaggle credentials, GPU, paid plan or inference API key is required.
 
@@ -39,15 +39,30 @@ Free apps can sleep after inactivity, and [resource limits can change](https://d
 
 Use **Manage app → logs** for installation, startup and inference failures. Save the deployed commit, final app URL, CI run URL and measured acceptance results. A resource-limit or dependency failure blocks release; do not remove modules or enable billing to bypass the gate.
 
-To roll back after a successful deployment, revert the faulty update on `deploy/streamlit-demo` with a normal commit and push it. Do not force-push or rewrite the release history. Recheck the prior model hashes and run the anonymous smoke checks after the rebuild. Before the first successful deployment, no rollback target is established.
+The known-good runtime is `7356f0f947ee051ac38639870e70856c24afe3b9`. To roll back, revert subsequent faulty runtime commits on `deploy/streamlit-demo` with normal commits and push them. Do not force-push or rewrite release history. Confirm the branch/commit in the build logs; if an update remains stale, use **Manage app → Reboot app** and wait for startup. Recheck model hashes and anonymous inference/report downloads after the rebuild. A reboot clears in-memory sessions and caches; users should download reports before maintenance.
 
 ## Current record — 23 October 2026
 
 - Audit runtime/evidence checkpoint: `05b4fc4`.
-- Local verification: 27 regression tests, dependency consistency and full offline inference checks passed.
-- Deployment branch has been published. The [initial compatibility run](https://github.com/kuntalashivasairahul/CropSense/actions/runs/39875532734) passed Linux and macOS, while Windows stopped at `pip check` because the runner's preinstalled `pipx` requires a different `filelock` version. CI now uses an isolated app virtual environment and preserves dependency pins. The [final candidate run](https://github.com/kuntalashivasairahul/CropSense/actions/runs/39876107038), on `5b622c6`, passed Linux, Windows and macOS: installation, dependency checks, model preparation, full offline inference and all 27 regression tests. Subsequent documentation-only commits do not change that tested runtime or CI configuration.
+- Tested and deployed runtime: [`7356f0f947ee051ac38639870e70856c24afe3b9`](https://github.com/kuntalashivasairahul/CropSense/commit/7356f0f947ee051ac38639870e70856c24afe3b9). Later documentation-only commits do not change that runtime or CI configuration.
+- The [final compatibility run](https://github.com/kuntalashivasairahul/CropSense/actions/runs/39879798310) passed Linux, Windows and macOS: installation, dependency consistency, checksum restoration, full offline inference and **28 regression tests per platform**. All three uploaded environment reports show `offline: true`, `full: true`, `status: passed` and unchanged model hashes. Local regression checks also passed. The initial runner-global `pipx` conflict was resolved by using an isolated app virtual environment.
 - Local fresh-helper-cache preflight: first complete native analysis 12.40 seconds; ten warm analyses averaged 0.147 seconds (maximum 0.154); three parallel native analyses each completed in about 0.334 seconds with matching outputs. Peak native process RSS was 919.7 MiB. ImageNet weights and class-index JSON were cached successfully. These are Mac measurements, not hosted latency, cloud available memory or browser-session isolation results.
-- Account sign-in succeeded and exposed the older `cropsense-btech` app on `main`, 24 commits behind the initial prepared release. It was preserved. The new app was created from release commit `1bf86ce`; initial cloud installation and a complete scenario succeeded. Cloud-specific dependency/font fixes and server memory logging now require fresh CI and hosted acceptance. Build logs and execution records are saved locally under the ignored deployment report folder.
+- Cloud fixes retain all modules and weights: Linux dependency markers match the host, relative font paths work inside its iframe, the hidden toolbar no longer intercepts navigation, and report downloads avoid a rerun that invalidated their media URLs. Initial model restoration and ImageNet helper/class-index downloads completed; subsequent requests used caches. No secrets or paid hosting were configured.
 - Existing source/model contracts are unchanged by deployment preparation. Historical model-quality and sensor-calibration limitations remain open.
 
-Machine-readable execution records and raw local/CI logs belong under ignored `reports/deployment-2026-10-23/`; update this record with verified public CI/deployment links when available. The machine-readable release record identifies the current commit and separates native preflight evidence from hosted acceptance.
+### Hosted acceptance and measurements
+
+| Check | Observed result |
+|---|---|
+| Public access | Three separate fresh browser profiles opened the app without sign-in. |
+| Four sections | Leaf inference and Grad-CAM, paired RGB/NIR NDVI and imagery, pest replay/chart, simulated composite and warnings rendered. |
+| Concurrent scenarios | Three profiles started distinct scenarios together; each completed in **7.47–7.59 seconds** and retained its own leaf, canopy input and pest source week. All three actual report downloads returned HTTP 200 with matching inputs and distinct report hashes on `7356f0f`. |
+| Repeated inference | Ten warm leaf analyses completed: mean **2.47 seconds**, range **2.34–2.86 seconds**. Browser click-to-result timing includes UI/network overhead. This series used `ba43b72`; the final change only prevents report-download reruns. |
+| Cold workflow | First full scenario after reboot completed in **17.67 seconds**. This measures scenario selection to results, not total cloud provisioning or a guaranteed wake-up time. |
+| Upload validation | A 1,049,600-pixel PNG, a non-image `.png` and an 11 MiB upload showed visible errors. Rejected inference cleared the old prediction. A subsequent valid leaf prediction recovered in **2.51 seconds**. |
+| Desktop/mobile | Fonts, navigation, result imagery and charts checked at desktop size and 390×844. Mobile navigation scrolls horizontally. This was Chromium viewport testing, not a physical-phone/browser matrix. |
+| Memory | Observed container limit **3 GiB**. Peak logged process RSS **1,325.7 MiB**; peak aggregate cgroup usage **3,071.6 MiB**, including cache and other container usage. No OOM or failed inference was observed in these runs, but aggregate usage approached the limit. |
+
+These results support a small presentation demo, not a sustained capacity guarantee. Wake and test the app before presenting; keep the local package available. More simultaneous viewers, long-duration stability, inactivity wake-up timing and a live model-file failure were not tested. A separate local AppTest injected a model-loader failure: the error was visible, no old prediction remained, and retry recovered. Inference-failure regression checks also passed. Anonymous host-wrapper requests for user details/analytics returned 404s; they did not prevent inference or the final downloads. A fresh navigation check had no console errors. Earlier font and report errors were corrected and retested.
+
+The compact public [validation record](evidence/deployment-2026-10-23/validation.json) identifies the runtime, checks and measurements. Raw build logs, CI reports, timings, screenshots and downloaded test reports are retained locally under ignored `reports/deployment-2026-10-23/`. Browser authentication state and raw session identifiers are excluded from published evidence.
