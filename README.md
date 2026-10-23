@@ -14,9 +14,13 @@ The grouped-field NDVI experiments did not produce a safe replacement. A validat
 
 The simulated mean index is `⅓ × healthy_class_probability_sum + ⅓ × ndvi_score + ⅓ × (1 − pest_risk_score)`. The disease signal sums all healthy-class probabilities; uncertainty is not inverted into health. The displayed warning tier preserves the worst individual component, or requests review for a flagged/low-confidence leaf, rather than bucketing the mean. These are uncalibrated demonstration rules, not learned or field-validated decisions. See the [runtime contract](docs/RUNTIME_CONTRACT.md) and [audit fix status](docs/AUDIT_FIX_STATUS_2026-10-22.md).
 
+## Public web demo
+
+Deployment is prepared on `deploy/streamlit-demo` for free Streamlit Community Cloud hosting. The [deployment runbook](docs/DEPLOYMENT.md) records Python 3.12 settings, checksummed model loading, release gates and recovery. The live URL remains pending account sign-in and hosted acceptance; deployment readiness does not establish field accuracy.
+
 ## Windows 11 laptop
 
-For the **22 October audit fixes**, extract the provided `CropSenseAI-audit-fixes-20261022-r4.zip` into a new folder and check its accompanying SHA-256 file. The local fix branch has not been pushed; cloning `codex/monday-demo-ready` retrieves the earlier snapshot. The portable archive was verified after extraction on the Mac, which does not establish Windows readiness. Follow the [current laptop checklist](docs/WINDOWS_DEMO.md).
+For the **22 October audit fixes**, extract the provided `CropSenseAI-audit-fixes-20261022-r4.zip` into a new folder and check its accompanying SHA-256 file, or clone the published `deploy/streamlit-demo` branch. Cloning `codex/monday-demo-ready` retrieves the earlier snapshot. The portable archive was verified after extraction on the Mac, which does not establish Windows readiness. Follow the [current laptop checklist](docs/WINDOWS_DEMO.md).
 
 Use **64-bit Python 3.12**. Version 3.12.2 is suitable. In the extracted project folder, double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
 

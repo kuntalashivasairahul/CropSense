@@ -2,7 +2,7 @@
 
 **Current assessed score: 74/100 (7.4/10), up from 57/100 before the fixes.** This is a judgment of the academic prototype's engineering and evidence, not predictive accuracy. The software repairs improve how results are computed, interpreted and reported. No production model was replaced, and the remaining model-quality issues are not counted as solved.
 
-Assessed local branch: `codex/audit-fixes-20261022`, based on `5e0c64b`. Changes are uncommitted and have not been pushed or verified on the actual Windows laptop. The [finding-by-finding status](AUDIT_FIX_STATUS_2026-10-22.md) and [runtime contract](RUNTIME_CONTRACT.md) describe the implementation and its limits.
+The assessment originated on `codex/audit-fixes-20261022`, based on `5e0c64b`. On 23 October the reviewed runtime/evidence changes were committed as `05b4fc4` and published on `deploy/streamlit-demo`; actual Windows laptop verification remains open. The [finding-by-finding status](AUDIT_FIX_STATUS_2026-10-22.md), [runtime contract](RUNTIME_CONTRACT.md) and [deployment record](DEPLOYMENT.md) describe the implementation and its limits.
 
 | Domain | Before | Current | Basis for current assessment |
 |---|---:|---:|---|
