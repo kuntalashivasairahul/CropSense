@@ -1958,5 +1958,6 @@ elif nav == "Composite":
                 file_name=f"CropSense_Assessment_{label.replace(' ', '_')}.txt",
                 mime="text/plain",
                 key="download_report",
+                on_click="ignore",
             )
         html('</div>')
