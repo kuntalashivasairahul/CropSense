@@ -61,9 +61,30 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+def log_runtime_memory(event):
+    """Record Linux process/container memory in server logs without input data."""
+    try:
+        status = Path("/proc/self/status").read_text()
+    except OSError:
+        return
+    metrics = {"event": event, "rss_bytes": next(
+        (int(line.split()[1]) * 1024 for line in status.splitlines()
+         if line.startswith("VmRSS:")), None)}
+    for key, path in (
+        ("container_bytes", "/sys/fs/cgroup/memory.current"),
+        ("container_limit_bytes", "/sys/fs/cgroup/memory.max"),
+    ):
+        try:
+            metrics[key] = int(Path(path).read_text().strip())
+        except (OSError, ValueError):
+            pass
+    print("CROPSENSE_MEMORY " + json.dumps(metrics), flush=True)
+
+
 @st.cache_resource(show_spinner=False)
 def prepare_release_assets():
     ensure_local_models()
+    log_runtime_memory("assets_ready")
     return True
 
 prepare_release_assets()
@@ -130,21 +151,21 @@ CSS = """
 /* Self-hosted fonts (strictly local in static/fonts) */
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('/app/static/fonts/plex-sans-var.woff2') format('woff2');
+  src: url('app/static/fonts/plex-sans-var.woff2') format('woff2');
   font-weight: 100 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Mono';
-  src: url('/app/static/fonts/plex-mono-400.woff2') format('woff2');
+  src: url('app/static/fonts/plex-mono-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Mono';
-  src: url('/app/static/fonts/plex-mono-500.woff2') format('woff2');
+  src: url('app/static/fonts/plex-mono-500.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -1158,6 +1179,7 @@ def check_module_animation(mod_key):
 def run_model(slot, fn):
     try:
         st.session_state[slot] = fn()
+        log_runtime_memory(slot)
         st.session_state.pop(f"{slot}_error", None)
         mod_key = {"disease": "m1", "ndvi": "m2", "pest": "m3"}[slot]
         st.session_state[f"{mod_key}_version"] = st.session_state.get(f"{mod_key}_version", 0) + 1
@@ -1318,6 +1340,7 @@ def apply_scenario(name):
     for m in ["m1", "m2", "m3", "m4"]:
         st.session_state[f"{m}_version"] = st.session_state.get(f"{m}_version", 0) + 1
         st.session_state[f"{m}_just_computed"] = True
+    log_runtime_memory("scenario")
 
 
 # Apply targeted nav redirection if set

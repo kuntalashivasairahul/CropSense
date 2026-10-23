@@ -157,6 +157,26 @@ class AuditBoundaryRegression(unittest.TestCase):
         self.assertNotIn("--target-dec:100;", rendered)
 
 
+    def test_runtime_memory_logging_is_input_free_and_optional(self):
+        import ast
+        from unittest.mock import Mock
+        tree = ast.parse((ROOT / "app.py").read_text(encoding="utf-8"))
+        function = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                        and n.name == "log_runtime_memory")
+        output = Mock()
+        namespace = {"Path": Path, "json": json, "print": output}
+        exec(compile(ast.Module(body=[function], type_ignores=[]), "app.py", "exec"), namespace)
+        with patch.object(Path, "read_text", side_effect=[
+                "VmRSS: 1024 kB\n", "2097152", "1073741824"]):
+            namespace["log_runtime_memory"]("test")
+        metrics = json.loads(output.call_args.args[0].removeprefix("CROPSENSE_MEMORY "))
+        self.assertEqual(metrics, {"event": "test", "rss_bytes": 1048576,
+                                  "container_bytes": 2097152, "container_limit_bytes": 1073741824})
+        output.reset_mock()
+        with patch.object(Path, "read_text", side_effect=OSError("unavailable")):
+            namespace["log_runtime_memory"]("test")
+        output.assert_not_called()
+
     def test_recovered_pest_inputs_match_exported_test_sequences(self):
         folder = ROOT / "docs/evidence/pest-recovery-2026-10-22"
         import pandas as pd
