@@ -41,8 +41,9 @@ To roll back after a successful deployment, revert the faulty update on `deploy/
 
 - Audit runtime/evidence checkpoint: `05b4fc4`.
 - Local verification: 27 regression tests, dependency consistency and full offline inference checks passed.
-- Deployment branch has been published; GitHub compatibility CI is running.
+- Deployment branch has been published. The [initial compatibility run](https://github.com/kuntalashivasairahul/CropSense/actions/runs/39875532734) passed Linux and macOS; Windows completion is tracked in the run. Linux's downloaded environment report confirms full offline inference and matching model hashes on Python 3.12.15.
+- Local fresh-helper-cache preflight: first complete native analysis 12.40 seconds; ten warm analyses averaged 0.147 seconds (maximum 0.154); three parallel native analyses each completed in about 0.334 seconds with matching outputs. Peak native process RSS was 919.7 MiB. ImageNet weights and class-index JSON were cached successfully. These are Mac measurements, not hosted latency, cloud available memory or browser-session isolation results.
 - Live URL, cloud build logs, hosted timings/memory and three-session acceptance: pending account sign-in and actual deployment. Do not present the preferred address as a live app.
 - Existing source/model contracts are unchanged by deployment preparation. Historical model-quality and sensor-calibration limitations remain open.
 
-Machine-readable execution records and raw local/CI logs belong under ignored `reports/deployment-2026-10-23/`; update this record with verified public CI/deployment links when available.
+Machine-readable execution records and raw local/CI logs belong under ignored `reports/deployment-2026-10-23/`; update this record with verified public CI/deployment links when available. The machine-readable release record identifies the current commit and separates native preflight evidence from hosted acceptance.
