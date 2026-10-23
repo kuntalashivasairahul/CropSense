@@ -215,7 +215,7 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
 }
 
 /* Chrome cleanups */
-#MainMenu, footer, [data-testid="stToolbarActions"], [data-testid="stActionButton"],
+#MainMenu, footer, [data-testid="stToolbar"], [data-testid="stToolbarActions"], [data-testid="stActionButton"],
 [data-testid="stDecoration"], [data-testid="stStatusWidget"],
 [data-testid="stHeaderActionElements"] { display: none !important; }
 
