@@ -1,0 +1,81 @@
+{
+  "sha": "5467f6012d78d1c446145d5f582da6096f852ae8",
+  "node_id": "MDY6Q29tbWl0MjA3NDEwODgzOjU0NjdmNjAxMmQ3OGQxYzQ0NjE0NWQ1ZjU4MmRhNjA5NmY4NTJhZTg=",
+  "commit": {
+    "author": {
+      "name": "Naman Jain",
+      "email": "namanjn98@yahoo.com",
+      "date": "2021-05-02T05:31:07Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2021-05-02T05:31:07Z"
+    },
+    "message": "Update README.md",
+    "tree": {
+      "sha": "b4a474c8b5a7b013ae7e316e18a24d1ff31b366e",
+      "url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/git/trees/b4a474c8b5a7b013ae7e316e18a24d1ff31b366e"
+    },
+    "url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/git/commits/5467f6012d78d1c446145d5f582da6096f852ae8",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJgjjkbCRBK7hj4Ov3rIwAAdL8IAHmpgh9I0mjp5cIl/OA81/Ia\nSbLYVFAqIFilbioAPvfT1vNxxE5UlaePkF8Ndg9f02mYkDGhKxkI6JpnhLVbKcG4\n0zpYTzocv1zPm/HzAzvPgh5kk57nilCWoNs2swhJn3mChp1h/Y1hDMJKrAs5emnJ\nYcb3wX9W36Eq0fgHwHv7pwXRNb5JVuiR+XpOBGxeZzQ0f3sTYqxzYoOL58nTYqej\nVYkpKhvtBL6Qj3SUlRJc4dd76ej84+Clp/pd6spAP1mbX9Og1cM0pBxNIvHLqoWg\nLKaky1vOEkOLmyuyoUG5rfhv1DpyWPrmY0iFl/Z0+ossuDzzcb0MiYaFldQqcEw=\n=f/d1\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree b4a474c8b5a7b013ae7e316e18a24d1ff31b366e\nparent fdfe5b3bcb94de90594913444529856995f3d9ea\nauthor Naman Jain <namanjn98@yahoo.com> 1619933467 +0530\ncommitter GitHub <noreply@github.com> 1619933467 +0530\n\nUpdate README.md",
+      "verified_at": "2024-01-16T19:59:59Z"
+    }
+  },
+  "url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/commits/5467f6012d78d1c446145d5f582da6096f852ae8",
+  "html_url": "https://github.com/pratikkayal/PlantDoc-Dataset/commit/5467f6012d78d1c446145d5f582da6096f852ae8",
+  "comments_url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/commits/5467f6012d78d1c446145d5f582da6096f852ae8/comments",
+  "author": null,
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "fdfe5b3bcb94de90594913444529856995f3d9ea",
+      "url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/commits/fdfe5b3bcb94de90594913444529856995f3d9ea",
+      "html_url": "https://github.com/pratikkayal/PlantDoc-Dataset/commit/fdfe5b3bcb94de90594913444529856995f3d9ea"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 2,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "577efc84cbde86fd3e6f35d7c687f4f058bebbe4",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/pratikkayal/PlantDoc-Dataset/blob/5467f6012d78d1c446145d5f582da6096f852ae8/README.md",
+      "raw_url": "https://github.com/pratikkayal/PlantDoc-Dataset/raw/5467f6012d78d1c446145d5f582da6096f852ae8/README.md",
+      "contents_url": "https://api.github.com/repos/pratikkayal/PlantDoc-Dataset/contents/README.md?ref=5467f6012d78d1c446145d5f582da6096f852ae8",
+      "patch": "@@ -4,6 +4,8 @@ This repository contains the Cropped-PlantDoc dataset used for benchmarking clas\n \n While the Object-Detection dataset can accessed through the following [link](https://github.com/pratikkayal/PlantDoc-Object-Detection-Dataset).\n \n+![Plantdoc Examples](PlantDoc_Examples.png)\n+\n ## Abstract\n India loses 35% of the annual crop yield due to plant diseases. Early detection of plant diseases remains difficult due to the lack of lab infrastructure and expertise. In this paper, we explore the possibility of computer vision approaches for scalable and early plant disease detection. The lack of availability of sufficiently large-scale non-lab data set remains a major challenge for enabling vision based plant disease detection. Against this background, we present PlantDoc: a dataset for visual plant disease detection. Our dataset contains 2,598 data points in total across 13 plant species and up to 17 classes of diseases, involving approximately 300 human hours of effort in annotating internet scraped images. To show the efficacy of our dataset, we learn 3 models for the task of plant disease classification. Our results show that modelling using our dataset can increase the classification accuracy by up to 31%. We believe that our dataset can help reduce the entry barrier of computer vision techniques in plant disease detection.\n "
+    }
+  ]
+}

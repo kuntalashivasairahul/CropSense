@@ -1,0 +1,1925 @@
+{
+  "source_files": 236,
+  "source_classes": 27,
+  "all_decoded": true,
+  "needing_eval_resize": 89,
+  "class_counts": {
+    "Apple Scab Leaf": 10,
+    "Apple leaf": 9,
+    "Apple rust leaf": 10,
+    "Bell_pepper leaf": 8,
+    "Bell_pepper leaf spot": 9,
+    "Blueberry leaf": 11,
+    "Cherry leaf": 10,
+    "Corn Gray leaf spot": 4,
+    "Corn leaf blight": 12,
+    "Corn rust leaf": 10,
+    "Peach leaf": 9,
+    "Potato leaf early blight": 8,
+    "Potato leaf late blight": 8,
+    "Raspberry leaf": 7,
+    "Soyabean leaf": 8,
+    "Squash Powdery mildew leaf": 6,
+    "Strawberry leaf": 8,
+    "Tomato Early blight leaf": 9,
+    "Tomato Septoria leaf spot": 11,
+    "Tomato leaf": 8,
+    "Tomato leaf bacterial spot": 9,
+    "Tomato leaf late blight": 10,
+    "Tomato leaf mosaic virus": 10,
+    "Tomato leaf yellow virus": 6,
+    "Tomato mold leaf": 6,
+    "grape leaf": 12,
+    "grape leaf black rot": 8
+  },
+  "rows": [
+    {
+      "path": "test/Apple Scab Leaf/052609%20Hartman%20Crabapple%20scab%20single%20leaf.JPG.jpg",
+      "dimensions": [
+        496,
+        348
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/1b321015-6e33-4f18-aade-888f4383fe92.jpeg.jpg",
+      "dimensions": [
+        768,
+        514
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/28-500x375.jpg",
+      "dimensions": [
+        500,
+        375
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/816.jpg",
+      "dimensions": [
+        330,
+        275
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apple%20scab%20leaf.jpg",
+      "dimensions": [
+        239,
+        398
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apple%20scabnew.jpg",
+      "dimensions": [
+        490,
+        392
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apple-scab-5366820.jpg",
+      "dimensions": [
+        460,
+        373
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apples_apple-scab_01_zoom.jpg",
+      "dimensions": [
+        900,
+        692
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apples_apple-scab_02_thm.jpg",
+      "dimensions": [
+        115,
+        85
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple Scab Leaf/apples_apple-scab_10_zoom.jpg",
+      "dimensions": [
+        900,
+        675
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple leaf/20180511_090912-14gtw8a-e1526047952754.jpg",
+      "dimensions": [
+        2988,
+        5312
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/20180511_091133-24l1vhg-e1526047988236.jpg",
+      "dimensions": [
+        2988,
+        5312
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/20180511_091252-1gy5xf5-e1526048000596.jpg",
+      "dimensions": [
+        2988,
+        5312
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/4120978-single-green-leaf-of-apple-tree.jpg",
+      "dimensions": [
+        800,
+        594
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple leaf/Apple-Leaf-Wallpaper-17.jpg",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/apple-leaf-14319997.jpg",
+      "dimensions": [
+        1300,
+        1174
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/apple-leaf-9834637.jpg",
+      "dimensions": [
+        1300,
+        957
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/apple-leaf-closeup-37636177.jpg",
+      "dimensions": [
+        1300,
+        957
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple leaf/apple-leaf-isolated-white-background-56631026.jpg",
+      "dimensions": [
+        800,
+        692
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/02.-Rust-2017-207u24s.jpg",
+      "dimensions": [
+        5312,
+        2988
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple rust leaf/0605_Rust-induced_leafspot.jpg",
+      "dimensions": [
+        341,
+        188
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/185161-004-EAF28842.jpg",
+      "dimensions": [
+        424,
+        450
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/2011-011.jpg",
+      "dimensions": [
+        500,
+        375
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/20130519cedarapplerust.jpg",
+      "dimensions": [
+        575,
+        431
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/20130610_110514.jpg",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple rust leaf/20130802_111632.jpg",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Apple rust leaf/4-apple-rust2_19011_matt-bertone.jpg",
+      "dimensions": [
+        600,
+        400
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/9343310-small.jpg",
+      "dimensions": [
+        155,
+        206
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Apple rust leaf/99e886623c2080c22f6519b0e708c531.jpg",
+      "dimensions": [
+        425,
+        284
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/00.jpg",
+      "dimensions": [
+        480,
+        360
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/000.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/01.jpg",
+      "dimensions": [
+        638,
+        479
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/Bacterial-spot-pepper2.jpg",
+      "dimensions": [
+        221,
+        166
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/CMVpepperLeafShock-copy-50QUALITY-1ge8umw.jpg",
+      "dimensions": [
+        667,
+        500
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/H5w92.jpg",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/bacterial_leaf_spot_pepper_l.jpg",
+      "dimensions": [
+        400,
+        300
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/pepper-spot.jpg",
+      "dimensions": [
+        351,
+        209
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf spot/pepper_bacterial-spot_03_zoom.jpg",
+      "dimensions": [
+        900,
+        599
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/10148582-green-leaf-of-pepper.jpg",
+      "dimensions": [
+        800,
+        582
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/4825902504_5fa80b65b8_z.jpg",
+      "dimensions": [
+        640,
+        434
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/GREEN%20BELL%20PLANT%20YELLOW%20LEAF.JPG.jpg",
+      "dimensions": [
+        800,
+        600
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/IMG_1629.JPG?1507122477.jpg",
+      "dimensions": [
+        600,
+        800
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/RnGnC.jpg",
+      "dimensions": [
+        2147,
+        1432
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Bell_pepper leaf/e33155.jpg",
+      "dimensions": [
+        800,
+        600
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/pepper_leaf.jpg",
+      "dimensions": [
+        300,
+        400
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Bell_pepper leaf/why-are-my-pepper-plants-yellow-yellow-pepper-plants-yellow-leaves-green-veins-pepper-plants-yellow-veins.jpg",
+      "dimensions": [
+        421,
+        750
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Blueberry leaf/P1200665+Vaccinium+alaskaense+vs+ovalifolium+leaf+and++twig+cr.jpg",
+      "dimensions": [
+        1600,
+        1148
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/P1200701+Vaccinium+ovalifolium+Oval-leaf+Blueberry+leaf+margin+Heather+Meadows+cr.jpg",
+      "dimensions": [
+        1012,
+        1376
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg",
+      "dimensions": [
+        390,
+        540
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Blueberry leaf/blueberrysilverleaf16-1372b.jpg",
+      "dimensions": [
+        1846,
+        1392
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/leaf-blueberry-15281271.jpg",
+      "dimensions": [
+        1300,
+        1060
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/northern-highbush-blueberry-blue-huckleberry-vaccinium-corymbosum-EHNXRR.jpg",
+      "dimensions": [
+        865,
+        1390
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/stock-photo-blueberry-leaf-closeup-isolated-on-white-306486470.jpg",
+      "dimensions": [
+        450,
+        320
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Blueberry leaf/stock-photo-green-blueberry-leaf-isolated-with-clipping-path-550344304.jpg",
+      "dimensions": [
+        335,
+        470
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Blueberry leaf/stock-photo-two-sides-of-blueberry-leaf-isolated-on-white-15582232.jpg",
+      "dimensions": [
+        1500,
+        1345
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Blueberry leaf/vaccinium-angustifolium-low-bush-blueberry_0830_124221.jpg",
+      "dimensions": [
+        720,
+        540
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Blueberry leaf/vaccinium_angustifolium_leaf2.JPG.jpg",
+      "dimensions": [
+        1440,
+        2160
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/d7b79dbc0bca0eb3e63fbe5dfb256ccd53d90a4eb1413_1260x1260.jpg",
+      "dimensions": [
+        1056,
+        1260
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/e52bbb9a08ede2948ba0c006f02fe7b053ad7831d1df6_1260x1260.jpg",
+      "dimensions": [
+        1056,
+        1260
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/ed12ff77ce021883de241830dee55e2e53d2c93231699_1260x1260.jpg",
+      "dimensions": [
+        1056,
+        1260
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/fc729af279e9087d00bd32d89a1552a756a3ad9de7f2b_1260x1260.jpg",
+      "dimensions": [
+        1056,
+        1260
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/five-cherry-tree-green-leaves-white-isolated-background-34493587.jpg",
+      "dimensions": [
+        1032,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/prunsero_leaf1.jpg",
+      "dimensions": [
+        2000,
+        3008
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/prunsero_leaf2.jpg",
+      "dimensions": [
+        2000,
+        3008
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/prunus-virginiana-le-gmittelhauser.jpg",
+      "dimensions": [
+        751,
+        1000
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Cherry leaf/red-cherry-tree-leaf-isolated-crisp-white-background-35742030.jpg",
+      "dimensions": [
+        1300,
+        1065
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Cherry leaf/three-vibrant-leaves-bird-cherry-tree-13905898.jpg",
+      "dimensions": [
+        1300,
+        972
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn Gray leaf spot/IMG_42231.jpg",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn Gray leaf spot/rsz0803Figure6.jpg",
+      "dimensions": [
+        350,
+        230
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn Gray leaf spot/show_picture.asp?id=aaaaaaaaaaogcqq&w2=420&h2=378&clip=center,420,378&meta=0.jpg",
+      "dimensions": [
+        420,
+        378
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn Gray leaf spot/strom5.jpg",
+      "dimensions": [
+        480,
+        320
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/02c.jpg",
+      "dimensions": [
+        960,
+        540
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/0796.20graylssymt.jpg",
+      "dimensions": [
+        432,
+        350
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/07c.jpg",
+      "dimensions": [
+        675,
+        414
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/0c.jpg",
+      "dimensions": [
+        1170,
+        501
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn leaf blight/1321189.jpg",
+      "dimensions": [
+        590,
+        200
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/160314_web.jpg",
+      "dimensions": [
+        400,
+        533
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/2013Corn_GrayLeafSpot_0815_0003.JPG.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn leaf blight/2015070295153021.jpg",
+      "dimensions": [
+        1224,
+        1632
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn leaf blight/Common%20Diseases%20Figure%201.JPG.jpg",
+      "dimensions": [
+        188,
+        317
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn leaf blight/Corn-SCLB-2017-1.jpg",
+      "dimensions": [
+        3456,
+        5184
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn leaf blight/corn-disease-update-fig-3-gray-leaf-spot.jpg",
+      "dimensions": [
+        1500,
+        1125
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn leaf blight/corn-gray-leaf-spot-f4.jpg",
+      "dimensions": [
+        672,
+        832
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/0796.39maizerust.jpg",
+      "dimensions": [
+        432,
+        287
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/0796.40comrust.jpg",
+      "dimensions": [
+        432,
+        268
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/0796.47southrust.jpg",
+      "dimensions": [
+        432,
+        252
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/0796.52srusttelia.jpg",
+      "dimensions": [
+        432,
+        309
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/12-19striprustJIM.jpg",
+      "dimensions": [
+        185,
+        500
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/1355.50commonrust.jpg",
+      "dimensions": [
+        288,
+        419
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/2256-body-1501555581-1.jpg",
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Corn rust leaf/393.jpg",
+      "dimensions": [
+        590,
+        393
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/5496239405_d95bdb97d1_z.jpg",
+      "dimensions": [
+        640,
+        480
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Corn rust leaf/80104747.jpg",
+      "dimensions": [
+        613,
+        700
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Peach leaf/00pe.jpg",
+      "dimensions": [
+        720,
+        1000
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Peach leaf/7190f27ead55c0f6e3ff8b982972810a5446a9713a49d_1260x1260.jpg",
+      "dimensions": [
+        1056,
+        1260
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Peach leaf/depositphotos_3786198-Peach-leaf.jpg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Peach leaf/peach-leaf-10223898.jpg",
+      "dimensions": [
+        957,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Peach leaf/peach-leaf-16690421.jpg",
+      "dimensions": [
+        1300,
+        954
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Peach leaf/peach-leaf-isolated-white-background-42295220.jpg",
+      "dimensions": [
+        1300,
+        994
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Peach leaf/rose_tree_220430.jpg",
+      "dimensions": [
+        500,
+        500
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Peach leaf/stock-photo-peach-leaf-isolated-on-white-background-281097503.jpg",
+      "dimensions": [
+        1500,
+        912
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Peach leaf/stock-photo-peach-tree-leaf-isolated-over-white-background-back-side-64472731.jpg",
+      "dimensions": [
+        1500,
+        1600
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Potato leaf early blight/3023.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf early blight/backus-056-potato-blight.jpg",
+      "dimensions": [
+        2848,
+        2136
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Potato leaf early blight/early-blight-alternaria-alternata-leaf-spotting-on-potato-leaf-X91XJE.jpg",
+      "dimensions": [
+        1300,
+        1199
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Potato leaf early blight/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-AXK6AY.jpg",
+      "dimensions": [
+        1300,
+        1069
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Potato leaf early blight/earlyblightpotato.jpg",
+      "dimensions": [
+        465,
+        350
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf early blight/potato-blight-phytophthora-infestans-close-up-of-upper-surface-of-BMMRXC.jpg",
+      "dimensions": [
+        1300,
+        956
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Potato leaf early blight/potato-early-blight-alternaria-alternata-lesion-on-a-potato-leaf-a1w1em.jpg",
+      "dimensions": [
+        589,
+        540
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf early blight/potatobd001.jpg",
+      "dimensions": [
+        230,
+        150
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/1421_0.jpeg?itok=FMtmgePj.jpg",
+      "dimensions": [
+        640,
+        480
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/20090710-lateblight.jpg",
+      "dimensions": [
+        500,
+        364
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/2540_600.jpg",
+      "dimensions": [
+        400,
+        473
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/5816740026_d42ef24413_Phytophthora-Infestans.jpg",
+      "dimensions": [
+        333,
+        500
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/B2750109-Late_blight_on_a_potato_plant-SPL.jpg",
+      "dimensions": [
+        539,
+        800
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/LateBlight04.jpg",
+      "dimensions": [
+        350,
+        233
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/irish-blight-symptoms-on-potato-leaves-atmf8b.jpg",
+      "dimensions": [
+        640,
+        437
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Potato leaf late blight/potato-late-blight.jpg",
+      "dimensions": [
+        490,
+        390
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Raspberry leaf/Raspberry-leaf.jpg",
+      "dimensions": [
+        1200,
+        801
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Raspberry leaf/depositphotos_1323264-Raspberry-leaf-on-white.jpg",
+      "dimensions": [
+        1024,
+        772
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Raspberry leaf/depositphotos_1323551-stock-photo-raspberry-leaves.jpg",
+      "dimensions": [
+        985,
+        1024
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Raspberry leaf/depositphotos_2795312-stock-photo-green-raspberry-leaf.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Raspberry leaf/iron-deficiency-raspberry-leaf-chlorosis-isolated-32457798.jpg",
+      "dimensions": [
+        1121,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Raspberry leaf/leaves-of-raspberry-stock-picture-2529053.jpg",
+      "dimensions": [
+        1101,
+        1392
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Raspberry leaf/three-raspberry-green-leaves-isolated-white-background-62022932.jpg",
+      "dimensions": [
+        1190,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Soyabean leaf/07feb_ma_sbr3.JPG.jpg",
+      "dimensions": [
+        1296,
+        864
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Soyabean leaf/Soybean%20edamame%20leaf1.JPG.jpg",
+      "dimensions": [
+        4048,
+        3040
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Soyabean leaf/fresh-soy-leaves-isolated-on-260nw-667193923.jpg",
+      "dimensions": [
+        317,
+        280
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Soyabean leaf/leaf-raspberry-isolated-on-a-white-stock-photography-image-10106222-1625198.jpg",
+      "dimensions": [
+        1252,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Soyabean leaf/resistance1c.jpg",
+      "dimensions": [
+        447,
+        682
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94266130.jpg",
+      "dimensions": [
+        329,
+        470
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94700095.jpg",
+      "dimensions": [
+        450,
+        466
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Soyabean leaf/stock-photo-soy-leaf-isolated-on-white-background-120961801.jpg",
+      "dimensions": [
+        1500,
+        1372
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/Powdery-Mildew-on-squash.jpg",
+      "dimensions": [
+        800,
+        598
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/powdery-mildew-erysiphe-plantani-on-young-sycamore-leaves-b774tm.jpg",
+      "dimensions": [
+        516,
+        540
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/powdery-mildew-on-pumpkin-leaves-close-up-2.jpg",
+      "dimensions": [
+        576,
+        432
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/powdery-mildew-sphaerotheca-fuliginea-infection-on-pumpkin-leaves-ajdkkx.jpg",
+      "dimensions": [
+        448,
+        320
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/squash-leave-w-powd-mild.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Squash Powdery mildew leaf/surface.jpg",
+      "dimensions": [
+        432,
+        332
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaf--stock-photo-1431216.jpg",
+      "dimensions": [
+        1300,
+        1248
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaf-22360816.jpg",
+      "dimensions": [
+        1300,
+        1185
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaves-collection-white-background-36684676.jpg",
+      "dimensions": [
+        800,
+        571
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaves-isolated-white-17473157.jpg",
+      "dimensions": [
+        1274,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaves-isolated-white-34722259.jpg",
+      "dimensions": [
+        1300,
+        1390
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaves-stock-image-948674.jpg",
+      "dimensions": [
+        1300,
+        1035
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/strawberry-leaves-stock-picture-948708.jpg",
+      "dimensions": [
+        1300,
+        1035
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Strawberry leaf/wild-strawberry-leaf-top-view-rotated-KTBXCY.jpg",
+      "dimensions": [
+        1300,
+        1145
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Early blight leaf/039b47d574bc4bb8a14259a1cd96a741.jpg",
+      "dimensions": [
+        638,
+        479
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Early blight leaf/100983448.jpg",
+      "dimensions": [
+        448,
+        448
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Early blight leaf/1234080-Early-Blight.jpg",
+      "dimensions": [
+        768,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Early blight leaf/Shoemaker_7068.JPG.jpg",
+      "dimensions": [
+        600,
+        450
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Early blight leaf/bugs-and-blight-061.jpg",
+      "dimensions": [
+        2576,
+        1932
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Early blight leaf/dscn3175.jpg",
+      "dimensions": [
+        2592,
+        1944
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Early blight leaf/early_blight1-150x150.jpg",
+      "dimensions": [
+        150,
+        150
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Early blight leaf/earlyblight21_.jpg",
+      "dimensions": [
+        1704,
+        2272
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Early blight leaf/tomato_early-blight_01_zoom.jpg",
+      "dimensions": [
+        257,
+        378
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/0.jpg",
+      "dimensions": [
+        480,
+        360
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/2STEM.jpg",
+      "dimensions": [
+        367,
+        640
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/2septoria-tomato.jpg",
+      "dimensions": [
+        430,
+        290
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/55830b60a7cf2.image.jpg",
+      "dimensions": [
+        1173,
+        1766
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/6134794031202304.jpeg.jpg",
+      "dimensions": [
+        600,
+        800
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/636227737977191231-septoria-leaf-spot-VT.jpg",
+      "dimensions": [
+        534,
+        401
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/6447731_orig.jpg",
+      "dimensions": [
+        500,
+        332
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/7-17-Photo3_Septoria-MARY.jpg",
+      "dimensions": [
+        450,
+        359
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/RARZ4.jpg",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg",
+      "dimensions": [
+        1500,
+        1125
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato Septoria leaf spot/sept4disease-019.jpg",
+      "dimensions": [
+        1903,
+        1444
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/%2320+Bacterial+Spot+and+Speck.jpg",
+      "dimensions": [
+        960,
+        720
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/07.17.18-Common_Tomato_Diseases_Canker-258x300.jpg",
+      "dimensions": [
+        258,
+        300
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/Bacterial_spots563.jpg",
+      "dimensions": [
+        800,
+        600
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/Tom_Bact3.jpg",
+      "dimensions": [
+        400,
+        230
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/Tom_Bact7.jpg",
+      "dimensions": [
+        400,
+        268
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/Tomato%2BBacterial%2BSpot%2Bon%2BLeaves.jpg",
+      "dimensions": [
+        500,
+        263
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/bact-spot-fig-1.jpg",
+      "dimensions": [
+        1226,
+        817
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/tomato_V8.jpg",
+      "dimensions": [
+        350,
+        260
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf bacterial spot/tomato_bacterial-speck_01_zoom.jpg",
+      "dimensions": [
+        900,
+        675
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/110822-206-Tomato-blight.jpg",
+      "dimensions": [
+        750,
+        499
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/18c.jpg",
+      "dimensions": [
+        350,
+        255
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/636368370164094909-late-blight-15-.jpg",
+      "dimensions": [
+        540,
+        405
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/70.jpg",
+      "dimensions": [
+        490,
+        492
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/E%29Tomato-late-blight-foliar.jpg",
+      "dimensions": [
+        400,
+        300
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/IMG_5808.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf late blight/LateBlt09_06.jpg",
+      "dimensions": [
+        400,
+        268
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/dsc_8148cs.jpg",
+      "dimensions": [
+        1299,
+        1267
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf late blight/image.jpg",
+      "dimensions": [
+        490,
+        490
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf late blight/late_blight_tomato_leaf_spore1x1200.jpg",
+      "dimensions": [
+        1200,
+        914
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/9511.img.jpg",
+      "dimensions": [
+        540,
+        400
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/D%29AlfMov.jpg",
+      "dimensions": [
+        400,
+        317
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/Tomato-Mosaic-1wdr2jx-300x225.jpg",
+      "dimensions": [
+        130,
+        69
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/everystockphoto-21099455-l.jpg",
+      "dimensions": [
+        500,
+        375
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/ill-tomato-of-tomato-mosaic-virus-DBE17N.jpg",
+      "dimensions": [
+        1300,
+        956
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/page_2.jpg",
+      "dimensions": [
+        960,
+        774
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/tmv-tomato-34.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/tmv-tomato-9.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/toma_TMV.jpg",
+      "dimensions": [
+        907,
+        605
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf mosaic virus/tomato_virus_04_zoom.jpg",
+      "dimensions": [
+        900,
+        675
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/11-40580_5.jpg",
+      "dimensions": [
+        400,
+        200
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/17fc47.jpg",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/8226402877_9abf151b5b_b.jpg",
+      "dimensions": [
+        1024,
+        683
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/fwa2013313115151.jpg",
+      "dimensions": [
+        320,
+        240
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/glyphosate.jpg",
+      "dimensions": [
+        788,
+        362
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg",
+      "dimensions": [
+        638,
+        479
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf/1684.jpg",
+      "dimensions": [
+        563,
+        631
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato leaf/2013-08-20-06.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/90e2c0.jpg",
+      "dimensions": [
+        1000,
+        1333
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/DSCN1015.JPG.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/IMG_1246.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/Tomato59.JPG.jpg",
+      "dimensions": [
+        1600,
+        1205
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/Tomato_leaf.jpg",
+      "dimensions": [
+        2144,
+        2143
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/Tomato leaf/main-qimg-d9c2a93f60568485c989670d9bbf703b.jpg",
+      "dimensions": [
+        602,
+        462
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/49%20Leafmold%20Bottom.jpg",
+      "dimensions": [
+        252,
+        137
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/50%20Leafmold%20Top.jpg",
+      "dimensions": [
+        252,
+        162
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/BIGSD.jpg",
+      "dimensions": [
+        450,
+        253
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/black_leaf_mold_in_zina_tina.jpg",
+      "dimensions": [
+        900,
+        675
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/dscn6689.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/Tomato mold leaf/fungus-univ-of-minnesoeta.jpg",
+      "dimensions": [
+        800,
+        600
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/03gb.jpg",
+      "dimensions": [
+        479,
+        302
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/35589125035_662dd5b258_b.jpg",
+      "dimensions": [
+        574,
+        765
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/5-29black-rot-chardRR.jpg",
+      "dimensions": [
+        450,
+        302
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/Black%20rot%20on%20foliage.jpg",
+      "dimensions": [
+        1060,
+        795
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf black rot/Black%20rot%20on%20foliage2.jpg",
+      "dimensions": [
+        1060,
+        795
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf black rot/brleaf2_zoom.jpg",
+      "dimensions": [
+        900,
+        675
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/grape_F15a.jpg",
+      "dimensions": [
+        350,
+        263
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf black rot/piano%20gully%20spray%20seed%20damage%2006%20%289%29.JPG.jpg",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/0000.jpg",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/730-grape-leaf-2560x1600-nature-wallpaper.jpg",
+      "dimensions": [
+        2560,
+        1600
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/DSCN7317.JPG.jpg",
+      "dimensions": [
+        1530,
+        1600
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/P1130286.jpg",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/depositphotos_3443387-stock-photo-the-green-grape-leaf-on.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/depositphotos_6898486-stock-photo-grape-leaves.jpg",
+      "dimensions": [
+        1023,
+        751
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/grape-leaf-14309623.jpg",
+      "dimensions": [
+        1369,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/grape-leaf-picture-id119212425?k=6&m=119212425&s=612x612&w=0&h=8RZBWGcvXe4tAwhhvYZVFzWyRyiN5iTxKfWBpPT1FcU=.jpg",
+      "dimensions": [
+        470,
+        612
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/grapes-leaves.jpg",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/grapevine-leaf-7466071.jpg",
+      "dimensions": [
+        1219,
+        1300
+      ],
+      "needs_eval_resize": true
+    },
+    {
+      "path": "test/grape leaf/latest?cb=20100621160325.jpg",
+      "dimensions": [
+        530,
+        700
+      ],
+      "needs_eval_resize": false
+    },
+    {
+      "path": "test/grape leaf/vitis-riparia-le-ahaines-b.jpg",
+      "dimensions": [
+        1000,
+        812
+      ],
+      "needs_eval_resize": false
+    }
+  ]
+}

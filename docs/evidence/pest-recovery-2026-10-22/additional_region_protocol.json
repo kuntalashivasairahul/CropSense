@@ -1,0 +1,12 @@
+{
+  "purpose": "Availability-driven independent-region coverage check, with model choice already frozen",
+  "locations_in_order": ["Coimbatore", "Lam", "Ludhiana", "Pharbhani", "Sirsa"],
+  "years_from": 1990,
+  "years_to": 2011,
+  "crop": "Cotton",
+  "pests": ["Aphid", "Jassid"],
+  "policy": "Check Aphid record availability first, then retrieve Jassid only for sites with Aphid observations. Include all compatible paired windows from every available declared site; do not select a site by model scores. Report unavailable sites and missing classes. Verify source units, weather agreement and causal processing.",
+  "models": "Frozen released LSTM, frozen validation-selected lstm32_dropout0.1 and original logistic comparator; no training or tuning on regional records",
+  "selection_history": "candidate_validation.json and revision_1 record validation-only selection. historical_test_diagnostic.json is an already-inspected Akola comparison and is not independent validation.",
+  "scope": "Retrospective regional evidence only. No real-world treatment or prospectively collected outcome claim. No automatic promotion."
+}

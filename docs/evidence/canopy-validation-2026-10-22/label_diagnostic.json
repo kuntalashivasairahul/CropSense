@@ -1,0 +1,43 @@
+{
+  "scope": "Descriptive audit of all existing splits; no model fit, model selection or new test score.",
+  "source_sha256": {
+    "features_and_labels.csv": "cc1dc646b1b0bf6f524af3057e8cbba9365c4213ff463b631e571062f647be6b",
+    "split_manifest.csv": "31ee1cf266612ee1870a6bf892a46b959ff32cbd20dd20cfc12562719fa119ec",
+    "config.json": "a8ee7685438a433bfb5cc49045117a1eefb24ae6edd154beee901ec622ef5eaa"
+  },
+  "label_rule": "Severe if any severe mask >5%; else moderate if any moderate mask >2%; else healthy. Separate water exclusion precedes these stored rows.",
+  "label_reconstruction_matches": 8308,
+  "rows": 8308,
+  "class_counts": {
+    "severe_stress": 3734,
+    "moderate_stress": 3069,
+    "healthy": 1505
+  },
+  "healthy_with_any_selected_anomaly_pixels": 1491,
+  "healthy_total": 1505,
+  "healthy_with_negative_mean_raw_ndvi": 578,
+  "mean_raw_ndvi_quantiles": {
+    "healthy": {
+      "0.1": -0.37929379744183495,
+      "0.5": 0.0792412614504497,
+      "0.9": 0.3434154404014156
+    },
+    "moderate_stress": {
+      "0.1": -0.38719554075982154,
+      "0.5": 0.1136891694488161,
+      "0.9": 0.32040156873300135
+    },
+    "severe_stress": {
+      "0.1": -0.2135437438744819,
+      "0.5": 0.0225851739402868,
+      "0.9": 0.28075923713559653
+    }
+  },
+  "split_field_counts": {
+    "test": 123,
+    "train": 369,
+    "validation": 123
+  },
+  "field_groups_disjoint_by_recorded_id": true,
+  "interpretation": "Below anomaly-coverage thresholds is not verified plant health. Overlapping NDVI distributions do not prove irreducible error. Negative raw-band ratios do not diagnose stress or establish calibration."
+}

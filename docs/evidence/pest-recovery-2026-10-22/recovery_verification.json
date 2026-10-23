@@ -1,0 +1,42 @@
+{
+  "retrieved_utc": "2026-10-22T11:05:46.851954+00:00",
+  "source": "Current public ICAR-CRIDA CropPest DSS pages, extracted with gstack browser; archived DOM is not the original HTTP byte stream.",
+  "queries": {
+    "Jassid": {
+      "combo0": "Cotton",
+      "combo1": "Akola",
+      "combo2": "Jassid",
+      "combo3": "2005",
+      "combo4": "2009"
+    },
+    "Aphid": {
+      "combo0": "Cotton",
+      "combo1": "Akola",
+      "combo2": "Aphid",
+      "combo3": "2005",
+      "combo4": "2009"
+    }
+  },
+  "verification": {
+    "raw_counts_and_missingness_match_original_record": true,
+    "training_pest_scaling_matches_contract": true,
+    "training_thresholds_match_contract": true,
+    "all_19_exported_test_sequences_and_labels_match": true
+  },
+  "split_counts": {
+    "test": 19,
+    "train": 58,
+    "validation": 12
+  },
+  "limitations": "A newly retrieved and verified reconstruction, not a recovered original run export or a new blind evaluation. Source pages use HTTP and their current integrity is not independently certified.",
+  "sha256": {
+    "Aphid_page.html.txt": "ef7f23bfdc22d6893cf510b71f65fa150f99c9f759026376a09f91c0eedbbdf5",
+    "Aphid_raw.csv": "47685c69e274bbe7b1cea1345348fb14f2a99bd4732b862c101eea3a4ebd9101",
+    "Aphid_table.json": "a0d0e0e18c8851d818cff69755f6bb6c47c7ba6cb050678e4605f41b9fac71c8",
+    "Jassid_page.html.txt": "f1e0b1b2ed9ab828e56241f60f5c06cbd70201fb34ddb259f0ba1373253cdb40",
+    "Jassid_raw.csv": "b056367c2525490e8b10d007a05f0eab06d18234ffdfb271977ebcf779c27ca1",
+    "Jassid_table.json": "4d4a558095cd0e9a0bf70a3b000a23e438b5991c9fd964da278235af692eaaa8",
+    "processed_weekly_data.csv": "8de1aa81a64e2d1e989e285d8afde71743fb8baa04c24dfa768de275e9f8e3c9",
+    "reconstructed_split_manifest.csv": "31bc2578d1653a6201121733ad043d69771aa445789bef03ece9bfaca886b45d"
+  }
+}

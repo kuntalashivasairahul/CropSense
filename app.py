@@ -5,6 +5,7 @@ lives in core.py and is called from here unchanged.
 """
 
 import base64
+import hashlib
 import textwrap
 from html import escape
 import io
@@ -918,7 +919,7 @@ def sequences():
 def module2_manifest():
     manifest_path = core.MODELS_DIR / "module2_samples" / "manifest.json"
     if manifest_path.exists():
-        return json.loads(manifest_path.read_text())
+        return json.loads(manifest_path.read_text(encoding="utf-8"))
     return []
 
 
@@ -938,6 +939,8 @@ def note(text, tone="caution"):
 
 
 def disease_tone(res):
+    if res.get("needs_review"):
+        return MODERATE
     return HEALTHY if res["is_healthy"] else (SEVERE if res["disease_score"] < 0.33 else MODERATE)
 
 
@@ -959,6 +962,7 @@ def pil_to_b64(img):
 def prepare_image_input(img: Image.Image) -> Image.Image:
     """Ensure image is in RGB format. If it has an alpha channel (RGBA/LA/palette),
     composite it onto a flat pure white background before converting to RGB instead of dropping alpha."""
+    core.validate_image(img)
     if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
         rgba = img.convert("RGBA")
         white_bg = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
@@ -968,6 +972,8 @@ def prepare_image_input(img: Image.Image) -> Image.Image:
 
 def compute_ndvi_and_stats(rgb_img, nir_img):
     """Compute per-pixel NDVI, heatmap image, low-NDVI stress overlay, and 6 stats."""
+    core.validate_image(rgb_img)
+    core.validate_image(nir_img)
     if nir_img.size != rgb_img.size:
         raise ValueError(f"RGB and NIR dimensions differ: {rgb_img.size} vs {nir_img.size}. Use aligned images of the same size.")
     if nir_img.mode != "L":
@@ -979,6 +985,8 @@ def compute_ndvi_and_stats(rgb_img, nir_img):
     if nir_arr.ndim == 3:
         nir_arr = nir_arr[:, :, 0]
 
+    if not np.any(nir_arr + red > 0):
+        raise ValueError("RGB/NIR pair contains no usable red or NIR signal.")
     ndvi = (nir_arr - red) / (nir_arr + red + 1e-8)
     stats = {
         "ndvi_mean": float(np.mean(ndvi)),
@@ -1040,8 +1048,7 @@ def composite_gauge_svg(score, tone=HEALTHY, label="Healthy"):
     if score is not None:
         target_offset = total_len * (1.0 - min(max(score, 0.0), 1.0))
         num_str = f"{score:.3f}"
-        int_part = int(score)
-        dec_two = int(round((score - int_part) * 100))
+        int_part, dec_two = divmod(round(score * 100), 100)
         stroke_col = LIME if tone == HEALTHY else tone
     else:
         target_offset = total_len
@@ -1069,6 +1076,7 @@ def composite_gauge_svg(score, tone=HEALTHY, label="Healthy"):
         </div>
       </div>
     </div>
+    <div class="card-eyebrow">Individual component thresholds (not mean-index bands)</div>
     <div class="dial-chips-row">
       <span class="dial-chip"><span class="status-mark">{status_svg(SEVERE, 13)}</span>0.00 – 0.33 Severe</span>
       <span class="dial-chip"><span class="status-mark">{status_svg(MODERATE, 13)}</span>0.33 – 0.66 Moderate</span>
@@ -1151,27 +1159,33 @@ def run_model(slot, fn):
     try:
         st.session_state[slot] = fn()
         st.session_state.pop(f"{slot}_error", None)
-        mod_key = {"disease": "m1", "ndvi": "m2", "pest": "m3"}.get(slot, "m1")
+        mod_key = {"disease": "m1", "ndvi": "m2", "pest": "m3"}[slot]
         st.session_state[f"{mod_key}_version"] = st.session_state.get(f"{mod_key}_version", 0) + 1
         st.session_state[f"{mod_key}_just_computed"] = True
-    except Exception as e:
+        return True
+    except Exception as exc:
         st.session_state[slot] = None
-        st.session_state[f"{slot}_error"] = str(e)
+        st.session_state[f"{slot}_error"] = str(exc)
+        return False
 
 
 def clear_disease_input():
     st.session_state.disease = None
+    st.session_state.pop("disease_error", None)
     st.session_state.pop("disease_img", None)
     st.session_state.pop("disease_src", None)
 
 
 def clear_ndvi_input():
     st.session_state.ndvi = None
+    st.session_state.pop("ndvi_error", None)
     st.session_state.pop("ndvi_imgs", None)
+    st.session_state.pop("ndvi_source", None)
 
 
 def clear_pest_input():
     st.session_state.pest = None
+    st.session_state.pop("pest_error", None)
     for key in ("pest_seq", "pest_truth", "pest_label"):
         st.session_state.pop(key, None)
 
@@ -1187,6 +1201,7 @@ def apply_scenario(name):
         sample_path = core.MODELS_DIR.parent / "sample_images" / "Tomato___healthy.jpg"
         img = Image.open(sample_path)
         pick_label = "Tomato — Healthy"
+        st.session_state.pop("disease_error", None)
         st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
         st.session_state.disease_pick = pick_label
         st.session_state.disease_src = f"sample:{pick_label}"
@@ -1202,6 +1217,7 @@ def apply_scenario(name):
             stats, hm, ov = compute_ndvi_and_stats(rgb, nir)
             st.session_state.ndvi = core.predict_ndvi(nm, stats)
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "healthy sample pair")
+            st.session_state.ndvi_source = f"Bundled RGB/NIR pair: {rgb_p.name}; {nir_p.name}"
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
                 st.session_state[f"manual_slider_{f}"] = val
@@ -1209,12 +1225,14 @@ def apply_scenario(name):
         p_samp = seq_map["low"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
         st.session_state.pest_seq = p_samp["sequence"]
-        st.session_state.pest_week = f"{p_samp['label']} (recorded: Low)"
+        st.session_state.pest_week_select = f"{p_samp['label']} (recorded: Low)"
+        st.session_state.pest_label = p_samp["label"]
 
     elif "2 · Early Warning" in name:
         sample_path = core.MODELS_DIR.parent / "sample_images" / "Tomato___healthy.jpg"
         img = Image.open(sample_path)
         pick_label = "Tomato — Healthy"
+        st.session_state.pop("disease_error", None)
         st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
         st.session_state.disease_pick = pick_label
         st.session_state.disease_src = f"sample:{pick_label}"
@@ -1230,6 +1248,7 @@ def apply_scenario(name):
             stats, hm, ov = compute_ndvi_and_stats(rgb, nir)
             st.session_state.ndvi = core.predict_ndvi(nm, stats)
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "severe stress sample pair")
+            st.session_state.ndvi_source = f"Bundled RGB/NIR pair: {rgb_p.name}; {nir_p.name}"
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
                 st.session_state[f"manual_slider_{f}"] = val
@@ -1237,12 +1256,14 @@ def apply_scenario(name):
         p_samp = seq_map["medium"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
         st.session_state.pest_seq = p_samp["sequence"]
-        st.session_state.pest_week = f"{p_samp['label']} (recorded: Medium)"
+        st.session_state.pest_week_select = f"{p_samp['label']} (recorded: Medium)"
+        st.session_state.pest_label = p_samp["label"]
 
     elif "3 · Severe" in name:
         sample_path = core.MODELS_DIR.parent / "sample_images" / "Potato___Early_blight.jpg"
         img = Image.open(sample_path)
         pick_label = "Potato — Early Blight"
+        st.session_state.pop("disease_error", None)
         st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
         st.session_state.disease_pick = pick_label
         st.session_state.disease_src = f"sample:{pick_label}"
@@ -1257,6 +1278,7 @@ def apply_scenario(name):
             stats, hm, ov = compute_ndvi_and_stats(rgb, nir)
             st.session_state.ndvi = core.predict_ndvi(nm, stats)
             st.session_state.ndvi_imgs = (rgb, ov, hm, stats, "severe stress sample pair")
+            st.session_state.ndvi_source = f"Bundled RGB/NIR pair: {rgb_p.name}; {nir_p.name}"
             for f, val in stats.items():
                 st.session_state[f"ndvi_{f}"] = val
                 st.session_state[f"manual_slider_{f}"] = val
@@ -1264,11 +1286,13 @@ def apply_scenario(name):
         p_samp = seq_map["high"]
         st.session_state.pest = core.predict_pest(pm, p_samp["sequence"])
         st.session_state.pest_seq = p_samp["sequence"]
-        st.session_state.pest_week = f"{p_samp['label']} (recorded: High)"
+        st.session_state.pest_week_select = f"{p_samp['label']} (recorded: High)"
+        st.session_state.pest_label = p_samp["label"]
 
     elif "Adversarial test" in name:
         sample_path = core.MODELS_DIR.parent / "sample_images" / "adversarial_non_leaf.jpg"
         img = Image.open(sample_path)
+        st.session_state.pop("disease_error", None)
         st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
         st.session_state.disease_pick = "None"
         st.session_state.disease_src = "sample:adversarial_non_leaf"
@@ -1278,11 +1302,17 @@ def apply_scenario(name):
     elif "Known limitation" in name:
         sample_path = core.MODELS_DIR.parent / "sample_images" / "plantdoc_field_tomato_late_blight.jpg"
         img = prepare_image_input(Image.open(sample_path))
+        st.session_state.pop("disease_error", None)
         st.session_state.disease = core.predict_disease(dm, img, sanity_model=im)
         st.session_state.disease_pick = "None"
         st.session_state.disease_src = "sample:plantdoc_field_tomato_late_blight"
         st.session_state.disease_img = (img, "PlantDoc test set (70.jpg · True label: Tomato Late Blight)", "sample:plantdoc_field_tomato_late_blight")
         st.session_state["_target_nav"] = "Disease detection"
+
+    if "p_samp" in locals():
+        st.session_state.pop("ndvi_error", None)
+        st.session_state.pop("pest_error", None)
+        st.session_state.pest_truth = p_samp["actual_class"]
 
     # Bump version numbers for all modules on scenario apply
     for m in ["m1", "m2", "m3", "m4"]:
@@ -1300,9 +1330,9 @@ if "_target_nav" in st.session_state:
 # --------------------------------------------------------------------------
 _d, _n, _p = (st.session_state.get(k) for k in ("disease", "ndvi", "pest"))
 if _d and _n and _p:
-    _score = core.composite_score(_d["disease_score"], _n["ndvi_score"], _p["pest_risk_score"])
-    _label, _ = core.bucket(_score)
-    _tone = {"Healthy": HEALTHY, "Moderate Risk": MODERATE, "Severe Risk": SEVERE}[_label]
+    _assessment = core.composite_assessment(_d, _n, _p)
+    _score, _label = _assessment["score"], _assessment["label"]
+    _tone = {"Healthy": HEALTHY, "Moderate Risk": MODERATE, "Severe Risk": SEVERE, "Needs review": MODERATE}[_label]
     _comp_readout = f"""
     <div class="hdr-comp-pill">
       <span class="hdr-score-num">{_score:.3f}</span>
@@ -1352,12 +1382,12 @@ with col_stat:
 
 # Secondary Action Bar (Module Title + Demo Scenarios Picker)
 MODULE_META = {
-    "Disease detection": ("Module 1 · Foliar Vision", "Data Meets Foliar Health"),
-    "Canopy stress": ("Module 2 · Remote Sensing", "Canopy Multispectral Vigour"),
-    "Pest risk": ("Module 3 · Agro-meteorology", "Microclimate Outbreak Forecast"),
-    "Composite": ("Module 4 · Holistic Fusion", "Holistic Crop Health Synthesis"),
+    "Disease detection": ("Module 1 · Foliar Vision", "Leaf disease model"),
+    "Canopy stress": ("Module 2 · Remote Sensing", "Canopy anomaly model"),
+    "Pest risk": ("Module 3 · Agro-meteorology", "Pest pressure replay"),
+    "Composite": ("Module 4 · Simulated Fusion", "Simulated signal overview"),
 }
-eyebrow, title_text = MODULE_META.get(nav, ("Module 1 · Foliar Vision", "Data Meets Foliar Health"))
+eyebrow, title_text = MODULE_META.get(nav, ("Module 1 · Foliar Vision", "Leaf disease model"))
 
 sec_left, sec_right = st.columns([2.2, 1.2], vertical_alignment="center")
 with sec_left:
@@ -1382,19 +1412,31 @@ with sec_right:
     )
     if sc_choice != st.session_state.get("_last_scenario", "Manual / Custom inputs"):
         st.session_state["_last_scenario"] = sc_choice
+        st.session_state.pop("scenario_error", None)
         if sc_choice != "Manual / Custom inputs":
-            apply_scenario(sc_choice)
-            st.rerun()
+            try:
+                apply_scenario(sc_choice)
+            except Exception as exc:
+                clear_disease_input()
+                clear_ndvi_input()
+                clear_pest_input()
+                st.session_state.scenario_error = str(exc)
+        else:
+            clear_disease_input()
+            clear_ndvi_input()
+            clear_pest_input()
+        st.rerun()
+    if st.session_state.get("scenario_error"):
+        st.error("Scenario could not be loaded: " + st.session_state["scenario_error"])
 
 
 # ==========================================================================
 # MODULE 1: DISEASE DETECTION
 # ==========================================================================
 if nav == "Disease detection":
-    note("Trained and validated on lab-condition leaf images (PlantVillage dataset); accuracy "
-         "on the 252-image PlantDoc field test, the adapted checkpoint reached 55.95% accuracy "
-         "(historically inspected test set) — see project report "
-         "for details.")
+    note("The adapted checkpoint reached 55.95% accuracy on the Kaggle PlantDoc mirror’s "
+         "252-image test split, which was inspected in earlier work. This differs from the "
+         "upstream dataset’s test split. See the project report for split and label limitations.")
 
     anim_m1 = should_anim_title
     wrapper_cls = "card-anim-reveal" if anim_m1 else "card-static"
@@ -1404,6 +1446,7 @@ if nav == "Disease detection":
     with left:
         with st.container(border=True):
             html('<div class="card-eyebrow">Leaf Photo Input</div>')
+            st.caption("Use a close-up leaf from a supported crop. Flowers, fruits and aerial scenes are outside this classifier’s task; the image check may still accept them. JPG/PNG, up to 10 MB and 1,048,576 pixels; resize larger photographs before upload.")
             upload = st.file_uploader("Upload leaf photograph", type=["jpg", "jpeg", "png"], key="disease_upload", on_change=clear_disease_input)
             with st.expander("Supported crops (14)", expanded=False):
                 st.markdown(
@@ -1415,19 +1458,20 @@ if nav == "Disease detection":
                 )
             samples = sorted([p for p in (core.MODELS_DIR.parent / "sample_images").glob("*.jpg") if p.stem not in ("adversarial_non_leaf", "plantdoc_field_tomato_late_blight")])
             sample_names = [core.pretty_class(p.stem) for p in samples]
-            pick = st.selectbox("Or load labelled PlantVillage sample", ["None"] + sample_names, key="disease_pick", on_change=clear_disease_input)
+            pick = st.selectbox("Or load labelled PlantVillage sample", ["None"] + sample_names, key="disease_pick", on_change=clear_disease_input, persist_state="session")
 
             image, source, src_key = None, "", None
-            if upload is not None:
+            if upload is not None and sc_choice != "Manual / Custom inputs":
+                st.caption("The demonstration uses its bundled photo. Choose Manual / Custom inputs to analyze the uploaded file.")
+            if upload is not None and sc_choice == "Manual / Custom inputs":
                 try:
                     decoded = Image.open(upload)
-                    decoded.load()
                     image = prepare_image_input(decoded)
-                except Exception:
-                    note(f"<strong>{escape(upload.name)}</strong> could not be decoded as an image.", "fault")
+                except Exception as exc:
+                    note(f"<strong>{escape(upload.name)}</strong> could not be analyzed: {escape(str(exc))}", "fault")
                 else:
                     source = "Uploaded leaf photograph (224×224)"
-                    src_key = f"upload:{upload.name}:{upload.size}"
+                    src_key = f"upload:{upload.name}:sha256:{hashlib.sha256(upload.getvalue()).hexdigest()}"
             elif pick != "None":
                 image = prepare_image_input(Image.open(samples[sample_names.index(pick)]))
                 source = f"PlantVillage reference ({pick})"
@@ -1439,8 +1483,7 @@ if nav == "Disease detection":
             if image is not None:
                 st.write("")
                 if st.button("Classify leaf", type="primary", key="run_disease"):
-                    im = imagenet_model()
-                    run_model("disease", lambda: core.predict_disease(disease_model(), image, sanity_model=im))
+                    run_model("disease", lambda: core.predict_disease(disease_model(), image, sanity_model=imagenet_model()))
                     st.session_state.disease_src = src_key
                     st.session_state.disease_img = (image, source, src_key)
                     st.rerun()
@@ -1463,13 +1506,18 @@ if nav == "Disease detection":
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True, key=f"m1_container_{res_id_m1}"):
             result = st.session_state.get("disease")
-            st.session_state.disease_stale = bool(result) and st.session_state.get("disease_src") != src_key
+            if result and st.session_state.get("disease_src") != src_key:
+                clear_disease_input()
+                st.rerun()
 
-            html('<div class="card-eyebrow">Neural Diagnosis</div>')
+            html('<div class="card-eyebrow">Leaf model result</div>')
             if image is None:
                 note("Upload a leaf photo or load a reference sample to begin analysis.", "info")
             elif not result:
-                note("Ready. Press Classify leaf to evaluate with MobileNetV2.", "info")
+                if st.session_state.get("disease_error"):
+                    st.error("Leaf analysis failed: " + st.session_state["disease_error"] + " Retry after checking the input or local model setup.")
+                else:
+                    note("Ready. Press Classify leaf to evaluate with MobileNetV2.", "info")
             else:
                 sanity = result.get("sanity")
                 if sanity and sanity.get("is_flagged"):
@@ -1494,10 +1542,11 @@ if nav == "Disease detection":
                     )
                     note(warning_html, "caution")
 
+                if result.get("needs_review") and not (sanity and sanity.get("is_flagged")):
+                    st.warning("Low-confidence prediction: needs review. Uncertainty is not evidence of a healthy leaf.")
                 tone = disease_tone(result)
                 conf_val = result["confidence"]
-                conf_int = int(conf_val * 100)
-                conf_dec = int(round((conf_val * 100 - conf_int) * 10))
+                conf_int, conf_dec = divmod(round(conf_val * 1000), 10)
 
                 html(f"""
                 <div class="hero-num-wrap">
@@ -1533,6 +1582,8 @@ if nav == "Disease detection":
 # ==========================================================================
 elif nav == "Canopy stress":
     manifest = module2_manifest()
+    st.warning("Raw-band NDVI requires aligned 8-bit RGB and grayscale NIR from a supported acquisition. Equal dimensions do not establish alignment or reflectance calibration. Maximum 1,048,576 pixels per image.")
+    st.caption("Classes reflect training mask-coverage thresholds, not measured plant health: healthy means below the selected anomaly thresholds and can include annotated anomalies. The released forest recognized 0/6 bundled healthy-class tiles; its exact historical holdout accuracy is unverified.")
     anim_m2 = should_anim_title
     wrapper_cls = "card-anim-reveal" if anim_m2 else "card-static"
     res_id_m2 = st.session_state.get("m2_version", 0)
@@ -1550,14 +1601,19 @@ elif nav == "Canopy stress":
                     try:
                         rgb_img = prepare_image_input(Image.open(m2_rgb_file))
                         nir_img = Image.open(m2_nir_file)
+                        core.validate_image(nir_img)
                         nir_img.load()
                         stats, hm, ov = compute_ndvi_and_stats(rgb_img, nir_img)
                         prediction = core.predict_ndvi(ndvi_model(), stats)
-                    except (OSError, ValueError) as exc:
-                        st.error(f"Could not analyze this image pair: {exc}")
-                        st.stop()
+                    except Exception as exc:
+                        clear_ndvi_input()
+                        st.session_state.ndvi_error = str(exc)
+                        st.rerun()
                     st.session_state.ndvi = prediction
                     st.session_state.ndvi_imgs = (rgb_img, ov, hm, stats, "Uploaded multispectral pair")
+                    st.session_state.pop("ndvi_error", None)
+                    st.session_state.ndvi_source = (f"RGB {m2_rgb_file.name} sha256:{hashlib.sha256(m2_rgb_file.getvalue()).hexdigest()}; "
+                                                   f"NIR {m2_nir_file.name} sha256:{hashlib.sha256(m2_nir_file.getvalue()).hexdigest()}")
                     for f, val in stats.items():
                         st.session_state[f"ndvi_{f}"] = val
                         st.session_state[f"manual_slider_{f}"] = val
@@ -1570,22 +1626,26 @@ elif nav == "Canopy stress":
             b1, b2, b3 = st.columns(3)
 
             def load_sample_by_label(lbl_target):
-                entry = next((e for e in manifest if e["label"] == lbl_target), None)
-                if entry:
-                    src = entry["source_filename"].replace(".jpg", "")
+                try:
+                    entry = next(e for e in manifest if e["label"] == lbl_target)
+                    src = Path(entry["source_filename"]).stem
                     rgb_p = core.MODELS_DIR / "module2_samples" / f"{entry['label']}_{src}_rgb.jpg"
                     nir_p = core.MODELS_DIR / "module2_samples" / f"{entry['label']}_{src}_nir.jpg"
-                    rgb_img = Image.open(rgb_p)
-                    nir_img = Image.open(nir_p)
+                    rgb_img, nir_img = Image.open(rgb_p), Image.open(nir_p)
                     stats, hm, ov = compute_ndvi_and_stats(rgb_img, nir_img)
                     st.session_state.ndvi = core.predict_ndvi(ndvi_model(), stats)
                     st.session_state.ndvi_imgs = (rgb_img, ov, hm, stats, f"Sample parcel ({entry['label'].replace('_', ' ').title()})")
+                    st.session_state.pop("ndvi_error", None)
+                    st.session_state.ndvi_source = f"Bundled RGB/NIR pair: {rgb_p.name}; {nir_p.name}"
                     for f, val in stats.items():
                         st.session_state[f"ndvi_{f}"] = val
                         st.session_state[f"manual_slider_{f}"] = val
                     st.session_state["m2_version"] = st.session_state.get("m2_version", 0) + 1
                     st.session_state["m2_just_computed"] = True
-                    st.rerun()
+                except Exception as exc:
+                    clear_ndvi_input()
+                    st.session_state.ndvi_error = f"Bundled pair could not be analyzed: {exc}"
+                st.rerun()
 
             if b1.button("Healthy", key="btn_m2_h", width="stretch"):
                 load_sample_by_label("healthy")
@@ -1597,16 +1657,15 @@ elif nav == "Canopy stress":
             # Manual stats expander (demoted fallback)
             with st.expander("Enter NDVI statistics manually"):
                 for feat in core.NDVI_FEATURES:
-                    st.session_state.setdefault(f"manual_slider_{feat}", float(st.session_state.get(f"ndvi_{feat}", 0.35)))
+                    st.session_state.setdefault(f"manual_slider_{feat}", float(st.session_state.get(f"ndvi_{feat}", core.NDVI_DEFAULTS[feat])))
                     st.slider(feat, 0.0 if feat == "ndvi_std" else -1.0, 1.0, step=0.01, key=f"manual_slider_{feat}")
                 if st.button("Classify from manual stats", key="btn_manual_ndvi"):
                     man_stats = {feat: float(st.session_state[f"manual_slider_{feat}"]) for feat in core.NDVI_FEATURES}
-                    st.session_state.ndvi = core.predict_ndvi(ndvi_model(), man_stats)
-                    st.session_state.ndvi_imgs = None
-                    for f, val in man_stats.items():
-                        st.session_state[f"ndvi_{f}"] = val
-                    st.session_state["m2_version"] = st.session_state.get("m2_version", 0) + 1
-                    st.session_state["m2_just_computed"] = True
+                    if run_model("ndvi", lambda: core.predict_ndvi(ndvi_model(), man_stats)):
+                        st.session_state.ndvi_imgs = None
+                        st.session_state.ndvi_source = "Manual statistics: " + json.dumps(man_stats, sort_keys=True)
+                        for f, val in man_stats.items():
+                            st.session_state[f"ndvi_{f}"] = val
                     st.rerun()
 
     with right:
@@ -1615,14 +1674,16 @@ elif nav == "Canopy stress":
             res_ndvi = st.session_state.get("ndvi")
             img_state = st.session_state.get("ndvi_imgs")
 
-            html('<div class="card-eyebrow">Canopy Health Diagnosis</div>')
+            html('<div class="card-eyebrow">Canopy model result</div>')
             if not res_ndvi:
-                note("Load a paired RGB/NIR field tile or run NDVI calculation.", "info")
+                if st.session_state.get("ndvi_error"):
+                    st.error("Canopy analysis failed: " + st.session_state["ndvi_error"])
+                else:
+                    note("Load a paired RGB/NIR field tile or run NDVI calculation.", "info")
             else:
                 tone = ndvi_tone(res_ndvi)
                 score_val = res_ndvi["ndvi_score"]
-                s_int = int(score_val)
-                s_dec = int(round((score_val - s_int) * 100))
+                s_int, s_dec = divmod(round(score_val * 100), 100)
 
                 html(f"""
                 <div class="hero-num-wrap">
@@ -1691,6 +1752,7 @@ elif nav == "Canopy stress":
 # MODULE 3: PEST RISK FORECASTING (TEMPORAL LSTM)
 # ==========================================================================
 elif nav == "Pest risk":
+    st.warning("Historical cotton/Akola replay: LSTM 10/19 correct and 0/5 medium recall; saved logistic baseline 13/19. These results do not establish live or cross-region forecast accuracy.")
     seq_data = sequences()
     samples = seq_data["samples"]
     labels = [f"{s['label']} (recorded: {s['actual_class'].title()})" for s in samples]
@@ -1703,7 +1765,7 @@ elif nav == "Pest risk":
     with left:
         with st.container(border=True):
             html('<div class="card-eyebrow">Meteorological Window</div>')
-            pick_seq = st.selectbox("Select 4-week test sequence", labels, key="pest_week_select", on_change=clear_pest_input)
+            pick_seq = st.selectbox("Select 4-week test sequence", labels, key="pest_week_select", on_change=clear_pest_input, persist_state="session")
             chosen_sample = samples[labels.index(pick_seq)]
             seq_matrix = chosen_sample["sequence"]
 
@@ -1715,7 +1777,9 @@ elif nav == "Pest risk":
                 st.rerun()
 
             st.write("")
-            st.caption("Microclimate incubation curve (temperature, humidity, precipitation):")
+            st.caption("Maximum temperature over the four input weeks (the forecast target is the following week).")
+            st.dataframe(pd.DataFrame(seq_matrix, columns=seq_data["feature_names"], index=["W1", "W2", "W3", "W4"]))
+            st.caption("The ninth feature is prior pest pressure scaled using training data; this is not a weather-only forecast.")
             res_p = st.session_state.get("pest")
             p_class = res_p["pred_class"] if res_p else chosen_sample["actual_class"]
             p_score = res_p["pest_risk_score"] if res_p else 0.5
@@ -1725,14 +1789,16 @@ elif nav == "Pest risk":
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True, key=f"m3_container_{res_id_m3}"):
             res_pest = st.session_state.get("pest")
-            html('<div class="card-eyebrow">Outbreak Risk Assessment</div>')
+            html('<div class="card-eyebrow">Pest model result</div>')
             if not res_pest:
-                note("Select a weather sequence and run the LSTM forecast.", "info")
+                if st.session_state.get("pest_error"):
+                    st.error("Pest analysis failed: " + st.session_state["pest_error"])
+                else:
+                    note("Select a weather sequence and run the LSTM forecast.", "info")
             else:
                 tone = pest_tone(res_pest)
                 risk_score = res_pest["pest_risk_score"]
-                r_int = int(risk_score)
-                r_dec = int(round((risk_score - r_int) * 100))
+                r_int, r_dec = divmod(round(risk_score * 100), 100)
 
                 html(f"""
                 <div class="hero-num-wrap">
@@ -1762,6 +1828,7 @@ elif nav == "Pest risk":
 # MODULE 4: COMPOSITE MULTI-SIGNAL FUSION
 # ==========================================================================
 elif nav == "Composite":
+    st.warning("Simulated index from unrelated datasets, not one farm. No fusion accuracy or field diagnosis is validated. The warning tier preserves individual component alarms.")
     missing = []
     if not _d: missing.append("Disease detection")
     if not _n: missing.append("Canopy stress")
@@ -1778,26 +1845,28 @@ elif nav == "Composite":
     with c_left:
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True, key=f"m4_gauge_container_{res_id_m4}"):
-            html('<div class="card-eyebrow">Holistic Health Synthesis</div>')
+            html('<div class="card-eyebrow">Simulated mean index</div>')
             if missing:
                 html(composite_gauge_svg(None, HEALTHY, ""))
                 note(f"Awaiting signals from: {', '.join(missing)}.", "info")
             else:
-                score = core.composite_score(_d["disease_score"], _n["ndvi_score"], _p["pest_risk_score"])
-                label, _ = core.bucket(score)
-                tone = {"Healthy": HEALTHY, "Moderate Risk": MODERATE, "Severe Risk": SEVERE}[label]
+                assessment = core.composite_assessment(_d, _n, _p)
+                score, label = assessment["score"], assessment["label"]
+                tone = {"Healthy": HEALTHY, "Moderate Risk": MODERATE, "Severe Risk": SEVERE, "Needs review": MODERATE}[label]
                 html(composite_gauge_svg(score, tone, label))
                 st.write("")
-                st.caption("Evaluation Formula: composite = (disease_score + ndvi_score + (1.0 − pest_risk_score)) / 3")
+                st.caption("Mean index = (healthy-class probability sum + canopy class score + (1 − pest pressure)) / 3. The component warning tier is separate from this mean.")
+                for warning in assessment["warnings"]:
+                    st.warning(warning)
         html('</div>')
 
     with c_right:
         html(f'<div class="{wrapper_cls}">')
         with st.container(border=True, key=f"m4_ledger_container_{res_id_m4}"):
-            html('<div class="card-eyebrow">Orthogonal Signal Breakdown</div>')
+            html('<div class="card-eyebrow">Component signals</div>')
             rows_data = [
-                ("Foliar Pathology", "MobileNetV2 CNN", _d, "disease_score", lambda r: r["display_class"], disease_tone),
-                ("Canopy Hydration", "Random Forest NDVI", _n, "ndvi_score", lambda r: r["label"].replace("_", " ").title(), ndvi_tone),
+                ("Healthy-class probability sum", "MobileNetV2 CNN", _d, "disease_score", lambda r: r["display_class"], disease_tone),
+                ("Canopy anomaly class", "Random Forest NDVI", _n, "ndvi_score", lambda r: r["label"].replace("_", " ").title(), ndvi_tone),
                 ("Pest Pressure (Inverted)", "Temporal LSTM", _p, "pest_risk_score", lambda r: f"{r['pred_class'].title()} risk ({1.0 - r['pest_risk_score']:.3f})", pest_tone),
             ]
 
@@ -1855,7 +1924,11 @@ elif nav == "Composite":
 
             st.write("")
             report_txt = ("Prototype assessment for demonstration only. Confirm findings with a qualified local agronomist before treatment.\n\n"
-                          + core.generate_report(_d, _n, _p, score, label))
+                          + core.generate_report(_d, _n, _p, score, label, provenance={
+                              "leaf": st.session_state.get("disease_src", "Not recorded"),
+                              "canopy": st.session_state.get("ndvi_source", "Not recorded"),
+                              "pest": st.session_state.get("pest_label", "Not recorded"),
+                          }))
             st.download_button(
                 "Download Agronomic Assessment Report (TXT)",
                 data=report_txt,

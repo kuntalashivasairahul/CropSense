@@ -1,0 +1,28 @@
+{
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "packages": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "scikit-learn": "1.6.1",
+    "streamlit": "1.64.0"
+  },
+  "scored_core_snapshot_sha256": "e1b0680faee265c5d92f5b83da3004bb126874ffb6fba2a4a27fa3bad4e4ceeb",
+  "assets": {
+    "module1_cnn.keras": {
+      "bytes": 9805815,
+      "sha256": "5c263a58b9d4613625af07b344500bd45011336c680b30b2095c6b051d0d8deb"
+    },
+    "mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224.h5": {
+      "bytes": 14536120,
+      "sha256": "3e195a2857356cfc092cbbb460beb2a5bce279015d7792598b8d3d9e451902e3"
+    },
+    "imagenet_class_index.json": {
+      "bytes": 35363,
+      "sha256": "a1e7a966a1f601d39e4b43e119b3e7dd4a2ad3ea08cf69847cbaf021013767bc"
+    }
+  }
+}

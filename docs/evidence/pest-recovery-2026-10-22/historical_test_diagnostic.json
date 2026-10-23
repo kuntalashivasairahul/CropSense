@@ -1,0 +1,52 @@
+{
+  "scope": "Diagnostic on the previously inspected 2009 Akola test; not a new blind test. No selection or deployment changes from these results.",
+  "rows": [
+    {
+      "model": "release",
+      "n": 19,
+      "accuracy": 0.5263157894736842,
+      "macro_f1": 0.43274853801169594,
+      "confusion_matrix": [
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          6
+        ]
+      ]
+    },
+    {
+      "model": "validation_selected",
+      "n": 19,
+      "accuracy": 0.631578947368421,
+      "macro_f1": 0.6055555555555555,
+      "confusion_matrix": [
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          6
+        ]
+      ]
+    }
+  ],
+  "promoted": false
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Bounded pest-model repair experiment, declared before reading 2010-2011 observations",
+  "training_years": [2005, 2006, 2007],
+  "validation_years": [2008],
+  "previously_inspected_test_years_excluded_from_selection": [2009],
+  "new_temporal_test_years_if_source_has_observations": [2010, 2011],
+  "input_contract": "Existing 4x9 causal windows, original training-only scaling and target thresholds",
+  "candidates": [
+    {"name": "released_lstm", "train": false},
+    {"name": "lstm8_dropout0", "units": 8, "dropout": 0.0, "seed": 42},
+    {"name": "lstm16_dropout0.1", "units": 16, "dropout": 0.1, "seed": 42},
+    {"name": "lstm32_dropout0.1", "units": 32, "dropout": 0.1, "seed": 42}
+  ],
+  "training": {"epochs_max": 60, "batch_size": 8, "learning_rate": 0.001, "clipnorm": 1.0, "class_weight": "balanced", "early_stopping": "validation loss, patience 8, restore best weights"},
+  "selection_before_new_test": "Maximize validation macro F1; candidate medium recall must exceed released model and high recall must not fall. If none qualifies, select release. No 2009 or new temporal test used for selection.",
+  "comparators": ["released LSTM", "original standardized logistic baseline C=0.1 fit on training only", "persistence"],
+  "promotion_gate": "No automatic promotion. Require finite contract/reload checks, positive medium recall, nonworse macro F1 and high recall versus release on the new temporal test; disclose all counts, dependence and already-inspected validation history. Missing observations or classes are a coverage gap, not a pass.",
+  "no_claim": "This is retrospective temporal validation, not a prospective farmer study or a guarantee of model quality."
+}

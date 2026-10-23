@@ -1,0 +1,58 @@
+"""Diagnostic candidate comparison on existing grouped train/validation only."""
+import json
+import sys
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import ExtraTreesClassifier, HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+import core
+
+OUT = Path(__file__).parent
+folder = ROOT / 'docs/evidence/module-2-candidate'
+features = pd.read_csv(folder / 'features_and_labels.csv')
+membership = pd.read_csv(folder / 'split_manifest.csv')
+data = features.merge(membership[['filename', 'split']], on='filename', validate='one_to_one')
+train = data[data.split == 'train']
+validation = data[data.split == 'validation']
+assert len(train) == 5175 and len(validation) == 1584
+assert not set(train.field_id) & set(validation.field_id)
+assert np.isfinite(train[core.NDVI_FEATURES]).all().all()
+assert np.isfinite(validation[core.NDVI_FEATURES]).all().all()
+classes = ['healthy', 'moderate_stress', 'severe_stress']
+# Final test membership is deliberately unused for model selection.
+models = {
+    'rf_baseline': RandomForestClassifier(n_estimators=200, class_weight='balanced', random_state=42, n_jobs=2),
+    'extra_trees': ExtraTreesClassifier(n_estimators=400, min_samples_leaf=2, class_weight='balanced', random_state=42, n_jobs=2),
+    'hist_gradient_boosting': HistGradientBoostingClassifier(max_iter=150, max_leaf_nodes=15, learning_rate=.05,
+                                                           l2_regularization=.1, class_weight='balanced', random_state=42),
+    'logistic': make_pipeline(StandardScaler(), LogisticRegression(C=1, class_weight='balanced', max_iter=1000, random_state=42)),
+}
+rows = []
+for name, model in models.items():
+    start = time.perf_counter()
+    model.fit(train[core.NDVI_FEATURES], train.label)
+    predicted = model.predict(validation[core.NDVI_FEATURES])
+    cm = confusion_matrix(validation.label, predicted, labels=classes)
+    assert cm.sum() == len(validation)
+    rows.append({'model': name, 'split': 'existing_grouped_validation', 'n': len(validation),
+                 'accuracy': accuracy_score(validation.label, predicted),
+                 'macro_f1': f1_score(validation.label, predicted, labels=classes, average='macro'),
+                 'healthy_recall': cm[0, 0] / cm[0].sum(),
+                 'severe_to_healthy': int(cm[2, 0]), 'confusion_matrix': cm.tolist(),
+                 'seconds': time.perf_counter() - start})
+baseline = rows[0]
+for row in rows:
+    row['meets_baseline_class_guardrails'] = bool(row['healthy_recall'] >= baseline['healthy_recall']
+                                               and row['severe_to_healthy'] <= baseline['severe_to_healthy'])
+report = {'protocol': 'Diagnostic comparison on previously inspected grouped train/validation. No final test used, no model deployed.',
+          'features': core.NDVI_FEATURES, 'rows': rows}
+(OUT / 'rf-validation.json').write_text(json.dumps(report, indent=2, allow_nan=False))
+print(json.dumps(report, indent=2))

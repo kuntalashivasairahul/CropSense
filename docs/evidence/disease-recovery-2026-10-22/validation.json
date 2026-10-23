@@ -1,0 +1,67 @@
+{
+  "source_page": "https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit/output",
+  "public_output_version_id": 357329688,
+  "run_id": "20261011T112353Z",
+  "archive_sha256": "2f11802463d7af273de84f71d8baecefe7bf1c61080d5768a277880bbb14af44",
+  "model_sha256": "5c263a58b9d4613625af07b344500bd45011336c680b30b2095c6b051d0d8deb",
+  "model_matches_deployment": true,
+  "scope": "Saved v5 release verification, not original checkpoint-training records or fresh image inference",
+  "split_counts": {
+    "pv_train": 46160,
+    "pv_validation": 8145,
+    "field_train": 2128,
+    "field_validation": 532,
+    "field_test": 252
+  },
+  "retained_mapped_field_examples_after_dedup": 2912,
+  "field_content_hashes_disjoint_across_splits": true,
+  "prediction_checks": [
+    {
+      "file": "original_checkpoint__field_test_predictions.csv",
+      "n": 252,
+      "correct": 78,
+      "accuracy": 0.30952380952380953,
+      "macro_f1_all_classes": 0.21076470376311504,
+      "macro_f1_present_classes": 0.296631805296236,
+      "rows_labels_probabilities_and_confusion_match": true
+    },
+    {
+      "file": "original_checkpoint__pv_validation_predictions.csv",
+      "n": 8145,
+      "correct": 7990,
+      "accuracy": 0.9809699201964396,
+      "macro_f1_all_classes": 0.977414882814806,
+      "macro_f1_present_classes": 0.977414882814806,
+      "rows_labels_probabilities_and_confusion_match": true
+    },
+    {
+      "file": "original_checkpoint__field_validation_predictions.csv",
+      "n": 532,
+      "correct": 102,
+      "accuracy": 0.19172932330827067,
+      "macro_f1_all_classes": 0.12873793143898504,
+      "macro_f1_present_classes": 0.18118671832153452,
+      "rows_labels_probabilities_and_confusion_match": true
+    },
+    {
+      "file": "adapted_checkpoint__field_test_predictions.csv",
+      "n": 252,
+      "correct": 141,
+      "accuracy": 0.5595238095238095,
+      "macro_f1_all_classes": 0.3922468251546211,
+      "macro_f1_present_classes": 0.5520510872546519,
+      "rows_labels_probabilities_and_confusion_match": true
+    },
+    {
+      "file": "adapted_checkpoint__pv_validation_predictions.csv",
+      "n": 8145,
+      "correct": 7887,
+      "accuracy": 0.9683241252302026,
+      "macro_f1_all_classes": 0.9563672385284538,
+      "macro_f1_present_classes": 0.9563672385284538,
+      "rows_labels_probabilities_and_confusion_match": true
+    }
+  ],
+  "raw_mirror_total_established": false,
+  "production_weights_changed": false
+}

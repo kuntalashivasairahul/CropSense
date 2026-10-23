@@ -1,0 +1,15 @@
+{
+  "filename": "module1_cnn.keras",
+  "sha256": "6ea273be92246aa64cd4a6207044fcb8147fabf0ef9e38e07d43ed1adb29f7d4",
+  "hf_revision": "ccfe5b094992e65c62e0d5fe50447d02b48d8e86",
+  "input_shape": [
+    null,
+    224,
+    224,
+    3
+  ],
+  "output_shape": [
+    null,
+    38
+  ]
+}

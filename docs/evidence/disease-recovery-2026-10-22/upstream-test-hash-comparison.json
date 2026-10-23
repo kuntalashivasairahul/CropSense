@@ -1,0 +1,1182 @@
+[
+  {
+    "source_path": "test/Apple Scab Leaf/052609%20Hartman%20Crabapple%20scab%20single%20leaf.JPG.jpg",
+    "decoded_hash": "a7d13b2e3cf449f5b189eec26c8dc3a0b4f432fcfe6e91cba8057b609b9fc251",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/1b321015-6e33-4f18-aade-888f4383fe92.jpeg.jpg",
+    "decoded_hash": "60454f84a1057c493b78676aa44838f4b6f52ff8a7ccb7cd694cf79f16af9950",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/28-500x375.jpg",
+    "decoded_hash": "566b6382738e0ed26c304504012a3d31ac8ddeb592722621497bf4a8e87efe4e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/816.jpg",
+    "decoded_hash": "02cde5bfc494bcabd2a89ab6e3ef2180ab08458c98b9d71bb42fd88bc658b360",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apple%20scab%20leaf.jpg",
+    "decoded_hash": "35105e0d2f37cd50fc4341c9001a1b0164cfc871bcb059d2d7a2190c3deea982",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apple%20scabnew.jpg",
+    "decoded_hash": "37b1964c0e855c4f89544d42b6fdcf57766146e79b3ef13432e590c9e8939675",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apple-scab-5366820.jpg",
+    "decoded_hash": "7b931fdc50e88ec4a3f650e7e632d136ce74dc6b86a93ce98427e72978e52df7",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apples_apple-scab_01_zoom.jpg",
+    "decoded_hash": "35de5175d2d5b02d12ec089e0e60dbc907e3891fdf7e71e3f4820da614ee5335",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apples_apple-scab_02_thm.jpg",
+    "decoded_hash": "da66cdd9fb38bd3ecc2b6fd0d9304084ec61d8800ea31a23a2606c83c8478f98",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple Scab Leaf/apples_apple-scab_10_zoom.jpg",
+    "decoded_hash": "5c80c3768b2d4f7bb1bea15ca483b3bf1c2876fb7b9e2362dc14b23e904e7aa9",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple leaf/20180511_090912-14gtw8a-e1526047952754.jpg",
+    "decoded_hash": "8f24ee0b3a361de2a26ded117f586818964b7078c729b533d46a25cd56dedf83",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple leaf/20180511_091133-24l1vhg-e1526047988236.jpg",
+    "decoded_hash": "148d8b553bf4c2240c01f3bca65fc9a6f060332106f1c9ffd635d22c23881add",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple leaf/20180511_091252-1gy5xf5-e1526048000596.jpg",
+    "decoded_hash": "3f0ded5a0e2a7b13b8ce285cf0ce2e233db63780d87f08a073ee8e33f1921aea",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple leaf/4120978-single-green-leaf-of-apple-tree.jpg",
+    "decoded_hash": "93bcc534b49283459302d3856695f6041a40269f53eceb0e23e3ff871b2ccc86",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple leaf/Apple-Leaf-Wallpaper-17.jpg",
+    "decoded_hash": "f7a3a4b2d21df277c33c2acc7201afedccb62afba4c83be95e91976e39a74871",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple leaf/apple-leaf-14319997.jpg",
+    "decoded_hash": "48b03d183610ec24ed46a7d49b89e2a43a55e5c49d6466fc3160eb1074e857b3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple leaf/apple-leaf-9834637.jpg",
+    "decoded_hash": "65d0a116463452e6395695d0034f824cd3e32d5956865109c24f677f5c405066",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple leaf/apple-leaf-closeup-37636177.jpg",
+    "decoded_hash": "6b70d2076c910e3fb984695b8ade4f7a7faf1f24dd938b1a8789bbc61abc68c6",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple leaf/apple-leaf-isolated-white-background-56631026.jpg",
+    "decoded_hash": "17056e31ecf17ecd4286c38c59cc8e13956e2129da96e24f9e5dd070c5b38ccb",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/02.-Rust-2017-207u24s.jpg",
+    "decoded_hash": "ca128d51d8c363f9d1fc1f0722318bceb3c536bd264973aab6062a08500807a4",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple rust leaf/0605_Rust-induced_leafspot.jpg",
+    "decoded_hash": "affc9214ec21be9272b360039bef3b6200c1bbac24353f5e9ee94ea3772addb1",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/185161-004-EAF28842.jpg",
+    "decoded_hash": "7ae3f283d4d13d8b4b878a278c0f77d9cd13f7cbc9dbde45a13b77f2fbea374f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/2011-011.jpg",
+    "decoded_hash": "2544115bcd8844ab879a0cc378226cc18a3341ea22bc5b9b82e8c2924bcf3a22",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/20130519cedarapplerust.jpg",
+    "decoded_hash": "8fbbd89edc6145e28ab7a13fe7aaab284b1709fdd7f636c4bcc9ea2009197c9f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/20130610_110514.jpg",
+    "decoded_hash": "68b48e2c38adf74f243a40810271b952e64bbca67d4a8ff1e530c044ac75d7d2",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Apple rust leaf/20130802_111632.jpg",
+    "decoded_hash": "38359d300e8a9cde24e0f25971e93bd46d366f2ca8ed7ced2741705ca6173889",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/4-apple-rust2_19011_matt-bertone.jpg",
+    "decoded_hash": "b81b2e1c594be98f747d5ae9bd84a1a6b7d36ad9aa8c886446c0a0bd252aa613",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/9343310-small.jpg",
+    "decoded_hash": "48470a5eb3d1be181dcfa0df9ff8eda18dd32eb7a60acd3ddc0e1c56d20d9d50",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Apple rust leaf/99e886623c2080c22f6519b0e708c531.jpg",
+    "decoded_hash": "5427cd8db40aee0b777fbe35b152aad60f2ed21f6cfc5d870b237f5f97d6badb",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/00.jpg",
+    "decoded_hash": "11b48ca94eed1c38308491e86d2c9ace8006939f46e1e3569a96bd27ccfe561c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/000.jpg",
+    "decoded_hash": "005f05a73d370d59bac7673f0d61db827d552662107d42514530923047100f9f",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/01.jpg",
+    "decoded_hash": "5eb6d9e89eca126fbef1b6a6ef1d8e0ec6d296845ee0c31e1a2391e4fb2ff9f3",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/Bacterial-spot-pepper2.jpg",
+    "decoded_hash": "4f241b9b3d9e330757d4806a7e2540763aef7f2115d8a952c402ce432f993a6d",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/CMVpepperLeafShock-copy-50QUALITY-1ge8umw.jpg",
+    "decoded_hash": "98458ab9ec57a5b1070f80c0da557ada1bcbbef1801f184200b9a9a7e4fc1897",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/H5w92.jpg",
+    "decoded_hash": "5b3487a4789a539261c3c7ee66ce6ffa84bceeb6ef6315a4b36cdba71a3064f4",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/bacterial_leaf_spot_pepper_l.jpg",
+    "decoded_hash": "94a4ace1ddc354eb861f7c71f50760314b35352be722b824edd0e840299046cd",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/pepper-spot.jpg",
+    "decoded_hash": "fed05ea4c131cd84a2336b06b9442d027de743f5b2d59b1a84c8b9a55c7ec3bb",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf spot/pepper_bacterial-spot_03_zoom.jpg",
+    "decoded_hash": "1ca8e75889683862e94cc4c8e029f41ec9df57dcbe371f0628bc4be6d6d163ee",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/10148582-green-leaf-of-pepper.jpg",
+    "decoded_hash": "bcefff0f04937aafaecbb055a4c8fa2c8e6a8a1a69240c8a328a220f3574e4c0",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/4825902504_5fa80b65b8_z.jpg",
+    "decoded_hash": "e5b8114c18592ded4fe4cda9e60c86674f840d40f1b6b6b6db52ada29c0a328c",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/GREEN%20BELL%20PLANT%20YELLOW%20LEAF.JPG.jpg",
+    "decoded_hash": "df543dc20ffbba0f8a28579464ecd5d714c9d6e2996d6ed6c0adabd2c30b7165",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/IMG_1629.JPG?1507122477.jpg",
+    "decoded_hash": "8160a8845018438cf4654837d229930b76a82261b30e04ecfcf8294143efda4f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/RnGnC.jpg",
+    "decoded_hash": "4ccf3a7ccf5cc578912d8b0dc62b35e2fff210aec5ac2e267a7d785fa3d717a6",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/e33155.jpg",
+    "decoded_hash": "b82be5d79b12979469ee0e20f20c65bf2aaa30df73292ada459ff141a65182c6",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/pepper_leaf.jpg",
+    "decoded_hash": "12c8cf6dc09e9714329216476ebec10c2da8dcc103db6b79f53b8463f44191c0",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Bell_pepper leaf/why-are-my-pepper-plants-yellow-yellow-pepper-plants-yellow-leaves-green-veins-pepper-plants-yellow-veins.jpg",
+    "decoded_hash": "be2f456325feebb4c135879533900a3ea396b10e7e1eeec54864b2ee591ddaa9",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/P1200665+Vaccinium+alaskaense+vs+ovalifolium+leaf+and++twig+cr.jpg",
+    "decoded_hash": "5523d1736c347992ee1b59e93372a4c79b2f5f9994695bc1e712a1d74ee70b86",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/P1200701+Vaccinium+ovalifolium+Oval-leaf+Blueberry+leaf+margin+Heather+Meadows+cr.jpg",
+    "decoded_hash": "8048bc7db8cbc2e8870b49f1d6bfc022cc8414b1561e8ccc7f8117182256becf",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg",
+    "decoded_hash": "056d2a683d66a0091aed91cdd2e7a907e4028bb87c5bf143b4dd340c973ffbf2",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/blueberrysilverleaf16-1372b.jpg",
+    "decoded_hash": "beba61dd264f427305cb2a6d425f84f90e783c48ade3822c1af00dbe85bac201",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/leaf-blueberry-15281271.jpg",
+    "decoded_hash": "7c8c27b30d6dd15fff2d1b9e88b11a4b04a655fe3e12b8cb1e65a65b95beff94",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/northern-highbush-blueberry-blue-huckleberry-vaccinium-corymbosum-EHNXRR.jpg",
+    "decoded_hash": "e16f6f2e7cd62158979342f48a710db118bb9f721fd8f0990eb4e0420d29be18",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/stock-photo-blueberry-leaf-closeup-isolated-on-white-306486470.jpg",
+    "decoded_hash": "8a4bf1b83d427b0f50348cc5c0b3044b71d4a82734d35783aae54a5cfe81dd02",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/stock-photo-green-blueberry-leaf-isolated-with-clipping-path-550344304.jpg",
+    "decoded_hash": "c25ecad7a7261b29f32d7547cd062104a59cc27dd864d4b57d686a413caee1fd",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/stock-photo-two-sides-of-blueberry-leaf-isolated-on-white-15582232.jpg",
+    "decoded_hash": "fcd81f86122431858a63969248b8e5d54c4e7a127e2d479195f35326223e7348",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/vaccinium-angustifolium-low-bush-blueberry_0830_124221.jpg",
+    "decoded_hash": "062bffcfe0f1ea060e7d0e6c67c33a51fbd1118ff6ee7119500ea432c871960b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Blueberry leaf/vaccinium_angustifolium_leaf2.JPG.jpg",
+    "decoded_hash": "c8b3d190b25399d3bb054253a83cf34a2283bc65b2475728fb63f4a1101d6a5e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/d7b79dbc0bca0eb3e63fbe5dfb256ccd53d90a4eb1413_1260x1260.jpg",
+    "decoded_hash": "562ccb803e2da830248e6f4355aa4850093ca537de43ab957ce219042cbf10b4",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/e52bbb9a08ede2948ba0c006f02fe7b053ad7831d1df6_1260x1260.jpg",
+    "decoded_hash": "33a0f91fa785a746468b146a8db774386b0d1fa02d7bdb9c7683d00d383790d7",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/ed12ff77ce021883de241830dee55e2e53d2c93231699_1260x1260.jpg",
+    "decoded_hash": "c8edc186e578e52529384c19750bd6e8466a1a3eae2374e8d532e2a769701e8a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/fc729af279e9087d00bd32d89a1552a756a3ad9de7f2b_1260x1260.jpg",
+    "decoded_hash": "2c38295094c057af4cc314c6a75d28680fe402af6401a8c371c13be8cc2a7116",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/five-cherry-tree-green-leaves-white-isolated-background-34493587.jpg",
+    "decoded_hash": "d05fcf6562139579b4bbf244622efb3959b4cfc420cca576515c73f5dea8e730",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/prunsero_leaf1.jpg",
+    "decoded_hash": "254d9e8d056023d05f891a73a33492fe3ffc87587ff0d30156812ece0e81594b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/prunsero_leaf2.jpg",
+    "decoded_hash": "3f492203bbe01a13e4d926679756922d669a172c2d3e87d1f2650dc8ac6da783",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/prunus-virginiana-le-gmittelhauser.jpg",
+    "decoded_hash": "51462e79815698227f8b6656cac7af8d153708ea93c50ddf0912d513bd08dace",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/red-cherry-tree-leaf-isolated-crisp-white-background-35742030.jpg",
+    "decoded_hash": "40e182ce62d1949b2168782d3d3ee7b61eef4af01af8f8af25ad1b75a6cbbabf",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Cherry leaf/three-vibrant-leaves-bird-cherry-tree-13905898.jpg",
+    "decoded_hash": "94fb620d66698e720b5561fe4c74403803bd159d7d4b78940d047fe0653ed183",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn Gray leaf spot/IMG_42231.jpg",
+    "decoded_hash": "95ca980a4b5ed581a67a38da9ef4925d789de72723d2e6cc30a2ee82905f9767",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn Gray leaf spot/rsz0803Figure6.jpg",
+    "decoded_hash": "0d023930584089b7655486fc63d03ee517f0403e33ab2acc2f85ebecab02f0c6",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn Gray leaf spot/show_picture.asp?id=aaaaaaaaaaogcqq&w2=420&h2=378&clip=center,420,378&meta=0.jpg",
+    "decoded_hash": "3b5ad1d5eb2ecac7f7a0bbb30e0a23d4c167bb31ccb0949a7c6dac11ff90cb2b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn Gray leaf spot/strom5.jpg",
+    "decoded_hash": "5271f2f6e511c7d0e593cc9776bbddda7a4409e2a25a2412bfb5dbba8bffc5a2",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/02c.jpg",
+    "decoded_hash": "30eb9b5afe01eb4b537d64692d42a4208b78f71d416a575d240a11898e698d09",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/0796.20graylssymt.jpg",
+    "decoded_hash": "3cc340b0a400059a401aa7ee24afe1a1c7e633cb0ffb933a5663dd183982867a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/07c.jpg",
+    "decoded_hash": "47f2bb762435970e0dccf3a2fef91386e38a0779d8a4f92f8841b3c913905208",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/0c.jpg",
+    "decoded_hash": "2f77bd9e58184dec915cf4d9dc63fa00472772b52fb644ce4502cd25a9c67346",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/1321189.jpg",
+    "decoded_hash": "30392ef366203666bb03445ca89eb64560d0f2d0d5d9580aa9ffc96945864922",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/160314_web.jpg",
+    "decoded_hash": "6ebf139ca9edd0827078344a75b360bd662090301dde3e3bc3eeb9671b07cb7f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/2013Corn_GrayLeafSpot_0815_0003.JPG.jpg",
+    "decoded_hash": "1d3730b9c375f845972bdc5b27b7ab39e78b508ab84b8cc20e0c7d1adb47f698",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/2015070295153021.jpg",
+    "decoded_hash": "ee5feb93630e84778bf22c136a56340ee51da6dc5e76b4171dfe037644966c84",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/Common%20Diseases%20Figure%201.JPG.jpg",
+    "decoded_hash": "b6dc57bc737c268d8e44fd3e004dc9af52d3d5462cf860520852d34a84cf80a9",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/Corn-SCLB-2017-1.jpg",
+    "decoded_hash": "4862092645113e3d455e28456748629128562697ece1e005d007c976fb868d02",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/corn-disease-update-fig-3-gray-leaf-spot.jpg",
+    "decoded_hash": "17e667ff3262f4d4c2be30703747965c86c7750246540801726a7a7498608e90",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn leaf blight/corn-gray-leaf-spot-f4.jpg",
+    "decoded_hash": "da22454d6433118b4c98a5a8e5635604e981fe59a1876347f43d739e443b77c4",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/0796.39maizerust.jpg",
+    "decoded_hash": "34776f7ce75162af6b6a7fab01bf5ead1dd291471b73908f39f7d85c10c2b8e3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/0796.40comrust.jpg",
+    "decoded_hash": "09a4a0136b8c255e30f5464c277b6f4491ed7aa02bdd844edb72e05458fe7b55",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/0796.47southrust.jpg",
+    "decoded_hash": "d252a97c7bd42d359a6e13ff2146bfbfbd555134ff0621a715af665f7ea5639f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/0796.52srusttelia.jpg",
+    "decoded_hash": "c1adb6274af0f4fb8c2a6e51a40f4e2abf9be4b37a94f476c5dd370d1ce82542",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/12-19striprustJIM.jpg",
+    "decoded_hash": "2afe289a6ef52c9a719b1268fe925d9cd84de3a7d80bd88dc1e3394960533788",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/1355.50commonrust.jpg",
+    "decoded_hash": "282bc34711c2e8e797749352f6063b3079f9009d49f3d6f6e14d09afa8bd6a63",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/2256-body-1501555581-1.jpg",
+    "decoded_hash": "fb46238dc8f9dd6b663cf9e07fb2af40fccdd397abb2315ecd24a14cf6a2c9c9",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/393.jpg",
+    "decoded_hash": "3a94fea4ca3451faedf688a290ec4b9239253a588e98a07e277b188f26cdea55",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/5496239405_d95bdb97d1_z.jpg",
+    "decoded_hash": "d35d31650356e8b84ad14647b5bbf51a7d195cb2696749079971cda1d834cfac",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Corn rust leaf/80104747.jpg",
+    "decoded_hash": "90f4430e7c22a8e7d7c34860d20761cf16fc3703d26ff8fb531ead83da48c856",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/00pe.jpg",
+    "decoded_hash": "ecef2de1e102cecccb2938d3e0aa0ad0c9790eb449592aadc1d873528dd2b3d5",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/7190f27ead55c0f6e3ff8b982972810a5446a9713a49d_1260x1260.jpg",
+    "decoded_hash": "8e9381de78dcdf6a2b896af7641f978c4d07d6ae4f65537f6616ece713e9c5e7",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/depositphotos_3786198-Peach-leaf.jpg",
+    "decoded_hash": "c522101eab6e67ec349386ef6589e94b17ce51f6fc6e170bfc9cecc2e92ea980",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/peach-leaf-10223898.jpg",
+    "decoded_hash": "612742fe8049aec260198713d1d5d874c0333470da7187265776ceaba0f3ac6c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/peach-leaf-16690421.jpg",
+    "decoded_hash": "0f640251fd4cc89c26eb4e2b3c97b15ed6fc9e44dd02426abe530f124f06bf37",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/peach-leaf-isolated-white-background-42295220.jpg",
+    "decoded_hash": "6c81cfe7b1b9d35344decc2da48e5c88cd15b3b6488773bb62c07a80531ed9b3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/rose_tree_220430.jpg",
+    "decoded_hash": "c575abad998a1183daf047045293606901ccf2bb4bf00ea4b7c0329a98bdea4d",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/stock-photo-peach-leaf-isolated-on-white-background-281097503.jpg",
+    "decoded_hash": "08414684d1b58d492896f67dd37f1b422b7ae4528fb389fd390e12d0467180cf",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Peach leaf/stock-photo-peach-tree-leaf-isolated-over-white-background-back-side-64472731.jpg",
+    "decoded_hash": "2a24d08312ab694d74e9da1c2062c841ab11f64c32311c2fbf5bb351c70ca2cd",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf early blight/3023.jpg",
+    "decoded_hash": "eacbc5d994383c9ab4d7c0ca2ce9d662129f906f862521c13ad98c2253b60500",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf early blight/backus-056-potato-blight.jpg",
+    "decoded_hash": "98e706e4d4ae945947f956ad1b00c3072aaa7607129db23f996e37318f1d01c4",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf early blight/early-blight-alternaria-alternata-leaf-spotting-on-potato-leaf-X91XJE.jpg",
+    "decoded_hash": "09ee5b664315ff99c3a9f438398c1409dbbeb694b93b6e79d1d3d51fc5430c4f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf early blight/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-AXK6AY.jpg",
+    "decoded_hash": "2d17aed63578186ba10105a35577632ac83e5a2631a0dcbd0062f25819652ecc",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf early blight/earlyblightpotato.jpg",
+    "decoded_hash": "740d24a5cff123b3f928ee4cadc61c9066e32dd0cb1f41db9e17ec3219f33c42",
+    "match_split": "field_validation"
+  },
+  {
+    "source_path": "test/Potato leaf early blight/potato-blight-phytophthora-infestans-close-up-of-upper-surface-of-BMMRXC.jpg",
+    "decoded_hash": "11601819809bbfa444d9a14d315d51bde9c4dd19a0732314b455c88a8638738d",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf early blight/potato-early-blight-alternaria-alternata-lesion-on-a-potato-leaf-a1w1em.jpg",
+    "decoded_hash": "e7dc1dbc94a91750c2bc842e6331ef4d39beddc361734d37238dd892fdd64c68",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf early blight/potatobd001.jpg",
+    "decoded_hash": "3ffbb633042d4d63ff52a5ca95028dca4dbfe8deaab6e9a11aedb20dbd7797aa",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf late blight/1421_0.jpeg?itok=FMtmgePj.jpg",
+    "decoded_hash": "b744f0b2ab6bf51bdd87735e5ccec4adb7e27015cb9c43c261b3a62dee5cfa9a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf late blight/20090710-lateblight.jpg",
+    "decoded_hash": "f7755baecb7fe9d0d67087c0f43994541b835444e45b2f2fbc1f21ab7f3c064f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf late blight/2540_600.jpg",
+    "decoded_hash": "b0cb87a1e157f433dc3be653bd8e5d4035efb7975ae81a9a4682b9d7bdae2b3a",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf late blight/5816740026_d42ef24413_Phytophthora-Infestans.jpg",
+    "decoded_hash": "61489f3bbdca33335941cf18f70ac2449398790ef0bba8b190bdbb282fa716f1",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf late blight/B2750109-Late_blight_on_a_potato_plant-SPL.jpg",
+    "decoded_hash": "078ae28bedcb583e8af5427750a9c4c47b126f706b57d73af15fb5c2935cdef5",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf late blight/LateBlight04.jpg",
+    "decoded_hash": "7ed155bebf19e0826a0550594157b5ad366b2976ba2bc06fad4e06a1f55504b6",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Potato leaf late blight/irish-blight-symptoms-on-potato-leaves-atmf8b.jpg",
+    "decoded_hash": "0395f8206a71a10c3e5bc0161cc94a0bd21aaab0b0adfe340ac08e1ade32e4bb",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Potato leaf late blight/potato-late-blight.jpg",
+    "decoded_hash": "23e8ba6741c520874f15ea180f1af5da07e0f2eb87d4d25b65bfcf0294aa9276",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Raspberry leaf/Raspberry-leaf.jpg",
+    "decoded_hash": "23d2b7c28b73faf99b5ee9e13da71d47a5a79ef39cbd54e2ad9039913c77aefe",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/depositphotos_1323264-Raspberry-leaf-on-white.jpg",
+    "decoded_hash": "a64dffc274e5966f88dfac68dcacb49dbb068205e1bf92d4ea94c37547c65438",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/depositphotos_1323551-stock-photo-raspberry-leaves.jpg",
+    "decoded_hash": "d712c9e59081d1df189839a723b188a51cee45d35a0e2007a5c3d34d96d57f17",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/depositphotos_2795312-stock-photo-green-raspberry-leaf.jpg",
+    "decoded_hash": "d8bf321b9bec17e394b3219da05ee2037af0e504706820683af8106260138f7a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/iron-deficiency-raspberry-leaf-chlorosis-isolated-32457798.jpg",
+    "decoded_hash": "38bcc5fb9614a2ff03be397cac39437819653426321fa96283153765c138338c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/leaves-of-raspberry-stock-picture-2529053.jpg",
+    "decoded_hash": "23b937e20338859f2e1995a983744fd3b4377c2db2372241abed979d6464d818",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Raspberry leaf/three-raspberry-green-leaves-isolated-white-background-62022932.jpg",
+    "decoded_hash": "d04060079603bc5bcaf3d70d4d0b9d17dd738d1f5679d5dc30212b087f46508b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/07feb_ma_sbr3.JPG.jpg",
+    "decoded_hash": "dfd3eed584b657f0652655d2ce109c833f3a1c25d6cc80e5c94a9e74a0b4a144",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/Soybean%20edamame%20leaf1.JPG.jpg",
+    "decoded_hash": "8fbbda0786ed76056f55a95f43c0f7006cd0b60a16cc4305ead56a153c90c282",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/fresh-soy-leaves-isolated-on-260nw-667193923.jpg",
+    "decoded_hash": "53c134bafdac98feaca9d85058c29a512c34d83c90e7c156ff1082615170756c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/leaf-raspberry-isolated-on-a-white-stock-photography-image-10106222-1625198.jpg",
+    "decoded_hash": "346dc6bb1eb10df58eb9e981510f4421fb9d143a9b66176bd1226a4c95307c02",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/resistance1c.jpg",
+    "decoded_hash": "7b088352a8fec2c2edb07a75571558d14ef2401cc8864b72c0491f72a6c2c1ab",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94266130.jpg",
+    "decoded_hash": "b60e1067a09d365d178a354b4153eaa172c8f3aa964303ff3a5ae547251ffd0e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94700095.jpg",
+    "decoded_hash": "0ba1d197c2a14e688090a01d081f60207fce428fa9a1988c105c3e106879e35c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Soyabean leaf/stock-photo-soy-leaf-isolated-on-white-background-120961801.jpg",
+    "decoded_hash": "283cecb5190073eca6f89a44f7258a398b54e14b5c8f59585c96140037978632",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/Powdery-Mildew-on-squash.jpg",
+    "decoded_hash": "d1ba4212b033175fe30b6ca492e1c8f11abfb21ce79b0827bb63a7a6552fa731",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/powdery-mildew-erysiphe-plantani-on-young-sycamore-leaves-b774tm.jpg",
+    "decoded_hash": "29b7303b1f2de22b8cee288be56bf8d21e8cb94863c313029da040dd70df5173",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/powdery-mildew-on-pumpkin-leaves-close-up-2.jpg",
+    "decoded_hash": "53cfa21da2ffcd66ea256cf75f0ace0635d11584c7b3426766d32a64f1ec90b8",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/powdery-mildew-sphaerotheca-fuliginea-infection-on-pumpkin-leaves-ajdkkx.jpg",
+    "decoded_hash": "a1074b0ede9fdf82612f1b058f65fbdb6e0e189ae69255d1093945b418547a54",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/squash-leave-w-powd-mild.jpg",
+    "decoded_hash": "27e91549e5c3e9c7e996729a01a73fc2d98cde1c2f7106267d36d66ba9b3fc51",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Squash Powdery mildew leaf/surface.jpg",
+    "decoded_hash": "d1b807f50c29a04a2d7ed63a934a9c69eb91dd0aa98aab7155dbb0cfd0cd1ccf",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaf--stock-photo-1431216.jpg",
+    "decoded_hash": "25780acf40cee523c8eca61527e37bc82c556e3affe77844266a65265947f5f2",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaf-22360816.jpg",
+    "decoded_hash": "4d8828bb18263303c25a36055a85ff6ba6611228c8dc68b762c3f2d4f05feb75",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaves-collection-white-background-36684676.jpg",
+    "decoded_hash": "dd93a2cdbdf31bf562788878a450c6c493b89517ffdea9f8046f1ebb5f0e748b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaves-isolated-white-17473157.jpg",
+    "decoded_hash": "c7eaeffbe1b96e9d736aeaa101efb5e0e8dcdb2b4f1781b3f1d2ecec2d272bf5",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaves-isolated-white-34722259.jpg",
+    "decoded_hash": "fca9541c88aff682aacfbea455392eb68f3bae22091dacf28bd59be72a314730",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaves-stock-image-948674.jpg",
+    "decoded_hash": "e4364dee8f7fdf84993038469a887fb264b30c4090f2903a81ccca1f2774695f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/strawberry-leaves-stock-picture-948708.jpg",
+    "decoded_hash": "051806bbf307750e55b1bdf8e0a7e276263a12b7fba469b91cd2d99559de2978",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Strawberry leaf/wild-strawberry-leaf-top-view-rotated-KTBXCY.jpg",
+    "decoded_hash": "3efbdf76a3d790ba316d69761aaa4230edf4611ab31cd66602b79320ba956829",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/039b47d574bc4bb8a14259a1cd96a741.jpg",
+    "decoded_hash": "2a93ca19643b36ddf508c7a4797f84616973e58e7d9ab012dbc5d9bdfcafc6c5",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/100983448.jpg",
+    "decoded_hash": "5eab9a4e9cf45ac33fabad2e9a36e7167aa2648cd725832506753aa9fd16f1d0",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/1234080-Early-Blight.jpg",
+    "decoded_hash": "496bb8047a8b15d195b99924139127916fd68ed4fa4b9e06d7ec66b3084112e3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/Shoemaker_7068.JPG.jpg",
+    "decoded_hash": "1fa0f134b3c57407523dc44896efb46cbb9a847ae688e846268f97ee6e62c68a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/bugs-and-blight-061.jpg",
+    "decoded_hash": "c80cae267968c3c46bc60beef53d26072de4ab7c20b2323a11720edbe29b7358",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/dscn3175.jpg",
+    "decoded_hash": "073e6449725754372143bf105b4f8f3bf2fe62378bb4e51ca7f8a63c68a88b89",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/early_blight1-150x150.jpg",
+    "decoded_hash": "5b4f13274b8c076b46137d95373c17b55cc520d887d2ecf9f842b2c810270232",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/earlyblight21_.jpg",
+    "decoded_hash": "16623611c26b8fd925b2e640ec6eed4785e444669cf0a71f48603ff1e0b5649d",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Early blight leaf/tomato_early-blight_01_zoom.jpg",
+    "decoded_hash": "ab9afa2be35a8a606fd05c1758cd7f595883c1eed8919b5a97291105bd08b3a2",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/0.jpg",
+    "decoded_hash": "19ae8e809a5fc57afaf0b11b5fa2b1064cb6495219c598cdbed72313074daa4a",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/2STEM.jpg",
+    "decoded_hash": "20b067199e5c1d5e89a41a40499d9b9ec1a2d2b7a343530abe5d2a97effa4736",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/2septoria-tomato.jpg",
+    "decoded_hash": "4e7034707fd0529e1dc75cf308b1433a5f33904444ef498d04c8caaeb1b6a2d1",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/55830b60a7cf2.image.jpg",
+    "decoded_hash": "1dcf0f8d5710805c53b234678072b830f6cae4e7b6bb05448509f4cb09d1af0d",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/6134794031202304.jpeg.jpg",
+    "decoded_hash": "801e8f028d29b78f0777e9da516c15a4e37e0f26394dd51ca078b16d8f5f2cd1",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/636227737977191231-septoria-leaf-spot-VT.jpg",
+    "decoded_hash": "a6ed2db1bc2f82032e7e294cd0e94c08213475b1f1f53ea41bcd0b097c4ca0aa",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/6447731_orig.jpg",
+    "decoded_hash": "d8f7831bd8fba9bb263e05f74c841f614e63f29b6cf904b1510c1c6d3b8ec3f0",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/7-17-Photo3_Septoria-MARY.jpg",
+    "decoded_hash": "1cef1da852a3b78c1fdc2ad93e355d358a25b0c187efd8254858d71d4966f775",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/RARZ4.jpg",
+    "decoded_hash": "f8838a77aa4fda43716e112289b9a2584fdf3641614911d7e20e3c9dbe36ff53",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg",
+    "decoded_hash": "ea49e8e36188874da9036fc8760e3d96ebbdd62a981192df89ac8ac5e1989b44",
+    "match_split": "field_validation"
+  },
+  {
+    "source_path": "test/Tomato Septoria leaf spot/sept4disease-019.jpg",
+    "decoded_hash": "8d29e8f1319c5512dae80f543508ecd7433e714de4a67bf6985552331dd604a8",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/%2320+Bacterial+Spot+and+Speck.jpg",
+    "decoded_hash": "98e0fe5cbb66f2efd5d0d24f98ee7643716a2e20948ec1ab1b22f10f01cead9b",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/07.17.18-Common_Tomato_Diseases_Canker-258x300.jpg",
+    "decoded_hash": "8fe5bb79adc84685708abccabeb1ebe9ea9f2f56b831f02c2c6a866ece112e14",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/Bacterial_spots563.jpg",
+    "decoded_hash": "8b407acbc1fd58cf7305f7fc714e85b454742f9c98957ab253b67550a78d451c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/Tom_Bact3.jpg",
+    "decoded_hash": "47ab864a7db15e029b5507d3211c134e8aa99336f85df295e743a1bea7ae2dd3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/Tom_Bact7.jpg",
+    "decoded_hash": "1fbd066a6447345f933cfa2082bb6d214bf996750bccde3113b1f338ece291ba",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/Tomato%2BBacterial%2BSpot%2Bon%2BLeaves.jpg",
+    "decoded_hash": "696b45d13d4194cd3fe65effb48694fb9b00ba089615fb35964e7da4391a576a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/bact-spot-fig-1.jpg",
+    "decoded_hash": "60e7185f468d195806f782f61ab0e353b3b9fc3694e1de911633c43bf6e3cb5d",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/tomato_V8.jpg",
+    "decoded_hash": "42172c0701d01f13607828f9abd860e551d8777966c0523e1655b2037022a306",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf bacterial spot/tomato_bacterial-speck_01_zoom.jpg",
+    "decoded_hash": "9d45de99c337e2eaea94a249ba1ebf3c145d7946b5293028abb52098f3c7e8e7",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/110822-206-Tomato-blight.jpg",
+    "decoded_hash": "0b3fe7db3ba56c673c4ac2de579dd2121d85f7d18dbdc96bcfb16c3752ee9d6e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/18c.jpg",
+    "decoded_hash": "b6bc6dae7e73934196881bbd6bef2c6a602d319fad718514af4acfcdb7aee53a",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/636368370164094909-late-blight-15-.jpg",
+    "decoded_hash": "12da6431f2be5103d4af1896d9ee1bc90a4453a64d4c1cd9f8010a1789399ce5",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/70.jpg",
+    "decoded_hash": "dc9287f3c13e74d424e97c6df773445c563657afb5294c506c6fec8ee2102a96",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/E%29Tomato-late-blight-foliar.jpg",
+    "decoded_hash": "05e8e3b712c6964b4827bb4d285f6e8d1c85c275c18c11b5f9e79bd18a749dfb",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/IMG_5808.jpg",
+    "decoded_hash": "769bca1fba0d44bd70d81e7d23e3fea2037ee8aa98437977abdb8d960dafc561",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/LateBlt09_06.jpg",
+    "decoded_hash": "ced7bf9b25c4e4b9a634b028b4a605f97dbe4214df9f1e9a4dacc850dc7746ed",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/dsc_8148cs.jpg",
+    "decoded_hash": "dcfeace354de1974670dfadd13b719a06b24299d2ab4b67770cfafb062976448",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/image.jpg",
+    "decoded_hash": "921fde25d9d0ad039eaadb388fa441ec6d23efae082ad0c41246bd25cd8b5030",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf late blight/late_blight_tomato_leaf_spore1x1200.jpg",
+    "decoded_hash": "463cc0c1b628db4c62c145f05f619b48ab9941f98a7b7562dc318d8c8e9ab23f",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/9511.img.jpg",
+    "decoded_hash": "78f7f597fe55ccdf36d1a411e3a321a01693609deca3bfb284fcca6ea4a541d0",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/D%29AlfMov.jpg",
+    "decoded_hash": "0082ce1b13a4d0951e6d1c6d2c34a8150b4b0c162336b73336335a69462e074e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/Tomato-Mosaic-1wdr2jx-300x225.jpg",
+    "decoded_hash": "ae0b0527260933cb1c8c97878fbc269e8df8557d3dd8134832cae8c0a9a770ee",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/everystockphoto-21099455-l.jpg",
+    "decoded_hash": "f6e23703ef819a907e6bd2e09d4f5925517a41811b15a16a61a0e4ccd545ef69",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/ill-tomato-of-tomato-mosaic-virus-DBE17N.jpg",
+    "decoded_hash": "14ac7b0c7e7891d4506a6d52af6bf9bccaf0ea4412b6117e6ef462c0ecc98520",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/page_2.jpg",
+    "decoded_hash": "c5a144f27b809e72425855e7307d74331a4496fcfb556389fc2b8bdcbf492a25",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/tmv-tomato-34.jpg",
+    "decoded_hash": "5a56cc4716086b2ee2a320b52b82b5a535d56891c3f2820d0644f15f98b4b8b1",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/tmv-tomato-9.jpg",
+    "decoded_hash": "c00f67257ff7f1bb2f9d551d103b1b5a113c414ee3bf602a9658e18695ac3fe9",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/toma_TMV.jpg",
+    "decoded_hash": "141dc4e87fa36fe53ceb96a01f04dfe161f94d1199b62513d038a773be4e9602",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf mosaic virus/tomato_virus_04_zoom.jpg",
+    "decoded_hash": "87e47375af3953819f34948b2b98d5031d684f387ee35b469195ab1aeabdd086",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/11-40580_5.jpg",
+    "decoded_hash": "02aad4e26b16666196fcd75882b33a86b765a52b741048a3d2105ff208511524",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/17fc47.jpg",
+    "decoded_hash": "117932d025c3a24286eebf76c6485dfe2879a0644a94a4b5d643faf3acce915e",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/8226402877_9abf151b5b_b.jpg",
+    "decoded_hash": "4e1eab92efd85c0b02ee2c8d4a5f267445714754535558170a0d5b99076bb42a",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/fwa2013313115151.jpg",
+    "decoded_hash": "5fd27adfdb5c56a4c978c25256a1bbfe7498038b32f66e7771b15d1f4db2cca8",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/glyphosate.jpg",
+    "decoded_hash": "5daea19c276f901ae39c9ca113e2145e230393926fef06a1c00dc418fdb40188",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg",
+    "decoded_hash": "f54dc8a3ee76a65073e9d3f573f229a37591e80aee3a218c71d75ceac2c85112",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato leaf/1684.jpg",
+    "decoded_hash": "1e5bbd0df2b5ab970b7e532725df943ddd4c248a7eb2fe89d73615cfa68e4482",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/2013-08-20-06.jpg",
+    "decoded_hash": "dc4aa57e29562fe57f0841e97c4e35d691efee741158cc3687ae8459fc7d2d07",
+    "match_split": null
+  },
+  {
+    "source_path": "test/Tomato leaf/90e2c0.jpg",
+    "decoded_hash": "08d378a4bc19baace5830e7f237b182b4e61e3f3dd0363522fece2ab7092d078",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/DSCN1015.JPG.jpg",
+    "decoded_hash": "740d253babb5f9c6e6593b765704b9807b2cd47afa6f005ca675134494151088",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/IMG_1246.jpg",
+    "decoded_hash": "205d4935ab8297da34206a88ca2b0aa70c98bc4278878090c03b267b32da96b4",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/Tomato59.JPG.jpg",
+    "decoded_hash": "f549600e60a544a1f2bc864c9af2d486302b589daf2fed2e24902d261fbbea34",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/Tomato_leaf.jpg",
+    "decoded_hash": "664083c99542e479b5392a884e9004cc56b7ac38bc27ec0333588de7032717f3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato leaf/main-qimg-d9c2a93f60568485c989670d9bbf703b.jpg",
+    "decoded_hash": "88e49969bd9eab3c5b73621a53af589cbfad86f4e6f00e6e5be4c1c52d680cd6",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/49%20Leafmold%20Bottom.jpg",
+    "decoded_hash": "64238c2865a6133e08d38de30afaea65b6beeeed564d88598137f98d02f50274",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/50%20Leafmold%20Top.jpg",
+    "decoded_hash": "779adf03e5e035439239316ca8d0381c633e511826e1a7d822cf970588fad376",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/BIGSD.jpg",
+    "decoded_hash": "3627e18507d80bf89e5bdeb01e08721d639ff405aa08dad966f521a18a0659a3",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/black_leaf_mold_in_zina_tina.jpg",
+    "decoded_hash": "7532e7935b9ab0f082aa23434c77ef21f81d800c328a514b7b65d35a0bb29b9c",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/dscn6689.jpg",
+    "decoded_hash": "42b91fa82870c6eea44d5e6aff4172da5f1f93b4af059028b7f31db59bb784f4",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/Tomato mold leaf/fungus-univ-of-minnesoeta.jpg",
+    "decoded_hash": "d9ce4b8d96685273a5b1578eea52cd002e1c2a7db25095364ef647e49e8fe37e",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/grape leaf black rot/03gb.jpg",
+    "decoded_hash": "806d1f68d2c07cfc0b1fcb50c59b3817f55a43dcb6d9a789952cb91592f3bdab",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/35589125035_662dd5b258_b.jpg",
+    "decoded_hash": "3f3d2806ef4bd0d8e1c0b968061505d35cfd8c86bdffc5804dc575c1ae2a2499",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/5-29black-rot-chardRR.jpg",
+    "decoded_hash": "171f838c8792311daf7af45b020c5cb4915b3103778512eef1e0eb5fa295b124",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/grape leaf black rot/Black%20rot%20on%20foliage.jpg",
+    "decoded_hash": "62575d551a5ae803017d2bcaf67275a3b10674ad5cf3d4e9c6bce0ab0957bae9",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/Black%20rot%20on%20foliage2.jpg",
+    "decoded_hash": "2ff6ef7a2bbbe01d1461e381afad4230c4cd0df920cc44ac0e6ecc60f4cb0cd3",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/brleaf2_zoom.jpg",
+    "decoded_hash": "965a00d27b9f065ea7ab805f72e9d6bed4aabc8c5ef4e033f27fb22c0dc4b697",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/grape_F15a.jpg",
+    "decoded_hash": "dbb22575fd358490598ddad705612072e0dc3b5f31271ffa6ab640e891d0809f",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf black rot/piano%20gully%20spray%20seed%20damage%2006%20%289%29.JPG.jpg",
+    "decoded_hash": "87d1bb0b08c20f85999d5a4fb377f5611b014fbe6990c05d929e53792d52aaf5",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/grape leaf/0000.jpg",
+    "decoded_hash": "a8f11ab70383a840f6c5d114400a8b0a47c695d9021e9a10e811f50bc1e1edf4",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/grape leaf/730-grape-leaf-2560x1600-nature-wallpaper.jpg",
+    "decoded_hash": "48d023d0c1b9d185c1d3deb64643de2da3a22c2216367b71cc98a538bc3f2930",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/DSCN7317.JPG.jpg",
+    "decoded_hash": "e90bf47fc7f8eb27c5028b2b8ff6bb61e8197563b23f14ee8fe8d2e43307cbf8",
+    "match_split": "field_test"
+  },
+  {
+    "source_path": "test/grape leaf/P1130286.jpg",
+    "decoded_hash": "73fefaf0adbbbf9d31538b4cb88fa7a943760b6f939a1293880f2aafd4fb126e",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/depositphotos_3443387-stock-photo-the-green-grape-leaf-on.jpg",
+    "decoded_hash": "f1dc137f4ec947c4e4495054769baa0869bbbf6278d167c3c8622a98fc16c503",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/depositphotos_6898486-stock-photo-grape-leaves.jpg",
+    "decoded_hash": "c52ce380434de64db3a097f33278caba3f7850909f08d4c79dcb5553df3fd534",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/grape-leaf-14309623.jpg",
+    "decoded_hash": "dd4978f119a0e42397b37e52fca0d86af7cbe79b36688d8c31cf25f702f2af65",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/grape-leaf-picture-id119212425?k=6&m=119212425&s=612x612&w=0&h=8RZBWGcvXe4tAwhhvYZVFzWyRyiN5iTxKfWBpPT1FcU=.jpg",
+    "decoded_hash": "8ec8e278907a7c438c839875c4644f710fa05989f22e194ea9287535e4a57685",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/grapes-leaves.jpg",
+    "decoded_hash": "82b4de36e182d7c3b1ca7712f80fe4e966472e3dc10d3e06a8842eb67e4c9931",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/grapevine-leaf-7466071.jpg",
+    "decoded_hash": "0a4317606d50fd5cbfc76c387feb2397c3438f1288db93f1bb0000aad688c511",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/latest?cb=20100621160325.jpg",
+    "decoded_hash": "ba924abc87a15d2e0cf251d82dbdbb69b480baa2eaa6865c6760a8f9645af19f",
+    "match_split": null
+  },
+  {
+    "source_path": "test/grape leaf/vitis-riparia-le-ahaines-b.jpg",
+    "decoded_hash": "08767d126f4e54157d8a966fa83b79d4af75475f84dfc8db16b56bbc63ed30c3",
+    "match_split": null
+  }
+]

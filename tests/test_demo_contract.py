@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def image_function():
     tree = ast.parse((ROOT / 'app.py').read_text(encoding='utf-8'))
     fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'compute_ndvi_and_stats')
-    namespace = {'np': np, 'Image': Image}
+    import core
+    namespace = {'np': np, 'Image': Image, 'core': core}
     exec(compile(ast.Module(body=[fn], type_ignores=[]), 'app.py', 'exec'), namespace)
     return namespace['compute_ndvi_and_stats']
 
@@ -82,6 +83,10 @@ class AppStateContract(unittest.TestCase):
         app = AppTest.from_file(str(ROOT / 'app.py'), default_timeout=60).run()
         app.session_state['nav'] = 'Canopy stress'
         app.run()
+        app.button(key='btn_manual_ndvi').click().run()
+        self.assertFalse(app.exception)
+        self.assertFalse(app.error)
+        self.assertIsNotNone(app.session_state['ndvi'])
         for button in ('btn_m2_s', 'btn_m2_h'):
             app.button(key=button).click().run()
             self.assertFalse(app.exception)

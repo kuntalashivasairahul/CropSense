@@ -1,0 +1,97 @@
+"""Verify and preserve the public v5 release-verification records, without inference."""
+import gzip
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
+import stat
+import sys
+import zipfile
+
+import numpy as np
+import pandas as pd
+from sklearn.metrics import confusion_matrix, f1_score
+
+root = Path.cwd()
+sys.path.insert(0, str(root))
+import core
+
+archive = root / 'reports/kaggle-recovery-2026-10-22/module1-v5-evidence.zip'
+out = root / 'docs/evidence/disease-recovery-2026-10-22'
+assert not (out / 'validation.json').exists(), 'Preserve frozen evidence; rerun in a disposable project copy'
+out.mkdir(exist_ok=True)
+(out / 'source').mkdir(exist_ok=True)
+checks = []
+with zipfile.ZipFile(archive) as package:
+    entries = package.infolist()
+    assert len(entries) < 500 and sum(entry.file_size for entry in entries) < 300_000_000
+    for entry in entries:
+        assert len(PurePosixPath(entry.filename).parts) == 1
+        assert not PurePosixPath(entry.filename).is_absolute() and '..' not in PurePosixPath(entry.filename).parts
+        assert not stat.S_ISLNK(entry.external_attr >> 16)
+    assert package.testzip() is None
+    contract = json.loads(package.read('model_contract.json'))
+    assert contract['class_order'] == core.DISEASE_CLASSES
+    assert contract['run_id'] == '20261011T112353Z'
+    model_hash = hashlib.sha256(package.read('module1_cnn_candidate.keras')).hexdigest()
+    assert model_hash == contract['sha256'] == hashlib.sha256((root / 'models/module1_cnn.keras').read_bytes()).hexdigest()
+    decision = json.loads(package.read('decision.json'))
+    assert 'no retraining' in decision['deployment']
+    manifest = pd.read_csv(package.open('split_manifest.csv'))
+    assert list(manifest.columns) == ['path', 'label', 'split', 'image_hash']
+    assert len(manifest) == 57217 and manifest.path.is_unique
+    split_counts = {key: int(value) for key, value in manifest.split.value_counts().items()}
+    assert split_counts == {'pv_train': 46160, 'pv_validation': 8145, 'field_train': 2128,
+                            'field_validation': 532, 'field_test': 252}
+    field = manifest[manifest.split.str.startswith('field_')]
+    assert field.image_hash.notna().all() and field.image_hash.is_unique
+    declared = pd.read_csv(package.open('class_distribution.csv')).set_index('label').fillna(0).astype(int)
+    actual = manifest.groupby(['label', 'split']).size().unstack(fill_value=0)
+    pd.testing.assert_frame_equal(declared.sort_index(axis=1), actual.sort_index(axis=1), check_names=False)
+    for name in package.namelist():
+        if not name.endswith('_predictions.csv'):
+            continue
+        predictions = pd.read_csv(package.open(name))
+        probabilities = predictions[['prob_' + label for label in contract['class_order']]].to_numpy()
+        truth = predictions.true_index.to_numpy(dtype=int)
+        predicted = predictions.pred_index.to_numpy(dtype=int)
+        assert np.isfinite(probabilities).all() and np.all((probabilities >= 0) & (probabilities <= 1))
+        np.testing.assert_allclose(probabilities.sum(axis=1), 1, atol=1e-6, rtol=0)
+        np.testing.assert_array_equal(probabilities.argmax(axis=1), predicted)
+        split = 'field_test' if '__field_test_' in name else 'field_validation' if '__field_validation_' in name else 'pv_validation'
+        expected = manifest[manifest.split == split].set_index('path')
+        assert predictions.sample_id.is_unique and set(predictions.sample_id) == set(expected.index)
+        np.testing.assert_array_equal(expected.loc[predictions.sample_id, 'label'].to_numpy(), truth)
+        metrics = json.loads(package.read(name.replace('_predictions.csv', '_metrics.json')))
+        cm = confusion_matrix(truth, predicted, labels=np.arange(38))
+        np.testing.assert_array_equal(cm, metrics['confusion_matrix'])
+        accuracy = float(np.mean(truth == predicted))
+        macro_all = float(f1_score(truth, predicted, labels=np.arange(38), average='macro', zero_division=0))
+        macro_present = float(f1_score(truth, predicted, labels=np.unique(truth), average='macro', zero_division=0))
+        for key, value in [('accuracy', accuracy), ('macro_f1_all_classes', macro_all), ('macro_f1_present_classes', macro_present)]:
+            assert abs(metrics['summary'][key] - value) < 1e-12, (name, key)
+        checks.append({'file': name, 'n': len(truth), 'correct': int(np.sum(truth == predicted)),
+                       'accuracy': accuracy, 'macro_f1_all_classes': macro_all, 'macro_f1_present_classes': macro_present,
+                       'rows_labels_probabilities_and_confusion_match': True})
+    exported = {}
+    for entry in entries:
+        raw = package.read(entry.filename)
+        exported[entry.filename] = {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
+        if entry.filename.endswith(('.csv', '.json', '.md')):
+            path = out / 'source' / entry.filename
+            if entry.filename == 'split_manifest.csv' or entry.filename.endswith('_predictions.csv'):
+                compressed = gzip.compress(raw, mtime=0)
+                path = path.with_suffix(path.suffix + '.gz')
+                path.write_bytes(compressed)
+                assert gzip.decompress(path.read_bytes()) == raw
+            else:
+                path.write_bytes(raw)
+    (out / 'archive_members.json').write_text(json.dumps(exported, indent=2) + '\n')
+result = {'source_page': 'https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-1-audit/output',
+          'public_output_version_id': 357329688, 'run_id': contract['run_id'],
+          'archive_sha256': hashlib.sha256(archive.read_bytes()).hexdigest(), 'model_sha256': model_hash,
+          'model_matches_deployment': True, 'scope': 'Saved v5 release verification, not original checkpoint-training records or fresh image inference',
+          'split_counts': split_counts, 'retained_mapped_field_examples_after_dedup': len(field),
+          'field_content_hashes_disjoint_across_splits': True, 'prediction_checks': checks,
+          'raw_mirror_total_established': False, 'production_weights_changed': False}
+(out / 'validation.json').write_text(json.dumps(result, indent=2) + '\n')
+print(json.dumps(result, indent=2), flush=True)

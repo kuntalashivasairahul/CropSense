@@ -2,6 +2,10 @@
 
 Prepared 11 October 2026. The manuscript is a first complete draft for the authors and guide to review, not a submitted paper or a similarity certificate.
 
+## Runtime correction after this draft
+
+On 22 October 2026 the dashboard inference/reporting contract was corrected: Grad-CAM now follows classifier preprocessing, the disease signal sums healthy-class probabilities, and component warning tiers no longer bucket the mean. The manuscript and binary PDF/DOCX below describe the earlier snapshot and have not been silently rewritten. Review the new [runtime contract](../docs/RUNTIME_CONTRACT.md) and [fix status](../docs/AUDIT_FIX_STATUS_2026-10-22.md) before reusing or submitting those drafts. A new [pest source reconstruction](../docs/evidence/pest-recovery-2026-10-22/README.md) restores observations and matches all 19 saved test sequences; it is labelled as a reconstruction, not the original run export. The linked October RF rerun shows 260/399 and a model size different from deployment. A subsequently recovered [September notebook](../docs/evidence/rf-provenance-2026-10-22/README.md) does report 267/400 (66.75%), with matching size, parameters, six printed importances and training count. This corrects the initial audit's missed source. Treat it as a reported historical result with strong artifact consistency; the original export hash and split/prediction rows remain missing, so exact holdout replay is still unverified.
+
 ## Deliverables
 
 - `CropSense_AI_Paper.md`: editable text source, with the complete bibliography.
@@ -54,9 +58,9 @@ Checks confirmed that this language pass preserved numeric tokens, equation text
 
 ## Items requiring author or guide review
 
-- **Dataset provenance:** the consumed mapped PlantDoc mirror totals 2,912 images before any additional reconciliation, whereas the original paper's abstract describes 2,598 data points. The manuscript identifies snapshot-specific counts and flags source-mirror reconciliation. Confirm the precise mirror/version, its derivations and licenses before making a dataset-equivalence claim.
-- **Missing local exports:** complete disease and pest split manifests and some sample-level exports are not present locally. Their notebook export procedures are present. Restore the original run's exports if available; do not silently substitute a new split as historical evidence.
-- **Field identifiers:** confirm the Agriculture-Vision filename prefix convention with source documentation or acquisition metadata.
+- **Dataset provenance correction, 22 October:** recovered original CNN records establish that 2,912 is the retained mapped field count **after deduplication**, not the raw mirror total. The mirror's 252-example test differs from upstream's 236-image test: 185 exact upstream matches enter mirror test, two enter mirror validation, and 49 have no exact match. The upstream partition is therefore not blind to model selection. The historical manuscript wording needs review before submission; do not imply dataset equivalence or independent evaluation. See [recovered records and label review](../docs/evidence/disease-recovery-2026-10-22/README.md).
+- **Local exports recovered, 22 October:** original CNN v1 training/v5 verification and pest v3 records now restore full split/window manifests, histories and sample predictions. CNN files match deployment exactly. Pest containers differ, with identical weights/effective configuration and deployed output parity on 31 validation/test rows. See [pest archive checks](../docs/evidence/pest-export-recovery-2026-10-22/README.md). Original RF CSV/splits/hash-at-run remain missing. Historical paper/deck binaries were not silently regenerated.
+- **Field identifiers:** on 22 October, the maintainer README confirmed the field-ID prefix convention for the challenge dataset. This supports the grouping rule but does not by itself establish the exact 2017 miniscale archive lineage; retain that remaining qualification. See the [source-scope note](../docs/evidence/canopy-validation-2026-10-22/README.md).
 - **Figures and assistance:** the user confirmed coordinator permission for AI-assisted writing and ordinary experiment plots. The figures are data plots, with no image-generation model used. Follow any required institutional disclosure wording.
 - **Submission requirements:** obtain the official similarity report, author/guide approval, and any exact instructions on whether reference pages count toward the eight-page minimum. The draft includes substantive text rather than blank pages, and the export meets the stated total-page minimum.
 

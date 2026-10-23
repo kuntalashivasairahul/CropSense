@@ -1,0 +1,50 @@
+"""Describe existing canopy labels; no fitting, selection or test predictions."""
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+import pandas as pd
+
+root = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path.cwd()
+folder = root / 'docs/evidence/module-2-candidate'
+features = pd.read_csv(folder / 'features_and_labels.csv')
+membership = pd.read_csv(folder / 'split_manifest.csv')
+severe = ['coverage_' + name for name in ['drydown', 'nutrient_deficiency', 'storm_damage']]
+moderate = ['coverage_' + name for name in ['double_plant', 'planter_skip', 'endrow', 'weed_cluster']]
+assert len(features) == 8308 and features.filename.is_unique
+assert features[severe + moderate].ge(0).all().all()
+assert features[severe + moderate].le(100).all().all()
+reconstructed = pd.Series('healthy', index=features.index)
+reconstructed.loc[features[moderate].gt(2).any(axis=1)] = 'moderate_stress'
+reconstructed.loc[features[severe].gt(5).any(axis=1)] = 'severe_stress'
+assert reconstructed.eq(features.label).all(), 'Stored labels do not match threshold rules'
+data = features.merge(membership[['filename', 'split']], on='filename', validate='one_to_one')
+assert len(data) == len(features)
+groups = {split: set(part.field_id) for split, part in data.groupby('split')}
+assert set(groups) == {'train', 'validation', 'test'}
+assert not groups['train'] & groups['validation']
+assert not groups['train'] & groups['test']
+assert not groups['validation'] & groups['test']
+healthy = data[data.label == 'healthy']
+result = {
+    'scope': 'Descriptive audit of all existing splits; no model fit, model selection or new test score.',
+    'source_sha256': {name: hashlib.sha256((folder / name).read_bytes()).hexdigest()
+                      for name in ['features_and_labels.csv', 'split_manifest.csv', 'config.json']},
+    'label_rule': 'Severe if any severe mask >5%; else moderate if any moderate mask >2%; else healthy. Separate water exclusion precedes these stored rows.',
+    'label_reconstruction_matches': int(reconstructed.eq(features.label).sum()),
+    'rows': len(data),
+    'class_counts': {label: int(count) for label, count in data.label.value_counts().items()},
+    'healthy_with_any_selected_anomaly_pixels': int(healthy[severe + moderate].gt(0).any(axis=1).sum()),
+    'healthy_total': len(healthy),
+    'healthy_with_negative_mean_raw_ndvi': int(healthy.ndvi_mean.lt(0).sum()),
+    'mean_raw_ndvi_quantiles': {
+        label: {str(q): float(value) for q, value in part.ndvi_mean.quantile([.1, .5, .9]).items()}
+        for label, part in data.groupby('label')},
+    'split_field_counts': {split: len(fields) for split, fields in groups.items()},
+    'field_groups_disjoint_by_recorded_id': True,
+    'interpretation': 'Below anomaly-coverage thresholds is not verified plant health. Overlapping NDVI distributions do not prove irreducible error. Negative raw-band ratios do not diagnose stress or establish calibration.',
+}
+output = root / 'docs/evidence/canopy-validation-2026-10-22/label_diagnostic.json'
+output.write_text(json.dumps(result, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+print(json.dumps(result, indent=2))

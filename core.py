@@ -51,6 +51,16 @@ def pretty_class(raw_name):
     return str(raw_name).replace("_", " ").strip().title()
 
 
+MAX_IMAGE_PIXELS = 1_048_576
+
+
+def validate_image(image):
+    """Check dimensions before decoding or allocating full-resolution arrays."""
+    width, height = image.size
+    if width <= 0 or height <= 0 or width * height > MAX_IMAGE_PIXELS:
+        raise ValueError(f"Image must contain 1–{MAX_IMAGE_PIXELS:,} pixels; resize it before upload.")
+
+
 def preprocess_image(pil_image):
     """Resize to 224x224 RGB and return a raw 0-255 float batch.
 
@@ -59,6 +69,7 @@ def preprocess_image(pil_image):
     input layer, so dividing here would double-scale and silently corrupt
     every prediction.
     """
+    validate_image(pil_image)
     img = pil_image.convert("RGB").resize(IMG_SIZE)
     return np.expand_dims(np.asarray(img, dtype="float32"), axis=0)
 
@@ -67,8 +78,8 @@ def generate_gradcam(model, pil_image, class_idx=None, alpha=0.45):
     """Compute Grad-CAM saliency map overlay on the input leaf photo.
 
     Extracts gradients from the MobileNetV2 backbone's final activation layer
-    with respect to the target class logit, producing a spatial activation map
-    highlighting the specific visual lesion features driving the diagnosis.
+    with respect to the target class probability. The map shows influence,
+    not biological correctness or evidence that a lesion was detected.
     """
     import tensorflow as tf
 
@@ -82,7 +93,8 @@ def generate_gradcam(model, pil_image, class_idx=None, alpha=0.45):
         return None
 
     with tf.GradientTape() as tape:
-        conv_outputs = base(x)
+        # The outer classifier graph rescales before calling the backbone.
+        conv_outputs = base(x / 127.5 - 1.0, training=False)
         tape.watch(conv_outputs)
         y = gap(conv_outputs)
         y = drop(y, training=False)
@@ -112,8 +124,8 @@ def generate_gradcam(model, pil_image, class_idx=None, alpha=0.45):
 
     orig = pil_image.convert("RGB").resize(IMG_SIZE)
     orig_arr = np.asarray(orig, dtype="float32")
-    # Dynamic alpha proportional to activation: 0 in background, up to 0.65 in hot spots
-    alpha_map = np.clip(h_arr * 0.75, 0.0, 0.65)[..., np.newaxis]
+    # Blend only where the selected class has positive activation.
+    alpha_map = np.clip(h_arr * alpha, 0.0, 1.0)[..., np.newaxis]
     overlay = (1.0 - alpha_map) * orig_arr + alpha_map * colored_cam
     return Image.fromarray(np.clip(overlay, 0, 255).astype("uint8"))
 
@@ -155,6 +167,7 @@ def check_plant_color_coverage(pil_image, hue_low=20, hue_high=160, min_sat=40, 
     Roughly hue 20-160 on OpenCV's 0-179 scale with moderate-to-high saturation and value.
     Flags as low plant-color coverage if percentage < threshold_pct (default 15%).
     """
+    validate_image(pil_image)
     rgb = pil_image.convert("RGB")
     hsv = rgb.convert("HSV")
     h, s, v = np.array(hsv, dtype="float32").transpose(2, 0, 1)
@@ -172,6 +185,7 @@ def check_plant_color_coverage(pil_image, hue_low=20, hue_high=160, min_sat=40, 
 def check_imagenet_sanity(imagenet_model, pil_image, top_k=5):
     """Run image through stock ImageNet MobileNetV2 and check if top-5 has plant classes."""
     from tensorflow.keras.applications.mobilenet_v2 import decode_predictions, preprocess_input
+    validate_image(pil_image)
     img = pil_image.convert("RGB").resize(IMG_SIZE)
     x = np.array(img, dtype="float32")[np.newaxis, ...]
     x = preprocess_input(x)
@@ -192,7 +206,7 @@ def check_imagenet_sanity(imagenet_model, pil_image, top_k=5):
 
 
 def check_leaf_sanity(pil_image, imagenet_model=None):
-    """Comprehensive out-of-distribution sanity check for leaf photos."""
+    """Heuristic image check; flags are not calibrated leaf-eligibility decisions."""
     color_res = check_plant_color_coverage(pil_image)
     signals = []
     if color_res["is_low_coverage"]:
@@ -217,8 +231,17 @@ def check_leaf_sanity(pil_image, imagenet_model=None):
     }
 
 
+def validate_probabilities(values, count):
+    probabilities = np.asarray(values, dtype=float)
+    if (probabilities.shape != (count,) or not np.isfinite(probabilities).all()
+            or (probabilities < 0).any() or (probabilities > 1).any()
+            or not np.isclose(probabilities.sum(), 1.0, atol=1e-4)):
+        raise ValueError("Model returned invalid class probabilities.")
+    return probabilities / probabilities.sum()
+
+
 def predict_disease(model, pil_image, top_k=5, generate_cam=True, sanity_model=None):
-    probs = model.predict(preprocess_image(pil_image), verbose=0)[0]
+    probs = validate_probabilities(model.predict(preprocess_image(pil_image), verbose=0)[0], len(DISEASE_CLASSES))
     idx = int(probs.argmax())
     raw_name = DISEASE_CLASSES[idx]
     confidence = float(probs[idx])
@@ -231,8 +254,9 @@ def predict_disease(model, pil_image, top_k=5, generate_cam=True, sanity_model=N
         "display_class": pretty_class(raw_name),
         "confidence": confidence,
         "is_healthy": is_healthy,
-        # High confidence in a *disease* diagnosis pulls the score toward 0.
-        "disease_score": confidence if is_healthy else 1.0 - confidence,
+        "disease_score": float(np.clip(sum(p for name, p in zip(DISEASE_CLASSES, probs) if "healthy" in name.lower()), 0.0, 1.0)),
+        # shortcut: 0.5 is a conservative demo review rule; calibrate on a fresh validation set before field use.
+        "needs_review": confidence < 0.5 or sanity["is_flagged"],
         "top_k": [(pretty_class(DISEASE_CLASSES[i]), float(probs[i])) for i in order],
         "cam_image": cam_img,
         "sanity": sanity,
@@ -250,24 +274,19 @@ NDVI_SCORE_MAP = {"healthy": 1.0, "moderate_stress": 0.5, "severe_stress": 0.1}
 NDVI_DEFAULTS = {"ndvi_mean": 0.50, "ndvi_std": 0.10, "ndvi_min": 0.30,
                  "ndvi_max": 0.70, "ndvi_p25": 0.42, "ndvi_p75": 0.60}
 
-# Found by searching the trained forest's input space and verified to produce
-# their named class (see test_core.py). Note the forest keys "severe" mainly off
-# high within-field variance (ndvi_std / spread), not off a low mean alone.
-NDVI_EXAMPLES = {
-    "healthy": {"ndvi_mean": 0.67, "ndvi_std": 0.15, "ndvi_min": 0.14,
-                "ndvi_max": 0.81, "ndvi_p25": 0.39, "ndvi_p75": 0.73},
-    "stressed": {"ndvi_mean": 0.25, "ndvi_std": 0.37, "ndvi_min": 0.08,
-                 "ndvi_max": 0.68, "ndvi_p25": 0.21, "ndvi_p75": 0.45},
-}
-
-
 def predict_ndvi(model, feature_values):
-    """feature_values: dict keyed by NDVI_FEATURES."""
-    # DataFrame (not bare array) so the feature names match those the forest
-    # was fitted with, which keeps sklearn from warning and guards the order.
+    """Validate the six unscaled NDVI statistics before forest inference."""
     import pandas as pd
-    x = pd.DataFrame([[feature_values[f] for f in NDVI_FEATURES]], columns=NDVI_FEATURES)
-    probs = model.predict_proba(x)[0]
+    try:
+        mean, std, low, high, p25, p75 = values = np.asarray([feature_values[f] for f in NDVI_FEATURES], dtype=float)
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("NDVI requires six numeric statistics.") from exc
+    if (not np.isfinite(values).all() or not -1 <= low <= p25 <= p75 <= high <= 1
+            or not low <= mean <= high or std < 0
+            or std ** 2 > (high - mean) * (mean - low) + 1e-8):
+        raise ValueError("NDVI statistics must be finite and consistent: min ≤ p25 ≤ p75 ≤ max, mean within min/max, and feasible standard deviation.")
+    x = pd.DataFrame([values], columns=NDVI_FEATURES)
+    probs = validate_probabilities(model.predict_proba(x)[0], len(model.classes_))
     label = str(model.classes_[int(probs.argmax())])
     return {
         "label": label,
@@ -286,7 +305,7 @@ PEST_WEIGHTS = np.array([0.0, 0.5, 1.0])
 
 
 def load_sequences():
-    with open(MODELS_DIR / "sample_sequences.json") as f:
+    with open(MODELS_DIR / "sample_sequences.json", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -300,19 +319,19 @@ def pretty_label(label):
 
 
 def predict_pest(model, sequence):
-    """sequence: (window_size, n_features) of raw weather values.
-
-    Fed unscaled, exactly as exported in sample_sequences.json alongside the
-    model — no scaler artifact was saved with the model.
-    """
-    x = np.asarray(sequence, dtype="float32")[np.newaxis, ...]
-    probs = model.predict(x, verbose=0)[0]
+    """Raw weather plus training-scaled prior pest pressure; normalization is in the graph."""
+    try:
+        x = np.asarray(sequence, dtype="float32")
+    except (TypeError, ValueError) as exc:
+        raise ValueError("Pest sequence must contain numeric values.") from exc
+    if x.shape != tuple(model.input_shape[1:]) or not np.isfinite(x).all():
+        raise ValueError(f"Pest sequence must be finite with shape {tuple(model.input_shape[1:])}.")
+    probs = validate_probabilities(model.predict(x[np.newaxis, ...], verbose=0)[0], len(PEST_CLASSES))
     return {
         "probs": {c: float(p) for c, p in zip(PEST_CLASSES, probs)},
         "pred_class": PEST_CLASSES[int(probs.argmax())],
         "confidence": float(probs.max()),
-        # Continuous expected risk, not just the hard class label.
-        "pest_risk_score": float(np.dot(PEST_WEIGHTS, probs)),
+        "pest_risk_score": float(np.clip(np.dot(PEST_WEIGHTS, probs), 0.0, 1.0)),
     }
 
 
@@ -321,11 +340,16 @@ def predict_pest(model, sequence):
 # ---------------------------------------------------------------------------
 
 def composite_score(disease_score, ndvi_score, pest_risk_score):
-    return (disease_score + ndvi_score + (1.0 - pest_risk_score)) / 3.0
+    values = np.asarray([disease_score, ndvi_score, pest_risk_score], dtype=float)
+    if not np.isfinite(values).all() or (values < 0).any() or (values > 1).any():
+        raise ValueError("Composite inputs must be finite scores between 0 and 1.")
+    return float((values[0] + values[1] + (1.0 - values[2])) / 3.0)
 
 
 def bucket(score):
-    """-> (label, hex colour)."""
+    """-> (illustrative tier, hex colour), never a validated field verdict."""
+    if not np.isfinite(score) or not 0 <= score <= 1:
+        raise ValueError("Score must be finite and between 0 and 1.")
     if score >= 0.66:
         return "Healthy", "#2E7D32"
     if score >= 0.33:
@@ -333,111 +357,103 @@ def bucket(score):
     return "Severe Risk", "#C62828"
 
 
+def composite_assessment(disease, ndvi, pest):
+    """Keep the mean index while preventing it from hiding individual warnings."""
+    components = [disease["disease_score"], ndvi["ndvi_score"], 1.0 - pest["pest_risk_score"]]
+    score = composite_score(components[0], components[1], pest["pest_risk_score"])
+    warnings = []
+    for name, value in zip(["Leaf", "Canopy", "Pest"], components):
+        if value < 0.33:
+            warnings.append(f"{name}: severe model signal; the mean index does not cancel it.")
+        elif value < 0.66:
+            warnings.append(f"{name}: model signal needs follow-up.")
+    sanity = disease.get("sanity") or {}
+    if sanity.get("is_flagged"):
+        warnings.append("Leaf image check needs review; the forced class may be outside model scope.")
+    needs_review = disease.get("needs_review", False) or sanity.get("is_flagged", False)
+    if needs_review:
+        warnings.append("Leaf prediction is uncertain or flagged; confirm the input before interpretation.")
+        label, color = "Needs review", "#E8A33D"
+    else:
+        label, color = bucket(min(components))
+    return {"score": score, "label": label, "color": color, "warnings": warnings}
+
+
 # ---------------------------------------------------------------------------
 # Agronomic Advisories & Recommendations
 # ---------------------------------------------------------------------------
 
-DISEASE_INTERVENTIONS = {
-    "early_blight": {
-        "title": "Early Blight (Alternaria solani)",
-        "action": "Apply targeted protectant fungicide (Mancozeb or Chlorothalonil). Prune lower diseased foliage to arrest spore splash.",
-    },
-    "late_blight": {
-        "title": "Late Blight (Phytophthora infestans)",
-        "action": "Emergency protocol: Apply systemic fungicide (Cymoxanil or Metalaxyl). Quarantine affected field sections to prevent epidemic spread.",
-    },
-    "black_rot": {
-        "title": "Black Rot",
-        "action": "Apply Myclobutanil or copper-based fungicide. Clear mummified fruit and prune infected canes.",
-    },
-    "bacterial_spot": {
-        "title": "Bacterial Spot (Xanthomonas)",
-        "action": "Apply fixed copper bactericide tank-mixed with Mancozeb. Avoid overhead sprinkler irrigation.",
-    },
-    "powdery_mildew": {
-        "title": "Powdery Mildew",
-        "action": "Spray potassium bicarbonate or horticultural neem oil extract. Improve canopy airflow via selective pruning.",
-    },
-    "rust": {
-        "title": "Foliar Rust",
-        "action": "Apply Triazole or Strobilurin-class fungicide. Remove alternate host weeds along field margins.",
-    },
-}
-
-
 def get_disease_action(raw_class, is_healthy):
     if is_healthy:
-        return "Foliar health nominal. Maintain prophylactic monitoring and clean sanitation practices."
-    raw_lower = raw_class.lower()
-    for key, data in DISEASE_INTERVENTIONS.items():
-        if key in raw_lower:
-            return data["action"]
-    return "Foliar disease detected. Consult local extension agronomist for targeted anti-fungal treatment."
+        return "The model suggests healthy foliage. Confirm the photo and field observations; continue routine monitoring."
+    return f"Confirm {pretty_class(raw_class)} with a qualified local agronomist before choosing any treatment. The model does not establish the cause or severity."
 
 
 def get_ndvi_action(label):
-    if label == "severe_stress":
-        return "Canopy stress critical. Inspect irrigation drip pressure, verify root-zone moisture, and run an electrical conductivity (EC) soil salinity test."
-    if label == "moderate_stress":
-        return "Mild canopy suppression detected. Schedule supplementary irrigation and test for nitrogen or micro-nutrient deficiency."
-    return "Canopy photosynthetic vigour is optimal. Maintain standard irrigation schedule."
+    if label == "healthy":
+        return "The model predicts the below-threshold anomaly class, named healthy in training. This does not establish plant health; compare field observations and verify the image acquisition conditions."
+    return "Review the RGB/NIR pair and field conditions with an agronomist. This stress class does not identify irrigation, nutrient or disease causes."
 
 
 def get_pest_action(pred_class, pest_risk_score):
-    if pred_class == "high" or pest_risk_score >= 0.6:
-        return "High outbreak probability. Deploy pheromone monitoring traps (10 units/ha). Prepare bio-pesticide application (Bacillus thuringiensis)."
-    if pred_class == "medium" or pest_risk_score >= 0.3:
-        return "Moderate pest pressure expected. Increase field scouting frequency to twice weekly."
-    return "Pest pressure baseline nominal. Maintain routine surveillance and preserve natural beneficial predator insects."
+    return f"The model predicts {pred_class} pest pressure. Confirm recent pest observations and local scouting guidance; this historical prototype does not prescribe traps or pesticides."
 
 
-def generate_report(disease, ndvi, pest, score, bucket_label):
-    import datetime
-    now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    d_act = get_disease_action(disease["raw_class"], disease["is_healthy"])
-    n_act = get_ndvi_action(ndvi["label"])
-    p_act = get_pest_action(pest["pred_class"], pest["pest_risk_score"])
+def generate_report(disease, ndvi, pest, score, bucket_label, *, provenance=None):
+    from datetime import datetime, timezone
+    assessment = composite_assessment(disease, ndvi, pest)
+    if not np.isclose(score, assessment["score"], atol=1e-8) or bucket_label != assessment["label"]:
+        raise ValueError("Report score and tier must match the component assessment.")
+    manifest = json.loads((MODELS_DIR / "artifact_manifest.json").read_text(encoding="utf-8"))
+    identities = "\n".join(f"  {name}: SHA-256 {record['sha256']}" for name, record in manifest["models"].items())
+    sources = provenance or {}
+    warnings = "\n".join("- " + warning for warning in assessment["warnings"]) or "- No component heuristic warning; this does not establish accuracy."
+    return f"""CROPSENSE AI — SIMULATED MULTI-SIGNAL DEMONSTRATION
+Generated: {datetime.now(timezone.utc).isoformat()}
 
-    return f"""================================================================================
-CROPSENSE AI — MULTI-MODAL CROP HEALTH ASSESSMENT REPORT
-Generated: {now_str}
-================================================================================
+This prototype combines unrelated datasets, not measurements from one farm.
+No fusion accuracy or field diagnosis has been validated. Do not select treatment from this report.
 
-OVERALL VERDICT
---------------------------------------------------------------------------------
-Composite Health Score : {score:.3f} / 1.000
-Status Tier            : {bucket_label.upper()}
-Evaluation Formula     : composite = 1/3*(disease) + 1/3*(ndvi) + 1/3*(1 - pest)
+SIMULATED INDEX
+Mean index: {score:.3f} / 1.000
+Component warning tier: {bucket_label.upper()}
+Formula: (healthy-class probability sum + NDVI class score + (1 - expected pest pressure)) / 3
+The tier preserves the worst component signal or requests review; it is not the mean-index bucket.
+Healthy-class probability is uncalibrated; low confidence is not evidence of health.
 
-MODULE BREAKDOWN
---------------------------------------------------------------------------------
-1. Visual Foliar Pathology (MobileNetV2 CNN)
-   - Diagnosis         : {disease['display_class']}
-   - Softmax Confidence: {disease['confidence']:.2%}
-   - Disease Score     : {disease['disease_score']:.3f}
-   - Action            : {d_act}
+WARNINGS
+{warnings}
+- Passing the image check does not establish supported leaf/crop eligibility; flowers can pass and receive confident crop-disease classes.
+- Canopy classes reflect training mask-coverage thresholds; healthy means below selected anomaly thresholds, not verified plant health.
+- Released canopy forest: 0/6 bundled healthy pairs correctly recognized; exact historical holdout accuracy unverified.
+- Pest LSTM: 10/19 retrospective weeks correct, 0/5 medium recall; saved logistic baseline 13/19.
+- Raw-band NDVI assumes aligned 8-bit RGB/NIR; sensor reflectance calibration is not established.
 
-2. Canopy Multispectral Stress (Random Forest NDVI)
-   - Classification    : {ndvi['label'].replace('_', ' ').title()}
-   - Confidence        : {ndvi['confidence']:.2%}
-   - NDVI Score        : {ndvi['ndvi_score']:.3f}
-   - Action            : {n_act}
+INPUT PROVENANCE
+Leaf: {sources.get("leaf", "Not recorded")}
+Canopy: {sources.get("canopy", "Not recorded")}
+Pest sequence: {sources.get("pest", "Not recorded")}
+Input capture timestamps: not recorded; generation time above is not acquisition time.
 
-3. Pest Risk Forecast (Temporal Meteorological LSTM)
-   - Forecast Tier     : {pest['pred_class'].title()} Risk
-   - Confidence        : {pest['confidence']:.2%}
-   - Pest Risk Score   : {pest['pest_risk_score']:.3f} (inverted in fusion)
-   - Action            : {p_act}
+MODULE RESULTS
+Leaf predicted class: {disease["display_class"]}
+Softmax confidence: {disease["confidence"]:.2%}
+Healthy-class probability sum: {disease["disease_score"]:.3f}
+Follow-up: {get_disease_action(disease["raw_class"], disease["is_healthy"])}
 
-AGRONOMIC ACTION PROTOCOL
---------------------------------------------------------------------------------
-- Foliar Pathology   : {d_act}
-- Canopy / Hydration : {n_act}
-- Pest Surveillance  : {p_act}
+Canopy predicted class: {ndvi["label"]}
+Model confidence: {ndvi["confidence"]:.2%}
+Illustrative canopy score: {ndvi["ndvi_score"]:.3f}
+Follow-up: {get_ndvi_action(ndvi["label"])}
 
-================================================================================
-CropSense AI · Final-Year B.Tech Project · Multi-Modal Agricultural Intelligence
-================================================================================
+Pest predicted class: {pest["pred_class"]}
+Model confidence: {pest["confidence"]:.2%}
+Expected pest pressure: {pest["pest_risk_score"]:.3f}
+Follow-up: {get_pest_action(pest["pred_class"], pest["pest_risk_score"])}
+
+MODEL IDENTITIES
+Release: {manifest["release"]}
+{identities}
 """
 
 
@@ -445,27 +461,14 @@ CropSense AI · Final-Year B.Tech Project · Multi-Modal Agricultural Intelligen
 # Loaders (wrapped in @st.cache_resource by app.py)
 # ---------------------------------------------------------------------------
 
-HF_MODELS_REPO = "rahulkuntala/cropsense-models"
-
-LFS_POINTER_MAGIC = b"version https://git-lfs"
-
-
 def model_path(filename):
-    """Path to a model file, downloading from the Hub if it isn't really here.
-
-    The artefacts are git-lfs tracked. Streamlit Community Cloud does not fetch
-    lfs objects, so on that host `models/*.keras` arrive as ~130-byte pointer
-    stubs that would fail to load with a confusing error. Detect the stub (and
-    a plain missing file) and pull the real artefact from HF_MODELS_REPO
-    instead. Locally, where lfs did run, the real file is used as-is.
-    """
-    local = MODELS_DIR / filename
-    if local.exists():
-        with open(local, "rb") as f:          # header only, not the whole 25 MB
-            if f.read(len(LFS_POINTER_MAGIC)) != LFS_POINTER_MAGIC:
-                return str(local)
-    from huggingface_hub import hf_hub_download
-    return hf_hub_download(HF_MODELS_REPO, filename)
+    """Resolve only checksum-verified release artifacts, restoring from the local bundle."""
+    from scripts.release_assets import ensure_local_models
+    manifest = json.loads((MODELS_DIR / "artifact_manifest.json").read_text(encoding="utf-8"))
+    if filename not in manifest["models"]:
+        raise ValueError(f"Unknown release model: {filename}")
+    ensure_local_models(MODELS_DIR.parent)
+    return str(MODELS_DIR / filename)
 
 
 def load_disease_model():

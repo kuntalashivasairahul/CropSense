@@ -1,0 +1,48 @@
+{
+  "train_years": [
+    2005,
+    2006,
+    2007
+  ],
+  "validation_year": 2008,
+  "test_year": 2009,
+  "features": [
+    "MaxT(°C)",
+    "MinT(°C)",
+    "RH1(%)",
+    "RH2(%)",
+    "RF(mm)",
+    "WS(kmph)",
+    "SSH(hrs)",
+    "EVP(mm)",
+    "pest_pressure"
+  ],
+  "window": 4,
+  "thresholds": [
+    0.2136876006441224,
+    0.3223832528180354
+  ],
+  "pest_scaling": {
+    "Jassid": {
+      "min": 0.0,
+      "max": 14.7
+    },
+    "Aphid": {
+      "min": 0.0,
+      "max": 207.0
+    }
+  },
+  "missing_input_rule": "within-year forward-fill at most 4 weeks",
+  "target_rule": "both pest readings observed",
+  "candidates": [
+    {
+      "units": 8,
+      "dropout": 0.1
+    },
+    {
+      "units": 16,
+      "dropout": 0.3
+    }
+  ],
+  "selection": "validation macro F1; test never used for early stopping"
+}

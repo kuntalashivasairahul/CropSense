@@ -1,0 +1,178 @@
+{
+  "excluded_train_test_duplicates.csv": {
+    "bytes": 1123,
+    "sha256": "0f522789e225dd80b6f1480c34b333c84edad927117d9837b8d15ae8cc5f13e8"
+  },
+  "original_checkpoint__pv_validation_predictions.csv": {
+    "bytes": 8138857,
+    "sha256": "c8f779c9160015146d55a5abbd611a6783f30cf6d3b72f73e1afc3e22e2a57ed"
+  },
+  "model_contract.json": {
+    "bytes": 1802,
+    "sha256": "aaef8aad23539544b2a2b79bc6a7c9e0d1e6189f3dd9ea48db25fd59387da549"
+  },
+  "original_checkpoint__pv_validation_confusion_counts.csv": {
+    "bytes": 4933,
+    "sha256": "f4b5feb497a55a7c23733fb7af60a0cf6454d087d5994f931e7876d0695b8e6b"
+  },
+  "original_checkpoint__field_test_confusion_counts.csv": {
+    "bytes": 4865,
+    "sha256": "d0d158dfb1d397b5c319db318189797ea5ba8da00107655293981190820f4804"
+  },
+  "module1_cnn_candidate.keras": {
+    "bytes": 9805815,
+    "sha256": "5c263a58b9d4613625af07b344500bd45011336c680b30b2095c6b051d0d8deb"
+  },
+  "unreadable_or_unmapped.csv": {
+    "bytes": 136,
+    "sha256": "ee4c324a11dbeab7ba85ca9108b40359bc9b51c208162696cbbbbe5ec7b7ddac"
+  },
+  "adapted_checkpoint__field_test_classification_report.csv": {
+    "bytes": 2611,
+    "sha256": "42ba36eaecd4f38c3343700d4b9dd5d1f6b2023fd8dd389b6409018d6afa300d"
+  },
+  "original_checkpoint__field_validation_classification_report.csv": {
+    "bytes": 2548,
+    "sha256": "cc883d6edf683ea955a952f476a3f741c4b56cb1f2bf1827c31e71bf17c3f26b"
+  },
+  "baseline_artifact.json": {
+    "bytes": 217,
+    "sha256": "ce5561a098899ad41e9975b679e6912352054d9266ca0645b9309429015d7499"
+  },
+  "original_checkpoint__field_test_predictions.csv": {
+    "bytes": 242266,
+    "sha256": "7debda46aa4548840ba8f1e97fbf2ee8c612872f2ecf8873630c1ffc14328c57"
+  },
+  "adapted_checkpoint__pv_validation_confusion.png": {
+    "bytes": 479557,
+    "sha256": "da9db5915c0fd8d04a8f43776aae1841765b3106574061765d02bc4e5c7b1592"
+  },
+  "checkpoint_selection.csv": {
+    "bytes": 339,
+    "sha256": "5f0af3e5940e8211ef7624d7bab9294442434fec8f93420ab2dfc7e58a1e1cc8"
+  },
+  "environment.json": {
+    "bytes": 25827,
+    "sha256": "7e913d893b982b1596ed23c5cf4627a84622e3ceac4dc3481260e1f2d5932a17"
+  },
+  "results_summary.csv": {
+    "bytes": 1114,
+    "sha256": "4e3f1ec717f2150770f64cc48f9172b646155519f7a8aaeab0654fe25d686c1c"
+  },
+  "original_checkpoint__field_validation_confusion_counts.csv": {
+    "bytes": 4874,
+    "sha256": "4341d53c8571dbdf48ba950a6d2e78328674e56904f01046ef118700c795d24a"
+  },
+  "original_checkpoint__field_validation_confusion.png": {
+    "bytes": 479548,
+    "sha256": "3fb321052909d3ba96783f72e90604428a96ecf844ba2dfba8a67eaeb00f344e"
+  },
+  "split_manifest.csv": {
+    "bytes": 9467470,
+    "sha256": "3482c8f40ea9df44a953f48ac64128d5348cc01e15ee1ceb06a032aad75562ea"
+  },
+  "adapt_fine_tune_learning_curves.png": {
+    "bytes": 67903,
+    "sha256": "236562e0c9f64aa546349345a7d1ccc3fbe218e2291e7ef7d2d4fcc4efbe80a4"
+  },
+  "config.json": {
+    "bytes": 3362,
+    "sha256": "ee837ebc0dcc4ed2ec5c0b27dbd02049a1c51b267498afec2a3850ce253cb4d0"
+  },
+  "adapted_checkpoint__field_test_predictions.csv": {
+    "bytes": 240686,
+    "sha256": "1a8b3ce31c075f8fa62e12637efd35316dd204a005d637398d62232e4a9c42f2"
+  },
+  "original_checkpoint__pv_validation_confusion.png": {
+    "bytes": 478508,
+    "sha256": "8c6557bead9d873c0def6e6905747c6dfe41e57b90105b14d4806bafdcd65f74"
+  },
+  "adapted_checkpoint__field_test_confusion.png": {
+    "bytes": 471170,
+    "sha256": "4c69bfb7544b2019eadbeabb365711be021f8286524d3527fe7a16f50f8ccf8f"
+  },
+  "selection_before_test.json": {
+    "bytes": 146,
+    "sha256": "3cb9b4251cbba095281206c04ca42a24983450bf74b76a14fb23258b80d01652"
+  },
+  "original_checkpoint__field_test_confusion.png": {
+    "bytes": 482652,
+    "sha256": "fc90e798a958cc02ee91d23fbccbb0aac1e156a8c2bf1050944882d7220d3488"
+  },
+  "REPORT.md": {
+    "bytes": 1766,
+    "sha256": "acb3b48935953623256e5a638f8cffb56de4231b95432971f30f1a6aa0e2168c"
+  },
+  "original_checkpoint__pv_validation_classification_report.csv": {
+    "bytes": 2803,
+    "sha256": "5a88569c1005b10bf052f76ee6491842a755ad1854332b11550be4a26faaf6aa"
+  },
+  "adapted_checkpoint__pv_validation_predictions.csv": {
+    "bytes": 8146836,
+    "sha256": "b8cf498f1022849fbfad08ac4f765e5cc5aeff6a4966170f92f2700df1ad2c27"
+  },
+  "original_checkpoint__field_validation_metrics.json": {
+    "bytes": 21261,
+    "sha256": "bb7444f8c330437d004ce00443f0f125e6d7b017308d14ed60f3f66f7895af70"
+  },
+  "original_checkpoint__field_test_classification_report.csv": {
+    "bytes": 2420,
+    "sha256": "ff5090e145b8534409c37157b7131c40d8dd96f0d5ed9ea9c3661f43b364188c"
+  },
+  "decision.json": {
+    "bytes": 278,
+    "sha256": "b94d5d42c5564d9f696c0f3d0fff74b5ce2a7edbe7c9011b9109d94dd664e490"
+  },
+  "original_checkpoint__field_validation_predictions.csv": {
+    "bytes": 512628,
+    "sha256": "c5f0044cf6337d8b80a9c8c122fd0a7601a5547963f61bfb76aec88cbf2c0e59"
+  },
+  "adapt_head_history.csv": {
+    "bytes": 196,
+    "sha256": "492679e0ebc61f5caa4ecc8188583fce0928930469ea26a44a043f1e13024793"
+  },
+  "original_checkpoint__pv_validation_metrics.json": {
+    "bytes": 21571,
+    "sha256": "2f1b36974c28bc715251c8010d364d3411828f4fff1ad8e49303e3b7346cdea3"
+  },
+  "adapt_fine_tune_history.csv": {
+    "bytes": 653,
+    "sha256": "14b97014d64477885213c2a2d74e9e62a409bd10433c4c22bad0a4555a824dc3"
+  },
+  "best_field_validation.keras": {
+    "bytes": 24930250,
+    "sha256": "6a553811223c12d6bfc3870c093b752504cd2dc891624fced73741c44d0aff42"
+  },
+  "adapted_checkpoint__field_test_confusion_counts.csv": {
+    "bytes": 4867,
+    "sha256": "5994cde9cc7bac98a1e0bfd9f08403146394ec278212717ed1a2387457c1b128"
+  },
+  "adapted_checkpoint__pv_validation_classification_report.csv": {
+    "bytes": 3258,
+    "sha256": "40de6c9f589ba54bad30dde197812459841c00e8b7e97ece3df32d5b8f4402b4"
+  },
+  "adapted_checkpoint__pv_validation_confusion_counts.csv": {
+    "bytes": 4935,
+    "sha256": "802f7fbe12e685ce064b02674534ab37609d268d2cacbcea2935e8ef70ca4be5"
+  },
+  "class_distribution.csv": {
+    "bytes": 1006,
+    "sha256": "59429d6d2e3752c591b36afeb93c923b4123b70dce6be7687c321fd75a8f0c9b"
+  },
+  "adapted_checkpoint__pv_validation_metrics.json": {
+    "bytes": 22028,
+    "sha256": "7dc9b16c4f9e3ac58e19b5d6c9ad479c855fad9539638ce13974270dd5fc3962"
+  },
+  "adapted_checkpoint__field_test_metrics.json": {
+    "bytes": 21309,
+    "sha256": "420e5a0120f4c76bf2d82e8fc96ebe855ba09c225806ea0efe3578afbe1fc24e"
+  },
+  "original_checkpoint__field_test_metrics.json": {
+    "bytes": 21115,
+    "sha256": "df53a613c80e785d67ccd69007861100233328bfcbaef400209bc6e80a11b065"
+  },
+  "adapt_head_learning_curves.png": {
+    "bytes": 58401,
+    "sha256": "21209993831bcbce5188fb10f45a3986371f05bc239f9785c78c21bc652ce502"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "declared_before_region_download": true,
+  "reason": "Akola 2010-2011 queries returned no observations. Seek an independently located retrospective check without tuning on the inspected 2009 Akola test.",
+  "location": "Nagpur",
+  "crop": "Cotton",
+  "pests": ["Jassid", "Aphid"],
+  "years": [2005, 2006, 2007, 2008, 2009],
+  "models": "Frozen released LSTM and the validation-selected candidate recorded in candidate_validation.json; no regional training or tuning",
+  "processing": "Existing original training-only scale, thresholds, four-week within-year causal windows and both-pest-observed targets. Verify units and fields before evaluating.",
+  "required_reporting": "All available sample counts, class supports and confusion matrices. Empty/missing paired observations or absent classes are a coverage failure, not a model pass.",
+  "promotion": "None automatic; preserve release. Do not use this region to select further variants."
+}

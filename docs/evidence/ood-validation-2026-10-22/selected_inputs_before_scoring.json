@@ -1,0 +1,3880 @@
+[
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0153.jpg",
+    "expected_leaf": false,
+    "sha256": "8bde988bcf7a0f1a37b0c1b65e61d38414ecca7e6dec747d7947248952a630a4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0208.jpg",
+    "expected_leaf": false,
+    "sha256": "f4ef36b011de0216990d387a6653b5efa8d1c8e1f5e710cf17e1121075a6da91"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0045.jpg",
+    "expected_leaf": false,
+    "sha256": "a638b9171f242098179cb5e9887b49d4cabb113eb1268a2c86c9e63943d72974"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0308.jpg",
+    "expected_leaf": false,
+    "sha256": "827362fea944cc19642cbad881675fea2e6a6fd076fb368230173bd02dbd2237"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0092.jpg",
+    "expected_leaf": false,
+    "sha256": "466a9c15d0fcfef44146dc4ae8926ecb3e6f2a8e9d141a7c778ecab856622579"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0241.jpg",
+    "expected_leaf": false,
+    "sha256": "434d9e8a23aff274ec8073ea61326242c998ab2a802632cd61aaba8694f29b34"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0289.jpg",
+    "expected_leaf": false,
+    "sha256": "84377bdf17e735d269eacafb76ffd26c43f77d30de601d44b9e0dc66ac88e3ba"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0217.jpg",
+    "expected_leaf": false,
+    "sha256": "e3c13753e179efc117e3dfc0b259c0e6daa6631a25c65f2d0328787dc72a1ccf"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0134.jpg",
+    "expected_leaf": false,
+    "sha256": "5df4225c2df6a452f6ec83e8369627e68f8c75e7281e5911315793afe003664f"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0375.jpg",
+    "expected_leaf": false,
+    "sha256": "ee00b9843e67439446dbfdd80bcb4f82bff812cf70068765deadb9e27c113aff"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0031.jpg",
+    "expected_leaf": false,
+    "sha256": "ebe8319f45b9e276395ba90c578b81ef64e0899986f0e6bb6f07aab3ecea659d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0064.jpg",
+    "expected_leaf": false,
+    "sha256": "33df5bbcd1b47c5c402daca5500e707cbdf2a79bd1fa5a8530235b7f605c0ae6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0030.jpg",
+    "expected_leaf": false,
+    "sha256": "159cef30f131a0760ba4e86a308ae1e23d4e9481edf10cea967f7d28a73465f0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0422.jpg",
+    "expected_leaf": false,
+    "sha256": "b5ec11e4d5c9f91b56bb6a97aee8bdd14863629ef652582cb1b8f058fa5a7054"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0391.jpg",
+    "expected_leaf": false,
+    "sha256": "bf5c828db041f09a961de6fc40e1473dfe1f928244ed27bf2db5cbbad42e57e6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0215.jpg",
+    "expected_leaf": false,
+    "sha256": "a1dae28e7f1656bd3f588adb5544d7c304692fd3ab886e17e20ed69983552020"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0155.jpg",
+    "expected_leaf": false,
+    "sha256": "3fcce110cf8f9f673b05ce1187656e0504444c1dfef1aa9c63a578939f0e9405"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0345.jpg",
+    "expected_leaf": false,
+    "sha256": "feb491e2e1f5dc3ef00a32f84cdad20e91a1bd94a3ad053dca4a323f654e015a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0250.jpg",
+    "expected_leaf": false,
+    "sha256": "710aa441a6bf10b3e59c519df2ee0c42f0f6e5a7b82211ba8e2655b75904c27e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0003.jpg",
+    "expected_leaf": false,
+    "sha256": "0ee2a32fda88d396249592d86a50321092abf64aba2ff48f6a1c472de58dbd22"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0405.jpg",
+    "expected_leaf": false,
+    "sha256": "8c9622ffb75542c4a8d4e97be28e442f6be6f1478053a431b7032862d6eb63e8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0156.jpg",
+    "expected_leaf": false,
+    "sha256": "1e41fdfea5b4c65666baacb137e60fa9246e1e460b08beb7e7ef77b92092effb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0396.jpg",
+    "expected_leaf": false,
+    "sha256": "b4fbf75863f75bd9c3b05ca89d800eccd1c79c0540620aa3189b87af64be7eef"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0111.jpg",
+    "expected_leaf": false,
+    "sha256": "0fe3dd6d3511681847e03981ec0744dbb48541f5c3492230f200c9d3b24a123e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0413.jpg",
+    "expected_leaf": false,
+    "sha256": "76f784122cc3ea485a8632600cdbe1a5f46c182ef0355955dc280e47cfb22ef4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0432.jpg",
+    "expected_leaf": false,
+    "sha256": "29ec0b72ce602bac674bad973ef18b8eb8ada2ae3858db17352a9914d784f88b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0384.jpg",
+    "expected_leaf": false,
+    "sha256": "18c80d86404a36e6ac53f40356d391ebfc610fe8461244d34ea2c573a99142d8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0051.jpg",
+    "expected_leaf": false,
+    "sha256": "a757b4ed5f95b7952ab0d272520785eaa9922cb874b6bd9edd5d5e221a5f42c1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0095.jpg",
+    "expected_leaf": false,
+    "sha256": "5b3844c0082a519779754d4c2f4671251b7e2de58470f6769e6120c1682893a9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Faces_easy",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Faces_easy/image_0285.jpg",
+    "expected_leaf": false,
+    "sha256": "cef08a36cbc6398d1a01e0635867e6d85a354f2ab2634e99f13b99e7184d9beb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0038.jpg",
+    "expected_leaf": false,
+    "sha256": "fbd9d388b864ffb640e1a673c005d647a21c9ab953aecd1fc8dcb2002d59b83c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0178.jpg",
+    "expected_leaf": false,
+    "sha256": "c2d94cde612e0214188e78973edf02ccf869f45ef2349db3ffb28ad4d134e948"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0005.jpg",
+    "expected_leaf": false,
+    "sha256": "0447fec09688c436aa9ec071bc68e8387b6df812352e59420cad6941a1e7ef90"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0068.jpg",
+    "expected_leaf": false,
+    "sha256": "c81f81cdd41ef12bf266e8ec5925f9f6ed0d01514e000aac03e8a66122e1b015"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0048.jpg",
+    "expected_leaf": false,
+    "sha256": "2c41d31f49b80ec2a3be79e4c72f63f23199171be2fedf3198f1583e6556f070"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0131.jpg",
+    "expected_leaf": false,
+    "sha256": "4c0daf4abb7c7e55028bf4fd5226c9eff0482415357ca540813ea5f616964638"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0036.jpg",
+    "expected_leaf": false,
+    "sha256": "cdd9a7614bff9c4b693568c44917e6b9ee746a5cc9aedb9748f52a10e93d14ab"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0070.jpg",
+    "expected_leaf": false,
+    "sha256": "2c3ff88c2c2ff09b56d45f527253476091504ee66ae568620f5e5c83d55d0334"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0196.jpg",
+    "expected_leaf": false,
+    "sha256": "cad3ca9da5b32c7e8aca92af1c4c639ecf421333bdc2222ff427ba20eebface0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0126.jpg",
+    "expected_leaf": false,
+    "sha256": "365673e085a8590ff4270bcd8a4d96db512fee66bdcf743dc9cb69aa690101aa"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0127.jpg",
+    "expected_leaf": false,
+    "sha256": "4f5cf564c27a3f3cbeb76151105f23430e660a04eb537d25ae4325b68b35660a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0064.jpg",
+    "expected_leaf": false,
+    "sha256": "150ddae9bc73a31ec10037fe2cb9ab96ac188ae0129505abe6cd3a6a8f8a2e9c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0119.jpg",
+    "expected_leaf": false,
+    "sha256": "0073abfce77df5dd364f045898c9b8fad78f6750a3367028975da30ffea72425"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0006.jpg",
+    "expected_leaf": false,
+    "sha256": "473f31441c7804432231e4c5970f72a635ccb3f5d565a02b8c42c6e1f605dd05"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0179.jpg",
+    "expected_leaf": false,
+    "sha256": "296f7c54ae41ab2984e03a722599efe08f150ada5dcc6805874ba04cc3f63f3c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0080.jpg",
+    "expected_leaf": false,
+    "sha256": "b1528cfecad0a33434e66f29a773382bcc61b0c153b2136b658b874cb1ad9f69"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0084.jpg",
+    "expected_leaf": false,
+    "sha256": "037beafcff38ffb2e16faca232ebe6d029df2fd3cc757e13e336bb0f5cb23d98"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0122.jpg",
+    "expected_leaf": false,
+    "sha256": "86f307503496ffd3fb03ecbf5a6dd7d6542210ea0885f1d79768a4e91a437db4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0162.jpg",
+    "expected_leaf": false,
+    "sha256": "848c1a04b4ff28df64d6ce29d25af8515d444583a4479df0ebbb12f46524e8f2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0174.jpg",
+    "expected_leaf": false,
+    "sha256": "56d84276ab7f77ff893edad047f61fefbb1f4c8c3f70b60af3c9690e70bb0ec0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0171.jpg",
+    "expected_leaf": false,
+    "sha256": "cc2022ecb56c1042e8ee66718f0afa30cf5f45cc0cb6c0a5faf4097cf066ae3f"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0103.jpg",
+    "expected_leaf": false,
+    "sha256": "7e33999ea4ce53393ba8c4c4632ca659ad590248aa771281d6a6d06e1de0d2a1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0028.jpg",
+    "expected_leaf": false,
+    "sha256": "c3e7f62ece300ed249ecf6270c5407414a8ad400970325bd85544f5d0efec6c8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0033.jpg",
+    "expected_leaf": false,
+    "sha256": "7b8feb1df12885a27fa11580a7e2567afb9a5468ac40a2b15182f5b13aa9211c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0092.jpg",
+    "expected_leaf": false,
+    "sha256": "02aa089ad2fbc300296dcd41b24ba5442f3845ea39ffd0774c079dbdaed2b4b5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0104.jpg",
+    "expected_leaf": false,
+    "sha256": "11199083e3292afb989992e8cf2ce5179bae8a4d1aa0e7bc6447ab7606362c4d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0113.jpg",
+    "expected_leaf": false,
+    "sha256": "2e6a1842690b7abc0806dc04d8a57dae4ff6a8f70a4e29cd16870dd505843e7c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0009.jpg",
+    "expected_leaf": false,
+    "sha256": "2d799dcc5014a9d0c9057f91a1357f003e63c3cbcecb563c0d8fc6eb95752d34"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0076.jpg",
+    "expected_leaf": false,
+    "sha256": "531f82a95888b6dfd61d1b6329300f930f1e124d775717ec5a8652def4614487"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Leopards",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Leopards/image_0124.jpg",
+    "expected_leaf": false,
+    "sha256": "2dc177d66d25365d0fb4b9fcab6714fc35e6b19750a31f2689ef74522588501f"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0102.jpg",
+    "expected_leaf": false,
+    "sha256": "96638f6b0c21ae63de7a7b59a4351ec5e9da4ac6f65efce729efbec7edaab7e9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0725.jpg",
+    "expected_leaf": false,
+    "sha256": "5bf4d424ff3f2a8c919419c3fbd621d7d40c43ddda8980940cc378d88a81537c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0781.jpg",
+    "expected_leaf": false,
+    "sha256": "5fb778e45173562dfea93040a48cdf91625f615b78a6f50c19bd3a04130cf1ed"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0489.jpg",
+    "expected_leaf": false,
+    "sha256": "16faeb847db3f20723c2e24a4f829affadf3ae993ef947c8ce595346717d282d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0297.jpg",
+    "expected_leaf": false,
+    "sha256": "366023b5890c3fb9a3b23faf873b7d55f5bba2ef3ddb77dce23be5f09cbf6b06"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0027.jpg",
+    "expected_leaf": false,
+    "sha256": "8fe3806cf26530f5e1076a4ee327de5db3accc88f5eecfbca479ed261e4af0b2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0505.jpg",
+    "expected_leaf": false,
+    "sha256": "ed8ab445262f81c694ad866f224ef3fcbf13662d5feffcb339d78c501f5da0a5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0436.jpg",
+    "expected_leaf": false,
+    "sha256": "7db966eb78dd90e71b1fe64e4763ab2fd68ce230535e64b3f4398d2fac94f199"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0277.jpg",
+    "expected_leaf": false,
+    "sha256": "c3cb325a94e4d890c91b33ae68e576084e579faa6a970280b9c8121c2c032bc7"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0037.jpg",
+    "expected_leaf": false,
+    "sha256": "34d1110576875c12aded5f3cc001767814f084ce83506617c3be23d86575b9fe"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0656.jpg",
+    "expected_leaf": false,
+    "sha256": "6da9b2457a27a1d3819258ecc80a075ddd9bf78552d53a46af17b49a5a774a32"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0509.jpg",
+    "expected_leaf": false,
+    "sha256": "e5b41a6e488db219837777a57c7a7986ac0e85af786821da6d5700a299c59311"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0011.jpg",
+    "expected_leaf": false,
+    "sha256": "f5879afb11a3d7cad46c838d94a222087e5c567a0dbda5d7d9e21a18f208448a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0511.jpg",
+    "expected_leaf": false,
+    "sha256": "0db85b8116a80fd1a964d5574091be3c8bb5ab0bb934379e1baa9f5f774b1c7e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0283.jpg",
+    "expected_leaf": false,
+    "sha256": "b3f5be7bf7f7aa58eb5d9e4e5c721c7a0898db81f7abb509c6dc75eb404acdc0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0419.jpg",
+    "expected_leaf": false,
+    "sha256": "c3405adf2d822dd2431afa4ddf9c48f516b6cba0e412543cd432593f6935c63c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0449.jpg",
+    "expected_leaf": false,
+    "sha256": "ad17d4cbc9c4f12d22ac8352b8ab81610b4a932bf42a57d012e398a840c30f98"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0563.jpg",
+    "expected_leaf": false,
+    "sha256": "1cb3e5db519d2fec22e7a97aa66ff80e07fa4fd929e85f95f50236721f6d7c38"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0095.jpg",
+    "expected_leaf": false,
+    "sha256": "e689bb542edb7dcb66817c898a9680f014d815b051febca695923c10f4397da1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0216.jpg",
+    "expected_leaf": false,
+    "sha256": "eb87147a91dfd5ff1888f6c7ecf498e9c1b093c69af558314cc79810db5b8eea"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0582.jpg",
+    "expected_leaf": false,
+    "sha256": "9aa5dba10869ee216c99f430610735dd0a097f136dad24945edb6d6990021d67"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0318.jpg",
+    "expected_leaf": false,
+    "sha256": "4504d705202a42a1b6902d9dda78668b5e359ccd3f10cdedd9bf74757f4a0ea4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0610.jpg",
+    "expected_leaf": false,
+    "sha256": "4b01dde0f52a588f45c23066bae84c92cc865f18eba69318749704f1ea31b6a0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0267.jpg",
+    "expected_leaf": false,
+    "sha256": "77b1df53bd9b7dd2e75064f3f4641bd4eb642298a23f88035f46afc2e72556b8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0339.jpg",
+    "expected_leaf": false,
+    "sha256": "72c082d65860198c926d495ea34f870cd86c937c7952508330ef37c88b44517c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0279.jpg",
+    "expected_leaf": false,
+    "sha256": "cc64844a6ed3098b68bf9cf5ac956fdf8588469f0b1aa321d451bd087bed5bd0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0641.jpg",
+    "expected_leaf": false,
+    "sha256": "fe93bbc0bac3b33075857c678929df518f8509bd9cd7846f4e58b88cce1aa5e6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0502.jpg",
+    "expected_leaf": false,
+    "sha256": "9dcfb83f8d1bd9017eba9e1383a655431046b054c89ef9685c61aac4a2f591db"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0155.jpg",
+    "expected_leaf": false,
+    "sha256": "db1cddba294b6127fb2ff9ff1f581bcf1d3fa8b2648550ccd5614b817c341f19"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "Motorbikes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/Motorbikes/image_0259.jpg",
+    "expected_leaf": false,
+    "sha256": "c15364196212e5fdc3204a2496fab5b7424b5a0516c80dcf96375440139f1e42"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0020.jpg",
+    "expected_leaf": false,
+    "sha256": "2958ff16262cfb1530ec310cbbd6be994d818f7fdacc2d4ebd65ba7686f15d7c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0436.jpg",
+    "expected_leaf": false,
+    "sha256": "de1845c9082ea4e25917f58739e70b7d5230f3d875c853e6e77c7e2b3c144271"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0543.jpg",
+    "expected_leaf": false,
+    "sha256": "b97bd749aba715d7fb84b384d391ad0f3dc30022adaac423b0c5451afaed7225"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0692.jpg",
+    "expected_leaf": false,
+    "sha256": "ca849462fd4dc49d9362fa3209993603af13b297b9faa303be39220824c4cc1a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0659.jpg",
+    "expected_leaf": false,
+    "sha256": "41bb468d0c8bc2ef51085764293e1fe3f9038f8c5d746ce2e849ac65068d15bb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0689.jpg",
+    "expected_leaf": false,
+    "sha256": "bbb923a2a8a052668d048c3c725464a35d441545f8d4037d2e0ff2c0fe9d8337"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0576.jpg",
+    "expected_leaf": false,
+    "sha256": "416eee7d76ba1b5b1f1b815b252c57580c174cb778e79e5bb2a29e40affa553c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0128.jpg",
+    "expected_leaf": false,
+    "sha256": "29298f887a1bbb3651acff760e13d8dc2618dd59632c2f20468a4bbbf12029dd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0764.jpg",
+    "expected_leaf": false,
+    "sha256": "8484c8b43cd333f465bb4e015f9370a1deafcfe5e563f2d64ac046cbd0c8acbd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0141.jpg",
+    "expected_leaf": false,
+    "sha256": "103d67d876fd8c7505fba5e09a6d243e72be63450f32007f29eb93eca31d7815"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0312.jpg",
+    "expected_leaf": false,
+    "sha256": "3a115f8c578ebed9b1bf1cd383235635269b8c829a0d5193aa11d441df187dd9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0105.jpg",
+    "expected_leaf": false,
+    "sha256": "4e87f14645b76186de2dece7e2763948da0c0632b49eaa8a677faf1b4bc75381"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0696.jpg",
+    "expected_leaf": false,
+    "sha256": "c9fb0e8b6ce9973439938591663ba821f6498f534b712ad4b68f47b157c135d0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0046.jpg",
+    "expected_leaf": false,
+    "sha256": "0fb3efcd010b9fe1369b6ed00d03f37b19bb53ba1abb0e02ad6b09038030a775"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0795.jpg",
+    "expected_leaf": false,
+    "sha256": "4210bd2a95e679d98d691742c986df34beeff893960e5b880d059cbe9c1693b1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0439.jpg",
+    "expected_leaf": false,
+    "sha256": "4b92945e40f1db5aa180a8925809213a1d092fa8a8d5d377c72dd062f5911719"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0154.jpg",
+    "expected_leaf": false,
+    "sha256": "cef317c2a94bdd4e906d4d2d25b1b13f4da2a8a8a3491458af0a7415314210d1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0008.jpg",
+    "expected_leaf": false,
+    "sha256": "6b8eec29276c61d209a7beb06071145b9c11e76437ebdea2c0b802f66c6e9aa2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0029.jpg",
+    "expected_leaf": false,
+    "sha256": "b3b159bba9a10cfff733df25cfe568847aafb6bb3abe5b345657c4c4d7177673"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0617.jpg",
+    "expected_leaf": false,
+    "sha256": "0e392585558913247d6ad1ced8dfe6949193712b1896af8fb512bca3cc2af503"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0481.jpg",
+    "expected_leaf": false,
+    "sha256": "396cd970c23a69143c2348059604ffd780c5dc2ee0eb18cc1e843694568402dd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0707.jpg",
+    "expected_leaf": false,
+    "sha256": "12c1a1fcecb4d0ca0343a9a81a99d613e63eb9d7786a5fad8138459d31d372b5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0007.jpg",
+    "expected_leaf": false,
+    "sha256": "3689745d9cd12b42521fc9df017043f53938d3419bbc689e1ac5a884be00b8ef"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0374.jpg",
+    "expected_leaf": false,
+    "sha256": "568785819514c08f66b5e511b7ff2bf494b6dbcc2991bcf1b5cecd2210c837fc"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0761.jpg",
+    "expected_leaf": false,
+    "sha256": "fa69bcdf9f75dc9da762c6330d95f4c452b562181879bf1641867d55b462cabc"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0535.jpg",
+    "expected_leaf": false,
+    "sha256": "bc01bcd9a376ca0d387d5b6dbede031c295c28ddf98af710972cfb580ea70bca"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0631.jpg",
+    "expected_leaf": false,
+    "sha256": "5edb697fc6740c7beea18e35eeabdbf03d4d964b9ce32c90d535fa4c282d82ea"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0686.jpg",
+    "expected_leaf": false,
+    "sha256": "83a50d5493c8ce931d6b46627bdb55276a236f901592c26c6631e4fc89f51454"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0148.jpg",
+    "expected_leaf": false,
+    "sha256": "c7264faa4e19d45ed65100e21bacdb50a3c02a431400e8a84ad85336d827e2f2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "airplanes",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/airplanes/image_0287.jpg",
+    "expected_leaf": false,
+    "sha256": "89bda7b5e5587248d75c643455455836f23bb22514ba1a3de4a00178e9091468"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0048.jpg",
+    "expected_leaf": false,
+    "sha256": "fa5508c282ef07f0a321f66661d55b70c4b924683744055fb92a08676b6d7f9b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0030.jpg",
+    "expected_leaf": false,
+    "sha256": "e465833955c5999b1a6c2f06fb7544897157bfb1942edb5f491114635a7dd4b7"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0077.jpg",
+    "expected_leaf": false,
+    "sha256": "4e5f89873ebe8b9b3dbae92c14d354d740f981817daa531e0bc14d3003c15ba3"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0071.jpg",
+    "expected_leaf": false,
+    "sha256": "3aff67b78c4f979a04bbf4c72e0197638e0f649a0087f50dd89410708d8f075a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0044.jpg",
+    "expected_leaf": false,
+    "sha256": "3903ff8ddc8f30e7b67971f5088d0084f74fe987d9915a7e46f65a5b495c2333"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0043.jpg",
+    "expected_leaf": false,
+    "sha256": "94ba535b568c4b94680b8ecb38d65e0150d7a35aabd7c0d1b51942cfa21d683c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0101.jpg",
+    "expected_leaf": false,
+    "sha256": "fef1afaa793c30b215ddb3387d9255f6d9d255a5eb7cd0b8cf1269fc350aad19"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0093.jpg",
+    "expected_leaf": false,
+    "sha256": "dcb047646c6963b76eeef05f7e543c12781d6a896d0df542881e251b98b9ecfa"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0041.jpg",
+    "expected_leaf": false,
+    "sha256": "bde620fde200bb615c027018c64ee79b1c597d65806b28531580b3c22677d459"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0063.jpg",
+    "expected_leaf": false,
+    "sha256": "37124d0ad9ee03b7a6d8c0f0c619eda75a29c6a0035a03ed5f66eac456b44f1c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0027.jpg",
+    "expected_leaf": false,
+    "sha256": "984f4033957abede3bca92897774fb4eb419d984f7584652734be4bea7b32e84"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0031.jpg",
+    "expected_leaf": false,
+    "sha256": "34ed0c2865d0846251e393e42c7c64a80aaed99fabfed86dfd8badba0412f11c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0045.jpg",
+    "expected_leaf": false,
+    "sha256": "b9a6f8a444be3e6b5bee63242d788a78243bb87c104a10d13babf410cf27a487"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0028.jpg",
+    "expected_leaf": false,
+    "sha256": "23265686295999233d49bb4be1f2d8441733aefb4f714c593a26ad3a3f3c4aa9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0102.jpg",
+    "expected_leaf": false,
+    "sha256": "a4bbf6b255ac6c87a7a7251c8809a445c9c16e18819ac788aa2ead72b2433071"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0110.jpg",
+    "expected_leaf": false,
+    "sha256": "1e5e22d2f84b60c78342f7656e89f319d1ebf3ad83fbe175a9c3a990e1da29d7"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0066.jpg",
+    "expected_leaf": false,
+    "sha256": "fb52bb3304880d6d825aaf31eb1a8a9200034a678102560e3d157c261e65453c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0086.jpg",
+    "expected_leaf": false,
+    "sha256": "edaaa8cd5fb1764e36b45ba318dbea597ae3652a84e2a90ff3364824adf6b5b6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0009.jpg",
+    "expected_leaf": false,
+    "sha256": "a605b7a3f46fbbbd787f509363b88a5ea9d83c7e22be04cc016fd7c2c07250e9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0121.jpg",
+    "expected_leaf": false,
+    "sha256": "da64e44390c675abd0eb9bf33af7d60e3da5879625699c88e8182eb43367c46e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0107.jpg",
+    "expected_leaf": false,
+    "sha256": "23f62d6925ba74398660bd3edd5bb5e77a3e151f2b23ce70950c3770c003813f"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0120.jpg",
+    "expected_leaf": false,
+    "sha256": "fe31f3acd27f1c7497b8ccea1d354a9c0cc7ef5194bfb4bcf26aa21cef79b2f9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0082.jpg",
+    "expected_leaf": false,
+    "sha256": "f8e4f64badd3eb7425f747cda1aaa2ee3d9509a7f200f06fae6c11d9b118191b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0118.jpg",
+    "expected_leaf": false,
+    "sha256": "f4902a1fe72ddf498b5c8ad4f6768150136837e3f87414f17e1d785a7061100c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0085.jpg",
+    "expected_leaf": false,
+    "sha256": "aac3397969be2f9714a53690212b7dfb55204bdc186f6009c006e534a2784ff0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0051.jpg",
+    "expected_leaf": false,
+    "sha256": "8a3d709d2c7a1161ddb87e7cd3161a69bf2e336592d06c6dc71cc3b0265fb649"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0115.jpg",
+    "expected_leaf": false,
+    "sha256": "6c52b0cfae76c770a6fd06f3905cc30068c25091e1c88d2aea71575200b24b77"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0092.jpg",
+    "expected_leaf": false,
+    "sha256": "cd84f1dade1c467b482035cc3e77f0383962ee577a559d9eceddd33ce26b9782"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0112.jpg",
+    "expected_leaf": false,
+    "sha256": "8e933f2648655c91dcd5ec29abfdbd60c1975474cd8cb6e3eb092d53e70191f5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "car_side",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/car_side/image_0047.jpg",
+    "expected_leaf": false,
+    "sha256": "f3844828cdec436e88021b65dac51fc2aa0862441851272889c68dc394fabea4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0017.jpg",
+    "expected_leaf": false,
+    "sha256": "5194eaaf86b02a2c21718543559a8041905cd526120e5c6425642370e8f49ee9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0026.jpg",
+    "expected_leaf": false,
+    "sha256": "e7053ecbcea2b2408efef4ee1661ea0ecdfdcbea00d545877ef293c2605347fb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0089.jpg",
+    "expected_leaf": false,
+    "sha256": "984e9aa7c433c59a4cefc760b33219877b4718ae29eae6214cbc5ae782cfa345"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0080.jpg",
+    "expected_leaf": false,
+    "sha256": "6a4d0b1047b5a97a0733e2dc353c92ffbb1d0afe02400445d65d453979240674"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0020.jpg",
+    "expected_leaf": false,
+    "sha256": "5b89296984ed6379125dc6039cf24ca1c5821ae8a4c4f4ab156240f3d7798f75"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0059.jpg",
+    "expected_leaf": false,
+    "sha256": "214f74ea8924e51990678fd3407b6a378299f876d454aebe3ea790428c671289"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0060.jpg",
+    "expected_leaf": false,
+    "sha256": "a46fa22b1997ea4f0abbd75e7737452b09d9eb16bd715b865dc5af3c19c7ddc8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0028.jpg",
+    "expected_leaf": false,
+    "sha256": "8c3e0bcc764f1f3eb978b22be0d24dd5f55e97e04287c7c9622664fd92636a1a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0061.jpg",
+    "expected_leaf": false,
+    "sha256": "755e2d9963874773be449d063ad7a5e21b2d8d1bed55033f5568ed3731a17336"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0048.jpg",
+    "expected_leaf": false,
+    "sha256": "b77225519470bc5c57db2dc8da93343eb29b68346e6b0b31e5926bc12a2d2e94"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0062.jpg",
+    "expected_leaf": false,
+    "sha256": "289f17cd4da4fea635a6fa8e992125d554997395ce8f5d08d5d5aec4a53ab885"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0037.jpg",
+    "expected_leaf": false,
+    "sha256": "42d68d25d4911f63a352beea8140146c0def3018615285421751c796df626a17"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0097.jpg",
+    "expected_leaf": false,
+    "sha256": "2d530f693003387c593e88f348330cb601bfb40e91168af3190e33b474f383dd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0021.jpg",
+    "expected_leaf": false,
+    "sha256": "cd74e94e49b432e146bfc3a9ff3ab475cdd6a3a1b515d8b1c1603cae3f3e1880"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0098.jpg",
+    "expected_leaf": false,
+    "sha256": "c4acf00713aebcb913f5e16a14734b5db20d70b5397e737f3cb3f26e9df74802"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0040.jpg",
+    "expected_leaf": false,
+    "sha256": "9fb44f527d06bff9be1d650abab58217dd000a9c52f4f558cf109453e3eb85de"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0008.jpg",
+    "expected_leaf": false,
+    "sha256": "cadb4924c6c352dab3920f5c085878bf5153b378def6fa02969dc7d8de445937"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0051.jpg",
+    "expected_leaf": false,
+    "sha256": "65ef63f7deed105669b7373f6811d58f4ae87d09d804a9d3208bec538016cbe6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0016.jpg",
+    "expected_leaf": false,
+    "sha256": "45b987204cd46baacb76f74f4a36fd2647ce28109b6136d5a151c11d1b850c42"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0001.jpg",
+    "expected_leaf": false,
+    "sha256": "21dcea06bee85ba169634130dfe5b0efc8b44f05decea440ce159df274a0ee3a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0022.jpg",
+    "expected_leaf": false,
+    "sha256": "be1f7383b0ee4a26250ce1417bf22a11a3d0f199162303be0e2337d1fb793dd1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0003.jpg",
+    "expected_leaf": false,
+    "sha256": "e4b9384dab03fcdc40a8b88bcafe9d657f742450d664028514337fc38895b07c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0006.jpg",
+    "expected_leaf": false,
+    "sha256": "f04afaa7a18675d41051acd2b8928f218829faabdcdf529321b8903f837821fb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0064.jpg",
+    "expected_leaf": false,
+    "sha256": "171a366646ea4a4a9bcde508b4d6cb10d5431065825bcb38f404ffa7352a9b71"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0094.jpg",
+    "expected_leaf": false,
+    "sha256": "81b0f532cd1eb05cb7416f0a4869d41f1676e7180e67b13562e84b44b0f10441"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0086.jpg",
+    "expected_leaf": false,
+    "sha256": "f9db47b6348d68516e3e98b565ad24426788e1952dbd8e55b5fc7b33c26e9cea"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0036.jpg",
+    "expected_leaf": false,
+    "sha256": "3fd75dfe283e06d494970148397b84c8b4e8814bfb3c040d249dfce369960098"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0076.jpg",
+    "expected_leaf": false,
+    "sha256": "326cf2f885da7109298430dd045d38e89680ceef0fd78e54d5879250e71b2b11"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0065.jpg",
+    "expected_leaf": false,
+    "sha256": "a44a8ce9748d3cbf5c2cf71a5e92f2d5582d826a0ee7bfc3fc4b882c574086a1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "grand_piano",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/grand_piano/image_0063.jpg",
+    "expected_leaf": false,
+    "sha256": "73b391f715b310adf4ae3f5183ab228ff7f08b58ee5edd9c064a05e0c75b9595"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0026.jpg",
+    "expected_leaf": false,
+    "sha256": "e1c7ad0fb7440e8e383200298b2ce76c2ce304002c4676a0e75df0d37c8af7eb"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0044.jpg",
+    "expected_leaf": false,
+    "sha256": "5a820abcd0210a9ade8767648535ea5a6c995c3dea7b82d9af6889b2022430f9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0039.jpg",
+    "expected_leaf": false,
+    "sha256": "4cd4bc01f8ac94fe2abd269aecd5ab399637010cda74f1e3d81cb63ec5cabf58"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0095.jpg",
+    "expected_leaf": false,
+    "sha256": "3290315f8d43d264626cdba35e9a65131250bb71e19be44d72ed073d909c7257"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0032.jpg",
+    "expected_leaf": false,
+    "sha256": "dfba033309fcff5add1f5acdb3450ea4094f73f65c101233baee4d3169ccc6b9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0112.jpg",
+    "expected_leaf": false,
+    "sha256": "a3e2ea6f7e288d7c247bd4b75de3415623f8e89c18e0c3b84026cd58518017e2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0056.jpg",
+    "expected_leaf": false,
+    "sha256": "e33b31862ef859090a82aac04cb8f1bb1a95002447b274755c0a57aef65061e1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0003.jpg",
+    "expected_leaf": false,
+    "sha256": "588f4c0c9b457fc9f6823202d4c0cd105d74dec6e82525cf78d7523ca477eb9d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0049.jpg",
+    "expected_leaf": false,
+    "sha256": "a0a1266ceeeeafd1ae5dde79d2d90b634c0d29c86b4ed20a882353c24525cb61"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0041.jpg",
+    "expected_leaf": false,
+    "sha256": "cc58acba7773f27750d2f0614679f8800e88d2d92fa8df2eb69aab1cdf1a3792"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0045.jpg",
+    "expected_leaf": false,
+    "sha256": "955f4ff2aff308d8c69eb773eb8cb9c5f5a828f790d300591488a819af1ef416"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0042.jpg",
+    "expected_leaf": false,
+    "sha256": "c9a49b6ce2e9d8b34045447153f503947761fd4f423d6adc27aeb4a0e378df63"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0090.jpg",
+    "expected_leaf": false,
+    "sha256": "568cd4a724bcfe70f975de98cb7d4afeab127d4abec0536d1a0c4ac2665f4547"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0020.jpg",
+    "expected_leaf": false,
+    "sha256": "1f24007a705cfbfd4517225a184e957556b65f6fbb75bf64e03d4c9e45915447"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0066.jpg",
+    "expected_leaf": false,
+    "sha256": "2af1dd0d2a513b235906bf3b549275264d5ba78171b3fd3ac5a12a1a3545742c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0047.jpg",
+    "expected_leaf": false,
+    "sha256": "9ff2e35868cd231c810b6514bdec13fc9f0626cb93fe9e043eb73d3d83634c3d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0027.jpg",
+    "expected_leaf": false,
+    "sha256": "f81179c94dea2f44ebd93c50fab437776012b8c7af855ab42487a23b4c374abc"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0037.jpg",
+    "expected_leaf": false,
+    "sha256": "8a86397169288c05c77ff51865bbfe50734781010f525d220c8f882ecee5968d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0107.jpg",
+    "expected_leaf": false,
+    "sha256": "ca8bbb744d8c2914a4908c32515bdf84faa680344c9528e975d05811d0aa5877"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0092.jpg",
+    "expected_leaf": false,
+    "sha256": "dc5f64772a2e722c7cc7e01d34d2a09cc80308f105d488200830c393d1ad8c77"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0073.jpg",
+    "expected_leaf": false,
+    "sha256": "b1d7ddaef4df27950b68979501a25cb6ce2a1d67d8221fb9944b7110f663e27f"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0023.jpg",
+    "expected_leaf": false,
+    "sha256": "e133986566b32ad7eb6a23cf0f13b187e5734a1619d27d36fbc7133e573eb155"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0101.jpg",
+    "expected_leaf": false,
+    "sha256": "d733912af306563ccef126c1153d2584feee5c2034018135fc3f48c591fedd13"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0110.jpg",
+    "expected_leaf": false,
+    "sha256": "0e164244981239f54692a0a1411c6f00caef01f3aa1e47cc4aaba39e68927aa1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0014.jpg",
+    "expected_leaf": false,
+    "sha256": "75901422baf4c67845b861150cf0ce65d511695f6f7949def2c0895d6bdb4a01"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0070.jpg",
+    "expected_leaf": false,
+    "sha256": "64ea15bba19d3e2ef8f4bc7fc31c733dffcbc27a1ce143a000444d460f4a8408"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0005.jpg",
+    "expected_leaf": false,
+    "sha256": "142744007d8ec295fb7482a1a08ff48679b796f0a28066b0ab4640ed279960b0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0114.jpg",
+    "expected_leaf": false,
+    "sha256": "4f808a3322ad1341def71f654395c161cb8749cce781e8efa57794fcb912e8c6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0004.jpg",
+    "expected_leaf": false,
+    "sha256": "a3421afac384ad1a09717534340c67c22ecfc02a490c174717c00eadce037cd5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "ketch",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/ketch/image_0009.jpg",
+    "expected_leaf": false,
+    "sha256": "3bfeac34b25ea6f936c71e3e635e23c52287c224d063c2c2e73c57aafd3bc4e7"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0061.jpg",
+    "expected_leaf": false,
+    "sha256": "3db33bc8a7e70e431c35a232d09b4913f59a6942e92fd3e311a4c336d872b919"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0009.jpg",
+    "expected_leaf": false,
+    "sha256": "0ce5770741689ec6eb086743714a8bdf5cd7e92ce8cac9ef83231a5d4eb6dbe6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0047.jpg",
+    "expected_leaf": false,
+    "sha256": "6ab060c99e30a1540d3716a4ebaa964faff16eba963a630c61159f02dfc60415"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0029.jpg",
+    "expected_leaf": false,
+    "sha256": "c15a90615367a067f4c130403706ab864b42969dce770fe40862badf31729649"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0007.jpg",
+    "expected_leaf": false,
+    "sha256": "3d125bebfb28225f306263af7c5eac7bf570bd239d7a95a0cc6909ff102ff206"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0080.jpg",
+    "expected_leaf": false,
+    "sha256": "2b9bf902efda96bc94efdfe93448c0856b6cde7d7a2e6b6b92f97c9f39b7839a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0015.jpg",
+    "expected_leaf": false,
+    "sha256": "37e46f0eac58986d5390848875e81af7960751571c71a786293d5f8acc2cd77a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0001.jpg",
+    "expected_leaf": false,
+    "sha256": "ec2f63f7f71e637bc2da327340cb350770db0ef7a80b6e1edd4be0eb68cdc0c9"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0071.jpg",
+    "expected_leaf": false,
+    "sha256": "7ca10894e3c01d598f243e9c07d7219d187640da312bb96e9e56ec4abb1c605c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0025.jpg",
+    "expected_leaf": false,
+    "sha256": "00186cb27e7f04524612811338092ecbe3e8b9329f8521461cc3e236fd264338"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0013.jpg",
+    "expected_leaf": false,
+    "sha256": "8ded0a6f3307c20bb32709b61088d0399941fd23e561f129fe48ed5235035939"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0022.jpg",
+    "expected_leaf": false,
+    "sha256": "e78f304f3f8edb591db606908d0e136c6f3ecd9864f5b77cbb3a2b8dd7668d82"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0042.jpg",
+    "expected_leaf": false,
+    "sha256": "220cfc016fe853c256ac4f87092a94b7c0c4869c4049821f1583e32475370488"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0020.jpg",
+    "expected_leaf": false,
+    "sha256": "30b80cbab0dcd7a1c71e8f6ff6c3ee297b19c3c6dfd4c592d83bb69a7649b4c7"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0031.jpg",
+    "expected_leaf": false,
+    "sha256": "54cd4263ac5d7da3a6f85d071b23a4859f62a5b0908dcc9a2df4c7e730c84b61"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0046.jpg",
+    "expected_leaf": false,
+    "sha256": "8228c4a175f69060c478c7cb8501ab5a2b07fb68bc59a6a3a80551a7b7ab81ca"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0083.jpg",
+    "expected_leaf": false,
+    "sha256": "3be292f296872dfc0f2118573c26c5dbd4e6fb8467f53f9980bead7e7c0ef59e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0052.jpg",
+    "expected_leaf": false,
+    "sha256": "e6bf1be09e8cdd8e56fb1fc44d1f0c14297c140abc918659c7a0f48b1c31e63a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0030.jpg",
+    "expected_leaf": false,
+    "sha256": "d6b019ae7067241b3a913165166000881108c9c227a8c0f88499bb0e0f28fb9b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0081.jpg",
+    "expected_leaf": false,
+    "sha256": "2c669ce5138957e3a7b390c5fad5148b6830491b8a27222ba399b5be5ff534f6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0054.jpg",
+    "expected_leaf": false,
+    "sha256": "af7b5f0329fcdf2578432cee05ccebd1418f3f047cc8a5614f79e5b0af92d717"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0064.jpg",
+    "expected_leaf": false,
+    "sha256": "513a9fefaef970a763bedd04023d47d47c350f9ee8eed6bb726c34376be74d6a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0063.jpg",
+    "expected_leaf": false,
+    "sha256": "aa4fa973b7b84c0dfa6d6927256eaa57bb4424923cf52911042afa3ced6bbf71"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0038.jpg",
+    "expected_leaf": false,
+    "sha256": "329017b32692ceaf69691bdaf67c7a8de7b278e7255e103ce4b912d84629547d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0053.jpg",
+    "expected_leaf": false,
+    "sha256": "f8ed8e37bf10a64fb055d380bbd4095d26deb223b5c6d198010e2eb56d314175"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0050.jpg",
+    "expected_leaf": false,
+    "sha256": "b40b14dc89e53a63af51ea28486c3895555aa4ab51c81cdaaf45e36684b5b119"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0067.jpg",
+    "expected_leaf": false,
+    "sha256": "4c0a7ea702b6716b64316335ef52568c74a80d402cb6400b14358e57bc3235c4"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0072.jpg",
+    "expected_leaf": false,
+    "sha256": "0f9b56ce4d0ba9e9fca821b8ee45ab9c4359cde876486680964b61844a18bfda"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0078.jpg",
+    "expected_leaf": false,
+    "sha256": "3e58dc5d239a11f365d4c11784cf6b1312c7b9a770ea8ca4184007088245bd30"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "scorpion",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/scorpion/image_0032.jpg",
+    "expected_leaf": false,
+    "sha256": "d6a03319a030fbf83ee663aeb6208e5c75d2635862ac4b38f52eeaf20579a868"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0020.jpg",
+    "expected_leaf": false,
+    "sha256": "57f2555d05b4cf5750a0e116032f02a1403defd4e5422a3a9c2aeb5e76f0b384"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0045.jpg",
+    "expected_leaf": false,
+    "sha256": "55b26e3ebc5bdcd938e54e3a5ff1d4d13328582c26549c3cd90064373390f28b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0029.jpg",
+    "expected_leaf": false,
+    "sha256": "d42722ce6136a374c13f582f1acd6095338e6dbefde527df3843e8b3b506152a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0040.jpg",
+    "expected_leaf": false,
+    "sha256": "7b24388c56f7391300c68c13007a20ac6ac55e25d9feeee916a85a2116755b86"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0035.jpg",
+    "expected_leaf": false,
+    "sha256": "403398ca8e0a06e338ea805cb803acd526ba8e3d2f38df5a724080a642945e5e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0042.jpg",
+    "expected_leaf": false,
+    "sha256": "e470c46420965906cefe7ad41db53f87c41268bbc373fd73835394ef5bd7b8dc"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0012.jpg",
+    "expected_leaf": false,
+    "sha256": "e61e6318d48b747baad38727d077edaaaf4692da0de4aa146e2947b581a8fd94"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0058.jpg",
+    "expected_leaf": false,
+    "sha256": "069f52a92d64b6c96062b7995c95cfbae334a7b5528addbc3d06309e8ada7d45"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0030.jpg",
+    "expected_leaf": false,
+    "sha256": "6509b718eb62399f68bcf7605127505401881c34085d2cf0d5e110f47345bf13"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0025.jpg",
+    "expected_leaf": false,
+    "sha256": "08bd324c7eac55fd1022d53a8d2c9a1cfca0ef54f6d6c76065d1861d2413fd86"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0028.jpg",
+    "expected_leaf": false,
+    "sha256": "3f59e3455fdaf5b445c657575bf96be5764dd3172a1189fbf7309f6e395c5a30"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0021.jpg",
+    "expected_leaf": false,
+    "sha256": "f831dd513f8654785c75e97c49a570184b4259ef21430c1a89b7da3203822737"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0023.jpg",
+    "expected_leaf": false,
+    "sha256": "c111ef31012c48fa18a2b528743980a57ba167dccfdc423a8907d97abf8f66f1"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0048.jpg",
+    "expected_leaf": false,
+    "sha256": "ec1ec81669c6f3bf4628cee6e03481646db6a247b2229332b9d044d2adf82b77"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0014.jpg",
+    "expected_leaf": false,
+    "sha256": "9db8528a700927dc60361009498f5d130aeef4cec1295cf39ab359f779c23500"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0034.jpg",
+    "expected_leaf": false,
+    "sha256": "1e74e0f7e9ccfcedc466f78a10d825762dfec5527b686160dcdadd953c6aa2e5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0056.jpg",
+    "expected_leaf": false,
+    "sha256": "92641e238941a864480353b3ca45c628def91aef87d85e5a49d6f0b9fb08a7bd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0063.jpg",
+    "expected_leaf": false,
+    "sha256": "3f206698d47c6246e5470ea1b472a890009691c883699a268be8e47e7fa136f8"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0047.jpg",
+    "expected_leaf": false,
+    "sha256": "d1261fc13f69279343d206188d34bfeb282de88bd9db2a93412fc684d17f116a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0016.jpg",
+    "expected_leaf": false,
+    "sha256": "44b1dfec8189d385f48619bed099bdd5125b711f3c30d2b55e9cfe7bf6042c7b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0005.jpg",
+    "expected_leaf": false,
+    "sha256": "829c51737be439dab88e64d99b2e363f9d9b956970494266156d584b6791c920"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0036.jpg",
+    "expected_leaf": false,
+    "sha256": "cffeb11840a32583b52158e8ffe862ca66355d6cb06b49b78a87bf741e2b0089"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0002.jpg",
+    "expected_leaf": false,
+    "sha256": "68e40b7b234eae3714a1cc964606d8edd5752ef72140c913d8cfdc47ab02147c"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0011.jpg",
+    "expected_leaf": false,
+    "sha256": "b200c789dcdde9c2ca4bcaf141d6d95cb992351479554cfc55d027c275b90f2b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0031.jpg",
+    "expected_leaf": false,
+    "sha256": "3ddf94b9239d79e5d99b48aae5260f5049e5e5cfc8b87f782c0b0d7e667f891b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0022.jpg",
+    "expected_leaf": false,
+    "sha256": "7a854b07c40f499db0d06c8e1690f3d1f9e70bfeadf690d4a8c3910bc885b2a6"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0019.jpg",
+    "expected_leaf": false,
+    "sha256": "2a1352402110aad47c7afa258a5c68a1b50c62adcb7936afbb57e98c307a0666"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0044.jpg",
+    "expected_leaf": false,
+    "sha256": "f599064673b510961249f28ec6a0566a8b5309b9b79d7a8cb1bd09e854f5977d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0052.jpg",
+    "expected_leaf": false,
+    "sha256": "220dda965cfa2a22c20b93bd8165b4331bf20d63011d6c3ec98e78a97ca44531"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "stop_sign",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/stop_sign/image_0024.jpg",
+    "expected_leaf": false,
+    "sha256": "ae3904eb9784d46df746939b311f631c7a1fc4213cb1872340e365a4a5f65a9a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0085.jpg",
+    "expected_leaf": false,
+    "sha256": "63476b39319e90014687c6433f3ef9575ed923b494d3b95089b4110884bcf8e2"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0062.jpg",
+    "expected_leaf": false,
+    "sha256": "d499b2ac552d6c1faa0a02bd71fa9d32c89ed8f6ce564fc6d457e24a7743ef0d"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0082.jpg",
+    "expected_leaf": false,
+    "sha256": "27ec556728063f461f0f936be09d4dd1deeb4c50bae853e4f84c8668e88e8d3e"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0059.jpg",
+    "expected_leaf": false,
+    "sha256": "c588ab59e10e90dde6b5cb26a428125eac6eb1861d3eaf85ae7b3cb1f17015de"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0034.jpg",
+    "expected_leaf": false,
+    "sha256": "8247772a34607186e10339201ee62a3cc079c7b68e71a6c6c55fa117ec531421"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0001.jpg",
+    "expected_leaf": false,
+    "sha256": "cf93cee197a0a91ae6c6b0c309455f59ff579d10b373ab4fcf662432d0959c53"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0051.jpg",
+    "expected_leaf": false,
+    "sha256": "c80951e8f19bf8757c2f3ec181bf276fa5f781d30e4bf8d04bbb5f2966e41fb0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0058.jpg",
+    "expected_leaf": false,
+    "sha256": "77ea2f44000fcb9a5d29c59a08e65d89eaf5a35ddddfdba32fc12c065c78bd11"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0056.jpg",
+    "expected_leaf": false,
+    "sha256": "37545844c014a7a6fe160515aed9ca32e8804b31f3a7afeb35892613951a4934"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0031.jpg",
+    "expected_leaf": false,
+    "sha256": "9f4326df39e5595e3023cab619a52bb9cb0f67184559185c68dd38a8dc05896a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0027.jpg",
+    "expected_leaf": false,
+    "sha256": "0e626b465bc5122fd217f30df5be9aa7a810a43af004d97818d399ae3f1f1ace"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0068.jpg",
+    "expected_leaf": false,
+    "sha256": "a56fac9e99fbcba0c43a71298f8f790df4f5e4c1fd6948071892f363fbaac03a"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0016.jpg",
+    "expected_leaf": false,
+    "sha256": "c36c0b73e70df260712c442c147587e1d86b404e145265e557577a0035f32534"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0021.jpg",
+    "expected_leaf": false,
+    "sha256": "0da865a55f4bbaa57751811251363a25bb4fc53cdc4d44ab4f727f9b8fdb1320"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0055.jpg",
+    "expected_leaf": false,
+    "sha256": "6ce7e5de286213fbb54ebc69e6912006e3da1143e0c05af9600c52721ef2db36"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0084.jpg",
+    "expected_leaf": false,
+    "sha256": "e965f2e66d10f38cde45b5f0b9c120318201085cfcc482bb0ee4e905e113d0cd"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0014.jpg",
+    "expected_leaf": false,
+    "sha256": "ac8108f336efbc1452e28dac302a95399766cf558acb9866a8cf09b7abd1d2ab"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0030.jpg",
+    "expected_leaf": false,
+    "sha256": "31967a22af704fae3e86ec9e61bf56d842ec3a5df8c8a1f293d28c81f2f57748"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0008.jpg",
+    "expected_leaf": false,
+    "sha256": "7e16529f4da66dfd32e1bfc361b5b9c10ecf9e706f1e75fdeb249645549fcbfa"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0003.jpg",
+    "expected_leaf": false,
+    "sha256": "83b52c33c85c186635abaec16f35bfd096f6fe56f520ae95d54b63c9467e498b"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0013.jpg",
+    "expected_leaf": false,
+    "sha256": "e23a702c3c77cd3b13f6fbbca7071c981b495412ed75b1f2d6d3cfe0f6ed5c00"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0050.jpg",
+    "expected_leaf": false,
+    "sha256": "a30bdc75f5e4e46d07803a213ea80cf2f100b7fad494865173554b2d42670ce0"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0012.jpg",
+    "expected_leaf": false,
+    "sha256": "459321b83655ea09ecdb079cf77bdc079f3dd626ea00451bc71e0bc9197e6caf"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0029.jpg",
+    "expected_leaf": false,
+    "sha256": "e3d29d0ddf4a47dfa7214a9fa43f27f18a1c66050af668457a5f63c62f331a96"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0064.jpg",
+    "expected_leaf": false,
+    "sha256": "6e16512459d7baa562f562211d162113c0de313e2cc73c777e14794692477302"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0005.jpg",
+    "expected_leaf": false,
+    "sha256": "9cbd21290528a763de254b637b2f6e5c9b81f4ee8ce4ae87b25f7f4d27227a85"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0079.jpg",
+    "expected_leaf": false,
+    "sha256": "d7a321df56b8d72bc3e3d29404baee4ae3dd8c7e3a54c6be65936b81c70eb944"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0070.jpg",
+    "expected_leaf": false,
+    "sha256": "c8485bcc22e359dd6e10bc1d36117bc59889da7e611a2d74d404ea380ad002f5"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0048.jpg",
+    "expected_leaf": false,
+    "sha256": "a259483790725775770caad069ec23ce5c824d8bd339ea38d9dd73feed700a95"
+  },
+  {
+    "source": "caltech_non_leaf",
+    "category": "sunflower",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/caltech/sunflower/image_0074.jpg",
+    "expected_leaf": false,
+    "sha256": "75b8d8cfff4fee908c5bd20878c01058bca5da2f866d0707025ad51deddc1ee3"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/052609%20Hartman%20Crabapple%20scab%20single%20leaf.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "13cfeac779b23fa433e92498086f19b1768b84cab23bc9d25e5b33cbe7ca17db"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/1b321015-6e33-4f18-aade-888f4383fe92.jpeg.jpg",
+    "expected_leaf": true,
+    "sha256": "7af1a2678a7114632f0274947888e29794321fc9e5edc25dd78d16d42017d685"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/28-500x375.jpg",
+    "expected_leaf": true,
+    "sha256": "5fb95aeef21638c09143a6f15c39c65eb7be22e7c752730c648ed7b60c6d50d8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/816.jpg",
+    "expected_leaf": true,
+    "sha256": "ffc0df6903deff23117a8517a8365d729b073b272d3e6dfb97d414b1f736ddf5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apple%20scab%20leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "9fc6c998582e99696112bc79e2ce2f20f023641323d2642489b772f43073f3cf"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apple%20scabnew.jpg",
+    "expected_leaf": true,
+    "sha256": "6caf2ad458a695a73f9d890934f38628ad47e1fc395e5219ce0ee1caf57242d8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apple-scab-5366820.jpg",
+    "expected_leaf": true,
+    "sha256": "1eaebcb9926515196f0e5499ed932bffe2dd1897e8bad55da41c4100cbc4f1b2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apples_apple-scab_01_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "b47288fa0e351c4483d62ff1bd6db178e3fba89137407726e6f2890cf7a5d248"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apples_apple-scab_02_thm.jpg",
+    "expected_leaf": true,
+    "sha256": "f91a6ba2e60144bd62175891872170b57a3e1bfd642a7816b018b86db76257f7"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple Scab Leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple Scab Leaf/apples_apple-scab_10_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "0b32e3e7a5a1b37b7f9a18721cb2674260f6ac3246c690879d82345c9c576f76"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/20180511_090912-14gtw8a-e1526047952754.jpg",
+    "expected_leaf": true,
+    "sha256": "93eaedfb1c29ec24e347500fa9e1e5556ba94af539254caac79c8b471d11b8df"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/20180511_091133-24l1vhg-e1526047988236.jpg",
+    "expected_leaf": true,
+    "sha256": "646de55f7314f6994e453a8b5306fdf63e7b8f66a28b29fa9274be3b4d763883"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/20180511_091252-1gy5xf5-e1526048000596.jpg",
+    "expected_leaf": true,
+    "sha256": "aa297cdf285ef4fd70ef7561b0f80f212d169a075ab01e6ea15a39b49788d4bb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/4120978-single-green-leaf-of-apple-tree.jpg",
+    "expected_leaf": true,
+    "sha256": "86ae7cf7e63818282f1e6c217a50ddd0bc2399c677d29268c5603bc0869f8192"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/Apple-Leaf-Wallpaper-17.jpg",
+    "expected_leaf": true,
+    "sha256": "632220da09aa65fcd78c805f778511125c99639b3894170f4d9c8a94f7f32ddb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/apple-leaf-14319997.jpg",
+    "expected_leaf": true,
+    "sha256": "ee31497d152703df4f9581a32796cc272181cc0b2bd7be22d5e10ee0f40cac9d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/apple-leaf-9834637.jpg",
+    "expected_leaf": true,
+    "sha256": "56a414ce3976cfbd137ebabac52ca2faba093d9a865368d129eae5bae0ac14e8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/apple-leaf-closeup-37636177.jpg",
+    "expected_leaf": true,
+    "sha256": "8d345ef55e8b6b13407264385e8076101c8f3711b908c6c2f8eb32a16ae78864"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple leaf/apple-leaf-isolated-white-background-56631026.jpg",
+    "expected_leaf": true,
+    "sha256": "4742bf7d38d0b0d9042cb3430d6f703d9877fc1bc5703977da24d48fb001df82"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/02.-Rust-2017-207u24s.jpg",
+    "expected_leaf": true,
+    "sha256": "f1b4f0ef38724290a0f896de850871f302aa12eac89625705233f77b0bd52797"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/0605_Rust-induced_leafspot.jpg",
+    "expected_leaf": true,
+    "sha256": "9773123c2caf06b5b574c406894ed37fff53638d2b826343603504b1d69595b1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/185161-004-EAF28842.jpg",
+    "expected_leaf": true,
+    "sha256": "93337329613ae06077f080ee91254267039c1fb27e04eb090e6c81f99a90fda2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/2011-011.jpg",
+    "expected_leaf": true,
+    "sha256": "0902a4df3831c69d0580f0b746a8ea277d317e358dcd05d5304c13ac539996e7"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/20130519cedarapplerust.jpg",
+    "expected_leaf": true,
+    "sha256": "20adb414a8162e2dfd875b16ab9ba78b80713e62242d2a57497d1cbf22f621c1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/20130610_110514.jpg",
+    "expected_leaf": true,
+    "sha256": "326ddb5fd0ec65489a154a583d968dc63177c9e244f82f12a55f42c2eada807f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/20130802_111632.jpg",
+    "expected_leaf": true,
+    "sha256": "b383d0ba58fbd71926956fe38016ef2cb1de8dd1cf09534c289b6d00b9a1e6bb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/4-apple-rust2_19011_matt-bertone.jpg",
+    "expected_leaf": true,
+    "sha256": "ea6f3c7dfbba1e7089ccb48ca2421249c9b8c96405668369963c723f8a136011"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/9343310-small.jpg",
+    "expected_leaf": true,
+    "sha256": "b1572c5a942ed6485bcf2d41c2b8aaa6d6a42041fc19b0f5e9f212ff8f10210c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Apple rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Apple rust leaf/99e886623c2080c22f6519b0e708c531.jpg",
+    "expected_leaf": true,
+    "sha256": "33d5438707e6c733eef23f55d2ca20c455a847cbdaa6055e986c7601b0cd8d23"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/00.jpg",
+    "expected_leaf": true,
+    "sha256": "092fd6fa8208f5c46f10899a8c58543949ad3ee3c7621a4e760d685bfd9f610a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/000.jpg",
+    "expected_leaf": true,
+    "sha256": "428e8aa1e9ea0e344c1fc50c26734079f7d4eb0d76c5709a9b4a3cf6d1f559cb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/01.jpg",
+    "expected_leaf": true,
+    "sha256": "993f8bea1f19f3bc3334636badfe6e05d1206d7e338d2138cff7392fba6ff9d9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/Bacterial-spot-pepper2.jpg",
+    "expected_leaf": true,
+    "sha256": "f17a668a59155565f613ffc6352a4de92be0153e90ed86d48a4443c2492c5128"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/CMVpepperLeafShock-copy-50QUALITY-1ge8umw.jpg",
+    "expected_leaf": true,
+    "sha256": "cda914f54adfddcc5bce2771d0aa908e9497602645a27281c30dacaca836905e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/H5w92.jpg",
+    "expected_leaf": true,
+    "sha256": "ea4730d34e5117cea5a252f952381393ccb22938680b33ae952a39f2a4771c68"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/bacterial_leaf_spot_pepper_l.jpg",
+    "expected_leaf": true,
+    "sha256": "f92092c55bfd2a95571995f5b38bd8e784da25440b5e146b98644494f3425728"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/pepper-spot.jpg",
+    "expected_leaf": true,
+    "sha256": "a5a5f34a7c50efbbbc3f680af9f277b7a016b4e145f60b6a0eafb7de39b3bb5f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf spot/pepper_bacterial-spot_03_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "aec0b49214e20a168593766a67f93a22b310be6b36a6c518a9916e5055bece8e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/10148582-green-leaf-of-pepper.jpg",
+    "expected_leaf": true,
+    "sha256": "18d27a2f69525db1028494ad8d3a54871f431133017ebcc2fa432da18bb50205"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/4825902504_5fa80b65b8_z.jpg",
+    "expected_leaf": true,
+    "sha256": "31bf779ab58fdb35b249d94105c47a57f372302b7158f9c26bbfb2d3c1e580de"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/GREEN%20BELL%20PLANT%20YELLOW%20LEAF.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "7d0741e7826cfcb6ee50a0c78215ab42a66128b2db342e0d6d104bfcff2c370f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/IMG_1629.JPG?1507122477.jpg",
+    "expected_leaf": true,
+    "sha256": "7ae7d000d7730a008e6bf53dfc78c207859c4569c2bad0eee22675129058256b"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/RnGnC.jpg",
+    "expected_leaf": true,
+    "sha256": "13b8b10d2b5ac884239a21da79d04911ea3128094aed4ee22a52b7a85c05e893"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/e33155.jpg",
+    "expected_leaf": true,
+    "sha256": "dd6526f15640c67223a9d40b4cd34e9522732deea2b09df09dc9c2eb08099047"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/pepper_leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "a651cf2765e927ffc2c865cdd0a68876f4df8e6ba5f3a2483dcb13754a02c4b9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Bell_pepper leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Bell_pepper leaf/why-are-my-pepper-plants-yellow-yellow-pepper-plants-yellow-leaves-green-veins-pepper-plants-yellow-veins.jpg",
+    "expected_leaf": true,
+    "sha256": "bfc4393571e4be68819bd2f8835dfdb82015a9a160ce6fb186b0197da4de32ce"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/P1200665+Vaccinium+alaskaense+vs+ovalifolium+leaf+and++twig+cr.jpg",
+    "expected_leaf": true,
+    "sha256": "f16930fbfab4042fbabc2966fb8a7f9cfe00c1029b7f768e3afdf322c98f09e2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/P1200701+Vaccinium+ovalifolium+Oval-leaf+Blueberry+leaf+margin+Heather+Meadows+cr.jpg",
+    "expected_leaf": true,
+    "sha256": "59c1b790426d06c2b119456b682f898453c9dcc3aac7d77627455d6b4c6c0cf2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg",
+    "expected_leaf": true,
+    "sha256": "07b9b0a3395d6643e0033f5327c188305479c20a67b9e0081efec85139d63306"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/blueberrysilverleaf16-1372b.jpg",
+    "expected_leaf": true,
+    "sha256": "09a3f4807d7d79b399e19da63d212e271fb0ecb4be8a90d0629b62c483403d0a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/leaf-blueberry-15281271.jpg",
+    "expected_leaf": true,
+    "sha256": "c80d8c6ad4eab11f18540936ed92cc607269612ed4915780268f6bd584de3a2d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/northern-highbush-blueberry-blue-huckleberry-vaccinium-corymbosum-EHNXRR.jpg",
+    "expected_leaf": true,
+    "sha256": "9825a869d66d0aa4fa812dac3233a95372c0c37d963b894eb7a7baa83cb9bf0c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/stock-photo-blueberry-leaf-closeup-isolated-on-white-306486470.jpg",
+    "expected_leaf": true,
+    "sha256": "5e31b852c76e429e3fe2981d6b383b655618a8c9d04b8c29451de26a6780e9a8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/stock-photo-green-blueberry-leaf-isolated-with-clipping-path-550344304.jpg",
+    "expected_leaf": true,
+    "sha256": "9f252ca961c41ade2ecc1baab912a309d173397db1acd6b8701c4268f6fb370c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/stock-photo-two-sides-of-blueberry-leaf-isolated-on-white-15582232.jpg",
+    "expected_leaf": true,
+    "sha256": "5012fc4eac7e81d6030083fad12253182bc00365c46a4ea72d682ed31b7bc35c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/vaccinium-angustifolium-low-bush-blueberry_0830_124221.jpg",
+    "expected_leaf": true,
+    "sha256": "a230f0f7f35b6f2c1473259c429f68537a9332545bac2a59c5940620cae3ff4c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Blueberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Blueberry leaf/vaccinium_angustifolium_leaf2.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "ce7c810c3188f547ec5f77ff917fff685adb9d61fa46e3d4e31124cccc555cb8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/d7b79dbc0bca0eb3e63fbe5dfb256ccd53d90a4eb1413_1260x1260.jpg",
+    "expected_leaf": true,
+    "sha256": "c8558de1281f269c91d394fbaf4fd06fb2c0a04dd3125cad4d5fcec2be3a5891"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/e52bbb9a08ede2948ba0c006f02fe7b053ad7831d1df6_1260x1260.jpg",
+    "expected_leaf": true,
+    "sha256": "58b9ab22b87542a82c76f4ccdc24c7a2a7979a26b59d2a1ed051edfd036760b6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/ed12ff77ce021883de241830dee55e2e53d2c93231699_1260x1260.jpg",
+    "expected_leaf": true,
+    "sha256": "0a26a3e226bdd6d34416e19bbc4e168a034f201ce5effa5fb46e6896ad877334"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/fc729af279e9087d00bd32d89a1552a756a3ad9de7f2b_1260x1260.jpg",
+    "expected_leaf": true,
+    "sha256": "acda7a4b63745a43b2da5195eb7d16f36f5933f6b23bd7ebe60cb285176d1bf7"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/five-cherry-tree-green-leaves-white-isolated-background-34493587.jpg",
+    "expected_leaf": true,
+    "sha256": "5a5df8b7b4a21e5edae671379674afa0e3b958466893f7d9cabacb085670f336"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/prunsero_leaf1.jpg",
+    "expected_leaf": true,
+    "sha256": "edcfea2e7632ee23e48a545f941b4ff6b2bcc26995f953501e3d5079ba1ee768"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/prunsero_leaf2.jpg",
+    "expected_leaf": true,
+    "sha256": "b24b1b75df677567d96f6fa00ff0530afe4512cd647efa860ac7e625da706d5a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/prunus-virginiana-le-gmittelhauser.jpg",
+    "expected_leaf": true,
+    "sha256": "2fd622275560e03ed0880b393d9f888c9776184ce842e530fc51aea2b1525a0c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/red-cherry-tree-leaf-isolated-crisp-white-background-35742030.jpg",
+    "expected_leaf": true,
+    "sha256": "281c7ac4550ab84d66c8bb2caedddf25bfe6ece1e743cf02027dcaaaa006b3d5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Cherry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Cherry leaf/three-vibrant-leaves-bird-cherry-tree-13905898.jpg",
+    "expected_leaf": true,
+    "sha256": "f0dacd9900802e97ca97d7931308959993c3a09d3cecbaa8de051af5a1dfb3d1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn Gray leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn Gray leaf spot/IMG_42231.jpg",
+    "expected_leaf": true,
+    "sha256": "ee3838e2249e671b7b4510b0d3831f30882e2bcbf20c9c8c42ee8f4e1b95fcce"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn Gray leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn Gray leaf spot/rsz0803Figure6.jpg",
+    "expected_leaf": true,
+    "sha256": "723b0d272e745f3d81f205fc60dcfc989cb7698e3d48087aa63f904001ff9101"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn Gray leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn Gray leaf spot/show_picture.asp?id=aaaaaaaaaaogcqq&w2=420&h2=378&clip=center,420,378&meta=0.jpg",
+    "expected_leaf": true,
+    "sha256": "09be2f9958acdcd1cc32b43cb3f9b6196815f6ee9103077861a10f78f2a5978c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn Gray leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn Gray leaf spot/strom5.jpg",
+    "expected_leaf": true,
+    "sha256": "d335de0aeb36d5127592a6c5b33cc02e5e9e9bff688500e71cd338736329cf1c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/02c.jpg",
+    "expected_leaf": true,
+    "sha256": "0a7d472d5da53b9436775feb479598e0c8067eae96dfd06c7ebdaecee79af473"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/0796.20graylssymt.jpg",
+    "expected_leaf": true,
+    "sha256": "3b616d93a4aa72ad932f05dd2ff1a0392139ce355a1b9d24f0e78cf71405a62c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/07c.jpg",
+    "expected_leaf": true,
+    "sha256": "4713b10521040b12bd472f7d83aca182cb240f99d6a214ec2c904cca3316e30a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/0c.jpg",
+    "expected_leaf": true,
+    "sha256": "9b17c3e4a9dacb6144f7c6ae7e69366b5966f8bdc49bd5ac175450a9c2f60dcf"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/1321189.jpg",
+    "expected_leaf": true,
+    "sha256": "0269c07a3081df41e9e8e5a7ee3c18394bb81fd8b0c6bff78b610d993b72a14d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/160314_web.jpg",
+    "expected_leaf": true,
+    "sha256": "23fb26f404234f8f4a24641c038cac24dade2a9fa70c5da27c6aa2328a8270cd"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/2013Corn_GrayLeafSpot_0815_0003.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "366cac0649df317e9cdfbc64ec11c8b3da8e15aa7db164a9bf84db5c6236dfa3"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/2015070295153021.jpg",
+    "expected_leaf": true,
+    "sha256": "6e777d1b6829140e66573f918c0f1681ca4cd2979859c37435c84977153ec223"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/Common%20Diseases%20Figure%201.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "248c90ff324974883bc2a6547f5946f1fb26349186618d6f961e5cd1979e4abf"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/Corn-SCLB-2017-1.jpg",
+    "expected_leaf": true,
+    "sha256": "deef0c607d0a5decdae484b0d1d92633ba4fe0ab15595d33e36222f62313f58e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/corn-disease-update-fig-3-gray-leaf-spot.jpg",
+    "expected_leaf": true,
+    "sha256": "440c5caae1739af7a4e8530fd16cf3a5d450a376ce315fbe0ccab2e326139606"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn leaf blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn leaf blight/corn-gray-leaf-spot-f4.jpg",
+    "expected_leaf": true,
+    "sha256": "9120578a76fd8539da220def6e0609ebb2435decc7a9c34b949e46e86e794c8d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/0796.39maizerust.jpg",
+    "expected_leaf": true,
+    "sha256": "74f5150ebe2ad2efc2288e5d8764852c8616ae96b9cd0486b72e48c08fb3dc55"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/0796.40comrust.jpg",
+    "expected_leaf": true,
+    "sha256": "d81099827be9eea9fd64d18771a60680255ea1fa9a2d2dd9247d55c97df59556"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/0796.47southrust.jpg",
+    "expected_leaf": true,
+    "sha256": "9d3bbdb56a902458d4bb09c2b16a117173048eb2f9dac5a25adaf5b87a32782e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/0796.52srusttelia.jpg",
+    "expected_leaf": true,
+    "sha256": "d551e7c75cb72e01ddb13abdc7cc996e7727c54bb21556a552b82bebcd81f825"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/12-19striprustJIM.jpg",
+    "expected_leaf": true,
+    "sha256": "3072867b4b451739759fa7b4e26de9018e72e9f85ea5069b8bd2179dc20a4694"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/1355.50commonrust.jpg",
+    "expected_leaf": true,
+    "sha256": "376de5dfd4c5f0385e483a9a9e8b64d58c271787b9c0f72da2713cfb08ab702d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/2256-body-1501555581-1.jpg",
+    "expected_leaf": true,
+    "sha256": "851941010e7f34ff324b3891139d55c9615272153e26a570732b81cd5f8b4930"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/393.jpg",
+    "expected_leaf": true,
+    "sha256": "35371942d3914e29adc6ce0247d6e9aff2c04820d58f2168ea42c515a33e32a6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/5496239405_d95bdb97d1_z.jpg",
+    "expected_leaf": true,
+    "sha256": "1236a199431c6c7b4798310cfb847faa4c4b9047b62149de91674989b1ed76b9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Corn rust leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Corn rust leaf/80104747.jpg",
+    "expected_leaf": true,
+    "sha256": "10e15f1c88ceda5b126d25f64ca4ec09229e2359b58ed8b0d39381df3dffd883"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/00pe.jpg",
+    "expected_leaf": true,
+    "sha256": "efe7103184ba7b526b7958d11ece9922d3a7110b20603860b3225e1dbeb4db82"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/7190f27ead55c0f6e3ff8b982972810a5446a9713a49d_1260x1260.jpg",
+    "expected_leaf": true,
+    "sha256": "2b42bfdb7b7422f0229cf8049232f8f38acf1e3df5070ef79b343ed1515c5ed1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/depositphotos_3786198-Peach-leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "512ff2f4d94b3d8047719b056442ff695406ddc3d09509949812c599cf988101"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/peach-leaf-10223898.jpg",
+    "expected_leaf": true,
+    "sha256": "160f181cf8b1db9892696a724d3bbfc3f271f7eae0cbd6a76e7c165f54c341ef"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/peach-leaf-16690421.jpg",
+    "expected_leaf": true,
+    "sha256": "d50fe7bece6375221f16b2d8f1547416d4384f6bbaf57580ef16fe81daf7f65e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/peach-leaf-isolated-white-background-42295220.jpg",
+    "expected_leaf": true,
+    "sha256": "c33f72012a661f5aea0244a0312f66485d90a7dd819bd27f4656852c8b215975"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/rose_tree_220430.jpg",
+    "expected_leaf": true,
+    "sha256": "cec29697c55ee511861de7246d98948525e0b25876d2cbf0b36fe15d45c9664b"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/stock-photo-peach-leaf-isolated-on-white-background-281097503.jpg",
+    "expected_leaf": true,
+    "sha256": "9e6ed3aeaadb6670be4740a4bf977c5e6166f24ffa03953988b51985322f2ebb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Peach leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Peach leaf/stock-photo-peach-tree-leaf-isolated-over-white-background-back-side-64472731.jpg",
+    "expected_leaf": true,
+    "sha256": "3b0dab3c5cdff9da949bbe6fa10f6e4e7422a1c9715ff5451a89427f1abf5224"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/3023.jpg",
+    "expected_leaf": true,
+    "sha256": "4e8b82493c841d55dc0c3d43ae6dde79e03beaaf5cb1f425acaa44cffd8f1c99"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/backus-056-potato-blight.jpg",
+    "expected_leaf": true,
+    "sha256": "64c0f7b5701e815769bad881c0834ffb3b58018233fc3af42c3a1b7968f86973"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/early-blight-alternaria-alternata-leaf-spotting-on-potato-leaf-X91XJE.jpg",
+    "expected_leaf": true,
+    "sha256": "53410fa233b049b9d1ccf632a0295969427b799a1b807a16b324166e0b73131a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-AXK6AY.jpg",
+    "expected_leaf": true,
+    "sha256": "c256a583dacb5c2747393b2820b4e5fb5aec08c54f930ad76ef3422d2153f48e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/earlyblightpotato.jpg",
+    "expected_leaf": true,
+    "sha256": "c339100d52667a90c43b2f7f36d969e5894849f621b1bbc4a5ba5cf6817b8cbe"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/potato-blight-phytophthora-infestans-close-up-of-upper-surface-of-BMMRXC.jpg",
+    "expected_leaf": true,
+    "sha256": "908640f63872eb893ca69db7ddd5297a1f7e5489f2fd9dcd5e3192efefe0f28c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/potato-early-blight-alternaria-alternata-lesion-on-a-potato-leaf-a1w1em.jpg",
+    "expected_leaf": true,
+    "sha256": "b21f34ffc768f1aa57a1922e87c6816b9a5556a06fd89d6d4051d59fe6410db8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf early blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf early blight/potatobd001.jpg",
+    "expected_leaf": true,
+    "sha256": "01431bdbb52ca18d4dfb15f10b99d1b3370f0ac00650b0afdad8a00be24e11b3"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/1421_0.jpeg?itok=FMtmgePj.jpg",
+    "expected_leaf": true,
+    "sha256": "c53ad8d40c38debfbc0b79a87d0f3649c20b933a65f5b78a6931f59d06aad498"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/20090710-lateblight.jpg",
+    "expected_leaf": true,
+    "sha256": "2f6afbd158df153a151b3b0e543d24268b902c541520c1c4fb0ee0b34fce0cce"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/2540_600.jpg",
+    "expected_leaf": true,
+    "sha256": "64f8a9c1c9ca88b4f82e655a9c7ac2eb7f5f34ce9916d244cc9fb21c5d5e8407"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/5816740026_d42ef24413_Phytophthora-Infestans.jpg",
+    "expected_leaf": true,
+    "sha256": "a981ee59e5e1dcafd0d225f74369a05969200352c17743318c31987083ab6f4c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/B2750109-Late_blight_on_a_potato_plant-SPL.jpg",
+    "expected_leaf": true,
+    "sha256": "c1bd41ada257040720bf59326a146b777fb1d495cd76a91325e84840ebafa48c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/LateBlight04.jpg",
+    "expected_leaf": true,
+    "sha256": "ce65c731160136a6f3c4c90b8de8ce50780ada4fe63a14184afba62c78e047fa"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/irish-blight-symptoms-on-potato-leaves-atmf8b.jpg",
+    "expected_leaf": true,
+    "sha256": "9dd93b4217495fbb725cfdded86d3dc5f98955c9616fff5323be1a00df17be8b"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Potato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Potato leaf late blight/potato-late-blight.jpg",
+    "expected_leaf": true,
+    "sha256": "227457fb9c8f3169fc7fde40362d8dad348e255a0fc4462db1a8fcbae4d12233"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/Raspberry-leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "145fa84daca79846d3703b5c4992a4f24555067750e7ef2a329500f77e72dc3c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/depositphotos_1323264-Raspberry-leaf-on-white.jpg",
+    "expected_leaf": true,
+    "sha256": "1cfceb41b043427b272f96d110dda31beba1ba51d4854573cd82d268cfa3e7ef"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/depositphotos_1323551-stock-photo-raspberry-leaves.jpg",
+    "expected_leaf": true,
+    "sha256": "7b7ce0877a26f90c92e21e9821ee8f51d8a3aba15282e7f8f3f0ab676593f023"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/depositphotos_2795312-stock-photo-green-raspberry-leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "a8e2b6196a3ccb3f8e0bb83bb8bc3d66d3c7fb3500745c12fde98912e5701c31"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/iron-deficiency-raspberry-leaf-chlorosis-isolated-32457798.jpg",
+    "expected_leaf": true,
+    "sha256": "7bec837ba4b297e24eb52da79bb1227840701f6713e7ef1403be2c847ae5b182"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/leaves-of-raspberry-stock-picture-2529053.jpg",
+    "expected_leaf": true,
+    "sha256": "bb2c865c8688a236110436a43f8c337c6ac62cfda91668e27d1fdaa8e821fd3a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Raspberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Raspberry leaf/three-raspberry-green-leaves-isolated-white-background-62022932.jpg",
+    "expected_leaf": true,
+    "sha256": "01857adfcb9d90567d2a688211ed216f057d5b230bc386ddd020665acb74d2fa"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/07feb_ma_sbr3.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "8224271e90dba7b9bad497190ce77adbb394984e90890256f12bf78a785b392f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/Soybean%20edamame%20leaf1.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "80beb9f77638e075ef045dd0235d0b5c6beb7093bb3cb065b655901035cf1a21"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/fresh-soy-leaves-isolated-on-260nw-667193923.jpg",
+    "expected_leaf": true,
+    "sha256": "75648ab5449cbf6a7551d0620e0b19e6de95c42dbf06c7e14979a0665b35a527"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/leaf-raspberry-isolated-on-a-white-stock-photography-image-10106222-1625198.jpg",
+    "expected_leaf": true,
+    "sha256": "11fb9e1e3000b8a2757c1c1c5b86f2d98383362397ebe9d865b5e32ac8b9ed0f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/resistance1c.jpg",
+    "expected_leaf": true,
+    "sha256": "cf2b890efa23dc50f8782b78bba353d4c1d9c295b2f0ff233519c8a1d5f56c75"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94266130.jpg",
+    "expected_leaf": true,
+    "sha256": "d63b89ea66ff5e235452b7f053fea1fea662137af04fdcf21a5691e2058760a2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94700095.jpg",
+    "expected_leaf": true,
+    "sha256": "16fcddded95b475317ef2713402c00bf2388d5e02f3e29aa6f775b8403e00d69"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Soyabean leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Soyabean leaf/stock-photo-soy-leaf-isolated-on-white-background-120961801.jpg",
+    "expected_leaf": true,
+    "sha256": "f011a2eec5088bbd45ba547f60f718703b562c1ceb5c2732910bc3da18375a1b"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/Powdery-Mildew-on-squash.jpg",
+    "expected_leaf": true,
+    "sha256": "0439b496676027f8849c588c6bc5422196ff322b7e8c5748a09a456c0c0f257d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/powdery-mildew-erysiphe-plantani-on-young-sycamore-leaves-b774tm.jpg",
+    "expected_leaf": true,
+    "sha256": "d67d991266f922355cb4e3f9c45ef875cac7767bd3918d3ae324dac37ea2e14b"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/powdery-mildew-on-pumpkin-leaves-close-up-2.jpg",
+    "expected_leaf": true,
+    "sha256": "3be3664ce890bc311ed008a168f435ddcfdfab5e967016aaf8f03374b0447de6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/powdery-mildew-sphaerotheca-fuliginea-infection-on-pumpkin-leaves-ajdkkx.jpg",
+    "expected_leaf": true,
+    "sha256": "8376d9a89830912317ce9aeb81cb87707fbb2d727bf0658692e293074a214dd6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/squash-leave-w-powd-mild.jpg",
+    "expected_leaf": true,
+    "sha256": "1a99306b14c3f304aa673b7f63b2a1b054f8a57a91fdea1ed3cabaf2b70a964f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Squash Powdery mildew leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Squash Powdery mildew leaf/surface.jpg",
+    "expected_leaf": true,
+    "sha256": "f10b4168449157a72bdf544c72d8e6cccf316772218e2669a496fb1bd6d0891c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaf--stock-photo-1431216.jpg",
+    "expected_leaf": true,
+    "sha256": "2b1e04fb0167cda6984a1f168ec887d6898551642686e63935cc533069c0ab9e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaf-22360816.jpg",
+    "expected_leaf": true,
+    "sha256": "cdef75f85823e13c782ab13417945edafd68f2253f13e1f35d7b86116cca3bcc"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaves-collection-white-background-36684676.jpg",
+    "expected_leaf": true,
+    "sha256": "fd8e2d007ab7d6895f447cb48ae48db10c7bab6d6c18134df241fb6f9f945f23"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaves-isolated-white-17473157.jpg",
+    "expected_leaf": true,
+    "sha256": "aea238ab644bf26dfde18e6c62abedcb90ed03af78df7f5dc0751b6fe58dfc42"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaves-isolated-white-34722259.jpg",
+    "expected_leaf": true,
+    "sha256": "71fe6863521c8342592f98ab3c43ac349dd17263efa11bc528e41010557f2244"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaves-stock-image-948674.jpg",
+    "expected_leaf": true,
+    "sha256": "55c83b9af55c51d9fe59e6a4d76a46bcc11dbf29cca5425cdd5444c2ee8073ae"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/strawberry-leaves-stock-picture-948708.jpg",
+    "expected_leaf": true,
+    "sha256": "3d4dc882286ba25f66c6adb5d8066cdbbf31a377277699c1b35efe652fee93e0"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Strawberry leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Strawberry leaf/wild-strawberry-leaf-top-view-rotated-KTBXCY.jpg",
+    "expected_leaf": true,
+    "sha256": "f9143045c9180ab7ae754421d4f5400971995ae7c92a81cabbedb8f4cbfd7366"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/039b47d574bc4bb8a14259a1cd96a741.jpg",
+    "expected_leaf": true,
+    "sha256": "7d9c5c6947554d5fc6e98df5fbc1beb6363255128bd56446960e29a73242c02e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/100983448.jpg",
+    "expected_leaf": true,
+    "sha256": "98d52f733e1e23c5f5059f3ce57c762a1e0fc26028abf8750105d0250c29f670"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/1234080-Early-Blight.jpg",
+    "expected_leaf": true,
+    "sha256": "236d96cdae7b29039c3d93147f447394c78a077fec42ce5aadbd0506a0aca0cb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/Shoemaker_7068.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "7885910ac8d584a706d6448390c24f77e4e36ada4a75ae58b354a5642d0448b4"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/bugs-and-blight-061.jpg",
+    "expected_leaf": true,
+    "sha256": "55570c32bf51ea713ee2dc293078ce3008986ad281a8cce626fbb264e0b44679"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/dscn3175.jpg",
+    "expected_leaf": true,
+    "sha256": "375244fd47978c73c1c7da2afb50df359e8b496cb20500f09ed02fa984e3ad62"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/early_blight1-150x150.jpg",
+    "expected_leaf": true,
+    "sha256": "9650bd867d436b35710a6c8e5142baf3744910eee250372efe547f23d514980a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/earlyblight21_.jpg",
+    "expected_leaf": true,
+    "sha256": "33051105a7999fd6346911a9de67485f5678af4af738076308b1edafada1bfe7"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Early blight leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Early blight leaf/tomato_early-blight_01_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "7571d72639461cc8de512dd2087c63cc1877322ae1954f7b4521756789c362c9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/0.jpg",
+    "expected_leaf": true,
+    "sha256": "c7e82b8ce320acec30c35a89e73490618e425c76d3c80d2d88a3053d39e9709e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/2STEM.jpg",
+    "expected_leaf": true,
+    "sha256": "a8844aed418d61e8db0e2ef68c9da1ede9c0e3800e0756b6fbf02e0247ad1b7c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/2septoria-tomato.jpg",
+    "expected_leaf": true,
+    "sha256": "b3404b141d9bda7cea19fa8dff6cef38da2a6e3f0a38fb6778713118578c13fc"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/55830b60a7cf2.image.jpg",
+    "expected_leaf": true,
+    "sha256": "9dbcc935858b4fcc4b4f6c895c48045735b1f577959e995f2941bf761e42390a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/6134794031202304.jpeg.jpg",
+    "expected_leaf": true,
+    "sha256": "5fc6710f54773260cd3d3f1444e1a3aa29a9b55c64065ab8eb12851bd4b9b9c5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/636227737977191231-septoria-leaf-spot-VT.jpg",
+    "expected_leaf": true,
+    "sha256": "519210b5c98e67f1ec0a0705b12ed0b28625e2e514b472c86d8d3d1ba7256365"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/6447731_orig.jpg",
+    "expected_leaf": true,
+    "sha256": "2d87a16ce8325e687e246afc29a9b6468cddc7841d113ac7d4948b0fefee6197"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/7-17-Photo3_Septoria-MARY.jpg",
+    "expected_leaf": true,
+    "sha256": "c80add2c370abf75ee50396e7dec72b686732c7474df5bbba02343ae504751c9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/RARZ4.jpg",
+    "expected_leaf": true,
+    "sha256": "2005cb2706dc299ac16e5be8b42e705da41d4aae2d6fe17f24e87466a6a856fa"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg",
+    "expected_leaf": true,
+    "sha256": "93c989d8551209bf34d4002ee9fae48ddbf6ab66fc3c27466c0473bcc7c0a2b7"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato Septoria leaf spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato Septoria leaf spot/sept4disease-019.jpg",
+    "expected_leaf": true,
+    "sha256": "3398df03c7b73de34b61da8df99de69a7f2448b800356be6809fa9edddc6abce"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/%2320+Bacterial+Spot+and+Speck.jpg",
+    "expected_leaf": true,
+    "sha256": "b609929106ab0044de24717ceb091163e7630ec3460ec18c6d9c7bf2b996121c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/07.17.18-Common_Tomato_Diseases_Canker-258x300.jpg",
+    "expected_leaf": true,
+    "sha256": "d9e9aa3d8e0e58d5875c4b9bb17b19327a5b004e91e20942d7a528a8c52f4eeb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/Bacterial_spots563.jpg",
+    "expected_leaf": true,
+    "sha256": "f8a309c930537862201f172a32c48db8558e0f3e119757ec85a5dc22d9e96e7f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/Tom_Bact3.jpg",
+    "expected_leaf": true,
+    "sha256": "abe1259ccd33542f7cd9c14ecef8a995b601272c0808b52daade7f153fdc5b66"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/Tom_Bact7.jpg",
+    "expected_leaf": true,
+    "sha256": "07d8f5a4a18746daf367d85b9254364ace2824ce5c31dfacefb0d00b89d99ac8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/Tomato%2BBacterial%2BSpot%2Bon%2BLeaves.jpg",
+    "expected_leaf": true,
+    "sha256": "98d1b4229761f914476b63c2b7c70a4bd5a23681bf9b4622b642c3dc09cac8ce"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/bact-spot-fig-1.jpg",
+    "expected_leaf": true,
+    "sha256": "04de396dcc709310361f017f4b290e8994ba258685a0725607169e2c16bb5877"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/tomato_V8.jpg",
+    "expected_leaf": true,
+    "sha256": "e23a29c94b58aac28e92f57f95eb6f53e99c874323cb2b90ebd327085721574e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf bacterial spot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf bacterial spot/tomato_bacterial-speck_01_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "18ce26ad83522efb7d2721582f0bd6f2a7d047f313e969442af25da038f6a2ec"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/110822-206-Tomato-blight.jpg",
+    "expected_leaf": true,
+    "sha256": "fd87cea75ee543ab40c76fb94cbc40e42d1c848e5f5dd7756e56f44d0367c734"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/18c.jpg",
+    "expected_leaf": true,
+    "sha256": "1a33cccc63bbb630a1c07cc04a1caa2ee0bbfb8f855529328076b3e725950afc"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/636368370164094909-late-blight-15-.jpg",
+    "expected_leaf": true,
+    "sha256": "d306bef21e5a4d9ddd57401a7b047a74a260f92096f443c786986cebf0402159"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/70.jpg",
+    "expected_leaf": true,
+    "sha256": "26eb8199defc993cacb48533b22628d8eb5cfd092b5dbc10b8d9db509aad848a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/E%29Tomato-late-blight-foliar.jpg",
+    "expected_leaf": true,
+    "sha256": "1146802ff74c97a511dedcb6bf204d3029e13734bb2d0fcc9a44bce50d2311f2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/IMG_5808.jpg",
+    "expected_leaf": true,
+    "sha256": "f77f5a7245b8a2ff0e3640693e679ac52b036ab639bbfef405d7de4ed4768536"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/LateBlt09_06.jpg",
+    "expected_leaf": true,
+    "sha256": "69526a0f4413d8f8e786650a8264e460496e41e0a794747b8358c7d4074dfee6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/dsc_8148cs.jpg",
+    "expected_leaf": true,
+    "sha256": "0024d2b0e3bd578375ffb676d5c5a20c3f6d82d335f8758a215a539ac3a27ff6"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/image.jpg",
+    "expected_leaf": true,
+    "sha256": "85f650d777a583a5a3f528fa7c356d8b673bc8c76f635cbf9dfdae773ea446a8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf late blight",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf late blight/late_blight_tomato_leaf_spore1x1200.jpg",
+    "expected_leaf": true,
+    "sha256": "3d2fdce4dd866c8db1a76996e0115dec623b25cfa90a98e8259d6fabc038b3d2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/9511.img.jpg",
+    "expected_leaf": true,
+    "sha256": "114ad00502e682078ccbed196422c3092e017a3d11078ebd439f9825a57e1fa2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/D%29AlfMov.jpg",
+    "expected_leaf": true,
+    "sha256": "1dd06a9e3bd48713bb445a8588d8c38dec7643435e5c8b0652f584ac4eff64c1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/Tomato-Mosaic-1wdr2jx-300x225.jpg",
+    "expected_leaf": true,
+    "sha256": "4e1e9dd3e151f41b1a610024c4ca401a7c052f970723faf8b137edce24102e41"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/everystockphoto-21099455-l.jpg",
+    "expected_leaf": true,
+    "sha256": "3be8d7001035234d99b56906f4b1d0d0037b22b785396889d3b9ce6eaa7d15cc"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/ill-tomato-of-tomato-mosaic-virus-DBE17N.jpg",
+    "expected_leaf": true,
+    "sha256": "fd47dc830e0dbbd0120d2a6777741dabbd9b4f6f296e31bc063b40568310250d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/page_2.jpg",
+    "expected_leaf": true,
+    "sha256": "995ada04ba135f89218ddc3f17617e59411b63ae5167c25ded94284aeda9d7e8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/tmv-tomato-34.jpg",
+    "expected_leaf": true,
+    "sha256": "d4ced16a63bfb55865541775dfa1311bc76c6714659af4443d9154297bf41ff0"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/tmv-tomato-9.jpg",
+    "expected_leaf": true,
+    "sha256": "c5d7e06ccd83c8b15a0102d343fb9bfecfb36c4cf83acfdf92c2b88c18899f5f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/toma_TMV.jpg",
+    "expected_leaf": true,
+    "sha256": "6314256efc354bde93065b70bd0044361644e866604b12ecd1cb762307405428"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf mosaic virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf mosaic virus/tomato_virus_04_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "300516de60912443a4b013d2588e35bcbab6705561e04ba421eec3a7070f2148"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/11-40580_5.jpg",
+    "expected_leaf": true,
+    "sha256": "1f62f0f3eabfd7d955f212d852f4143e8f0bb49077e9350f641696749f595d01"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/17fc47.jpg",
+    "expected_leaf": true,
+    "sha256": "e75892c6833fde9fddcf03d8d0529863c2827c91f971ac18b92d8dc2546a769d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/8226402877_9abf151b5b_b.jpg",
+    "expected_leaf": true,
+    "sha256": "3f9a9d33fdcdd8e091a878416ddf9360148a7c9b7a28293339c83402b480b1e0"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/fwa2013313115151.jpg",
+    "expected_leaf": true,
+    "sha256": "9ac4376dfcbf51d037888a2183aa8984cf60ec0227fe82dcdd7b49275df6d38a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/glyphosate.jpg",
+    "expected_leaf": true,
+    "sha256": "fa18a5b4f6d307b52db63d16e7fa0cdcda2804c4316631273df9470819dac16f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf yellow virus",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg",
+    "expected_leaf": true,
+    "sha256": "3c52144e19e95cc3d4170407eaf729d0981b934615eaa183f7f5aa29d8ef265a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/1684.jpg",
+    "expected_leaf": true,
+    "sha256": "bc0ec6abdabe070a8e98749360809fc8cca196e21661f93a038d75b45e13b18d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/2013-08-20-06.jpg",
+    "expected_leaf": true,
+    "sha256": "f462b769606f79703c44a2c595f57269924bb41ea335b94cbff099bc5c2525a2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/90e2c0.jpg",
+    "expected_leaf": true,
+    "sha256": "e990d6c955434857b52b7904fdcc48893ff0b0cebcbc839db143bc301ec7b191"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/DSCN1015.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "66e581feb1714e0cfd3e2afdc8f90dcf0394b897886233aa515b7dea1390da1a"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/IMG_1246.jpg",
+    "expected_leaf": true,
+    "sha256": "d119deb0673b049551857318a686c6ecab5c2aa2607fc349ac25424d4ce636c2"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/Tomato59.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "36d4cf67739d3d7b079eed20331535674781886f75abbf7f010999a45b00980f"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/Tomato_leaf.jpg",
+    "expected_leaf": true,
+    "sha256": "9cffe92d5f898fa2bb96e78f63ef46059b710a0f2d97054f1e534a5619778b13"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato leaf/main-qimg-d9c2a93f60568485c989670d9bbf703b.jpg",
+    "expected_leaf": true,
+    "sha256": "66d8d18b9bf9c8d83efd3a0cf09c53fbbd575795a518b57a66bc338c11c07069"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/49%20Leafmold%20Bottom.jpg",
+    "expected_leaf": true,
+    "sha256": "3c831e06fae662ff4a0351be082f516545b537c4df5fad003eeb1c623fd160d1"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/50%20Leafmold%20Top.jpg",
+    "expected_leaf": true,
+    "sha256": "038898eee33130b1e02ecee95413923d4c51b9f81bd0277c29381a479bf53f2c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/BIGSD.jpg",
+    "expected_leaf": true,
+    "sha256": "4d61613d92bdb576e294d12be4e4c8a78fd92c683eed9cdaf8f43b2eaa9bdad5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/black_leaf_mold_in_zina_tina.jpg",
+    "expected_leaf": true,
+    "sha256": "555167747a5a251e3df7053d441bedf96d9707027d572d606313bf4f71483ef5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/dscn6689.jpg",
+    "expected_leaf": true,
+    "sha256": "e64cf32592c83208ed72d4e5ccee2f3bbfe5aec8f108d3f3db9a43cce7ea95fb"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "Tomato mold leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/Tomato mold leaf/fungus-univ-of-minnesoeta.jpg",
+    "expected_leaf": true,
+    "sha256": "bfdd82a0f88aab850f5f214c7104d42d4266c11400b47285563b18693b4aa9f8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/03gb.jpg",
+    "expected_leaf": true,
+    "sha256": "e8468522aba52f73e8e919658fa833130602633a98aa3033dba6dd1595bc8718"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/35589125035_662dd5b258_b.jpg",
+    "expected_leaf": true,
+    "sha256": "d20cc643fdfbb07db3616a50de0a2280383e134fa8f06ca5522e07c0cfc25aa9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/5-29black-rot-chardRR.jpg",
+    "expected_leaf": true,
+    "sha256": "404fd83fecf8cb839ab7c76ac90e2a9e1906d2c4a62acf86568b3ef037b88f41"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/Black%20rot%20on%20foliage.jpg",
+    "expected_leaf": true,
+    "sha256": "e64969c324e6981d478bfff5c9099da715e0bdd974b2ea7a7acd62fa8ee63af0"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/Black%20rot%20on%20foliage2.jpg",
+    "expected_leaf": true,
+    "sha256": "99c0a3a63c127e376a4120007fcc81797ec8248cf95a8020510e46f602590335"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/brleaf2_zoom.jpg",
+    "expected_leaf": true,
+    "sha256": "09f5a6a0ded0e8f811d4a6c10f479c5fecb09f41b713eb729d381de12bd4ac01"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/grape_F15a.jpg",
+    "expected_leaf": true,
+    "sha256": "2309bc80cdef703d4923dee780d5d840ec67e8d83118915b2014053de3a2a6c9"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf black rot",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf black rot/piano%20gully%20spray%20seed%20damage%2006%20%289%29.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "4949d0f81b7c1ec21b55e51ccbdcce34eec213d02c58f9f9121660552be6cd7c"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/0000.jpg",
+    "expected_leaf": true,
+    "sha256": "420433aad07a69dbba27df1b1db4693058daef37698b93f0461724bb8767ba6d"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/730-grape-leaf-2560x1600-nature-wallpaper.jpg",
+    "expected_leaf": true,
+    "sha256": "468f656f6c89d8f241f07246300acb790a11f3e288e9c3750dac1b4da9405577"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/DSCN7317.JPG.jpg",
+    "expected_leaf": true,
+    "sha256": "650324392a33c2c1e1ca4a076176d6b060b86ae62fbe098756b052b5546d9240"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/P1130286.jpg",
+    "expected_leaf": true,
+    "sha256": "499dc9edb0c55b3c4344111aa83a4e49023a78cbde05e0092c86f3e0e5168366"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/depositphotos_3443387-stock-photo-the-green-grape-leaf-on.jpg",
+    "expected_leaf": true,
+    "sha256": "94af80a5965f800fc0b878eb4091d7c1af7e25d90011ee02a8d768639f0a38d4"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/depositphotos_6898486-stock-photo-grape-leaves.jpg",
+    "expected_leaf": true,
+    "sha256": "d6d169bb7c76997d2e58a2864842cd4747f2a6b98daf106bf322be4b0467eff0"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/grape-leaf-14309623.jpg",
+    "expected_leaf": true,
+    "sha256": "4ffafa5924ddbabf1b460680417ac978efb7cc54de78bbfe031fbabd2c8db221"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/grape-leaf-picture-id119212425?k=6&m=119212425&s=612x612&w=0&h=8RZBWGcvXe4tAwhhvYZVFzWyRyiN5iTxKfWBpPT1FcU=.jpg",
+    "expected_leaf": true,
+    "sha256": "533765ed2041617bd33411f448db7b567665d4439078bfbfa0701a92a9b1425e"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/grapes-leaves.jpg",
+    "expected_leaf": true,
+    "sha256": "4154590f1c69e97f554ebbbbd9b84e0e191d4c706dce1036d9f1fa5630286076"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/grapevine-leaf-7466071.jpg",
+    "expected_leaf": true,
+    "sha256": "c8c261b0a733913fcc6a120739bf46f52bbe26bfaa5a75582184ef45e3fac6b8"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/latest?cb=20100621160325.jpg",
+    "expected_leaf": true,
+    "sha256": "7013d4ba8af2ad9de143f47732b28a7315480f359b6f48f225e11a91af6599e5"
+  },
+  {
+    "source": "plantdoc_leaf",
+    "category": "grape leaf",
+    "path": "reports/audit-fixes-2026-10-22/ood-data/plantdoc/test/grape leaf/vitis-riparia-le-ahaines-b.jpg",
+    "expected_leaf": true,
+    "sha256": "bee75e5955d643b47cb6ad64d31421c685c282093f726d01ebea0744f2218292"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_BT179YYAD_401-10591-913-11103_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "617803e89d0f7942332bd08f1e62b83ffb1e55618db45c131d37975b28210898"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_JRALMMAL2_387-11679-899-12191_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "03743208d707593adedf3cccdd350447251dd9647ee5b6adb4bb4b2639925622"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_KC8JQDBQT_3077-9923-3589-10435_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "bf39669fee3b101df57e3cdb32ce8b829aa01d46f12a41f83f413b30fee2be45"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_R4UWVHYRP_399-1921-911-2433_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "e36a2f415b844422458a169edd3507d1efdeca09beea07f364437022903ad58b"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_WEZI3PT8I_6402-902-6914-1414_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "3ee689f1f48bd0575213bd1addb0929e45d7673426d3c1166d67c24fa03f22c9"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/healthy_YCG8BZ7AC_2266-5165-2778-5677_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "c25606c6faae88dd7b2594f13bc6a46751e873323909db47549fda5d28c354ea"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_2GLBAZRT1_4288-4151-4800-4663_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "32e5872bd12630b69ced46083d61f72fc2fdb1bc9285f92380360631b9f6be02"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_CGUJHNC2I_9544-1213-10056-1725_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "b91bc073b37fa9b7bdbae01d4064cf7f4ca4ce437f360f11634e3a8682ea8196"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_H3TYMI63U_2120-530-2632-1042_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "ebdddfdc4efcb68a91a318af45113540594ae4c8e4aec253325019c874cf872b"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_R8IWGRUZ3_963-651-1475-1163_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "9ef05fd84843fd9234b64f6f639aba2a1e58bf6aec63e5a40353a321c4a871bf"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_V3MHE1GKK_7152-7317-7664-7829_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "3f6a1cd9913153786694317ff1664c0b8bc5560c473ea715032a7e8d0a2fa9c9"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/moderate_stress_ZGXCP3YJW_3762-12314-4274-12826_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "01e2e1eb8b1405f3252c2cb7aa994ce26a95672b907ccf2433779e45004baf44"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_CTIYXJNCI_3143-1565-3655-2077_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "aee2e78bbd06366756012adbed521866112af0a543973ce9fb8d40c6706c655e"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_JEGPDJQLK_3958-6903-4470-7415_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "2a135d575f85584cc7ea7c2225c16ede28dd9cb1263c808a85e494688c18a057"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_LWKIMUCCV_6816-477-7328-989_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "38de59fe656dd40dbbb41e8edbc98e15ede3b409e08cdd890abacb39d4af603e"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_QM9ZI8AP6_4280-3144-4792-3656_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "1d142c9218b3842eedf17b381b99501cadb52cf2d47393823f9503d9ecd82f66"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_QMXNXNHAA_3361-4206-3873-4718_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "a1fdd4ed80a8c6a1e014b7d53364e806f9b8c99fac53fe4ab20a28ba9c28c44c"
+  },
+  {
+    "source": "canopy_scene",
+    "category": "aerial_crop_scene",
+    "path": "models/module2_samples/severe_stress_TKFR81ZLJ_349-3348-861-3860_rgb.jpg",
+    "expected_leaf": false,
+    "sha256": "16a4b2065b5be50d1676aef6d89fc93e73b27f8751dedc423e72c099ad5eda6c"
+  }
+]

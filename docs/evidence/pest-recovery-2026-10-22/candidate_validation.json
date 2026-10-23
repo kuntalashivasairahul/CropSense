@@ -1,0 +1,105 @@
+{
+  "protocol": "Existing 58 training / 12 validation windows. 2009 and extension data unused for selection.",
+  "rows": [
+    {
+      "model": "released_lstm",
+      "n": 12,
+      "macro_f1": 0.4230769230769231,
+      "medium_recall": 1.0,
+      "high_recall": 0.7142857142857143,
+      "confusion_matrix": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "model": "lstm8_dropout0",
+      "n": 12,
+      "macro_f1": 0.32996632996632996,
+      "medium_recall": 0.0,
+      "high_recall": 0.42857142857142855,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": "lstm16_dropout0.1",
+      "n": 12,
+      "macro_f1": 0.4230769230769231,
+      "medium_recall": 1.0,
+      "high_recall": 0.7142857142857143,
+      "confusion_matrix": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "model": "lstm32_dropout0.1",
+      "n": 12,
+      "macro_f1": 0.42857142857142855,
+      "medium_recall": 1.0,
+      "high_recall": 0.7142857142857143,
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          5
+        ]
+      ]
+    }
+  ],
+  "selected_before_extension_test": "lstm32_dropout0.1",
+  "candidate_sha256": "f5d57f4315b100357718e492c41c4404d6d24cacdc5ce3d27ba48299ca44f39e",
+  "promoted": false,
+  "limitations": "Only two medium validation weeks; this is candidate preparation, not proof of improved generalization."
+}

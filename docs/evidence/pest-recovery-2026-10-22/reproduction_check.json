@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "scope": "Clean disposable checkout copy: raw recovery, LSTM validation selection and regional matrices replayed without touching original evidence.",
+  "regional_matrices_identical": true,
+  "selected_model_identical": true
+}

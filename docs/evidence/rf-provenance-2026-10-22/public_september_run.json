@@ -1,0 +1,61 @@
+{
+  "public_notebook_url": "https://www.kaggle.com/code/kuntalashivasairahul/module-2",
+  "script_version_id": 351052482,
+  "download_url": "https://www.kaggle.com/kernels/scriptcontent/351052482/download",
+  "notebook_sha256": "6286785d14786b60eaa2a0d832934e2f5dec0668543f16f491b93079e0ba5a6b",
+  "recorded_execution_range": [
+    "2026-09-19T10:53:54.603496Z",
+    "2026-09-19T10:56:24.913218Z"
+  ],
+  "reported_result": {
+    "correct": 267,
+    "total": 400,
+    "accuracy": 0.6675,
+    "macro_f1_from_confusion_counts": 0.5369954080792017,
+    "confusion_matrix": [
+      [
+        7,
+        34,
+        26
+      ],
+      [
+        12,
+        106,
+        30
+      ],
+      [
+        9,
+        22,
+        154
+      ]
+    ],
+    "reported_model_bytes": 13996161
+  },
+  "local_artifact_consistency": {
+    "size_matches": true,
+    "six_feature_importances_match_reported_precision": true,
+    "reported_importances": {
+      "ndvi_p25": 0.213967,
+      "ndvi_std": 0.207863,
+      "ndvi_p75": 0.20112,
+      "ndvi_mean": 0.181838,
+      "ndvi_max": 0.170821,
+      "ndvi_min": 0.024391
+    },
+    "local_importances": {
+      "ndvi_mean": 0.1818382914126984,
+      "ndvi_std": 0.20786307435440726,
+      "ndvi_min": 0.0243908710363453,
+      "ndvi_max": 0.17082091254501608,
+      "ndvi_p25": 0.21396732592720533,
+      "ndvi_p75": 0.20111952472432776
+    },
+    "parameters_match": {
+      "n_estimators": 200,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "stored_training_sample_count": 1596
+  },
+  "limits": "Historical saved outputs recovered, not rerun here. No model SHA-256 or original sample-level split/predictions in the notebook; matching size, timing, parameters and rounded importances support association but do not prove exact run identity."
+}

@@ -14,7 +14,8 @@
     },
     "module2_rf.pkl": {
       "sha256": "2fc55e901be9f29f209f7bd30c1e33a4a793c999b3f87c8e901faaaade8eafe2",
-      "bytes": 13996161
+      "bytes": 13996161,
+      "evaluation_status": "September notebook reports 267/400 (66.75%) with matching size, parameters and printed importances; original hash/split/prediction records are missing. October rerun and grouped RF metrics belong to separate evaluations."
     }
   },
   "demo_assets": {

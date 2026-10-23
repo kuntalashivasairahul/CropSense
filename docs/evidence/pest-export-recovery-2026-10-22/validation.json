@@ -1,0 +1,75 @@
+{
+  "source_page": "https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics/output",
+  "public_output_version_id": 357329745,
+  "run_id": "20261011T112402Z",
+  "archive_sha256": "a07fe598bc1568729d730f68614ed224c293de530bf791efefb9a9a33b544133",
+  "saved_container_sha256": "b2dfd1d3085980ead55acb1130245732441396f3f5372d540460f91ad60a1d70",
+  "deployed_container_sha256": "c9dcc0972ab5cc2e94989c3e4480f3468b36255ec8923e09acfa782da13722d6",
+  "weights_payload_identical": true,
+  "configuration_equal_with_shared_object_ids_canonicalized": true,
+  "canonical_config_sha256": "aee9f148053990d63edb61331c0cce845b6c1e5984d524a8e19a7f19e49ab3a2",
+  "serialization_metadata": {
+    "saved": {
+      "keras_version": "3.13.2",
+      "date_saved": "2026-10-11@11:24:45"
+    },
+    "deployed": {
+      "keras_version": "3.13.2",
+      "date_saved": "2026-10-10@10:48:03"
+    }
+  },
+  "split_counts": {
+    "train": 58,
+    "test": 19,
+    "validation": 12
+  },
+  "all_89_windows_rebuilt_from_original_processed_data": true,
+  "saved_test_sequences_match_deployed_sequences": true,
+  "deployed_validation_and_test_probabilities_match_archive": true,
+  "prediction_checks": [
+    {
+      "file": "majority__test_predictions.csv",
+      "n": 19,
+      "correct": 7,
+      "accuracy": 0.3684210526315789,
+      "macro_f1": 0.1794871794871795
+    },
+    {
+      "file": "lstm_u16_d0.3__validation_predictions.csv",
+      "n": 12,
+      "correct": 7,
+      "accuracy": 0.5833333333333334,
+      "macro_f1": 0.4230769230769231
+    },
+    {
+      "file": "lstm_u8_d0.1__validation_predictions.csv",
+      "n": 12,
+      "correct": 4,
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.26666666666666666
+    },
+    {
+      "file": "persistence__test_predictions.csv",
+      "n": 19,
+      "correct": 8,
+      "accuracy": 0.42105263157894735,
+      "macro_f1": 0.37606837606837606
+    },
+    {
+      "file": "lstm_u16_d0.3__test_predictions.csv",
+      "n": 19,
+      "correct": 10,
+      "accuracy": 0.5263157894736842,
+      "macro_f1": 0.43274853801169594
+    },
+    {
+      "file": "logistic__test_predictions.csv",
+      "n": 19,
+      "correct": 13,
+      "accuracy": 0.6842105263157895,
+      "macro_f1": 0.6763236763236763
+    }
+  ],
+  "production_weights_changed": false,
+  "limits": "Different serialized containers are recorded explicitly. Saved-run parity is not fresh field or cross-region validation."
+}

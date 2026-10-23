@@ -1,0 +1,14 @@
+{
+  "review_stage": "After source retrieval/preflight, before any diagnostic model scoring",
+  "selection_changed": false,
+  "plantdoc": {
+    "pinned_upstream_image_files": {"train": 2342, "test": 236, "total": 2578},
+    "test_classes": 27,
+    "all_test_files_decode": true,
+    "test_files_resized_by_declared_1024_max_side_transform": 89,
+    "visual_review": "Reviewed a contact sheet containing the first lexicographic image from each of the 27 test folders. Examples include isolated leaves, multi-leaf scenes, text overlays, presentation slides and montages. This is not a manually adjudicated collection of single-leaf camera photographs.",
+    "metric_interpretation": "Positive-source flag rates use the dataset class as a proxy for leaf eligibility. They do not establish the true false-rejection rate on farmer photographs. No source-labelled example is removed after viewing.",
+    "count_boundary": "The upstream README abstract quotes 2598 data points. The pinned classification repository tree contains 2578 image blobs, while the consumed Kaggle mirror was documented as 2912 images. These are different snapshots; the exact derivation remains unresolved."
+  },
+  "scope": "No disease-label accuracy, threshold tuning, new checkpoint or model promotion is performed in this source review."
+}

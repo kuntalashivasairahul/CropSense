@@ -1,0 +1,32 @@
+{
+  "v1_output_version_id": 357023819,
+  "v1_archive_sha256": "e8b0c172cae0028d3d1633bf9db3d29107f098a34fc2b316b52834aae10cd2dc",
+  "v5_output_version_id": 357329688,
+  "v5_archive_sha256": "2f11802463d7af273de84f71d8baecefe7bf1c61080d5768a277880bbb14af44",
+  "shared_files_byte_identical": {
+    "module1_cnn_candidate.keras": true,
+    "split_manifest.csv": true,
+    "class_distribution.csv": true,
+    "excluded_train_test_duplicates.csv": true,
+    "original_checkpoint__pv_validation_predictions.csv": true,
+    "original_checkpoint__field_test_predictions.csv": true,
+    "adapted_checkpoint__field_test_predictions.csv": true,
+    "adapted_checkpoint__pv_validation_predictions.csv": true,
+    "original_checkpoint__field_validation_predictions.csv": false
+  },
+  "original_validation_probability_max_abs_difference": 1.430511474609375e-06,
+  "original_validation_sample_ids_truth_and_argmax_identical": true,
+  "maximum_recorded_validation_checkpoint": {
+    "phase": "fine_tune",
+    "epoch": "8",
+    "field_validation_macro_f1": "0.5599771253992443"
+  },
+  "training_head_epochs": 2,
+  "training_fine_tune_epochs": 8,
+  "upstream_test_exact_hash_counts": {
+    "field_test": 185,
+    "no_exact_match": 49,
+    "field_validation": 2
+  },
+  "limits": "Saved predictions and training records, not fresh image inference; absent exact matches do not prove independence."
+}

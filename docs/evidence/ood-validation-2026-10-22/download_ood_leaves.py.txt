@@ -1,0 +1,37 @@
+"""Fetch pinned public leaf fixtures through gstack browse; verify Git blob bytes."""
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+from urllib.parse import quote
+
+root = Path.cwd()
+report = root / 'reports/audit-fixes-2026-10-22'
+evidence = root / 'docs/evidence/ood-validation-2026-10-22'
+protocol = json.loads((evidence / 'protocol.json').read_text())
+commit = json.loads((evidence / 'plantdoc_commit_metadata.json').read_text())
+assert commit['sha'] == protocol['positive_source']['commit']
+manifest = json.loads((evidence / 'plantdoc_source_manifest.json').read_text())
+assert manifest['commit'] == commit['sha']
+rows = manifest['test_files']
+assert len(rows) == 236 and sum(row['size'] for row in rows) < 100_000_000
+browser = Path.home() / '.Codex/skills/gstack/browse/dist/browse'
+output = report / 'ood-data/plantdoc'
+for index, row in enumerate(sorted(rows, key=lambda row: row['path'])):
+    relative = Path(row['path'])
+    assert '..' not in relative.parts and len(relative.parts) == 3 and relative.parts[0] == 'test'
+    assert relative.suffix.lower() in {'.jpg', '.jpeg', '.png'}
+    path = output / relative
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not path.exists():
+        url = 'https://raw.githubusercontent.com/pratikkayal/PlantDoc-Dataset/' + commit['sha'] + '/' + quote(row['path'], safe='/')
+        result = subprocess.run([str(browser), 'download', url, str(path)], capture_output=True, text=True, timeout=45)
+        assert result.returncode == 0 and path.exists(), (row['path'], result.stderr[:200])
+    raw = path.read_bytes()
+    assert len(raw) == row['size'], row['path']
+    assert hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == row['sha'], row['path']
+    row['sha256'] = hashlib.sha256(raw).hexdigest()
+    if (index + 1) % 20 == 0:
+        print(f'Verified {index + 1}/{len(rows)} leaf source files', flush=True)
+assert manifest['counts'] == {'train': 2342, 'test': 236}
+print('All pinned leaf source bytes verified.', flush=True)

@@ -1,0 +1,7 @@
+{
+  "selected": "adapted_checkpoint",
+  "reload_predictions_match": true,
+  "field_accuracy_gain": 0.25,
+  "lab_accuracy_change": -0.012645794966236967,
+  "deployment": "verified existing release checkpoint; no retraining or promotion in this run"
+}

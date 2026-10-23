@@ -1,0 +1,25 @@
+{
+  "purpose": "Fixed-sample diagnostic of the existing leaf-image heuristic; not a calibrated eligibility model or new blind disease benchmark.",
+  "frozen_before_model_scoring": true,
+  "production_algorithm": "Unchanged OR rule: color coverage below 15% or no plant-related ImageNet top-5 class flags the image.",
+  "positive_source": {
+    "repository": "https://github.com/pratikkayal/PlantDoc-Dataset",
+    "commit": "5467f6012d78d1c446145d5f582da6096f852ae8",
+    "selection": "All 236 image blobs under test/ in the pinned upstream classification repository. Keep original per-class filenames and Git blob identities.",
+    "scope": "Source-labelled cropped leaf photographs, not independently agronomist relabelled; this repository snapshot differs from the Kaggle mirror used in historical model evaluation."
+  },
+  "negative_source": {
+    "record": "https://data.caltech.edu/records/mzrjq-6wc02",
+    "doi": "10.22002/D1.20086",
+    "file": "caltech-101.zip",
+    "expected_md5": "3138e1922a9193bfa496528edbbc45d0",
+    "categories": ["Faces_easy", "Leopards", "Motorbikes", "airplanes", "car_side", "grand_piano", "ketch", "scorpion", "stop_sign", "sunflower"],
+    "selection": "First 30 JPGs per category ordered by ascending SHA-256 of the category/filename string. Categories are primary-object, non-leaf cases; sunflower separately tests a plant subject outside the leaf-classification task.",
+    "scope": "300 natural object photographs; source category is a proxy for dominant non-leaf subject, not a pixel-level guarantee of no leaves. Potential ImageNet overlap is not excluded."
+  },
+  "additional_diagnostic": "All 18 bundled canopy RGB tiles, separate from Caltech counts: aerial crop scenes are outside the single-leaf disease task even though they contain plants.",
+  "processing": "Decode original bytes, record original dimensions, make an evaluation copy with PIL thumbnail(max 1024x1024), preserve aspect ratio, then use current core inference. Record resizing, decoding failures and exact decoded-image duplicates. Do not silently exclude examples based on predictions.",
+  "metrics": ["Per-source and per-class counts", "Flagged source-labelled leaf count and false-flag rate", "Accepted non-leaf count and false-accept rate", "Color-only and ImageNet-only flags", "Unflagged non-leaf cases with forced disease confidence >=0.5", "Separate aerial-scene diagnostic"],
+  "threshold_policy": "Do not tune thresholds, class keywords, checkpoint or source selection on this diagnostic. Any follow-up uses this as inspected development evidence and requires independent validation before claims.",
+  "limitations": ["No farmer-image population sampling", "Source-labelled examples and internet imagery", "Near duplicates and ImageNet pretraining overlap unverified", "No disease-label accuracy or overall OOD certification claimed", "Production weights remain unchanged"]
+}

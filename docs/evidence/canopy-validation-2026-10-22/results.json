@@ -1,0 +1,125 @@
+{
+  "protocol": "Diagnostic comparison on previously inspected grouped train/validation. No final test used, no model deployed.",
+  "features": [
+    "ndvi_mean",
+    "ndvi_std",
+    "ndvi_min",
+    "ndvi_max",
+    "ndvi_p25",
+    "ndvi_p75"
+  ],
+  "rows": [
+    {
+      "model": "rf_baseline",
+      "split": "existing_grouped_validation",
+      "n": 1584,
+      "accuracy": 0.5662878787878788,
+      "macro_f1": 0.4829407401876435,
+      "healthy_recall": 0.14150943396226415,
+      "severe_to_healthy": 24,
+      "confusion_matrix": [
+        [
+          45,
+          145,
+          128
+        ],
+        [
+          109,
+          357,
+          187
+        ],
+        [
+          24,
+          94,
+          495
+        ]
+      ],
+      "seconds": 0.6361919169994508,
+      "meets_baseline_class_guardrails": true
+    },
+    {
+      "model": "extra_trees",
+      "split": "existing_grouped_validation",
+      "n": 1584,
+      "accuracy": 0.5315656565656566,
+      "macro_f1": 0.47682475528370194,
+      "healthy_recall": 0.22641509433962265,
+      "severe_to_healthy": 49,
+      "confusion_matrix": [
+        [
+          72,
+          131,
+          115
+        ],
+        [
+          216,
+          293,
+          144
+        ],
+        [
+          49,
+          87,
+          477
+        ]
+      ],
+      "seconds": 0.42888391700034845,
+      "meets_baseline_class_guardrails": false
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "split": "existing_grouped_validation",
+      "n": 1584,
+      "accuracy": 0.5233585858585859,
+      "macro_f1": 0.48409151409454426,
+      "healthy_recall": 0.3081761006289308,
+      "severe_to_healthy": 75,
+      "confusion_matrix": [
+        [
+          98,
+          130,
+          90
+        ],
+        [
+          234,
+          274,
+          145
+        ],
+        [
+          75,
+          81,
+          457
+        ]
+      ],
+      "seconds": 1.3959148750000168,
+      "meets_baseline_class_guardrails": false
+    },
+    {
+      "model": "logistic",
+      "split": "existing_grouped_validation",
+      "n": 1584,
+      "accuracy": 0.48169191919191917,
+      "macro_f1": 0.41898344772383805,
+      "healthy_recall": 0.14150943396226415,
+      "severe_to_healthy": 60,
+      "confusion_matrix": [
+        [
+          45,
+          144,
+          129
+        ],
+        [
+          90,
+          344,
+          219
+        ],
+        [
+          60,
+          179,
+          374
+        ]
+      ],
+      "seconds": 0.02377004099980695,
+      "meets_baseline_class_guardrails": false
+    }
+  ]
+}

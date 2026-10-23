@@ -1,0 +1,115 @@
+"""Run the frozen leaf-eligibility diagnostic without fitting or threshold tuning."""
+import hashlib
+import json
+import sys
+import tarfile
+import zipfile
+from collections import Counter, defaultdict
+from pathlib import Path
+
+from PIL import Image
+
+root = Path.cwd()
+sys.path.insert(0, str(root))
+import core
+
+report = root / 'reports/audit-fixes-2026-10-22'
+evidence = root / 'docs/evidence/ood-validation-2026-10-22'
+protocol = json.loads((evidence / 'protocol.json').read_text())
+leaf_manifest = json.loads((evidence / 'plantdoc_source_manifest.json').read_text())
+assert leaf_manifest['commit'] == protocol['positive_source']['commit']
+archive = report / 'ood-data/caltech-101.zip'
+assert hashlib.md5(archive.read_bytes()).hexdigest() == protocol['negative_source']['expected_md5']
+categories = protocol['negative_source']['categories']
+choices = defaultdict(list)
+with zipfile.ZipFile(archive) as container:
+    candidates = [name for name in container.namelist() if name.endswith('101_ObjectCategories.tar.gz') and not name.startswith('__MACOSX/')]
+    assert len(candidates) == 1, candidates
+    with container.open(candidates[0]) as compressed, tarfile.open(fileobj=compressed, mode='r|gz') as images:
+        for entry in images:
+            parts = Path(entry.name).parts
+            if entry.isfile() and len(parts) == 3 and parts[1] in categories and parts[2].lower().endswith('.jpg'):
+                assert entry.size <= 10_000_000 and '..' not in parts
+                raw = images.extractfile(entry).read()
+                assert len(raw) == entry.size
+                choices[parts[1]].append((parts[1] + '/' + parts[2], raw))
+assert set(choices) == set(categories), sorted(choices)
+inputs = []
+for category in categories:
+    assert len(choices[category]) >= 30
+    selected = sorted(choices[category], key=lambda item: hashlib.sha256(item[0].encode()).hexdigest())[:30]
+    for name, raw in selected:
+        path = report / 'ood-data/caltech' / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(raw)
+        inputs.append(('caltech_non_leaf', category, path, False, hashlib.sha256(raw).hexdigest()))
+for item in leaf_manifest['test_files']:
+    path = report / 'ood-data/plantdoc' / item['path']
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256']
+    inputs.append(('plantdoc_leaf', Path(item['path']).parts[1], path, True, item['sha256']))
+canopy = sorted((root / 'models/module2_samples').glob('*_rgb.jpg'))
+assert len(canopy) == 18
+for path in canopy:
+    inputs.append(('canopy_scene', 'aerial_crop_scene', path, False, hashlib.sha256(path.read_bytes()).hexdigest()))
+assert len(inputs) == 554
+assert len({str(item[2]) for item in inputs}) == len(inputs)
+source_snapshot = [{'source': source, 'category': category, 'path': str(path.relative_to(root)),
+                    'expected_leaf': expected, 'sha256': digest} for source, category, path, expected, digest in inputs]
+(evidence / 'selected_inputs_before_scoring.json').write_text(json.dumps(source_snapshot, indent=2) + '\n')
+
+disease_model = core.load_disease_model()
+sanity_model = core.load_imagenet_model()
+rows = []
+decoded_ids = defaultdict(list)
+for index, (source, category, path, expected, digest) in enumerate(inputs):
+    row = {'source': source, 'category': category, 'path': str(path.relative_to(root)),
+           'expected_leaf': expected, 'sha256': digest}
+    try:
+        with Image.open(path) as original:
+            row['original_dimensions'] = list(original.size)
+            original.thumbnail((1024, 1024))
+            image = original.convert('RGB')
+        row['evaluation_dimensions'] = list(image.size)
+        row['resized'] = row['original_dimensions'] != row['evaluation_dimensions']
+        decoded = hashlib.sha256(str(image.size).encode() + image.tobytes()).hexdigest()
+        decoded_ids[decoded].append(row['path'])
+        result = core.predict_disease(disease_model, image, generate_cam=False, sanity_model=sanity_model)
+        row.update(status='scored', flagged=result['sanity']['is_flagged'],
+                   color_flagged=result['sanity']['color_flagged'], imagenet_flagged=result['sanity']['imagenet_flagged'],
+                   color_coverage_pct=result['sanity']['color_coverage_pct'],
+                   imagenet_top_5=result['sanity']['imagenet_top_5'],
+                   disease_class=result['raw_class'], confidence=result['confidence'],
+                   healthy_probability_mass=result['disease_score'], needs_review=result['needs_review'])
+    except (OSError, ValueError) as exc:
+        row.update(status='input_error', error=f'{type(exc).__name__}: {exc}')
+    rows.append(row)
+    if (index + 1) % 20 == 0:
+        print(f'Scored {index + 1}/{len(inputs)} declared inputs', flush=True)
+
+summaries = []
+for source in sorted({row['source'] for row in rows}):
+    group = [row for row in rows if row['source'] == source]
+    scored = [row for row in group if row['status'] == 'scored']
+    assert scored, source
+    by_category = {}
+    for category in sorted({row['category'] for row in scored}):
+        members = [row for row in scored if row['category'] == category]
+        by_category[category] = {'n': len(members), 'flagged': sum(row['flagged'] for row in members),
+                                 'accepted_confidence_ge_0_5': sum(not row['flagged'] and row['confidence'] >= .5 for row in members)}
+    flagged = sum(row['flagged'] for row in scored)
+    expected = all(row['expected_leaf'] for row in group)
+    summaries.append({'source': source, 'declared': len(group), 'scored': len(scored),
+                      'input_errors': len(group) - len(scored), 'expected_leaf': expected,
+                      'flagged': flagged, 'color_flagged': sum(row['color_flagged'] for row in scored),
+                      'imagenet_flagged': sum(row['imagenet_flagged'] for row in scored),
+                      'false_flag_rate' if expected else 'false_accept_rate': flagged / len(scored) if expected else (len(scored) - flagged) / len(scored),
+                      'accepted_confidence_ge_0_5': sum(not row['flagged'] and row['confidence'] >= .5 for row in scored),
+                      'by_category': by_category})
+result = {'protocol_sha256': hashlib.sha256((evidence / 'protocol.json').read_bytes()).hexdigest(),
+          'core_sha256': hashlib.sha256((root / 'core.py').read_bytes()).hexdigest(),
+          'summary': summaries, 'status_counts': dict(Counter(row['status'] for row in rows)),
+          'exact_decoded_duplicate_groups': [paths for paths in decoded_ids.values() if len(paths) > 1],
+          'rows': rows, 'production_algorithm_changed': False}
+assert sum(row['declared'] for row in summaries) == 554
+(evidence / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
+print(json.dumps({key: value for key, value in result.items() if key != 'rows'}, indent=2), flush=True)

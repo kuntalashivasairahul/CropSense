@@ -1,0 +1,126 @@
+"""Evaluate frozen models on all compatible paired records from predeclared regions."""
+import hashlib
+import json
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+import core
+import keras
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+
+IN = Path(__file__).parent
+OUT = ROOT / 'docs/evidence/pest-recovery-2026-10-22'
+contract = json.loads((ROOT / 'docs/evidence/module-3-candidate/model_contract.json').read_text())
+selection = json.loads((OUT / 'candidate_validation.json').read_text())
+candidate = IN / 'pest_validation_selected.keras'
+assert hashlib.sha256(candidate.read_bytes()).hexdigest() == selection['candidate_sha256']
+YEAR, WEEK = 'Observation Year', 'Standard Week'
+features = contract['feature_order']
+weather = features[:-1]
+classes = contract['class_order']
+
+
+def windows(frame):
+    x, y, ids = [], [], []
+    for year, season in frame.groupby(YEAR, sort=True):
+        season = season.sort_values(WEEK)
+        for i in range(4, len(season)):
+            part = season.iloc[i - 4:i + 1]
+            if not np.all(np.diff(part[WEEK]) == 1):
+                continue
+            values = part.iloc[:-1][features].to_numpy(dtype='float32')
+            target = float(part.iloc[-1]['target_pressure'])
+            if not np.isfinite(values).all() or not np.isfinite(target):
+                continue
+            x.append(values)
+            y.append(int(np.digitize(target, contract['thresholds'])))
+            ids.append(f'{int(year)}-W{int(part.iloc[-1][WEEK]):02d}')
+    assert len(set(ids)) == len(ids)
+    return np.asarray(x, dtype='float32'), np.asarray(y, dtype=int), ids
+
+
+train = pd.read_csv(OUT / 'processed_weekly_data.csv')
+Xtr, ytr, _ = windows(train[train[YEAR].isin([2005, 2006, 2007])])
+assert Xtr.shape == (58, 4, 9)
+linear = make_pipeline(StandardScaler(), LogisticRegression(C=.1, class_weight='balanced', max_iter=2000, random_state=42))
+linear.fit(Xtr.reshape(len(Xtr), -1), ytr)
+models = {'released_lstm': core.load_pest_model(), 'validation_selected_lstm': keras.models.load_model(candidate)}
+rows, availability, all_y, all_predictions = [], {}, [], {n: [] for n in [*models, 'logistic']}
+for site in ['Coimbatore', 'Lam', 'Ludhiana', 'Pharbhani', 'Sirsa']:
+    aphid_tables = json.loads((IN / (site + '_Aphid.json')).read_text())
+    count = sum(max(0, len(t) - 1) for t in aphid_tables)
+    availability[site] = {'aphid_source_rows': count}
+    if not count:
+        continue
+    frames = {}
+    for pest in ['Aphid', 'Jassid']:
+        context = json.loads((IN / (site + '_' + pest + '_context.json')).read_text())
+        context_text = json.dumps(context)
+        assert site in context_text and 'Cotton' in context_text and pest in context_text
+        assert 'Number/ 3 leaves' in context_text, (site, pest, 'incompatible unit')
+        tables = json.loads((IN / (site + '_' + pest + '.json')).read_text())
+        assert len(tables) == 1 and tables[0][0] == [YEAR, WEEK, 'Pest Value', *weather]
+        table = tables[0]
+        frame = pd.DataFrame(table[1:], columns=table[0]).apply(pd.to_numeric, errors='coerce')
+        assert not frame.duplicated([YEAR, WEEK]).any()
+        frame.to_csv(OUT / (site + '_' + pest + '_raw.csv'), index=False)
+        frames[pest] = frame.rename(columns={'Pest Value': pest})
+        for suffix in ['.json', '_context.json']:
+            shutil.copyfile(IN / (site + '_' + pest + suffix), OUT / (site + '_' + pest + suffix))
+    shared = frames['Jassid'].merge(frames['Aphid'], on=[YEAR, WEEK], suffixes=('_j', '_a'), validate='one_to_one')
+    matching = np.isclose(shared[[c + '_j' for c in weather]].to_numpy(), shared[[c + '_a' for c in weather]].to_numpy(), equal_nan=True)
+    compatible = matching.all(axis=1) & np.isfinite(shared[[c + '_j' for c in weather]].to_numpy()).all(axis=1)
+    availability[site]['weather_conflicting_rows'] = int((~matching).any(axis=1).sum())
+    availability[site]['compatible_weather_rows'] = int(compatible.sum())
+    availability[site]['status'] = 'Only weather-consistent weeks used; exclusions precede scoring and do not depend on model outputs.'
+    df = frames['Jassid'].merge(frames['Aphid'][[YEAR, WEEK, 'Aphid']], on=[YEAR, WEEK], validate='one_to_one')
+    df = df.merge(shared.loc[compatible, [YEAR, WEEK]], on=[YEAR, WEEK], validate='one_to_one')
+    if df.empty:
+        availability[site]['valid_windows'] = 0
+        continue
+    # Preserve calendar gaps so four-row forward fill cannot carry across missing weeks.
+    df = pd.concat([part.set_index(WEEK).reindex(range(1, 53)).assign(**{YEAR: year}).reset_index()
+                    for year, part in df.groupby(YEAR, sort=True)], ignore_index=True)
+    for pest in ['Jassid', 'Aphid']:
+        scale = contract['pest_scaling'][pest]
+        df[pest + '_norm'] = ((df[pest] - scale['min']) / (scale['max'] - scale['min'])).clip(0, 1)
+    df['target_pressure'] = df[['Jassid_norm', 'Aphid_norm']].max(axis=1, skipna=False)
+    for pest in ['Jassid', 'Aphid']:
+        df[pest + '_past'] = df.groupby(YEAR)[pest + '_norm'].ffill(limit=4)
+    df['pest_pressure'] = df[['Jassid_past', 'Aphid_past']].max(axis=1, skipna=False)
+    X, y, ids = windows(df)
+    availability[site].update(paired_table_rows=len(shared), calendar_rows_after_exclusions=len(df), valid_windows=len(y), supports=np.bincount(y, minlength=3).tolist())
+    if not len(y):
+        continue
+    all_y.extend(y.tolist())
+    for name in [*models, 'logistic']:
+        probabilities = linear.predict_proba(X.reshape(len(X), -1)) if name == 'logistic' else models[name].predict(X, verbose=0)
+        assert np.isfinite(probabilities).all() and probabilities.shape == (len(y), 3)
+        predicted = probabilities.argmax(1)
+        all_predictions[name].extend(predicted.tolist())
+        cm = confusion_matrix(y, predicted, labels=[0, 1, 2])
+        rows.append({'site': site, 'model': name, 'n': len(y), 'accuracy': accuracy_score(y, predicted),
+                     'macro_f1_all_classes': f1_score(y, predicted, labels=[0, 1, 2], average='macro', zero_division=0),
+                     'confusion_matrix': cm.tolist()})
+pooled = []
+for name, pred in all_predictions.items():
+    if not pred:
+        continue
+    cm = confusion_matrix(all_y, pred, labels=[0, 1, 2])
+    assert cm.sum() == len(all_y)
+    pooled.append({'model': name, 'n': len(all_y), 'accuracy': accuracy_score(all_y, pred),
+                   'macro_f1_all_classes': f1_score(all_y, pred, labels=[0, 1, 2], average='macro', zero_division=0),
+                   'confusion_matrix': cm.tolist()})
+report = {'scope': 'Newly inspected retrospective regional records; frozen models, no regional tuning. Not a prospective study.',
+          'availability': availability, 'per_site': rows, 'pooled': pooled, 'promoted': False,
+          'limitations': 'Training-defined Akola scaling and quantile target applied across regions. Source uses HTTP; biological risk calibration and regional label equivalence are unverified.'}
+(OUT / 'regional_evaluation.json').write_text(json.dumps(report, indent=2, allow_nan=False))
+print(json.dumps(report, indent=2))

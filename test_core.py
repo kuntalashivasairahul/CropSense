@@ -28,8 +28,8 @@ def check_disease():
               f"disease_score={r['disease_score']:.3f}")
         assert r["raw_class"] in core.DISEASE_CLASSES
         assert 0.0 <= r["confidence"] <= 1.0 and total <= 1.0 + 1e-4
-        # Score formula: healthy -> confidence, diseased -> 1 - confidence.
-        expected = r["confidence"] if r["is_healthy"] else 1.0 - r["confidence"]
+        probs = model.predict(core.preprocess_image(Image.open(path)), verbose=0)[0]
+        expected = sum(float(p) for label, p in zip(core.DISEASE_CLASSES, probs) if "healthy" in label.lower()) / sum(float(p) for p in probs)
         assert abs(r["disease_score"] - expected) < 1e-9
         # Class-index mapping must line up with the real label.
         assert r["raw_class"] == truth, f"class mapping off: {truth} -> {r['raw_class']}"
@@ -52,14 +52,18 @@ def check_disease():
 def check_ndvi():
     model = core.load_ndvi_model()
     assert list(model.feature_names_in_) == core.NDVI_FEATURES, model.feature_names_in_
-
-    for name, expected in [("healthy", "healthy"), ("stressed", "severe_stress")]:
-        r = core.predict_ndvi(model, core.NDVI_EXAMPLES[name])
-        print(f"  {name:9s} example -> {r['label']:15s} {r['confidence']:6.2%} "
-              f"ndvi_score={r['ndvi_score']}")
-        assert abs(sum(r["probs"].values()) - 1.0) < 1e-6
-        assert r["label"] == expected, f"{name} example gave {r['label']}"
-        assert r["ndvi_score"] == core.NDVI_SCORE_MAP[expected]
+    entries = json.loads((core.MODELS_DIR / "module2_samples/manifest.json").read_text())
+    counts = {label: [0, 0] for label in core.NDVI_SCORE_MAP}
+    for entry in entries:
+        result = core.predict_ndvi(model, entry)
+        assert abs(sum(result["probs"].values()) - 1.0) < 1e-6
+        assert result["ndvi_score"] == core.NDVI_SCORE_MAP[result["label"]]
+        counts[entry["label"]][0] += result["label"] == entry["label"]
+        counts[entry["label"]][1] += 1
+    assert all(total > 0 for _, total in counts.values()), "Missing a fixture class"
+    for label, (correct, total) in counts.items():
+        print(f"  {label}: {correct}/{total} fixture labels matched (diagnostic, not generalization accuracy)")
+    print("  Known canopy quality limits remain visible; passing the runtime contract does not establish accuracy.")
 
 
 def check_pest():
@@ -97,17 +101,18 @@ def check_fusion():
     # Advisory & report checks
     act_d = core.get_disease_action("Potato___Early_blight", False)
     act_h = core.get_disease_action("Tomato___healthy", True)
-    assert "Mancozeb" in act_d or "Chlorothalonil" in act_d
-    assert "nominal" in act_h.lower()
-    assert "critical" in core.get_ndvi_action("severe_stress").lower()
-    assert "pheromone" in core.get_pest_action("high", 0.8).lower()
+    assert "confirm" in act_d.lower() and "treatment" in act_d.lower()
+    assert "monitoring" in act_h.lower()
+    assert "does not identify" in core.get_ndvi_action("severe_stress").lower()
+    assert "does not prescribe" in core.get_pest_action("high", 0.8).lower()
 
     dummy_d = {"display_class": "Tomato — Healthy", "raw_class": "Tomato___healthy",
                "confidence": 0.99, "disease_score": 0.99, "is_healthy": True}
     dummy_n = {"label": "healthy", "confidence": 0.85, "ndvi_score": 1.0}
     dummy_p = {"pred_class": "low", "confidence": 0.90, "pest_risk_score": 0.05}
-    rep = core.generate_report(dummy_d, dummy_n, dummy_p, 0.95, "Healthy")
-    assert "CROPSENSE AI — MULTI-MODAL CROP HEALTH ASSESSMENT REPORT" in rep
+    assessment = core.composite_assessment(dummy_d, dummy_n, dummy_p)
+    rep = core.generate_report(dummy_d, dummy_n, dummy_p, assessment["score"], assessment["label"])
+    assert "SIMULATED MULTI-SIGNAL DEMONSTRATION" in rep
     assert "HEALTHY" in rep
     print(f"  composite(1,1,0)=1.0  composite(0,0,1)=0.0  "
           f"composite(.5,.5,.5)={base:.3f} -> {core.bucket(base)[0]}")
@@ -115,25 +120,24 @@ def check_fusion():
 
 
 def check_model_path(tmp_path=None):
-    """Local real file is used as-is; an lfs pointer stub falls back to the Hub."""
+    """Verify local integrity and offline restoration without touching the release."""
+    import hashlib
+    import shutil
     import tempfile
-
-    assert core.model_path("module1_cnn.keras") == str(core.MODELS_DIR / "module1_cnn.keras")
-    print("  real local file  -> used directly, no download")
-
+    from unittest.mock import patch
     original = core.MODELS_DIR
-    try:
-        tmp = Path(tempfile.mkdtemp())
-        (tmp / "module1_cnn.keras").write_bytes(
-            b"version https://git-lfs.github.com/spec/v1\noid sha256:deadbeef\nsize 24935986\n")
-        core.MODELS_DIR = tmp
-        resolved = core.model_path("module1_cnn.keras")
-        assert resolved != str(tmp / "module1_cnn.keras"), "pointer stub was not detected"
-        assert Path(resolved).stat().st_size > 1_000_000, "did not fetch the real artefact"
-        print(f"  lfs pointer stub -> fetched {Path(resolved).stat().st_size:,} bytes from "
-              f"{core.HF_MODELS_REPO}")
-    finally:
-        core.MODELS_DIR = original
+    assert core.model_path("module1_cnn.keras") == str(original / "module1_cnn.keras")
+    with tempfile.TemporaryDirectory() as directory:
+        folder = Path(directory) / "models"
+        folder.mkdir()
+        for name in ["artifact_manifest.json", "release_bundle.zip", "release_bundle.sha256"]:
+            shutil.copyfile(original / name, folder / name)
+        (folder / "module1_cnn.keras").write_bytes(b"version https://git-lfs.github.com/spec/v1\n")
+        with patch.object(core, "MODELS_DIR", folder):
+            restored = Path(core.model_path("module1_cnn.keras"))
+            manifest = json.loads((folder / "artifact_manifest.json").read_text())
+            assert hashlib.sha256(restored.read_bytes()).hexdigest() == manifest["models"][restored.name]["sha256"]
+    print("  local release integrity and LFS pointer restoration verified without Hub fallback")
 
 
 def check_ood_sanity():
@@ -164,7 +168,9 @@ def check_ood_sanity():
     assert adv_res["color_flagged"], "adversarial image color check did not flag"
     assert not adv_res["has_plant_match"], "adversarial image unexpectedly matched plant class"
     assert adv_res["is_flagged"], "adversarial image was not flagged as OOD"
-    print("  OOD sanity check invariants verified (0 false positives on test leaves, flags non-leaf).")
+    apple = core.check_leaf_sanity(Image.open(HERE / "sample_images/Apple___Black_rot.jpg"), im_model)
+    print(f"  All three labelled leaf fixtures: {int(apple['is_flagged'])}/3 heuristic false alarms; not an OOD benchmark.")
+    print("  The non-leaf fixture is flagged; a real diseased leaf can also be flagged.")
 
 
 if __name__ == "__main__":

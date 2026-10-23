@@ -1,0 +1,83 @@
+"""Bounded LSTM comparison; uses reconstructed training and 2008 validation only."""
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+import core
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from sklearn.metrics import confusion_matrix, f1_score
+from sklearn.utils.class_weight import compute_class_weight
+
+OUT = Path(__file__).parent
+EVIDENCE = ROOT / 'docs/evidence/pest-recovery-2026-10-22'
+protocol = json.loads((EVIDENCE / 'extension_protocol_revision_1.json').read_text())
+contract = json.loads((ROOT / 'docs/evidence/module-3-candidate/model_contract.json').read_text())
+df = pd.read_csv(EVIDENCE / 'processed_weekly_data.csv')
+
+
+def windows(years):
+    x, y = [], []
+    for _, season in df[df['Observation Year'].isin(years)].groupby('Observation Year', sort=True):
+        season = season.sort_values('Standard Week')
+        for i in range(4, len(season)):
+            segment = season.iloc[i - 4:i + 1]
+            if not np.all(np.diff(segment['Standard Week']) == 1):
+                continue
+            values = segment.iloc[:-1][contract['feature_order']].to_numpy(dtype='float32')
+            pressure = float(segment.iloc[-1]['target_pressure'])
+            if not np.isfinite(values).all() or not np.isfinite(pressure):
+                continue
+            x.append(values)
+            y.append(int(np.digitize(pressure, contract['thresholds'])))
+    return np.asarray(x), np.asarray(y)
+
+
+Xtr, ytr = windows(protocol['training_years'])
+Xv, yv = windows(protocol['validation_years'])
+assert Xtr.shape == (58, 4, 9) and Xv.shape == (12, 4, 9)
+weights = dict(enumerate(compute_class_weight('balanced', classes=np.arange(3), y=ytr)))
+models = {'released_lstm': core.load_pest_model()}
+rows = []
+for spec in protocol['candidates']:
+    name = spec['name']
+    if spec.get('train') is not False:
+        tf.keras.utils.set_random_seed(spec['seed'])
+        normalizer = tf.keras.layers.Normalization(axis=-1)
+        normalizer.adapt(Xtr.reshape(-1, 9))
+        model = tf.keras.Sequential([tf.keras.layers.Input((4, 9)), normalizer,
+                                     tf.keras.layers.LSTM(spec['units'], dropout=spec['dropout']),
+                                     tf.keras.layers.Dense(3, activation='softmax')])
+        model.compile(optimizer=tf.keras.optimizers.Adam(.001, clipnorm=1),
+                      loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+        history = model.fit(Xtr, ytr, validation_data=(Xv, yv), epochs=60, batch_size=8,
+                            shuffle=False, class_weight=weights, verbose=0,
+                            callbacks=[tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=8,
+                                                                        restore_best_weights=True)])
+        pd.DataFrame(history.history).to_csv(OUT / (name + '_history.csv'), index=False)
+        models[name] = model
+    model = models[name]
+    probabilities = model.predict(Xv, verbose=0)
+    assert np.isfinite(probabilities).all()
+    predicted = probabilities.argmax(1)
+    cm = confusion_matrix(yv, predicted, labels=[0, 1, 2])
+    rows.append({'model': name, 'n': len(yv), 'macro_f1': f1_score(yv, predicted, labels=[0, 1, 2], average='macro', zero_division=0),
+                 'medium_recall': float(cm[1, 1] / cm[1].sum()),
+                 'high_recall': float(cm[2, 2] / cm[2].sum()), 'confusion_matrix': cm.tolist()})
+baseline = rows[0]
+eligible = [r for r in rows[1:] if r['medium_recall'] >= baseline['medium_recall']
+            and r['high_recall'] >= baseline['high_recall'] and r['macro_f1'] > baseline['macro_f1']]
+chosen = max(eligible, key=lambda r: r['macro_f1'])['model'] if eligible else 'released_lstm'
+path = OUT / 'pest_validation_selected.keras'
+models[chosen].save(path)
+np.testing.assert_allclose(models[chosen].predict(Xv, verbose=0), tf.keras.models.load_model(path).predict(Xv, verbose=0), atol=1e-6)
+report = {'protocol': 'Existing 58 training / 12 validation windows. 2009 and extension data unused for selection.',
+          'rows': rows, 'selected_before_extension_test': chosen,
+          'candidate_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+          'promoted': False, 'limitations': 'Only two medium validation weeks; this is candidate preparation, not proof of improved generalization.'}
+(EVIDENCE / 'candidate_validation.json').write_text(json.dumps(report, indent=2, allow_nan=False))
+print(json.dumps(report, indent=2))

@@ -1,0 +1,24 @@
+{
+  "artifact": "module2_rf.pkl",
+  "bytes": 13996161,
+  "sha256": "2fc55e901be9f29f209f7bd30c1e33a4a793c999b3f87c8e901faaaade8eafe2",
+  "hosted_repo": "rahulkuntala/cropsense-models",
+  "first_hosted_rf_commit": "8d5a322df80ad76d0000a9ae183cc00d3f1803da",
+  "first_hosted_rf_date": "2026-09-19T16:00:13.000Z",
+  "hosted_current_commit": "4b10be42c2b8ce1c9f97588330ab5f067834ff80",
+  "first_git_addition": "f483a82a94e00eea0b9f64875475db7d9fa41773",
+  "first_git_pointer_matches": true,
+  "git_artifact_history": [
+    "f483a82a94e00eea0b9f64875475db7d9fa41773 2026-09-19T21:09:34+05:30 Add CropSense AI dashboard: 3-model fusion over disease, NDVI and pest risk"
+  ],
+  "local_exported_notebook": {
+    "path": "notebooks/originals/module-2.ipynb",
+    "sha256": "c163ad2d2a1cdf25ae2eb0531ba9baccd828e1bf2fa2f8afc0e5f5861cb3e5d7",
+    "recorded_first_execution_time": "2026-10-09T09:11:27.868562Z",
+    "recorded_last_execution_time": "2026-10-09T09:13:47.560694Z"
+  },
+  "conclusion": "Deployment bytes trace to September 19. The public September notebook reports 267/400, with size, parameters, six printed importances and training count matching deployment observations. The local October rerun is separate. Exact export hash-at-run and original split/prediction rows remain missing.",
+  "holdout_accuracy_verified": false,
+  "public_september_source_recovered": true,
+  "public_september_run_record": "public_september_run.json"
+}

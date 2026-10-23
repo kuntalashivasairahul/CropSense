@@ -46,7 +46,7 @@ grayTextColor = "#5B6760"
 grayBackgroundColor = "#F4F8FA"
 
 chartCategoricalColors = ["#C6E94A", "#2E7D32", "#E0A526", "#E4572E", "#3F6B12", "#5B6760"]
-chartSequentialColors = ["#F0F4C3", "#DCE775", "#C6E94A", "#9CCC65", "#7CB342", "#558B2F", "#33691E", "#2E7D32", "#1B5E20"]
+chartSequentialColors = ["#F0F4C3", "#DCE775", "#C6E94A", "#9CCC65", "#7CB342", "#558B2F", "#33691E", "#2E7D32", "#1F6428", "#1B5E20"]
 
 [theme.sidebar]
 backgroundColor = "rgba(255, 255, 255, 0.85)"

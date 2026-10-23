@@ -1,0 +1,74 @@
+menu
+Skip to
+content
+
+Create
+
+Home
+
+Competitions
+
+Benchmarks
+
+Arenas
+
+Game Arena
+
+Data Hub
+
+More
+
+​
+Login
+Sign Up
+Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+Learn more
+OK, Got it.
+KUNTALA SHIVA SAI RAHUL · 1mo ago · 5 views
+arrow_drop_up
+0
+Copy & Edit
+file_download
+Download
+more_vert
+module 2
+Notebook
+Input
+Output
+Logs
+Comments (0)
+history
+Version 1 of 1
+Runtime
+play_arrow
+
+12s
+
+Language
+
+Python
+
+Table of Contents
+Module 2 - NDVI Crop Stress Classification
+1. Data acquisition
+2. NDVI feature extraction
+3. Experiment A - Random Forest with balanced class weights
+4. Experiment B - SMOTE oversampling (tested, rejected)
+5. Final model
+License
+
+This Notebook has been released under the Apache 2.0 open source license.
+
+Continue exploring
+input
+Input
+1 file
+output
+Output
+0 files
+list_alt
+Logs
+11.8 second run - successful
+comment
+Comments
+0 comments

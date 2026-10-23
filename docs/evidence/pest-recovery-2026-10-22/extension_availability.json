@@ -1,0 +1,9 @@
+{
+  "queries": {
+    "Jassid_2010_2011_holdout": 0,
+    "Aphid_2010_2011_holdout": 0,
+    "Nagpur_Jassid_holdout": 52,
+    "Nagpur_Aphid_holdout": 0
+  },
+  "outcome": "No complete independent check: 2010-2011 has no observations; Nagpur has no paired Aphid observations. Do not score or promote a model on absent targets."
+}

@@ -1,0 +1,131 @@
+"""Check the saved pest run and its relation to deployment, without retraining."""
+import hashlib
+import io
+import json
+from pathlib import Path, PurePosixPath
+import stat
+import sys
+import zipfile
+
+import numpy as np
+import pandas as pd
+from sklearn.metrics import confusion_matrix, f1_score
+
+root = Path.cwd()
+sys.path.insert(0, str(root))
+import core
+
+archive = root / 'reports/kaggle-recovery-2026-10-22/module3-v3-evidence.zip'
+out = root / 'docs/evidence/pest-export-recovery-2026-10-22'
+assert not (out / 'validation.json').exists(), 'Preserve frozen evidence; rerun in a disposable copy'
+out.mkdir(exist_ok=True)
+(out / 'source').mkdir(exist_ok=True)
+
+
+def canonical_config(value):
+    identities = {}
+    def normalize(item):
+        if isinstance(item, dict):
+            return {key: identities.setdefault(item[key], len(identities)) if key == 'shared_object_id'
+                    else normalize(item[key]) for key in sorted(item)}
+        if isinstance(item, list):
+            return [normalize(child) for child in item]
+        return item
+    return normalize(value)
+
+
+with zipfile.ZipFile(archive) as package:
+    entries = package.infolist()
+    assert len(entries) < 200 and sum(entry.file_size for entry in entries) < 20_000_000
+    for entry in entries:
+        assert len(PurePosixPath(entry.filename).parts) == 1 and not PurePosixPath(entry.filename).is_absolute()
+        assert '..' not in PurePosixPath(entry.filename).parts and not stat.S_ISLNK(entry.external_attr >> 16)
+    assert package.testzip() is None
+    contract = json.loads(package.read('model_contract.json'))
+    assert contract['run_id'] == '20261011T112402Z' and contract['class_order'] == list(core.PEST_CLASSES)
+    candidate = package.read('module3_lstm_candidate.keras')
+    candidate_hash = hashlib.sha256(candidate).hexdigest()
+    assert candidate_hash == contract['sha256']
+    deployed = (root / 'models/module3_lstm.keras').read_bytes()
+    with zipfile.ZipFile(io.BytesIO(candidate)) as saved, zipfile.ZipFile(io.BytesIO(deployed)) as current:
+        assert saved.read('model.weights.h5') == current.read('model.weights.h5')
+        a = canonical_config(json.loads(saved.read('config.json')))
+        b = canonical_config(json.loads(current.read('config.json')))
+        assert a == b
+        configuration_hash = hashlib.sha256(json.dumps(a, sort_keys=True).encode()).hexdigest()
+        metadata = {'saved': json.loads(saved.read('metadata.json')), 'deployed': json.loads(current.read('metadata.json'))}
+    provenance = json.loads(package.read('data_provenance.json'))
+    for pest in ['Jassid', 'Aphid']:
+        assert hashlib.sha256(package.read(pest + '_source.html')).hexdigest() == provenance[pest]['sha256_html']
+        raw = pd.read_csv(package.open(pest + '_raw.csv'))
+        assert len(raw) == provenance[pest]['rows'] == 260
+        assert {key: int(value) for key, value in raw.isna().sum().items()} == provenance[pest]['missing']
+    split = pd.read_csv(package.open('split_manifest.csv'))
+    assert split.sample_id.is_unique and split.split.value_counts().to_dict() == {'train': 58, 'test': 19, 'validation': 12}
+    weekly = pd.read_csv(package.open('processed_weekly_data.csv'))
+    assert not weekly.duplicated(['Observation Year', 'Standard Week']).any()
+    windows = []
+    for row in split.itertuples():
+        year, week = map(int, row.sample_id.split('-W'))
+        past = weekly[(weekly['Observation Year'] == year) & weekly['Standard Week'].between(week - 4, week - 1)].sort_values('Standard Week')
+        assert past['Standard Week'].tolist() == list(range(week - 4, week))
+        values = past[contract['feature_order']].to_numpy(dtype=np.float32)
+        assert values.shape == (4, 9) and np.isfinite(values).all()
+        target = weekly[(weekly['Observation Year'] == year) & (weekly['Standard Week'] == week)].iloc[0]
+        assert pd.notna(target['Jassid']) and pd.notna(target['Aphid'])
+        assert int(np.digitize(target.target_pressure, contract['thresholds'])) == row.class_index
+        windows.append(values)
+    x = np.stack(windows)
+    samples = json.loads(package.read('sample_sequences_candidate.json'))
+    current_samples = json.loads((root / 'models/sample_sequences.json').read_text())
+    assert samples == current_samples
+    for sample in samples['samples']:
+        index = split.index[split.sample_id == sample['label']].item()
+        np.testing.assert_allclose(x[index], sample['sequence'], atol=1e-6, rtol=0)
+    native = core.load_pest_model().predict(x, verbose=0)
+    checks = []
+    for name in package.namelist():
+        if not name.endswith('_predictions.csv'):
+            continue
+        frame = pd.read_csv(package.open(name))
+        probabilities = frame[['prob_' + label for label in core.PEST_CLASSES]].to_numpy()
+        assert np.isfinite(probabilities).all() and np.all((probabilities >= 0) & (probabilities <= 1))
+        np.testing.assert_allclose(probabilities.sum(axis=1), 1, atol=1e-6, rtol=0)
+        np.testing.assert_array_equal(probabilities.argmax(axis=1), frame.pred_index)
+        part = 'validation' if '__validation_' in name else 'test'
+        expected = split[split.split == part].set_index('sample_id')
+        assert frame.sample_id.is_unique and set(frame.sample_id) == set(expected.index)
+        np.testing.assert_array_equal(frame.true_index, expected.loc[frame.sample_id, 'class_index'])
+        metrics = json.loads(package.read(name.replace('_predictions.csv', '_metrics.json')))
+        cm = confusion_matrix(frame.true_index, frame.pred_index, labels=[0, 1, 2])
+        np.testing.assert_array_equal(cm, metrics['confusion_matrix'])
+        accuracy = float(np.mean(frame.true_index == frame.pred_index))
+        macro = float(f1_score(frame.true_index, frame.pred_index, labels=[0, 1, 2], average='macro', zero_division=0))
+        assert abs(accuracy - metrics['summary']['accuracy']) < 1e-12
+        assert abs(macro - metrics['summary']['macro_f1_all_classes']) < 1e-12
+        if name.startswith('lstm_u16_d0.3__'):
+            indices = [split.index[split.sample_id == sample_id].item() for sample_id in frame.sample_id]
+            np.testing.assert_allclose(native[indices], probabilities, atol=1e-6, rtol=0)
+        checks.append({'file': name, 'n': len(frame), 'correct': int(np.trace(cm)), 'accuracy': accuracy, 'macro_f1': macro})
+    members = {}
+    for entry in entries:
+        raw = package.read(entry.filename)
+        members[entry.filename] = {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
+        if entry.filename.endswith(('.csv', '.json', '.md', '.html')):
+            filename = entry.filename + '.txt' if entry.filename.endswith('.html') else entry.filename
+            (out / 'source' / filename).write_bytes(raw)
+    (out / 'archive_members.json').write_text(json.dumps(members, indent=2) + '\n')
+result = {'source_page': 'https://www.kaggle.com/code/kuntalashivasairahul/cropsense-module-3-causal-lstm-and-metrics/output',
+          'public_output_version_id': 357329745, 'run_id': contract['run_id'],
+          'archive_sha256': hashlib.sha256(archive.read_bytes()).hexdigest(),
+          'saved_container_sha256': candidate_hash, 'deployed_container_sha256': hashlib.sha256(deployed).hexdigest(),
+          'weights_payload_identical': True, 'configuration_equal_with_shared_object_ids_canonicalized': True,
+          'canonical_config_sha256': configuration_hash, 'serialization_metadata': metadata,
+          'split_counts': {key: int(value) for key, value in split.split.value_counts().items()},
+          'all_89_windows_rebuilt_from_original_processed_data': True,
+          'saved_test_sequences_match_deployed_sequences': True,
+          'deployed_validation_and_test_probabilities_match_archive': True,
+          'prediction_checks': checks, 'production_weights_changed': False,
+          'limits': 'Different serialized containers are recorded explicitly. Saved-run parity is not fresh field or cross-region validation.'}
+(out / 'validation.json').write_text(json.dumps(result, indent=2) + '\n')
+print(json.dumps(result, indent=2), flush=True)

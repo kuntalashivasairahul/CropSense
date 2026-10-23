@@ -1,2 +1,4 @@
 *.keras filter=lfs diff=lfs merge=lfs -text
 *.pkl filter=lfs diff=lfs merge=lfs -text
+# Frozen upstream HTML evidence retains its original whitespace and line endings.
+docs/evidence/**/*.html.txt -whitespace -text

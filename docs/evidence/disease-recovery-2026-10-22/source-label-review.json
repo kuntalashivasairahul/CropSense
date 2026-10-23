@@ -1,0 +1,22 @@
+[
+  {
+    "source_path": "train/Tomato two spotted spider mites leaf/SpotSpeckBlightMite-1l4v879.jpg",
+    "upstream_commit": "5467f6012d78d1c446145d5f582da6096f852ae8",
+    "git_blob_sha1": "9e29daf9a67d238c6bf175c429a7403afddc2d27",
+    "sha256": "7a39980b4f6448958db22a28da7b409e74834a820592f7302b5547703ab61578",
+    "bytes": 113860,
+    "decoded_rgb_sha256": "f77ec56765080165d82774bca5860fbf775c61f0efd028d049590b49253a62be",
+    "visual_review": "Multi-condition comparison chart; panels labelled Bacterial Spot, Bacterial Speck, Early Blight and Mite Damage",
+    "decision": "Keep excluded pending label review; whole-image single-class mapping is not justified"
+  },
+  {
+    "source_path": "train/Tomato two spotted spider mites leaf/comparing-diseases-4-canker-tomato-1y51ejs.jpg",
+    "upstream_commit": "5467f6012d78d1c446145d5f582da6096f852ae8",
+    "git_blob_sha1": "d9f682ef5527381fcbf0f5bf06d9731e693f66ae",
+    "sha256": "2c59025109d5e9a2cfba879cfde943fa3d238a4dbaf2e44763b986d6bef5c22d",
+    "bytes": 125378,
+    "decoded_rgb_sha256": "92682578238ef4360369281973bf5f800434adb3f717f5f8c3c23d574d8167e9",
+    "visual_review": "Multi-condition comparison chart; panels labelled Bacterial Spot, Bacterial Speck, Early Blight and Mite Damage",
+    "decision": "Keep excluded pending label review; whole-image single-class mapping is not justified"
+  }
+]

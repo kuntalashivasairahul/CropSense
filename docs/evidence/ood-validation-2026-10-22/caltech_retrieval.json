@@ -1,0 +1,7 @@
+{
+  "source_metadata_url": "https://data.caltech.edu/api/records/mzrjq-6wc02/files/caltech-101.zip",
+  "archive_bytes": 137414764,
+  "md5_matches_published_metadata": true,
+  "sha256": "331234750fc7f77520e50d9565e8b6907b03565e30320da1401130db08c61f91",
+  "retrieval": "Direct gstack API-content download completed after its CLI observation timeout. Fallback range parts were not used for the verified archive."
+}
