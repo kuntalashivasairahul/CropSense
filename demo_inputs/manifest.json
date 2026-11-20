@@ -1,0 +1,66 @@
+{
+  "note": "Unmodified copies of existing demonstration fixtures; labels are source labels, not guaranteed model predictions.",
+  "files": [
+    {
+      "file": "01_leaf/Tomato___healthy.jpg",
+      "original": "sample_images/Tomato___healthy.jpg",
+      "sha256": "a294299b0518a50ebc275c0ec4519b022cab8b34735039f6c2a089a911f6964e"
+    },
+    {
+      "file": "01_leaf/Potato___Early_blight.jpg",
+      "original": "sample_images/Potato___Early_blight.jpg",
+      "sha256": "100079e00ccf046c761599235a1a73db03980fa4847b2a2fe8ea4092bca6bf5c"
+    },
+    {
+      "file": "01_leaf/Apple___Black_rot.jpg",
+      "original": "sample_images/Apple___Black_rot.jpg",
+      "sha256": "b5e88d0216fc3212facde4c2d50a60757cf325d28f50381f690c07a1cb41b444"
+    },
+    {
+      "file": "01_leaf/plantdoc_field_tomato_late_blight.jpg",
+      "original": "sample_images/plantdoc_field_tomato_late_blight.jpg",
+      "sha256": "26eb8199defc993cacb48533b22628d8eb5cfd092b5dbc10b8d9db509aad848a"
+    },
+    {
+      "file": "01_leaf/adversarial_non_leaf.jpg",
+      "original": "sample_images/adversarial_non_leaf.jpg",
+      "sha256": "b6eba2d1721ff7358a28891bb3e9780e90e8897275f7102c70c8b26be11e84fb"
+    },
+    {
+      "file": "02_canopy/healthy_label/RGB.jpg",
+      "original": "models/module2_samples/healthy_R4UWVHYRP_399-1921-911-2433_rgb.jpg",
+      "sha256": "e36a2f415b844422458a169edd3507d1efdeca09beea07f364437022903ad58b",
+      "source_label": "healthy"
+    },
+    {
+      "file": "02_canopy/healthy_label/NIR.jpg",
+      "original": "models/module2_samples/healthy_R4UWVHYRP_399-1921-911-2433_nir.jpg",
+      "sha256": "869fb95280f5ca80325048d1082b4c845c09b796c1f56c80a9cdb6982ffbb888",
+      "source_label": "healthy"
+    },
+    {
+      "file": "02_canopy/moderate/RGB.jpg",
+      "original": "models/module2_samples/moderate_stress_CGUJHNC2I_9544-1213-10056-1725_rgb.jpg",
+      "sha256": "b91bc073b37fa9b7bdbae01d4064cf7f4ca4ce437f360f11634e3a8682ea8196",
+      "source_label": "moderate_stress"
+    },
+    {
+      "file": "02_canopy/moderate/NIR.jpg",
+      "original": "models/module2_samples/moderate_stress_CGUJHNC2I_9544-1213-10056-1725_nir.jpg",
+      "sha256": "5a239dd0d34db0bcce88e1db5404d55309bc8dffbf05a06e58b0933f8c9d1ee5",
+      "source_label": "moderate_stress"
+    },
+    {
+      "file": "02_canopy/severe/RGB.jpg",
+      "original": "models/module2_samples/severe_stress_LWKIMUCCV_6816-477-7328-989_rgb.jpg",
+      "sha256": "38de59fe656dd40dbbb41e8edbc98e15ede3b409e08cdd890abacb39d4af603e",
+      "source_label": "severe_stress"
+    },
+    {
+      "file": "02_canopy/severe/NIR.jpg",
+      "original": "models/module2_samples/severe_stress_LWKIMUCCV_6816-477-7328-989_nir.jpg",
+      "sha256": "a8b9587cf1a949cd51d13e50d40f035edf859b3a3b681889ab95d6a145fe47e7",
+      "source_label": "severe_stress"
+    }
+  ]
+}

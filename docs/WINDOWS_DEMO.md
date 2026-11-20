@@ -42,6 +42,8 @@ Require **28 passing tests**, a verifier `PASS`, and `reports\environment-window
 
 ## Rehearse with Wi-Fi off
 
+For manual uploads, open the project's [demo input folder](../demo_inputs/README.md): five leaf examples and three matching RGB/NIR pairs are grouped by module. Pest uses the built-in numeric sequence selector; Composite needs no separate image. Choose **Manual / Custom inputs** before uploading.
+
 1. Disconnect Wi-Fi. Double-click `start_windows.cmd`, keep the terminal open, and open `http://localhost:8501`. A successful launch needs the setup cache under the same Windows user account.
 2. Select **Scenario 3 · Severe Combined Risk**. Visit all four sections. Expected fixture results: Potato Early Blight about **99.46%** softmax confidence, canopy severe stress **81.50%** class confidence / **0.100** assigned score, pest medium **43.80%** class confidence / **0.570** expected pressure, composite mean **0.177** / **Severe Risk**. These are reproducible fixture outputs, not benchmark accuracy.
 3. Switch the leaf view to **Grad-CAM saliency**. Explain influence rather than verified lesion localization. Load the non-leaf scenario and confirm the warning, then return to a valid leaf.

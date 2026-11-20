@@ -2,6 +2,8 @@
 
 **Final demo: 21 November 2026.** Use `deploy/streamlit-demo` for the Windows laptop and public app. Start with the [Windows checklist](docs/WINDOWS_DEMO.md) and [20 November verification](docs/FINAL_DEMO_2026-11-21.md).
 
+**Manual demo files:** [demo_inputs/](demo_inputs/README.md) collects labelled leaf examples and matching RGB/NIR pairs. Pest risk uses the built-in historical sequence selector; the folder explains each module's inputs and known prediction limits.
+
 **Team mini-project handoff:** start with the [teammate guide](docs/team/README.md). It links the code walkthrough, all nine Kaggle notebooks, setup instructions, verification record, and a [copyable Codex prompt](docs/team/CODEX_PROMPT.md) for the `team/project-handoff` branch.
 
 Final-year crop-health prototype. Three independently trained models feed an equal-weight composite score. The inputs come from unrelated datasets, so the composite is a **simulated scenario**, with no validated fusion accuracy.
