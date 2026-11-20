@@ -15,7 +15,7 @@ Target: free Streamlit Community Cloud, public access, initially 1–3 simultane
 | Secrets | None |
 | Live address | https://cropsense-ai-demo.streamlit.app/ |
 
-The public app was deployed and exercised on 23 October 2026. The older **https://cropsense-btech.streamlit.app/** still points to `main` and is preserved; it was 24 commits behind the initial prepared release. Use the new address for the audited runtime.
+The public app was deployed and exercised on 23 October 2026, then rechecked on 20 November. The older **https://cropsense-btech.streamlit.app/** historically points to `main`; its old snapshot was 24 commits behind the initial prepared release, and it showed the inactivity sleep screen on 20 November. `main` is being advanced to the current stable baseline during branch cleanup. Use the current address above for the demo; the older host has not been accepted on its updated source.
 
 The [Community Cloud deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy) describes the repository, branch, entrypoint and Python settings. The owner signs in and grants GitHub access in the browser; passwords, OAuth credentials and verification codes must not enter the repository or logs. No Kaggle credentials, GPU, paid plan or inference API key is required.
 
@@ -41,7 +41,13 @@ Use **Manage app → logs** for installation, startup and inference failures. Sa
 
 The known-good runtime is `7356f0f947ee051ac38639870e70856c24afe3b9`. To roll back, revert subsequent faulty runtime commits on `deploy/streamlit-demo` with normal commits and push them. Do not force-push or rewrite release history. Confirm the branch/commit in the build logs; if an update remains stale, use **Manage app → Reboot app** and wait for startup. Recheck model hashes and anonymous inference/report downloads after the rebuild. A reboot clears in-memory sessions and caches; users should download reports before maintenance.
 
-## Current record — 23 October 2026
+## Recheck — 20 November 2026
+
+The current hosted app ran all four sections and the severe scenario. Its actual downloaded report matched the local report byte-for-byte after removing only the generation timestamp, including source IDs, predictions, warnings, mean 0.177, Severe Risk, and all three release model hashes. Streamlit 1.64.0 matches the pin. The team handoff differs from the deployment Git source only in documentation and agent-entry files. The public status endpoint does not expose the deployed Git SHA; no owner-dashboard/build-log verification of that SHA was performed. See the [final-demo verification](FINAL_DEMO_2026-11-21.md).
+
+Retain `deploy/streamlit-demo` as both the Windows final-demo branch and configured hosting source. No application code, dependency pin, model, or launcher changes were needed. The two old remote feature/Monday branch names can be removed because their commits remain in the retained history. The older local paper branch has unique work and is retained locally. November checks did not repeat October's load/performance tests.
+
+## Historical record — 23 October 2026
 
 - Audit runtime/evidence checkpoint: `05b4fc4`.
 - Tested and deployed runtime: [`7356f0f947ee051ac38639870e70856c24afe3b9`](https://github.com/kuntalashivasairahul/CropSense/commit/7356f0f947ee051ac38639870e70856c24afe3b9). Later documentation-only commits do not change that runtime or CI configuration.

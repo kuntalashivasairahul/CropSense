@@ -1,6 +1,6 @@
 # CropSenseAI agent entry point
 
-This branch is the team mini-project handoff. Read these before explaining or changing the project:
+This checkout includes the team mini-project handoff and final demo. Read these before explaining or changing the project:
 
 1. `docs/team/README.md` — scope, reading order, setup, and included material.
 2. `docs/team/PROJECT_GUIDE.md` — architecture, code symbols, inputs, and limitations.

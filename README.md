@@ -1,5 +1,7 @@
 # CropSense AI
 
+**Final demo: 21 November 2026.** Use `deploy/streamlit-demo` for the Windows laptop and public app. Start with the [Windows checklist](docs/WINDOWS_DEMO.md) and [20 November verification](docs/FINAL_DEMO_2026-11-21.md).
+
 **Team mini-project handoff:** start with the [teammate guide](docs/team/README.md). It links the code walkthrough, all nine Kaggle notebooks, setup instructions, verification record, and a [copyable Codex prompt](docs/team/CODEX_PROMPT.md) for the `team/project-handoff` branch.
 
 Final-year crop-health prototype. Three independently trained models feed an equal-weight composite score. The inputs come from unrelated datasets, so the composite is a **simulated scenario**, with no validated fusion accuracy.
@@ -18,11 +20,11 @@ The simulated mean index is `⅓ × healthy_class_probability_sum + ⅓ × ndvi_
 
 ## Public web demo
 
-Open the public demo at **https://cropsense-ai-demo.streamlit.app/**. It runs from `deploy/streamlit-demo` on free Streamlit Community Cloud with Python 3.12. All four sections and three concurrent anonymous sessions were exercised on 23 October 2026. The [deployment runbook](docs/DEPLOYMENT.md) records the tested commit, performance, memory limits and recovery. Wake the app before presentations; deployment does not establish field accuracy.
+Open the public demo at **https://cropsense-ai-demo.streamlit.app/**. It runs from `deploy/streamlit-demo` on free Streamlit Community Cloud with Python 3.12. Rechecked on 20 November 2026: all four sections ran and the downloaded severe-scenario report matched local output except its generation timestamp, including all three model hashes. The [deployment runbook](docs/DEPLOYMENT.md) retains the separate October concurrency/performance results. Wake the app before presentations; deployment does not establish field accuracy.
 
 ## Windows 11 laptop
 
-For the **22 October audit fixes**, extract the provided `CropSenseAI-audit-fixes-20261022-r4.zip` into a new folder and check its accompanying SHA-256 file, or clone the published `deploy/streamlit-demo` branch. Cloning `codex/monday-demo-ready` retrieves the earlier snapshot. The portable archive was verified after extraction on the Mac, which does not establish Windows readiness. Follow the [current laptop checklist](docs/WINDOWS_DEMO.md).
+For **21 November's final demo**, extract `CropSenseAI-final-demo-2026-11-21.zip` into a new folder after checking its accompanying SHA-256 file, or clone `deploy/streamlit-demo`. Use a fresh folder, such as `C:\CropSenseAI-demo`; do not copy the Mac `.venv`. Follow the [current laptop checklist](docs/WINDOWS_DEMO.md). The earlier October ZIP and Monday branch are historical snapshots.
 
 Use **64-bit Python 3.12**. Version 3.12.2 is suitable. In the extracted project folder, double-click [setup_windows.cmd](setup_windows.cmd) while online. This creates `.venv`, installs pinned dependencies, checks model hashes, caches the ImageNet helper, and tests inference without network access. It can take a while because TensorFlow is large. Then double-click [start_windows.cmd](start_windows.cmd) and open `http://localhost:8501`.
 
